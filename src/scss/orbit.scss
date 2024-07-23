@@ -1,0 +1,269 @@
+:root {
+  --orbit-delay-1: 1s;
+  --orbit-delay-2: 2s;
+  --orbit-delay-3: 3s;
+  --orbit-delay-3: 4s;
+  --orbit-delay-3: 5s;
+  --orbit-size-1: calc(585px / 2); /* Размер маленькой орбиты */
+  --orbit-size-2: calc(685px / 2); /* Размер средней орбиты */
+  --orbit-size-3: calc(785px / 2); /* Размер большой орбиты */
+  --orbit-size-4: calc(885px / 2);
+  --orbit-size-5: calc(985px / 2);
+  --orbit-deg-from: 0deg;
+  --orbit-deg-to: 0deg;
+  --orbit-deg-inner-from: 0;
+  --orbit-deg-inner-to: -360deg;
+
+  --orbit-deg-from-5: 300deg;
+  --orbit-deg-to-5: 660deg;
+  --orbit-deg-inner-from-5: -300deg;
+  --orbit-deg-inner-to-5: -660deg;
+
+
+  --orbit-deg-from-4: 120deg;
+  --orbit-deg-to-4: 480deg;
+  --orbit-deg-inner-from-4: -120deg;
+  --orbit-deg-inner-to-4: -480deg;
+
+  --orbit-deg-from-3: 200deg;
+  --orbit-deg-to-3: 560deg;
+  --orbit-deg-inner-from-3: -200deg;
+  --orbit-deg-inner-to-3: -560deg;
+
+  --orbit-deg-from-2: 30deg;
+  --orbit-deg-to-2: 390deg;
+  --orbit-deg-inner-from-2: -30deg;
+  --orbit-deg-inner-to-2: -390deg;
+
+  --orbit-opacity-1: rgba(255, 255, 255, 0.5);
+  --orbit-opacity-2: rgba(255, 255, 255, 0.4);
+  --orbit-opacity-3: rgba(255, 255, 255, 0.3);
+  --orbit-opacity-4: rgba(255, 255, 255, 0.2);
+  --orbit-opacity-5: rgba(255, 255, 255, 0.1);
+}
+
+.orbit-container {
+  position: relative;
+  width: 985px; /* Размер самой большой орбиты */
+  height: 985px; /* Размер самой большой орбиты */
+  margin: auto; /* Центрирование контейнера */
+}
+
+.orbit {
+  border: 1px solid var(--orbit-opacity-1); /* Цвет границы */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+  animation: 1s ease 0s normal forwards 1 fadein;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.icon {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: 50%;
+  --orbit-size: 585px; /* Значение по умолчанию для маленькой орбиты */
+  transform-origin: 0 50%; /* Центр вращения  */
+  animation: orbit-animation 10s linear infinite; /* Анимация движения по орбите */
+}
+
+/* Пример для трех орбит разного размера */
+.orbit:nth-child(1) {
+  width: 585px; /* Размер маленькой орбиты */
+  height: 585px; /* Размер маленькой орбиты */
+  transform-origin: 300px 300px;
+}
+
+.orbit:nth-child(2) {
+  width: 685px; /* Размер средней орбиты */
+  height: 685px; /* Размер средней орбиты */
+  transform-origin: 300px 300px;
+}
+
+.orbit:nth-child(3) {
+  width: 785px; /* Размер большой орбиты */
+  height: 785px; /* Размер большой орбиты */
+  transform-origin: 100px 100px;
+}
+.orbit:nth-child(4) {
+  width: 885px; /* Размер большой орбиты */
+  height: 885px; /* Размер большой орбиты */
+  transform-origin: 100px 100px;
+}
+.orbit:nth-child(5) {
+  width: 985px; /* Размер большой орбиты */
+  height: 985px; /* Размер большой орбиты */
+  transform-origin: 100px 100px;
+}
+
+/* @keyframes orbit-animation {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-size)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--orbit-size)) rotate(-360deg);
+  }
+} */
+
+@keyframes orbit-animation {
+  from {
+    transform: rotate(var(--orbit-deg-from)) translateX(var(--orbit-size))
+      rotate(var(--orbit-deg-inner-from));
+  }
+  to {
+    transform: rotate(var(--orbit-deg-to)) translateX(var(--orbit-size))
+      rotate(var(--orbit-deg-inner-to));
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.imagePhone {
+  -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+  animation: 1s ease 0s normal forwards 1 fadein;
+  animation-delay: 1.8s;
+}
+
+.orbit:nth-child(1) .icon {
+  --orbit-size: var(--orbit-size-1); /* Маленькая орбита */
+  --orbit-deg-from: var(--orbit-deg-from); /* Большая орбита */
+  --orbit-deg-to: var(--orbit-deg-to); /* Большая орбита */
+  transform: translateY(-50%);
+}
+
+.orbit:nth-child(2) .icon {
+  --orbit-size: var(--orbit-size-2); /* Средняя орбита */
+  --orbit-deg-from: var(--orbit-deg-from-2); /* Большая орбита */
+  --orbit-deg-to: var(--orbit-deg-to-2); /* Большая орбита */
+  --orbit-deg-inner-from: var(--orbit-deg-inner-from-2);
+  --orbit-deg-inner-to: var(--orbit-deg-inner-to-2);
+  transform: translateY(-50%);
+  top: calc(50% - 38px);
+  left: calc(50% - 38px);
+
+/*   -webkit-animation-duration: 13s;
+  animation-duration: 13s; */
+}
+
+.orbit:nth-child(3) .icon {
+  --orbit-size: var(--orbit-size-3); /* Большая орбита */
+  --orbit-deg-from: var(--orbit-deg-from-3); /* Большая орбита */
+  --orbit-deg-to: var(--orbit-deg-to-3); /* Большая орбита */
+  --orbit-deg-inner-from: var(--orbit-deg-inner-from-3);
+  --orbit-deg-inner-to: var(--orbit-deg-inner-to-3);
+  transform: translateY(-50%);
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+
+/*   -webkit-animation-duration: 9s;
+  animation-duration: 9s; */
+}
+.orbit:nth-child(4) .icon {
+  --orbit-size: var(--orbit-size-4); /* Большая орбита */
+  --orbit-deg-from: var(--orbit-deg-from-4); /* Большая орбита */
+  --orbit-deg-to: var(--orbit-deg-to-4); /* Большая орбита */
+  --orbit-deg-inner-from: var(--orbit-deg-inner-from-4);
+  --orbit-deg-inner-to: var(--orbit-deg-inner-to-4);
+  transform: translateY(-50%);
+  top: calc(50% -22px);
+  left: calc(50% - 22px);
+
+/*   -webkit-animation-duration: 15s;
+  animation-duration: 15s; */
+}
+.orbit:nth-child(5) .icon {
+  --orbit-size: var(--orbit-size-5); /* Большая орбита */
+  --orbit-deg-from: var(--orbit-deg-from-5); /* Большая орбита */
+  --orbit-deg-to: var(--orbit-deg-to-5); /* Большая орбита */
+  --orbit-deg-inner-from: var(--orbit-deg-inner-from-5);
+  --orbit-deg-inner-to: var(--orbit-deg-inner-to-5);
+/*   -webkit-animation-duration: 13s;
+  animation-duration: 13s; */
+
+  transform: translateY(-50%);
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+}
+
+.orbit:nth-child(1) {
+  /* Стили иконок для маленькой орбиты */
+  -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  border: 1px solid var(--orbit-opacity-1);
+}
+
+.orbit:nth-child(2) {
+  /* Стили иконок для средней орбиты */
+  -webkit-animation-delay: 1.3s; /* Safari 4.0 - 8.0 */
+
+  border: 1px solid var(--orbit-opacity-2);
+
+  animation-delay: 2.3s;
+}
+
+.orbit:nth-child(3) {
+  /* Стили иконок для большой орбиты */
+  -webkit-animation-delay: 1.6s; /* Safari 4.0 - 8.0 */
+  animation-delay: 2.6s;  
+  border: 1px solid var(--orbit-opacity-3);
+
+}
+.orbit:nth-child(4) {
+  /* Стили иконок для большой орбиты */
+  -webkit-animation-delay: 1.9s; /* Safari 4.0 - 8.0 */
+  animation-delay: 2.9s;  
+  border: 1px solid var(--orbit-opacity-4);
+
+}
+.orbit:nth-child(5) {
+  /* Стили иконок для большой орбиты */
+  -webkit-animation-delay: 2.2s; /* Safari 4.0 - 8.0 */
+  animation-delay: 3.2s;  
+  border: 1px solid var(--orbit-opacity-5);
+
+}
+
+
+@media (max-width: 1023px) {
+  /* Пример для трех орбит разного размера */
+.orbit:nth-child(1) {
+  width: 280px; /* Размер маленькой орбиты */
+  height: 280px; /* Размер маленькой орбиты */
+  transform-origin: 300px 300px;
+}
+
+.orbit:nth-child(2) {
+  width: 331px; /* Размер средней орбиты */
+  height: 331px; /* Размер средней орбиты */
+  transform-origin: 300px 300px;
+}
+
+.orbit:nth-child(3) {
+  width: 380px; /* Размер большой орбиты */
+  height: 380px; /* Размер большой орбиты */
+  transform-origin: 100px 100px;
+}
+.orbit:nth-child(4) {
+  width: 428px; /* Размер большой орбиты */
+  height: 428px; /* Размер большой орбиты */
+  transform-origin: 100px 100px;
+}
+.orbit:nth-child(5) {
+  width: 477px; /* Размер большой орбиты */
+  height: 477px; /* Размер большой орбиты */
+  transform-origin: 100px 100px;
+}
+}

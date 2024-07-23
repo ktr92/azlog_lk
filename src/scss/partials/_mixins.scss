@@ -1,0 +1,100 @@
+@import "params.scss";
+
+@mixin container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@mixin clear {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+@mixin clear-list {
+  @include clear;
+  list-style: none;
+}
+
+@mixin large-screen() {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin medium-screen() {
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin small-screen() {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin extrasmall-screen() {
+  @media only screen and (max-width: 410px) {
+    @content;
+  }
+}
+
+@mixin dropdown($icon: "../img/ChevronDown.svg") {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 15px;
+  &:after {
+    content: url($icon);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    position: absolute;
+    right: 0;
+    top: 48%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin imagecenter($padding: 24.62%, $fill: width) {
+  display: block;
+  height: 0;
+  padding-top: $padding;
+  position: relative;
+  overflow: hidden;
+
+  img:not([role="presentation"]) {
+    position: absolute;
+
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+    margin: auto;
+
+    @if $fill == width {
+      width: 100% !important;
+      max-height: initial !important;
+      height: initial !important;
+    } @else {
+      height: 100% !important;
+      max-width: initial !important;
+      width: initial !important;
+    }
+  }
+}
+
+@mixin slidershadow {
+  position: relative;
+  margin: 0 -20px;
+  overflow: hidden;
+  padding: 0 20px;
+  width: calc(100% + 40px);
+  .slick-list {
+    overflow: visible;
+  }
+}

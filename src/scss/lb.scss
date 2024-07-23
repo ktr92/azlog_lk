@@ -1,0 +1,27 @@
+#lightbox {
+  display: flex;
+  flex-direction: column
+}
+
+#lightbox .lb-dataContainer {
+  margin-bottom: 10px;
+  order: 0
+}
+
+#lightbox .lb-dataContainer .lb-details {
+  opacity: 0
+}
+
+#lightbox .lb-dataContainer .lb-close {
+  background: url(../img/closelightbox.svg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: contain
+}
+
+#lightbox .lb-outerContainer {
+  order: 1
+}
+.lb-data .lb-close {
+  margin-right: -50px;
+}
