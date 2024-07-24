@@ -1,0 +1,75 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+
+<div class="authpage">
+    <div class="container">
+      <div class="authpage__wrapper">
+        <div class="authpage__hero">
+          <div class="authpage__image">
+            <img src="img/heroblock.svg" alt="">
+          </div><!-- /.authpage__image -->
+          <div class="authpage__title">Добро пожаловать!</div><!-- /.authpage__title -->
+          <div class="authpage__text">Пройдите авторизацию, для того чтобы продолжить.</div><!-- /.authpage__text -->
+        </div><!-- /.authpage__hero -->
+        <div class="authpage__form">
+          <div class="formblock">
+            <div class="formblock__header flex ">
+              <div class="formblock__link"><a href="" class='active'>Вход</a></div><!-- /.formblock__link -->
+              <div class="formblock__link"><a href="">Регистрация</a></div><!-- /.formblock__link -->
+            </div><!-- /.formblock__header -->
+            <div class="formblock__form">
+              <form action="">
+                  <div class="formblock__main">
+                    <div class="formblock__input">
+                      <label for="">Email</label>
+                      <input type="text" class="input-error" value="xolxllz@gmail.com">
+                      <span class="input-errortext">Текст ошибки</span>
+    
+                    </div><!-- /.formblock__input -->
+                    <div class="formblock__input">
+                      <label for="">Пароль</label>
+                      <div class="inputpassword">
+                        <input type="password">
+                        <img src="img/Invisible.svg" alt="" data-toggle="password">
+                      </div><!-- /.inputpassword -->
+                    </div><!-- /.formblock__input -->
+                  </div><!-- /.formblock__main -->
+                  <div class="flex content-between formblock__check">
+                    <div class="check">
+                      <input type="checkbox" id="save" checked="checked" value="Y">
+                      <label for="save">Запомнить меня
+                      </label>
+                    </div>  
+                    <a href="#" class='check_rememb'>Забыли пароль?</a>
+                  </div>
+                  <div class="modal-submit modal-submit_small">
+                    <div class="buttonsrow">
+                      <div class="buttonsrow__item buttonsrow__item_full">
+                        <button type="submit" class="btn btn_main">Авторизироваться</button>
+                      </div>
+                      <!-- /.buttonsrow__item -->
+                     
+                    </div>
+                    <!-- /.buttonsrow -->
+                  </div>
+                  <div class="formblock__socials">
+                    <div class="socials">
+                      <div class="socials__block flex items-center">
+                        <div class="socials__text">Войти с помощью:</div><!-- /.socials__text -->
+                        <div class="socials__items flex items-center">
+                          <div class="socials__item"><a href=""><img src="img/yandex.svg" alt=""></a></div><!-- /.socials__item -->
+                          <div class="socials__item"><a href=""><img src="img/tg.svg" alt=""></a></div><!-- /.socials__item -->
+                          <div class="socials__item"><a href=""><img src="img/vk.svg" alt=""></a></div><!-- /.socials__item -->
+                        </div><!-- /.socials__items -->
+                      </div><!-- /.socials__block flex items-center -->
+                    </div><!-- /.socials -->
+                  </div><!-- /.formblock__socials -->
+              </form>
+            </div><!-- /.formblock__form -->
+          </div><!-- /.formblock -->
+        </div><!-- /.authpage__form -->
+      </div><!-- /.authpage__wrapper -->
+    </div><!-- /.container -->
+</div><!-- /.authpage -->
+
+<%= _.template(require('../includes/footer.html').default)(data) %>
