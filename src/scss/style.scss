@@ -475,7 +475,7 @@ textarea {
   margin-bottom: 17px; }
 
 .modal-submit_small {
-  margin-top: 17px; }
+  margin-top: 41px; }
 
 .formblock__input:last-child {
   margin-bottom: 0; }
@@ -527,7 +527,7 @@ color: rgba(55, 55, 55, 0.6);
   cursor: pointer;
   display: inline-block;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 0;
   font-size: 16px;
   line-height: 110%;
@@ -621,6 +621,10 @@ margin-right: 26px;
     margin-right: 22px;
     a {
       display: block;
+
+      &:hover {
+        transform: scale(1.15);
+      }
     }
   }
 
