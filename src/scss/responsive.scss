@@ -1,8 +1,15 @@
 @import "./style.scss";
 
 @media (max-width: 1440px) {
- 
+  .authpage__form {
+    padding-left: 30px;
+  }
+  .authpage__form .formblock {
+    padding: 34px;
 
+    min-width: 339px;
+    max-width: 607px;
+  }
 }
 @media (max-width: 1280px) {
  
@@ -17,6 +24,7 @@
     margin: auto;
 
     min-width: 339px;
+    max-width: 607px;
   }
   .authpage__wrapper {
     min-height: calc(100vh - 142px);
