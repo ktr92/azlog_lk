@@ -2,126 +2,126 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/responsive.scss ***!
   \***************************************************************************************************************************************************************************/
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-Bold.woff2") format("woff2"), url("../fonts/Jost-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-Black.woff2") format("woff2"), url("../fonts/Jost-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Jost-ExtraBoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-ExtraLight.woff2") format("woff2"), url("../fonts/Jost-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-ExtraBold.woff2") format("woff2"), url("../fonts/Jost-ExtraBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-BlackItalic.woff2") format("woff2"), url("../fonts/Jost-BlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-BoldItalic.woff2") format("woff2"), url("../fonts/Jost-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-Light.woff2") format("woff2"), url("../fonts/Jost-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-Medium.woff2") format("woff2"), url("../fonts/Jost-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-Thin.woff2") format("woff2"), url("../fonts/Jost-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-SemiBold.woff2") format("woff2"), url("../fonts/Jost-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-MediumItalic.woff2") format("woff2"), url("../fonts/Jost-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-Regular.woff2") format("woff2"), url("../fonts/Jost-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-LightItalic.woff2") format("woff2"), url("../fonts/Jost-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Jost-SemiBoldItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Jost-ExtraLightItalic.woff") format("woff");
   font-weight: 200;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-ThinItalic.woff2") format("woff2"), url("../fonts/Jost-ThinItalic.woff") format("woff");
   font-weight: 100;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: "Jost";
   src: url("../fonts/Jost-Italic.woff2") format("woff2"), url("../fonts/Jost-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
@@ -1020,7 +1020,8 @@ a {
 .cursor-pointer {
   cursor: pointer; }
 
-.color-white, .text-white {
+.color-white,
+.text-white {
   color: #fff; }
 
 .wrap {
@@ -1162,7 +1163,7 @@ textarea {
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
-  color: #04A3E9; }
+  color: #04a3e9; }
 
 .passwordforgot .check label {
   font-style: normal;
@@ -1271,7 +1272,7 @@ textarea {
   color: #2079ff;
   display: block; }
 
-.check input[type='checkbox'] {
+.check input[type="checkbox"] {
   display: none; }
 
 .check label a {
@@ -1292,7 +1293,7 @@ textarea {
   top: 50%;
   transform: translateY(-50%); }
 
-.check input[type='checkbox']:checked + label:before {
+.check input[type="checkbox"]:checked + label:before {
   background-image: url(../img/checkbox_checked.svg);
   background-repeat: no-repeat;
   background-position: center; }
@@ -1701,6 +1702,200 @@ textarea {
 .jsbackdrop.active {
   display: block; }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.welcome__icon {
+  min-width: 70px;
+  max-width: 70px;
+  height: 70px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  overflow: hidden; }
+
+.welcome_placeholder {
+  background: rgba(242, 63, 52, 0.15);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  color: #f23f34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; }
+
+.wrapper {
+  padding-top: 24px;
+  border-radius: 24px 24px 0 0;
+  border-top: 1px solid rgba(55, 55, 55, 0.1); }
+
+.welcome {
+  margin: 28px 0 44px 0; }
+
+.welcome__content {
+  margin-left: 27px; }
+
+.welcome__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 100%;
+  color: #373737;
+  margin-bottom: 17px; }
+
+.welcome__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #373737; }
+
+.maincontent__blocks {
+  gap: 26px; }
+
+.maincontent__block {
+  flex: 1; }
+
+.newslist {
+  height: 100%;
+  padding: 34px 30px 30px 30px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 8px; }
+  .newslist:after {
+    background: #fff;
+    content: url(../img/angle.svg);
+    position: absolute;
+    z-index: 1;
+    right: -1px;
+    top: -1px; }
+
+.newslist__title {
+  margin-bottom: 36px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #373737; }
+
+.newslist__item {
+  margin-bottom: 19px;
+  /*   padding-bottom: 32px; */
+  border-bottom: 1px solid #e9e9e9;
+  min-height: 80px;
+  margin-left: 15px; }
+  .newslist__item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 14px; }
+
+.newslist__link {
+  min-height: 44px;
+  display: block;
+  padding-left: 24px;
+  border-left: 4px solid #F23F34;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #373737; }
+
+.newslist__name {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #373737;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.newslist__date {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  color: #373737;
+  margin-bottom: 7px;
+  opacity: 0.7; }
+
+.btn_link {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  color: #f23f34;
+  display: inline-block;
+  border: 1px solid #f23f34;
+  border-radius: 3px;
+  padding: 13px 27px; }
+  .btn_link:hover {
+    background: #F23F34;
+    color: #fff; }
+
+.newslist__name {
+  height: 34px;
+  display: block; }
+
+.newslist_gray {
+  background: #f8f8f8;
+  padding: 24px 30px;
+  border: none; }
+  .newslist_gray:after {
+    display: none; }
+  .newslist_gray .newslist__name {
+    height: 32px;
+    line-height: 100%; }
+  .newslist_gray .newslist__date {
+    margin-bottom: 0;
+    margin-top: 13px; }
+  .newslist_gray .newslist__link {
+    border-left: none;
+    padding-left: 0; }
+  .newslist_gray .newslist__item {
+    padding-top: 26px;
+    margin-left: -30px;
+    margin-right: -30px;
+    width: calc(100% + 60px);
+    border-bottom: 3px solid #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 29px;
+    margin-bottom: 0; }
+    .newslist_gray .newslist__item:last-child {
+      margin-bottom: 26px; }
+
+.newslist__title--fire {
+  margin-left: -30px;
+  margin-right: -30px;
+  width: calc(100% + 60px);
+  min-height: 22px;
+  line-height: 22px;
+  margin-bottom: 0;
+  padding-bottom: 24px;
+  border-bottom: 3px solid #fff;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #f23f34;
+  padding-left: 60px;
+  background-position: left 30px top;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.53366 1.46667C9.33917 1.46667 9.15264 1.54394 9.01511 1.68146C8.87759 1.81899 8.80033 2.00552 8.80033 2.20001C8.80033 5.90847 3.66699 8.80001 3.66699 13.9333C3.66699 17.8331 7.89356 20.3544 9.38184 20.5176C9.43176 20.5281 9.48264 20.5334 9.53366 20.5333C9.72815 20.5333 9.91468 20.4561 10.0522 20.3186C10.1897 20.181 10.267 19.9945 10.267 19.8C10.2669 19.6911 10.2426 19.5835 10.1958 19.4852C10.149 19.3868 10.0808 19.3001 9.99629 19.2314V19.23C9.32896 18.6888 8.06699 17.1187 8.06699 15.685C8.06699 13.3318 10.267 12.4667 10.267 12.4667C9.01226 16.016 13.1236 16.4449 13.9508 19.959H13.9523C13.9884 20.1217 14.0789 20.2672 14.2088 20.3716C14.3387 20.476 14.5003 20.5331 14.667 20.5333C14.8214 20.533 14.9718 20.4838 15.0967 20.393C15.1099 20.3834 15.1228 20.3734 15.1354 20.3629C15.2547 20.2854 18.3337 18.249 18.3337 13.9333C18.3337 12.1714 17.4524 9.14504 16.8183 7.80456L16.8169 7.80027L16.8154 7.7974C16.7614 7.66061 16.6675 7.54321 16.546 7.46045C16.4244 7.3777 16.2807 7.33341 16.1337 7.33334C15.9624 7.3335 15.7966 7.3936 15.665 7.50322C15.5334 7.61284 15.4443 7.76505 15.4132 7.93347V7.93634C15.4114 7.94435 15.0746 9.44022 13.9337 10.2667C13.9337 6.81148 11.4391 3.24252 10.1238 1.76602C10.104 1.73929 10.0825 1.71393 10.0593 1.69011C9.99109 1.6196 9.90942 1.56349 9.81913 1.52511C9.72884 1.48673 9.63177 1.46686 9.53366 1.46667Z" fill="%23F23F34"/></svg>'); }
+
+.wrapper {
+  padding-bottom: 32px; }
+
 @media (max-width: 1440px) {
   .authpage__form {
     padding-left: 30px; }
@@ -1898,7 +2093,110 @@ textarea {
   [data-menu] {
     display: none; }
   [data-menu].active {
-    display: block; } }
+    display: block; }
+  .maincontent__blocks {
+    flex-wrap: wrap; }
+  .maincontent__block {
+    flex: unset;
+    width: 100%; }
+  .welcome__icon {
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px; }
+  .welcome_placeholder {
+    font-size: 16px; }
+  .wrapper {
+    padding-top: 14px;
+    border-radius: 24px 24px 0 0;
+    border-top: 1px solid rgba(55, 55, 55, 0.1); }
+  .welcome {
+    margin: 0 0 19px 0; }
+  .welcome__content {
+    margin-left: 15px; }
+  .welcome__title {
+    font-size: 18px;
+    margin-bottom: 6px; }
+  .welcome__text {
+    font-size: 12px; }
+  .maincontent__blocks {
+    gap: 14px; }
+  .maincontent__block {
+    flex: unset; }
+  .newslist {
+    height: unset;
+    padding: 24px 16px 24px 16px;
+    position: relative;
+    border-radius: 8px; }
+    .newslist:after {
+      background: #fff;
+      content: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H18V18L0 0Z" fill="white"/><path d="M18 18H6C2.68629 18 0 15.3137 0 12V0L18 18Z" fill="%23F1F1F1"/></svg>');
+      position: absolute;
+      z-index: 1;
+      right: -1px;
+      top: -1px; }
+  .newslist__title {
+    margin-bottom: 22px;
+    font-size: 16px; }
+  .newslist__item {
+    margin-bottom: 16px;
+    /*   padding-bottom: 32px; */
+    border-bottom: 1px solid #e9e9e9;
+    min-height: unset;
+    padding-bottom: 14px;
+    margin-left: 10px; }
+    .newslist__item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 14px; }
+  .newslist__link {
+    min-height: 34px;
+    padding-left: 19px;
+    border-left: 4px solid #F23F34;
+    font-size: 14px;
+    line-height: 120%; }
+  .newslist__name {
+    font-size: 14px;
+    line-height: 120%;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .newslist__date {
+    font-size: 12px;
+    margin-bottom: 6px; }
+  .newslist__name {
+    height: unset;
+    display: block; }
+  .newslist_gray {
+    background: #f8f8f8;
+    padding: 15px 16px; }
+    .newslist_gray .newslist__name {
+      height: unset; }
+    .newslist_gray .newslist__date {
+      margin-bottom: 0;
+      margin-top: 24px; }
+    .newslist_gray .newslist__item {
+      padding-top: 14px;
+      margin-left: -16px;
+      margin-right: -16px;
+      width: calc(100% + 32px);
+      border-bottom: 3px solid #fff;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 14px;
+      margin-bottom: 0; }
+      .newslist_gray .newslist__item:last-child {
+        margin-bottom: 14px;
+        border: none; }
+  .newslist__title--fire {
+    margin-left: -16px;
+    margin-right: -16px;
+    width: calc(100% + 32px);
+    margin-bottom: 0;
+    padding-bottom: 16px;
+    font-size: 16px;
+    padding-left: 46px;
+    background-position: left 16px top; }
+  .wrapper {
+    padding-bottom: 32px; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/
