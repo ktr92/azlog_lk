@@ -2,6 +2,7 @@ function initFE() {
   closeByClickOutside('[data-menu="mainmenu"]', '[data-menutoggle="mainmenu"]');
   closeByClickOutside('[data-toggle="messageblock"]', '[data-toggleclick="messageblock"]')
   closeByClickOutside('[data-toggle="accountmenu"]', '[data-toggleclick="accountmenu"]')
+  closeByClickOutside('.popup', '[data-toggle="popup"]')
 
 }
 
@@ -89,7 +90,19 @@ $('[data-toggleclickset]').on('click', function(e) {
     $("[data-menutoggle]").removeClass("active")
   })
 
-  $("input[type=tel]").mask("7 (999) 999-99-99")
+  $("input[type=tel]").mask("7 (999) 999-99-99");
+
+
+  $("[data-toggle='popup']").on('click', function(e) {
+    const target = $(this).attr('href')
+    $(target).addClass('active');
+    $(".jsbackdrop").addClass("active").addClass('top0');
+  })
+  $("[data-dismiss='popup']").on('click', function(e) {
+    const target = $(this).closest('.popup')
+    $(target).removeClass('active');
+    $(".jsbackdrop").removeClass("active").removeClass('top0');
+  })
  
 })
 
