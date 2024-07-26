@@ -119,12 +119,12 @@ $('[data-toggleclickset]').on('click', function(e) {
   $("[data-toggle='popup']").on('click', function(e) {
     const target = $(this).attr('href')
     $(target).addClass('active');
-    $(".jsbackdrop").addClass("active").addClass('top0');
+    $(".jsbackdrop").addClass("active");
   })
   $("[data-dismiss='popup']").on('click', function(e) {
     const target = $(this).closest('.popup')
     $(target).removeClass('active');
-    $(".jsbackdrop").removeClass("active").removeClass('top0');
+    $(".jsbackdrop").removeClass("active");
   })
  
 })

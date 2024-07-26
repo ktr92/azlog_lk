@@ -1,0 +1,42 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+
+    <section id="content">
+      <%= _.template(require('../includes/header.html').default)(data) %>
+
+        <main>
+          <div class="wrapper">
+            <div class="container">
+              <div class="pageheader">
+                <div class="pageheader__title">
+                  <h1>Профиль пользователя</h1>
+                </div><!-- /.pageheader__title -->
+                <div class="pageheader__nav">
+                  <div class="pageheader__links flex">
+                    <div class="pageheader__link"><a href="" class="btn_default">Мои данные</a></div>
+                    <div class="pageheader__link active"><a href="" class="btn_default">Контрагенты</a></div>
+                  </div><!-- /.pageheader__links -->
+                </div><!-- /.pageheader__nav -->
+              </div><!-- /.pageheader -->
+
+              <div class="pagetable">
+                <div class="thereno flex items-center">
+                  <div class="thereno__img">
+                    <img src="img/empty.svg" alt="">
+                  </div><!-- /.thereno__img -->
+                  <div class="thereno__text">Контрагенты пока не добавлены</div><!-- /.thereno__text -->
+                </div><!-- /.thereno -->
+                <div class="pagetable__add">
+                  <a href="#" class='linkadd'>Добавить контрагента</a>
+                </div><!-- /.pagetable__add -->
+              </div><!-- /.pagetable -->
+
+           
+             
+
+            </div><!-- /.container -->
+          </div><!-- /.wrapper -->
+
+        </main>
+    </section><!-- /#content -->
+    <%= _.template(require('../includes/footer.html').default)(data) %>
