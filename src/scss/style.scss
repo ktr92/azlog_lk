@@ -1834,12 +1834,17 @@ button {
   }
 }
 
+.tablestatus_not {
+  padding-left: 0;
+}
+
 .pagetable {
   a:not([class]) {
     font-family: var(--font-family);
 font-weight: 500;
 font-size: 14px;
 line-height: 100%;
+text-align: left;
 color: #2079ff;
   }
 }
