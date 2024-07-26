@@ -1457,6 +1457,8 @@ body {
   padding-right: 30px;
 }
 
+
+
 .pagetable__table {
   thead {
     th {
@@ -1505,7 +1507,6 @@ body {
     td:last-child {
       border-radius: 0 5px 5px 0;
     }
-    
 
     /*  .col_tableid {
       width: 200px;
@@ -1525,6 +1526,8 @@ body {
     }
   }
 }
+
+
 .pagetable__add {
   margin-top: 35px;
 }
@@ -1582,7 +1585,7 @@ body {
   color: rgba(55, 55, 55, 0.4);
 }
 
-.btn_white {
+a.btn_white, .btn_white, .pagetable a.btn_white {
   display: inline-block;
   font-family: var(--font-family);
   font-weight: 700;
@@ -1592,7 +1595,7 @@ body {
   padding: 12px 20px;
   background: #fff;
   border-radius: 6px;
-text-align: center;
+  text-align: center;
   &:hover {
     background: $red;
     color: #fff;
@@ -1609,12 +1612,12 @@ text-align: center;
 }
 
 .popup {
- left: -100%;
- transition: all 0.1s linear;
- width: 375px;
- background: #fff;
+  left: -100%;
+  transition: all 0.1s linear;
+  width: 375px;
+  background: #fff;
   padding: 65px 26px 65px 36px;
-  height: 100vh;
+  min-height: 100vh;
   position: fixed;
 
   top: 0;
@@ -1633,24 +1636,24 @@ text-align: center;
 
 .popup__title {
   font-family: var(--font-family);
-font-weight: 700;
-font-size: 26px;
-line-height: 100%;
-color: #373737;
-padding-bottom: 38px;
-position: relative;
-margin-bottom: 52px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 100%;
+  color: #373737;
+  padding-bottom: 38px;
+  position: relative;
+  margin-bottom: 52px;
 
-&::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 34px;
-  height: 4px;
-  background: $red;
-  display: block;
-  content: "";
-}
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 34px;
+    height: 4px;
+    background: $red;
+    display: block;
+    content: "";
+  }
 }
 .popup__content {
 }
@@ -1661,28 +1664,28 @@ margin-bottom: 52px;
 }
 .popupdata__label {
   font-family: var(--font-family);
-font-weight: 500;
-font-size: 14px;
-line-height: 100%;
-color: rgba(55, 55, 55, 0.5);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: rgba(55, 55, 55, 0.5);
   margin-bottom: 10px;
 }
 .popupdata__value {
   font-family: var(--font-family);
-font-weight: 700;
-font-size: 14px;
-line-height: 100%;
-color: #373737;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737;
 }
 .popupdata__value {
   a {
     font-family: var(--font-family);
-font-weight: 700;
-font-size: 14px;
-line-height: 100%;
-text-decoration: underline;
-text-decoration-skip-ink: none;
-color: #f23f34;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #f23f34;
   }
 }
 .jsbackdrop {
@@ -1692,8 +1695,185 @@ color: #f23f34;
 .thereno__text {
   margin-left: 23px;
   font-family: var(--font-family);
-font-weight: 700;
-font-size: 18px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #373737;
+}
+
+.stepform__row {
+  margin: 0 -9px;
+}
+
+.stepform__col {
+  padding: 0 9px;
+}
+
+.stepform__header {
+  min-height: 46px;
+}
+
+.stepform__main {
+  padding-left: 52px;
+  border-left: 2px solid $red;
+  margin-left: 23px;
+}
+
+.stepform__content {
+  padding-bottom: 45px;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.stepform__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #373737;
+  margin-left: 28px;
+}
+
+.stepform__header {
+  margin-bottom: 10px;
+}
+
+.stepform {
+  input {
+    border: 1px solid #ebebeb;
+    background: #f5f5f5;
+  }
+}
+
+.stepform__buttons {
+  margin-top: 42px;
+}
+
+.stepform__button {
+  margin-right: 44px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  transition: $transition;
+}
+
+.btn_reset {
+  background-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.2"><path d="M9.42333 1.10119C9.29015 0.966107 9.07446 0.966107 8.94128 1.10119L6.00037 4.08413L3.05969 1.10119C2.92651 0.966107 2.71083 0.966107 2.57765 1.10119L1.10037 2.59958C0.967193 2.73466 0.967193 2.95343 1.10037 3.08851L3.97072 5.99988L1.10037 8.91124C0.967193 9.04633 0.967193 9.26509 1.10037 9.40018L2.57765 10.8986C2.71083 11.0336 2.92651 11.0336 3.05969 10.8986L6.00037 7.91562L8.94128 10.8986C9.07446 11.0336 9.29015 11.0336 9.42333 10.8986L10.9006 9.39995C11.0338 9.26486 11.0338 9.0461 10.9006 8.91101L8.03049 5.99988L10.9006 3.08874C11.0338 2.95366 11.0338 2.73489 10.9006 2.59981L9.42333 1.10119Z" fill="%23373737"/></g></svg>');
+  background-position: left center;
+  padding-left: 24px;
+  background-repeat: no-repeat;
+
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: rgba(55, 55, 55, 0.5);
+
+  &:hover {
+    color: rgba(55, 55, 55, 1);
+  }
+}
+.btn_submit {
+  background-image: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.39652 5.91254L9.63016 0L12 1.81572L4.75548 10L0 6.12874L2.02162 3.97922L4.39652 5.91254Z" fill="%2300B468"/></svg>');
+  background-position: left center;
+  padding-left: 24px;
+  background-repeat: no-repeat;
+
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: rgba(55, 55, 55, 1);
+
+  &:hover {
+    color: #00b468;
+  }
+}
+.stepform__icon {
+  min-width: 48px;
+  max-width: 48px;
+}
+
+.stepform__item {
+  margin-bottom: 18px;
+}
+.stepform__row {
+  margin-bottom: 38px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  width: 100%;
+}
+.stepform__row_col3 {
+  .stepform__col {
+    width: calc(100% / 3);
+  }
+}
+.stepform__row_col2 {
+  .stepform__col {
+    width: calc(100% / 3 * 2);
+  }
+}
+
+.pagetable {
+  a:not([class]) {
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 14px;
 line-height: 100%;
-color: #373737;
+color: #2079ff;
+  }
+}
+
+.pagetable_default {
+  tbody {
+    td {
+      padding: 13px 21px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+}
+
+.tableremove img {
+  min-width: 22px;
+  max-width: 22px;
+  display: block;
+}
+
+.tableremove {
+  img {
+    transition: $transition;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+.stepform__form {
+  margin-bottom: 50px;
 }

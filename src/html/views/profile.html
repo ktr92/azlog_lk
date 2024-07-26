@@ -1,0 +1,404 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+
+    <section id="content">
+      <%= _.template(require('../includes/header.html').default)(data) %>
+
+        <main>
+          <div class="wrapper">
+            <div class="container">
+              <div class="pageheader">
+                <div class="pageheader__title">
+                  <h1>Профиль пользователя</h1>
+                </div><!-- /.pageheader__title -->
+                <div class="pageheader__nav">
+                  <div class="pageheader__links flex">
+                    <div class="pageheader__link"><a href="" class="btn_default">Мои данные</a></div>
+                    <div class="pageheader__link active"><a href="" class="btn_default">Контрагенты</a></div>
+                  </div><!-- /.pageheader__links -->
+                </div><!-- /.pageheader__nav -->
+              </div><!-- /.pageheader -->
+
+              <div class="stepform">
+                <div class="stepform__form">
+                  <form action="">
+                    <div class="stepform__items">
+                      <div class="stepform__item">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__icon">
+                            <img src="img/stepform_1.svg" alt="">
+                          </div><!-- /.stepform__icon -->
+                          <div class="stepform__title">ФИО пользователя</div><!-- /.stepform__title -->
+                        </div><!-- /.stepform__header -->
+                        <div class="stepform__main">
+                          <div class="stepform__content">
+                            <div class="stepform__row stepform__row_col3 flex">
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Фамилия</label>
+                                  <input type="text" name='FIO_F' value='Астраханович'>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Имя</label>
+                                  <input type="text" name='FIO_I' value='Андрей'>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Отчество</label>
+                                  <input type="text" name='FIO_O' value='Валерьевич'>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+                            </div><!-- /.stepform__row -->
+                            <div class="stepform__buttons flex">
+                              <div class="stepform__button">
+                                <button type='reset' name='RESET_FIO' class='btn_reset'>Сбросить</button>
+                              </div><!-- /.stepform__button -->
+                              <div class="stepform__button">
+                                <button type='submit' name='SUBMIT_FIO' class='btn_submit'>Изменить</button>
+                              </div><!-- /.stepform__button -->
+                            </div><!-- /.stepform__buttons -->
+                          </div><!-- /.stepform__content -->
+                        </div><!-- /.stepform__main -->
+                      </div><!-- /.stepform__item -->
+                      <div class="stepform__item">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__icon">
+                            <img src="img/stepform_2.svg" alt="">
+                          </div><!-- /.stepform__icon -->
+                          <div class="stepform__title">Адрес электронной почты</div><!-- /.stepform__title -->
+                        </div><!-- /.stepform__header -->
+                        <div class="stepform__main">
+                          <div class="stepform__content">
+                            <div class="stepform__row stepform__row_col3  flex">
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Email</label>
+                                  <input type="email" name='EMAIL' value='xolxllz@yandex.ru'>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+
+                            </div><!-- /.stepform__row -->
+                            <div class="stepform__buttons flex">
+                              <div class="stepform__button">
+                                <button type='reset' name='RESET_EMAIL' class='btn_reset'>Сбросить</button>
+                              </div><!-- /.stepform__button -->
+                              <div class="stepform__button">
+                                <button type='submit' name='SUBMIT_EMAIL' class='btn_submit'>Изменить</button>
+                              </div><!-- /.stepform__button -->
+                            </div><!-- /.stepform__buttons -->
+                          </div><!-- /.stepform__content -->
+                        </div><!-- /.stepform__main -->
+                      </div><!-- /.stepform__item -->
+                      <div class="stepform__item">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__icon">
+                            <img src="img/stepform_3.svg" alt="">
+                          </div><!-- /.stepform__icon -->
+                          <div class="stepform__title">Мобильный телефон</div><!-- /.stepform__title -->
+                        </div><!-- /.stepform__header -->
+                        <div class="stepform__main">
+                          <div class="stepform__content">
+                            <div class="stepform__row stepform__row_col3 flex">
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Ваш номер телефона</label>
+                                  <input type="tel" name='PHONE' value='+7 999 458 18 18'>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+
+                            </div><!-- /.stepform__row -->
+                            <div class="stepform__buttons flex">
+                              <div class="stepform__button">
+                                <button type='reset' name='RESET_PHONE' class='btn_reset'>Сбросить</button>
+                              </div><!-- /.stepform__button -->
+                              <div class="stepform__button">
+                                <button type='submit' name='SUBMIT_PHONE' class='btn_submit'>Изменить</button>
+                              </div><!-- /.stepform__button -->
+                            </div><!-- /.stepform__buttons -->
+                          </div><!-- /.stepform__content -->
+                        </div><!-- /.stepform__main -->
+                      </div><!-- /.stepform__item -->
+                      <div class="stepform__item">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__icon">
+                            <img src="img/stepform_3.svg" alt="">
+                          </div><!-- /.stepform__icon -->
+                          <div class="stepform__title">Пароль</div><!-- /.stepform__title -->
+                        </div><!-- /.stepform__header -->
+                        <div class="stepform__main">
+                          <div class="stepform__content">
+                            <div class="stepform__row stepform__row_col2 flex">
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Текущий пароль</label>
+                                  <div class="inputpassword">
+
+                                    <input type="password" name='PASSWORLD_OLD' value='abbbs_19929'>
+                                    <img src="img/Invisible.svg" alt="" data-toggle="password">
+                                  </div>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+
+                            </div><!-- /.stepform__row -->
+                            <div class="stepform__row stepform__row_col3 flex">
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Новый пароль</label>
+                                  <div class="inputpassword">
+
+                                    <input type="password" name='PASSWORLD_NEW' value=''>
+                                    <img src="img/Invisible.svg" alt="" data-toggle="password">
+                                  </div>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Повторить пароль</label>
+                                  <div class="inputpassword">
+
+                                    <input type="password" name='PASSWORLD_NEW2' value=''>
+                                    <img src="img/Invisible.svg" alt="" data-toggle="password">
+                                  </div>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+
+                            </div><!-- /.stepform__row -->
+                            <div class="stepform__buttons flex">
+                              <div class="stepform__button">
+                                <button type='reset' name='RESET_PASSWORD' class='btn_reset'>Сбросить</button>
+                              </div><!-- /.stepform__button -->
+                              <div class="stepform__button">
+                                <button type='submit' name='SUBMIT_PASSWORD' class='btn_submit'>Изменить</button>
+                              </div><!-- /.stepform__button -->
+                            </div><!-- /.stepform__buttons -->
+                          </div><!-- /.stepform__content -->
+                        </div><!-- /.stepform__main -->
+                      </div><!-- /.stepform__item -->
+                      <div class="stepform__item">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__icon">
+                            <img src="img/stepform_4.svg" alt="">
+                          </div><!-- /.stepform__icon -->
+                          <div class="stepform__title">Мои API ключи</div><!-- /.stepform__title -->
+                        </div><!-- /.stepform__header -->
+                        <div class="stepform__main">
+                          <div class="stepform__content">
+                            <div class="pagetable pagetable_default">
+                              <div class="pagetable__table">
+                               <table>
+                                <thead>
+                                  <tr>
+                                    <th class="">
+                                      <span>Ключ</span>
+                                    </th>
+                                    <th class="">
+                                      <span >Компания / ФИО</span>
+                                    </th>
+                                    <th class="">
+                                      <span >ИНН / КПП / Паспорт</span>
+                                    </th>
+                                    <th class="">
+                                      <span >Сайт</span>
+                                    </th>
+                                    <th class="">
+                                      <span >Email</span>
+                                    </th>
+                                    <th class="">
+                                      <span >Комментарий</span>
+                                    </th>
+                                    <th class="">
+                                      <span >Статус</span>
+                                    </th>
+                                    <th class="col_tablebutton">
+                                      <span ></span>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="">
+                                      <span class="onlyMobile th">Ключ</span>
+                                      <span class="tableid">rbeerkghthe...leje444</span>
+                                    </td>
+                                    <td class="">
+                                      <span class="onlyMobile th">Компания / ФИО</span>
+                                      <span class="tablename">ИП Иванов И.И.</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">ИНН / КПП / Паспорт</span>
+                                      <span class="tablerekv">56859588589959</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Сайт</span>
+                                      <span class="tablelink">
+                                        <a href="" target='_blank'>test.ru</a></span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Email</span>
+                                      <span class="tableemail">oooananasstroy@yandex.ru</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Комментарий</span>
+                                      <span class="tablecomment">-</span>
+                                    </td>
+                                    <td  class="col_tablestatus">
+                                      <span class="tablestatus ">-</span>
+                                    </td>
+
+                                    <td class="">
+                                      <span class="tablebutton">
+                                        <a href="#" data-toggle='popup' class='tableremove'>
+                                          <img src="img/Delete.svg" alt="" width='22' height='22'>
+                                        </a>
+                                      </span><!-- /.tablebutton -->
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="">
+                                      <span class="onlyMobile th">Ключ</span>
+                                      <span class="tableid">rbeerkghthe...leje444</span>
+                                    </td>
+                                    <td class="">
+                                      <span class="onlyMobile th">Компания / ФИО</span>
+                                      <span class="tablename">ИП Иванов И.И.</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">ИНН / КПП / Паспорт</span>
+                                      <span class="tablerekv">56859588589959</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Сайт</span>
+                                      <span class="tablelink">
+                                        <a href="" target='_blank'>test.ru</a></span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Email</span>
+                                      <span class="tableemail">oooananasstroy@yandex.ru</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Комментарий</span>
+                                      <span class="tablecomment">-</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Статус</span>
+                                        <span class="tablestatus tablestatus_reject">Не подтвержденный</span>
+                                    </td>
+
+                                    <td class="">
+                                      <span class="tablebutton">
+                                        <a href="#" data-toggle='popup' class='tableremove'>
+                                          <img src="img/Delete.svg" alt="" width='22' height='22'>
+                                        </a>
+                                      </span><!-- /.tablebutton -->
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="">
+                                      <span class="onlyMobile th">Ключ</span>
+                                      <span class="tableid">rbeerkghthe...leje444</span>
+                                    </td>
+                                    <td class="">
+                                      <span class="onlyMobile th">Компания / ФИО</span>
+                                      <span class="tablename">ИП Иванов И.И.</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">ИНН / КПП / Паспорт</span>
+                                      <span class="tablerekv">56859588589959</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Сайт</span>
+                                      <span class="tablelink">
+                                        <a href="" target='_blank'>test.ru</a></span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Email</span>
+                                      <span class="tableemail">oooananasstroy@yandex.ru</span>
+                                    </td>
+                                    <td  class="">
+                                      <span class="onlyMobile th">Комментарий</span>
+                                      <span class="tablecomment">-</span>
+                                    </td>
+                                    <td  class="col_tablestatus">
+                                      <span class="onlyMobile th">Статус</span>
+
+                                      <span class="tablestatus tablestatus_ok">Подтвержденный</span>
+                                    </td>
+
+                                    <td class="">
+                                      <span class="tablebutton">
+                                        <a href="#" data-toggle='popup' class='tableremove'>
+                                          <img src="img/Delete.svg" alt="" width='22' height='22'>
+                                        </a>
+                                      </span><!-- /.tablebutton -->
+                                    </td>
+                                  </tr>
+                                  
+                                </tbody>
+                               </table>
+                              </div><!-- /.pagetable__table -->
+              
+                              <div class="pagetable__add">
+                                <a href="#" class='linkadd'>Добавить новый ключ</a>
+                              </div><!-- /.pagetable__add -->
+                            </div><!-- /.pagetable -->
+                            
+                          
+                          </div><!-- /.stepform__content -->
+                        </div><!-- /.stepform__main -->
+                      </div><!-- /.stepform__item -->
+                      <div class="stepform__item">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__icon">
+                            <img src="img/stepform_6.svg" alt="">
+                          </div><!-- /.stepform__icon -->
+                          <div class="stepform__title">Контакты бухгалтера</div><!-- /.stepform__title -->
+                        </div><!-- /.stepform__header -->
+                        <div class="stepform__main">
+                          <div class="stepform__content">
+                            <div class="stepform__row stepform__row_col3 flex">
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">ФИО</label>
+                                  <input type="text" name='BUH_FIO' value=''>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Номер телефона</label>
+                                  <input type="tel" name='BUH_TEL' value=''>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <label for="">Email</label>
+                                  <input type="email" name='BUH_EMAIL' value=''>
+                                </div><!-- /.stepform__input -->
+                              </div><!-- /.stepform__col -->
+                            </div><!-- /.stepform__row -->
+                            <div class="stepform__buttons flex">
+                              <div class="stepform__button">
+                                <button type='reset' name='RESET_FIO' class='btn_reset'>Сбросить</button>
+                              </div><!-- /.stepform__button -->
+                              <div class="stepform__button">
+                                <button type='submit' name='SUBMIT_FIO' class='btn_submit'>Изменить</button>
+                              </div><!-- /.stepform__button -->
+                            </div><!-- /.stepform__buttons -->
+                          </div><!-- /.stepform__content -->
+                        </div><!-- /.stepform__main -->
+                      </div><!-- /.stepform__item -->
+                    </div><!-- /.stepform__items -->
+                  </form>
+                </div><!-- /.stepform__form -->
+              </div><!-- /.stepform -->
+
+
+
+            </div><!-- /.container -->
+          </div><!-- /.wrapper -->
+
+        </main>
+    </section><!-- /#content -->
+    <%= _.template(require('../includes/footer.html').default)(data) %>
