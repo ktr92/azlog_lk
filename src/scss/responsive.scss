@@ -674,46 +674,81 @@ line-height: 100%;
   .stepform__form {
     margin-bottom: 50px;
   }
-}
-
-.pagetable {
-
-
-  tbody tr {
-    position: relative;
-    padding-right: 40px;
-  }
-
-  .tableremove {
-    position: absolute;
-    z-index: 8;
-    top: 11px;
-    right: 11px;
-    display: inline;
-    width: unset;
-
-    img {
-      width: 16px;
-      height: 16px;
-    }
-  }
-  .stepform__form {
-    margin-bottom: 15px;
-  }
   .pagefilter__items{
     flex-wrap: wrap;
+    gap: 8px;
   }
   .pagefilter__itemsearch {
     order: 0;
-    width: calc(100% - 40px);
+    width: calc(100% - 48px);
+    min-width: calc(100% - 48px);
   }
   .pagefilter__itembtn {
     order: 1;
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
   }
   .pagefilter__itemagent {
+    width: calc(50% - 9px);
+    max-width: calc(50% - 9px);
+    min-width: calc(50% - 9px);
     order: 2;
+    margin-right: 10px;
   }
   .pagefilter__itemdate {
+    width: calc(50% - 9px);
+    max-width: calc(50% - 9px);
+    min-width: calc(50% - 9px);
     order: 3;
   }
+
+  .pagefilterbtn__text {
+    display: none;
+  }
+
+  .pagefilterbtn {
+    background: #f23f34;
+    border-radius: 5px;
+    padding: 9px;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    display: block;
+    line-height: 1;
+  }
+  .pagefilterbtn__icon {
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+    svg g {
+      opacity: 1;
+    }
+    svg path {
+      fill: #fff;
+    }
+  }
+
+  .pagefilter__search input {
+    padding-left: 45px;
+  }
+  .filterbutton {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  .pagefilter__date {
+    min-width: unset;
+  }
+  .filterbutton__value {
+    padding-right: 18px;
+  }
+  .filterbutton::after {
+    right: 0;
+  }
+  .pagefilter {
+    margin-bottom: 21px;
+  }
 }
+

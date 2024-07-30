@@ -3,6 +3,8 @@ function initFE() {
   closeByClickOutside('[data-toggle="messageblock"]', '[data-toggleclick="messageblock"]')
   closeByClickOutside('[data-toggle="accountmenu"]', '[data-toggleclick="accountmenu"]')
   closeByClickOutside('[data-toggle="dateblock"]', '[data-toggleclick="dateblock"]')
+  closeByClickOutside('[data-toggle="agentblock"]', '[data-toggleclick="agentblock"]')
+  closeByClickOutside('[data-toggle="toolbarmenu"]', '[data-toggleclick="toolbarmenu"]')
   closeByClickOutside('.popup', '[data-toggle="popup"]')
 
 }
@@ -28,7 +30,7 @@ function closeByClickOutside(element, button) {
 
 $(document).ready(function () {
 
-  
+ 
   $('[data-toggleclick]').on('click', function(e) {
     $(this).toggleClass('active')
     e.preventDefault()
