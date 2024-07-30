@@ -700,4 +700,20 @@ line-height: 100%;
   .stepform__form {
     margin-bottom: 15px;
   }
+  .pagefilter__items{
+    flex-wrap: wrap;
+  }
+  .pagefilter__itemsearch {
+    order: 0;
+    width: calc(100% - 40px);
+  }
+  .pagefilter__itembtn {
+    order: 1;
+  }
+  .pagefilter__itemagent {
+    order: 2;
+  }
+  .pagefilter__itemdate {
+    order: 3;
+  }
 }

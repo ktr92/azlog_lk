@@ -293,7 +293,108 @@
 
             <div class="pagefilter">
               <div class="container">
-
+                <div class="pagefilter__wrapper">
+                  <form action="">
+                    <div class="pagefilter__form">
+                      <div class="pagefilter__items">
+                        <div class="pagefilter__item pagefilter__itemdate">
+                          <div class="pagefilter__date" data-toggleitem='dateblock'>
+                            <div class="pagefilter__button">
+                              <div class="filterbutton" data-toggleclick="dateblock">
+                                <div class="filterbutton__icon">
+                                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                    <path d="M5.5 0.916664V2.75H4.58333C3.575 2.75 2.75 3.575 2.75 4.58333V17.4167C2.75 18.425 3.575 19.25 4.58333 19.25H17.4167C18.425 19.25 19.25 18.425 19.25 17.4167V4.58333C19.25 3.575 18.425 2.75 17.4167 2.75H16.5V0.916664H14.6667V2.75H7.33333V0.916664H5.5ZM4.58333 4.58333H5.5H7.33333H14.6667H16.5H17.4167V6.41666H4.58333V4.58333ZM4.58333 8.25H17.4167V17.4167H4.58333V8.25Z" fill="#373737"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div><!-- /.filterbutton__icon -->
+                                <div class="filterbutton__value" data-value='dateblock'>7 дней</div><!-- /.filterbutton__value -->
+                                <input type="hidden" value='7 дней' data-inputvalue='dateblock'>
+                              </div><!-- /.filterbutton -->
+                            </div><!-- /.pagefilter__button -->
+                            <div class="dateblock__menu dropdownblock" data-toggle="dateblock">
+                              <div class="dropdownblock__wrapper">
+                                <div class="dropdownblock__links">
+                                  <ul>
+                                    <li><a href="#" data-togglevalue='1 день'>1 день</a></li>
+                                    <li><a href="#" data-togglevalue='7 дней'>7 дней</a></li>
+                                    <li><a href="#" data-togglevalue='30 дней'>30 дней</a></li>
+                                    <li><a href="#" data-togglevalue='6 месяцев'>6 месяцев</a></li>
+                                    <li><a href="#" data-togglevalue='1 год'>1 год</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- /.pagefilter__date -->
+                        </div><!-- /.pagefilter__item -->
+                        <div class="pagefilter__item pagefilter__itemsearch">
+                          <div class="pagefilter__search">
+                            <div class="pagefilter__input">
+                              <button type='submit'>
+                                <img src="img/SearchFiler.svg" alt="">
+                              </button>
+                              <input type="text" placeholder='ТТН'>
+                            </div><!-- /.pagefilter__input -->
+                          </div><!-- /.pagefilter__search -->
+                        </div><!-- /.pagefilter__item -->
+                         <div class="pagefilter__item pagefilter__itemagent">
+                          <div class="pagefilter__agent" data-toggleitem='agentblock'>
+                            <div class="pagefilter__button">
+                              <div class="filterbutton" data-toggleclick="agentblock">
+                                <div class="filterbutton__icon">
+                                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                    <path d="M10.9997 1.8335C5.93692 1.8335 1.83301 5.93741 1.83301 11.0002C1.83301 16.0629 5.93692 20.1668 10.9997 20.1668C16.0624 20.1668 20.1663 16.0629 20.1663 11.0002C20.1663 5.93741 16.0624 1.8335 10.9997 1.8335ZM10.9997 3.66683C15.0495 3.66683 18.333 6.95033 18.333 11.0002C18.333 12.4643 17.898 13.8245 17.1585 14.9694L16.4531 14.4233C15.0305 13.3261 12.4086 12.8335 10.9997 12.8335C9.59076 12.8335 6.96797 13.3261 5.54622 14.4233L4.84082 14.9712C4.10088 13.826 3.66634 12.4649 3.66634 11.0002C3.66634 6.95033 6.94984 3.66683 10.9997 3.66683ZM10.9997 5.271C9.35701 5.271 8.02051 6.6075 8.02051 8.25016C8.02051 9.89283 9.35701 11.2293 10.9997 11.2293C12.6423 11.2293 13.9788 9.89283 13.9788 8.25016C13.9788 6.6075 12.6423 5.271 10.9997 5.271ZM10.9997 7.10433C11.6313 7.10433 12.1455 7.61858 12.1455 8.25016C12.1455 8.88175 11.6313 9.396 10.9997 9.396C10.3681 9.396 9.85384 8.88175 9.85384 8.25016C9.85384 7.61858 10.3681 7.10433 10.9997 7.10433ZM10.9997 14.6668C13.842 14.6668 15.3704 15.7379 16.0861 16.2746C14.7672 17.5468 12.9768 18.3335 10.9997 18.3335C9.02256 18.3335 7.23219 17.5468 5.91325 16.2746C6.62892 15.7379 8.15735 14.6668 10.9997 14.6668ZM16.4191 15.9272C16.3186 16.0377 16.2182 16.1489 16.1112 16.2531C16.2179 16.1496 16.3177 16.0372 16.4191 15.9272Z" fill="#373737"/>
+                                    </g>
+                                    </svg>
+                                    
+                                    
+                                </div><!-- /.filterbutton__icon -->
+                                <div class="filterbutton__value" data-value='agentblock'>Контрагенты</div><!-- /.filterbutton__value -->
+                                <input type="hidden" value='7 дней' data-inputvalue='agentblock'>
+                              </div><!-- /.filterbutton -->
+                            </div><!-- /.pagefilter__button -->
+                            <div class="agentblock__menu dropdownblock" data-toggle="agentblock">
+                              <div class="dropdownblock__wrapper">
+                                <div class="dropdownblock__links">
+                                  <ul>
+                                    <li><a href="#" data-togglevalue='Контрагенты 1 '> Контрагенты 1 </a></li>
+                                    <li><a href="#" data-togglevalue='Контрагенты 7 '>Контрагенты 7 </a></li>
+                                    <li><a href="#" data-togglevalue='Контрагенты 30 '>Контрагенты 30 </a></li>
+                                    <li><a href="#" data-togglevalue='Контрагенты 6 '>Контрагенты 6 </a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- /.pagefilter__date -->
+                        </div><!-- /.pagefilter__item -->
+                        <div class="pagefilter__item pagefilter__itembtn">
+                          <div class="pagefilter__btn">
+                            <div class="pagefilter__input">
+                              <a href='#' class="pagefilterbtn">
+                                <div class="pagefilterbtn__icon">
+                                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                    <path d="M18.3333 10.0835C18.1628 10.0835 3.83717 10.0835 3.66667 10.0835C3.16067 10.0835 2.75 10.4942 2.75 11.0002C2.75 11.5062 3.16067 11.9168 3.66667 11.9168C3.83717 11.9168 18.1628 11.9168 18.3333 11.9168C18.8393 11.9168 19.25 11.5062 19.25 11.0002C19.25 10.4942 18.8393 10.0835 18.3333 10.0835Z" fill="#373737"/>
+                                    <path d="M13.75 13.75C15.2688 13.75 16.5 12.5188 16.5 11C16.5 9.48122 15.2688 8.25 13.75 8.25C12.2312 8.25 11 9.48122 11 11C11 12.5188 12.2312 13.75 13.75 13.75Z" fill="#373737"/>
+                                    <path d="M18.3333 3.6665C18.1628 3.6665 3.83717 3.6665 3.66667 3.6665C3.16067 3.6665 2.75 4.07717 2.75 4.58317C2.75 5.08917 3.16067 5.49984 3.66667 5.49984C3.83717 5.49984 18.1628 5.49984 18.3333 5.49984C18.8393 5.49984 19.25 5.08917 19.25 4.58317C19.25 4.07717 18.8393 3.6665 18.3333 3.6665Z" fill="#373737"/>
+                                    <path d="M8.25 7.3335C9.76878 7.3335 11 6.10228 11 4.5835C11 3.06471 9.76878 1.8335 8.25 1.8335C6.73122 1.8335 5.5 3.06471 5.5 4.5835C5.5 6.10228 6.73122 7.3335 8.25 7.3335Z" fill="#373737"/>
+                                    <path d="M18.3333 16.5C18.1628 16.5 3.83717 16.5 3.66667 16.5C3.16067 16.5 2.75 16.9107 2.75 17.4167C2.75 17.9227 3.16067 18.3333 3.66667 18.3333C3.83717 18.3333 18.1628 18.3333 18.3333 18.3333C18.8393 18.3333 19.25 17.9227 19.25 17.4167C19.25 16.9107 18.8393 16.5 18.3333 16.5Z" fill="#373737"/>
+                                    <path d="M9.16699 20.1665C10.6858 20.1665 11.917 18.9353 11.917 17.4165C11.917 15.8977 10.6858 14.6665 9.16699 14.6665C7.64821 14.6665 6.41699 15.8977 6.41699 17.4165C6.41699 18.9353 7.64821 20.1665 9.16699 20.1665Z" fill="#373737"/>
+                                    </g>
+                                    </svg>
+                                    
+                                </div><!-- /.pagefilterbtn__icon -->
+                                <div class="pagefilterbtn__text">Все фильтры</div><!-- /.pagefilterbtn__text -->
+                              </a><!-- /.pagefilterbtn -->
+                            </div><!-- /.pagefilter__input -->
+                          </div><!-- /.pagefilter__search -->
+                        </div><!-- /.pagefilter__item -->
+                      </div><!-- /.pagefilter__items -->
+                    </div><!-- /.pagefilter__form -->
+                  </form>
+                </div><!-- /.pagefilter__wrapper -->
               </div><!-- /.container -->
             </div><!-- /.pagefilter -->
 

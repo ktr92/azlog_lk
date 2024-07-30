@@ -25,6 +25,7 @@ function initFE() {
   closeByClickOutside('[data-menu="mainmenu"]', '[data-menutoggle="mainmenu"]');
   closeByClickOutside('[data-toggle="messageblock"]', '[data-toggleclick="messageblock"]')
   closeByClickOutside('[data-toggle="accountmenu"]', '[data-toggleclick="accountmenu"]')
+  closeByClickOutside('[data-toggle="dateblock"]', '[data-toggleclick="dateblock"]')
   closeByClickOutside('.popup', '[data-toggle="popup"]')
 
 }
@@ -59,6 +60,21 @@ $(document).ready(function () {
     $('[data-toggleclick].active').not($(`[data-toggleclick=${dropdown}]`)).removeClass('active')
     $(`[data-toggle=${dropdown}]`).toggleClass('active')
     $(`[data-toggleactive=${dropdown}]`).toggleClass('active')
+})
+  $('[data-togglevalue]').on('click', function(e) {
+    e.preventDefault()
+    $(this).toggleClass('active')
+    // get value
+    let val = $(this).data('togglevalue')
+    // get wrapper leement
+    const $wrapper = $(this).closest('[data-toggleitem]')
+    // get dropdown ID
+    let id = $wrapper.data('toggleitem')
+    // close dropdown
+    $(`[data-toggle=${id}]`).toggleClass('active')
+    // set value
+    $(`[data-value=${id}]`).text(val)
+    $(`[data-inputvalue=${id}]`).val(val)
 })
 
 $('[data-toggleclickset]').on('click', function(e) {
