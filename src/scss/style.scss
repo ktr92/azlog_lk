@@ -2205,7 +2205,7 @@ button {
   color: #373737;
 }
 
-.pagetable_ttn {
+.pagetable_ttntable {
   .pagetable__table {
    tbody {
     td {
@@ -2259,5 +2259,44 @@ text-align: right;
 
 .pagetable__ttnstatus{
   width: min-content;
+  white-space: nowrap;
+}
+.pagetable_ttn {
+  .pagetable__table thead th.pagetable__ttnstatus,
+  .pagetable__table tbody td.pagetable__ttnstatus {
+    text-align: right;
+    padding-right: 35px;
+
+    span {
+      display: inline;
+      text-align: right;
+    }
+  }
+}
+
+.pagetable_ttntable {
+  .check {
+    display: block;
+    line-height: 1;
+    text-align: right;
+  }
+  .check label {
+    height: 18px;
+    line-height: 1;
+    padding-left: 18px;
+  }
+  .check label:before {
+    top: 0;
+    transform: none;
+    border: 1px solid #d0d0d0;
+    background: #fff;
+
+  }
+  .check input[type="checkbox"]:checked + label:before {
+    background-color: $red;
+    border-color: $red;
+  }
+}
+.pagetable__ttn {
   white-space: nowrap;
 }

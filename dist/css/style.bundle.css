@@ -2601,10 +2601,10 @@ button {
   line-height: 100%;
   color: #373737; }
 
-.pagetable_ttn .pagetable__table tbody td {
+.pagetable_ttntable .pagetable__table tbody td {
   padding: 25px 9px; }
 
-.pagetable_ttn .pagetable__table thead span {
+.pagetable_ttntable .pagetable__table thead span {
   padding: 13px 9px; }
 
 .green {
@@ -2640,6 +2640,38 @@ button {
 
 .pagetable__ttnstatus {
   width: min-content;
+  white-space: nowrap; }
+
+.pagetable_ttn .pagetable__table thead th.pagetable__ttnstatus,
+.pagetable_ttn .pagetable__table tbody td.pagetable__ttnstatus {
+  text-align: right;
+  padding-right: 35px; }
+  .pagetable_ttn .pagetable__table thead th.pagetable__ttnstatus span,
+  .pagetable_ttn .pagetable__table tbody td.pagetable__ttnstatus span {
+    display: inline;
+    text-align: right; }
+
+.pagetable_ttntable .check {
+  display: block;
+  line-height: 1;
+  text-align: right; }
+
+.pagetable_ttntable .check label {
+  height: 18px;
+  line-height: 1;
+  padding-left: 18px; }
+
+.pagetable_ttntable .check label:before {
+  top: 0;
+  transform: none;
+  border: 1px solid #d0d0d0;
+  background: #fff; }
+
+.pagetable_ttntable .check input[type="checkbox"]:checked + label:before {
+  background-color: #F23F34;
+  border-color: #F23F34; }
+
+.pagetable__ttn {
   white-space: nowrap; }
 
 @media (max-width: 1440px) {
@@ -3135,7 +3167,67 @@ button {
   .filterbutton::after {
     right: 0; }
   .pagefilter {
-    margin-bottom: 21px; } }
+    margin-bottom: 21px; }
+  .pagefilter__item .dropdownblock {
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 100%; }
+  .pagefilter__items {
+    position: relative; }
+  .pagefilter__item {
+    position: static; }
+  .xstable {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 12px; }
+  .xstable__cell {
+    padding: 0 6px; }
+  .xstable__header {
+    background: #f5f5f5;
+    padding: 14px 16px;
+    border-bottom: 2px solid #fff; }
+  .xstable__info {
+    margin-top: 7px; }
+    .xstable__info .pagetable__info {
+      margin-top: 0;
+      font-size: 12px; }
+    .xstable__info .pagetable__ttnstatvalue {
+      margin-left: 10px;
+      white-space: nowrap;
+      font-size: 12px; }
+  .xstable__fromto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3px 7px;
+    background: #fff;
+    border-radius: 5px; }
+  .pagetable__from, .pagetable__to {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: #373737;
+    padding: 0 10px; }
+  .xstable__main {
+    background: #f5f5f5;
+    padding: 9px 16px; }
+  .xstable__footer {
+    background: #f5f5f5;
+    padding: 5px 16px 14px 16px; }
+  .xstable__icons a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .xstable__summ {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    color: #373737; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/
