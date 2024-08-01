@@ -822,4 +822,93 @@ font-size: 13px;
 line-height: 100%;
 color: #373737;
   }
+  .orderblocks__row {
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  .orderblocks__col {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .pageheader__wrapper  {
+    flex-wrap: wrap;
+  }
+  .pageheader__main  {
+    flex-wrap: wrap;
+  }
+  .pageheader__back a {
+    margin-bottom: 13px;
+  }
+  .pageheader__status {
+    margin-left: 0;
+    margin-bottom: 22px;
+    font-size: 12px;
+  }
+  .pageheader__toolbar {
+    min-height: 49px;
+    align-items: center;
+    display: flex;
+    
+    width: 100%;
+    padding: 8px 0;
+    background: #f8f8f8;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding: 0 18px;
+    width: calc(100% + 36px);
+  }
+  .ordertoolbar__items  {
+    justify-content: space-around;
+  }
+  .ordertoolbar {
+    width: 100%;
+  }
+  .orderblocks__col_map {
+    .orderitem__header {
+      display: none;
+    }
+    .orderitem__wrapper  {
+      padding-top: 0;
+      
+    }
+  }
+
+  .orderitem__wrapper {
+    margin-left: -18px;
+    margin-right: -18px;
+    padding: 20px 18px;
+    border-radius: 0;
+    width: calc(100% + 36px);
+  }
+
+  .ordermap {
+    border-radius: 0;
+    margin-left: -18px;
+    margin-right: -18px;
+    width: calc(100% + 36px);
+    margin-bottom: 14px;
+  }
+ .wrapper_orderpage .pageheader {
+    margin-bottom: 0;
+  }
+/*   .ordertrack {
+    margin-bottom: 19px;
+  } */
+  .ordertrack__pin {
+    font-weight: 600;
+font-size: 12px;
+line-height: 100%;
+padding: 3px 6px;
+  }
+  .orderitem__title {
+    font-size: 16px;
+  }
+  .orderdocs__item  {
+    margin-bottom: 6px;
+  }
+  .orderdocs__item a {
+    font-size: 12px;
+  }
 }

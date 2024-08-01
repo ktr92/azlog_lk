@@ -1,0 +1,162 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+
+    <section id="content">
+      <%= _.template(require('../includes/header.html').default)(data) %>
+
+        <main>
+          <div class="wrapper wrapper_orderpage">
+            <div class="container">
+              <div class="pageheader">
+                <div class="pageheader__back">
+                  <a href="#" class='flex items-center'>
+                    <img src="img/backl.svg" alt=""><span>Назад</span>
+                  </a>
+                </div><!-- /.pageheader__back -->
+                <div class="pageheader__wrapper flex items-center content-between">
+                  <div class="pageheader__main flex items-center">
+                    <div class="pageheader__title">
+                      <h1>Заказ №000114456890 от 20.20.2020</h1>
+                    </div><!-- /.pageheader__title -->
+                    <div class="pageheader__status">
+                      Выдача приостановлена
+                    </div><!-- /.pageheader__status -->
+                  </div><!-- /.pageheader__main -->
+                  <div class="pageheader__toolbar">
+                    <div class="ordertoolbar">
+                      <div class="ordertoolbar__items flex">
+                        <a href="#" class="ordertoolbar__item ordertb_update"></a><!-- /.ordertoolbar__item -->
+                        <a href="#" class="ordertoolbar__item ordertb_docs"></a><!-- /.ordertoolbar__item -->
+                        <a href="#" class="ordertoolbar__item ordertb_pause"></a><!-- /.ordertoolbar__item -->
+                        <a href="#" class="ordertoolbar__item ordertb_warning"></a><!-- /.ordertoolbar__item -->
+                        <a href="#" class="ordertoolbar__item ordertb_email"></a><!-- /.ordertoolbar__item -->
+                        <a href="#" class="ordertoolbar__item ordertb_disable"></a><!-- /.ordertoolbar__item -->
+                      </div><!-- /.ordertoolbar__items -->
+                    </div><!-- /.ordertoolbar -->
+                  </div><!-- /.pageheader__toolbar -->
+                </div><!-- /.pageheader__wrapper flex items-center -->
+
+
+              </div><!-- /.pageheader -->
+
+              <div class="orderblocks">
+                <div class="orderblocks__row">
+                  <div class="orderblocks__col orderblocks__col_map">
+                    <div class="orderitem">
+                      <div class="orderitem__wrapper">
+                        <div class="orderitem__header">
+                          <div class="orderitem__title">Отслеживание посылки</div><!-- /.orderitem__title -->
+                        </div><!-- /.orderitem__header -->
+
+                        <div class="orderitem__content">
+                          <div class="ordermap">
+                            <div id="ordermap">
+                              <img src="img/ordermap.jpg" alt="">
+                            </div><!-- /#ordermap -->
+                          </div><!-- /.ordermap -->
+                          <div class="ordertrack">
+                            <div class="ordertrack__wrapper">
+                              <div class="ordertrack__point">
+                                <div class="ordertrack__status ordertrack__status_in">
+                                  <img src="img/ordertrack__status_in.svg" alt="">
+                                </div><!-- /.ordertrack__status -->
+                                <div class="ordertrack__current">
+                                  <div class="ordertrack__title">Текущее местоположение</div>
+                                  <!-- /.ordertrack__title -->
+                                  <div class="ordertrack__value">Краснодар</div><!-- /.ordertrack__value -->
+                                </div><!-- /.ordertrack__current -->
+                              </div><!-- /.ordertrack__point -->
+                              <div class="ordertrack__pin">ПИН:4141</div><!-- /.ordertrack__pin -->
+                            </div><!-- /.ordertrack__wrapper -->
+                          </div><!-- /.ordertrack -->
+                        </div><!-- /.orderitem__content -->
+                      </div><!-- /.orderitem__wrapper -->
+                    </div><!-- /.orderitem -->
+                  </div><!-- /.orderblocks__col -->
+                  <div class="orderblocks__col orderblocks__col_docs">
+                    <div class="orderitem">
+                      <div class="orderitem__wrapper">
+                        <div class="orderitem__header">
+                          <div class="orderitem__title">Документы</div>
+                          <div class="orderitem__toolbar flex items-center">
+                            <a href="#" class='icondefault downloadicon2'></a>
+                            <a href="#" class='icondefault infoicon'></a>
+                          </div><!-- /.orderitem__toolbar -->
+                        </div><!-- /.orderitem__header -->
+
+                        <div class="orderitem__content">
+                          <div class="orderdocs">
+                            <div class="orderdocs__item"><a href="#">Счет на забор груза</a></div>
+                            <div class="orderdocs__item"><a href="#">Счет на межтерминальную перевозку</a></div>
+                            <div class="orderdocs__item disabled"><a href="#">Счет на адресную доставку груза</a></div>
+                            <div class="orderdocs__item"><a href="#">Обьединенный счет</a></div>
+                            <div class="orderdocs__item"><a href="#">ТТН</a></div>
+                            <div class="orderdocs__item disabled" disabled><a href="#">УПД/Акт</a></div>
+                          </div><!-- /.orderdocs -->
+                        </div><!-- /.orderitem__content -->
+                      </div><!-- /.orderitem__wrapper -->
+                    </div><!-- /.orderitem -->
+                  </div><!-- /.orderblocks__col -->
+                  <div class="orderblocks__col orderblocks__col_params">
+                    <div class="orderitem">
+                      <div class="orderitem__wrapper">
+                        <div class="orderitem__header">
+                          <div class="orderitem__title">Стоимость</div>
+                          <div class="orderitem__toolbar flex items-center">
+                            <a href="#" class='btn_redd'>Оплатить</a>
+                          </div><!-- /.orderitem__toolbar -->
+                        </div><!-- /.orderitem__header -->
+
+                        <div class="orderitem__content">
+                          <div class="orderparams">
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Межтерминальная перевозка</div><!-- /.orderparams__dt -->
+                              <div class="orderparams_dd">456 000 ₽ </div><!-- /.orderparams_dd -->
+                            </div><!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Адресный забор груза</div><!-- /.orderparams__dt -->
+                              <div class="orderparams_dd">25 000 ₽ </div><!-- /.orderparams_dd -->
+                            </div><!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Адресная доставка груза</div><!-- /.orderparams__dt -->
+                              <div class="orderparams_dd">-</div><!-- /.orderparams_dd -->
+                            </div><!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Стоимость страхования</div><!-- /.orderparams__dt -->
+                              <div class="orderparams_dd">104,45 ₽ </div><!-- /.orderparams_dd -->
+                            </div><!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Промокод</div><!-- /.orderparams__dt -->
+                              <div class="orderparams_dd">GPRI555</div><!-- /.orderparams_dd -->
+                            </div><!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Размер скидки</div><!-- /.orderparams__dt -->
+                              <div class="orderparams_dd ">
+                                <div class="discountbadge"> <span>13%</span>
+                                </div><!-- /.discountbadge -->
+                              </div><!-- /.orderparams_dd -->
+                            </div><!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Статус</div><!-- /.orderparams__dt -->
+                              <div class="orderparams_dd red">Не оплачено</div><!-- /.orderparams_dd -->
+                            </div><!-- /.orderparams__item -->
+                          </div><!-- /.orderparams -->
+                        </div><!-- /.orderitem__content -->
+                      </div><!-- /.orderitem__wrapper -->
+                    </div><!-- /.orderitem -->
+                  </div><!-- /.orderblocks__col -->
+                </div><!-- /.orderblocks__row -->
+              </div><!-- /.orderblocks -->
+
+
+
+            </div><!-- /.container -->
+          </div><!-- /.wrapper -->
+
+          <div class="wrapper_dark">
+            <div class="container"></div><!-- /.container -->
+          </div><!-- /.wrapper_dark -->
+
+        </main>
+    </section><!-- /#content -->
+    <%= _.template(require('../includes/footer.html').default)(data) %>
