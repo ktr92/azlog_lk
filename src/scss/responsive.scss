@@ -874,13 +874,22 @@ color: #373737;
       
     }
   }
-
+  .orderitem {
+    height: unset;
+  }
   .orderitem__wrapper {
+    margin-top: 9px;
+    height: unset;
+    padding: 20px;
+  }
+  
+  .orderitem__wrapper_wide {
     margin-left: -18px;
     margin-right: -18px;
     padding: 20px 18px;
     border-radius: 0;
     width: calc(100% + 36px);
+    margin-bottom: 0;
   }
 
   .ordermap {
@@ -910,5 +919,113 @@ padding: 3px 6px;
   }
   .orderdocs__item a {
     font-size: 12px;
+  }
+  .orderitem__cols {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .orderitem__col {
+    border-right: none;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 3px solid #f8f8f8;
+  }
+  .formcheckbox__item {
+    column-count: 1;
+  }
+  .orderblocks__row {
+    margin-bottom: 3px;
+  }
+  span.btn_gray {
+    width: 100%;
+  }
+  .orderitem__title .redlabel {
+    display: none;
+  }
+  .orderitem__col:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .orderparams_full .orderparams__item {
+    display: block;
+  }
+  .orderparams__dt {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+  .orderdriver__item {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 22px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .orderadd {
+    height: 85px;
+  }
+  .orderdriver__items {
+    flex-wrap: wrap;
+  }
+  .orderdriver {
+    padding: 18px;
+  }
+  .orderparams_dd {
+    font-size: 12px;
+  }
+  .orderparams__dt {
+    margin-bottom: 9px;
+    font-size: 12px;
+  }
+  .orderparams_full {
+    margin-top: 20px;
+  }
+  .modal_large  {
+    left: 0;top: 0;
+    right: unset;
+    bottom: unset;
+    overflow: visible !important;
+
+    .modalclose {
+      width: unset;
+      height: unset;opacity: 1;
+      transform: translateX(100%);
+        z-index: 99;
+        left: unset;
+        right: 0;
+        top: 0;
+
+    }
+  }
+  .modal_large .modal-dialog {
+    width: 327px !important;
+    max-width: 100%;
+    margin: 0;
+    left: 0;top: 0;
+    right: unset;
+    overflow: visible !important;
+    bottom: unset;
+  }
+  .modal_large .modal-content{
+   border-radius: 0;
+   padding: 28px 18px 18px 18px;
+   overflow: visible !important;
+
+  }
+  .orderfiles__item {
+    width: 100%;
+  }
+
+  .modal {
+    .orderparams_dd {
+      font-size: 14px;
+    }
+    .orderparams_dt {
+      font-size: 14px;
+    }
   }
 }

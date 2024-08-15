@@ -319,7 +319,7 @@
                 <div class="orderblocks__row">
                   <div class="orderblocks__col orderblocks__col_map">
                     <div class="orderitem">
-                      <div class="orderitem__wrapper">
+                      <div class="orderitem__wrapper orderitem__wrapper_wide">
                         <div class="orderitem__header">
                           <div class="orderitem__title">Отслеживание посылки</div><!-- /.orderitem__title -->
                         </div><!-- /.orderitem__header -->
@@ -351,7 +351,7 @@
                   </div><!-- /.orderblocks__col -->
                   <div class="orderblocks__col orderblocks__col_docs">
                     <div class="orderitem">
-                      <div class="orderitem__wrapper">
+                      <div class="orderitem__wrapper orderitem__wrapper_wide">
                         <div class="orderitem__header">
                           <div class="orderitem__title">Документы</div>
                           <div class="orderitem__toolbar flex items-center">
@@ -375,7 +375,7 @@
                   </div><!-- /.orderblocks__col -->
                   <div class="orderblocks__col orderblocks__col_params">
                     <div class="orderitem">
-                      <div class="orderitem__wrapper">
+                      <div class="orderitem__wrapper orderitem__wrapper_wide">
                         <div class="orderitem__header">
                           <div class="orderitem__title">Стоимость</div>
                           <div class="orderitem__toolbar flex items-center">
@@ -425,7 +425,7 @@
                 <div class="orderblocks__row">
                   <div class="orderblocks__col w-full">
                     <div class="orderitem w_full">
-                      <div class="orderitem__wrapper">
+                      <div class="orderitem__wrapper orderitem__wrapper_wide">
                         <div class="orderitem__header flex items-center">
                           <div class='flex items-center'>
                             <div class="orderitem__title">Информация по заказу</div>
@@ -435,7 +435,7 @@
                             </div>
                           </div>
                           <div class="orderitem__toolbar flex items-center">
-                            <a href="#" class="icondefault iconedit"></a>
+                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
                           </div>
 
                         </div><!-- /.orderitem__header -->
@@ -673,7 +673,7 @@
                           </div>
                           <div class="orderitem__toolbar flex items-center">
                             <a href="#popup_info" data-toggle="modal" class="icondefault infoicon"></a>
-                            <a href="#" class="icondefault iconedit"></a>
+                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
                           </div><!-- /.orderitem__toolbar -->
                         </div><!-- /.orderitem__header -->
 
@@ -752,7 +752,7 @@
                         <div class="orderitem__header">
                           <div class="orderitem__title">Отправитель</div>
                           <div class="orderitem__toolbar flex items-center">
-                            <a href="#" class="icondefault iconedit"></a>
+                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
                           </div><!-- /.orderitem__toolbar -->
                         </div><!-- /.orderitem__header -->
 
@@ -783,7 +783,7 @@
                         <div class="orderitem__header">
                           <div class="orderitem__title">Отправитель</div>
                           <div class="orderitem__toolbar flex items-center">
-                            <a href="#" class="icondefault iconedit"></a>
+                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
                           </div><!-- /.orderitem__toolbar -->
                         </div><!-- /.orderitem__header -->
 
@@ -818,7 +818,7 @@
                         <div class="orderitem__header">
                           <div class="orderitem__title">Плательщик</div>
                           <div class="orderitem__toolbar flex items-center">
-                            <a href="#" class="icondefault iconedit"></a>
+                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
                           </div><!-- /.orderitem__toolbar -->
                         </div><!-- /.orderitem__header -->
 
@@ -1002,7 +1002,7 @@
                       </div><!-- /.wrappedlist__params -->
                     </div>
                   </div><!-- /.wrappedlist__item -->
-                  
+
                 </div><!-- /.wrappedlist__items -->
               </div><!-- /.wrappedlist -->
             </div>
@@ -1016,7 +1016,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <span class="modalclose" data-dismiss="modal" aria-hidden="true">
-            <img src="img/modalclose.svg" alt="">
+            <img src="img/modalclose.svg" alt="" class='onlyDesktop'>
+            <img src="img/closepopup.svg" alt="" class='onlyMobile'>
+
           </span>
           <div class="modal-body">
             <div class="modal__header">
@@ -1075,6 +1077,277 @@
                   </div><!-- /.orderdriver__item -->
                 </div><!-- /.orderdriver__items -->
               </div>
+              <div class="orderfiles">
+                <div class="orderfiles__items">
+                  <div class="orderfiles__item">
+                    <a href="#" target='_blank' class='orderfiles__wrapper'>
+                      <div class="orderfiles__title">Счет на оплату 8434818414819.pdf</div>
+                      <div class="orderfiles__info">78 кБ</div>
+                    </a>
+                  </div>
+                  <div class="orderfiles__item">
+                    <a href="#" target='_blank' class='orderfiles__wrapper'>
+                      <div class="orderfiles__title">Коммерческое предложение</div>
+                      <div class="orderfiles__info">78 кБ</div>
+                    </a>
+                  </div>
+                  <div class="orderfiles__item">
+                    <a href="#" target='_blank' class='orderfiles__wrapper'>
+                      <div class="orderfiles__title">Договор оферты</div>
+                      <div class="orderfiles__info">78 кБ</div>
+                    </a>
+                  </div>
+                </div>
+              </div><!-- /.orderfiles -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup_edit" class="modal fade modal_calc modal_large">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="modalclose" data-dismiss="modal" aria-hidden="true">
+            <img src="img/modalclose.svg" alt="">
+          </span>
+          <div class="modal-body">
+            <div class="modal__header">
+              <div class="modal__title">Редактирование</div>
+
+            </div>
+
+            <div class="modal__content ">
+              <div class="formblock">
+                <div class="formblock__form">
+                  <form action="">
+                    <div class="formblock__main">
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <label for="">Адрес</label>
+                          <input type="text" value="г.Комсомольск-на-Амуре, ул.Строителей, д.156 к.1">
+                        </div><!-- /.formblock__input -->
+                      </div><!-- /.formblock__row -->
+                      <div class="formblock__row">
+                        <div class="formblock__col">
+                          <div class="formblock__input ">
+                            <label for="">Дата забора</label>
+                            <input type="date" value="24/24/2024">
+                          </div><!-- /.formblock__input -->
+                        </div><!-- /.formblock__col -->
+                        <div class="formblock__col">
+                          <div class="formblock__input ">
+                            <label for="">Интервал забора</label>
+                            <select name="" id="">
+                              <option value="">с 11:00 до 12:00</option>
+                              <option value="">с 13:00 до 14:00</option>
+                              <option value="">с 15:00 до 16:00</option>
+                              <option value="">с 17:00 до 18:00</option>
+                            </select><!-- /# -->
+                          </div><!-- /.formblock__input -->
+                        </div><!-- /.formblock__col -->
+
+                      </div><!-- /.formblock__main -->
+
+                    </div><!-- /.formblock__row -->
+                    <div class="formblock__row">
+                      <div class="formblock__input">
+                        <label for="">Контактное лицо</label>
+                        <input type="text" value="">
+                      </div><!-- /.formblock__input -->
+                    </div><!-- /.formblock__row -->
+                    <div class="formblock__row">
+                      <div class="formblock__input">
+                        <label for="">Телефон</label>
+                        <input type="text" value="">
+                      </div><!-- /.formblock__input -->
+                    </div><!-- /.formblock__row -->
+                    <div class="formblock__row">
+                      <div class="formblock__input">
+                        <label for="">Комментарий</label>
+                        <input type="text" value="">
+                      </div><!-- /.formblock__input -->
+                    </div><!-- /.formblock__row -->
+
+                    <div class="formblock__option">
+                      <div class="formoption">
+                        <div class="formoption__content">
+                          <div class="formoption__icon">
+                            <img src="img/formoption.svg" alt="">
+                          </div><!-- /.formoption__icon -->
+                          <div class="formoption__main">
+                            <div class="formoption__title">Погрузо-разгрузочные работы</div>
+                            <!-- /.formoption__title -->
+                            <div class="formoption__text">Активирован</div><!-- /.formoption__text -->
+                          </div><!-- /.formoption__main -->
+                        </div><!-- /.formoption__content -->
+                        <div class="formoption__check">
+                          <label class="dpswitch">
+                            <input type="checkbox" name="dpswitch" id="dpswitch">
+                            <span class="dpslider dpround"></span>
+                          </label>
+                        </div><!-- /.formoption__check -->
+                      </div>
+                    </div><!-- /.formblock__option -->
+                    <div class="formblock__block">
+                      <div class="formblock__blocktitle">Упаковка груза</div>
+                      <div class="formblock__checkoptions">
+                        <div class="orderitem__checkboxes">
+                          <div class="formcheckbox">
+                            <div class="formcheckbox__item">
+                              <label for="check210-1" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-1" name="CWOOD" value="Y"
+                                    data-stepdata="pack_wooden" data-steptype="source">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Деревянная
+                                    обрешетка</span>
+                                </span>
+
+                              </label>
+                              <label for="check210-012" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-012" name="PALET" value="Y"
+                                    data-stepdata="pack_palet" data-steptype="source">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Паллетный
+                                    борт</span>
+                                </span>
+
+                              </label>
+                              <label for="check210-2" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-2" name="BUBBLE" value="Y"
+                                    data-stepdata="pack_bubble" data-steptype="source">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Пузырчатая
+                                    пленка</span>
+                                </span>
+
+                              </label>
+                              <label for="check210-3" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-3" name="STRETCHFILM" data-stepdata="pack_stretch"
+                                    data-steptype="source" value="Y">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Стретч
+                                    пленка</span>
+                                </span>
+
+                              </label>
+                              <label for="check210-4" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-4" name="CORRUGATEDBOARD" value="Y"
+                                    data-stepdata="pack_gofro" data-steptype="source">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон</span>
+                                </span>
+
+                              </label>
+                              <label for="check210-5" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-5" name="BAG" value="Y"
+                                    data-stepdata="pack_meshkotara" data-steptype="source">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара</span>
+                                </span>
+
+                              </label>
+                              <label for="check210-8" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-8" name="InternalRecalculate"
+                                    data-stepdata="pack_recalc" data-steptype="source" value="Y">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Пересчет
+                                    внутренних вложений</span>
+                                </span>
+
+
+                              </label>
+                              <label for="check210-9" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-9" name="MARKING" value="Y"
+                                    data-stepdata="pack_mark" data-steptype="source" checked="">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Маркировка</span>
+                                </span>
+
+                              </label>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="formblock__block">
+                      <div class="formblock__blocktitle">Доп. услуги</div>
+                      <div class="formblock__checkoptions">
+                        <div class="orderitem__checkboxes">
+                          <div class="formcheckbox">
+                            <div class="formcheckbox__item">
+                              <label for="check210-10" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-10" name="CDOC" value="Y"
+                                    data-stepdata="pack_mark" data-steptype="source" checked="">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Перевозка
+                                    сопроводительных
+                                    документов</span>
+                                </span>
+
+                              </label>
+                              <label for="check210-11" class="formcheckbox__label formcheckbox__label_type2">
+                                <span>
+                                  <input type="checkbox" id="check210-11" name="CBACKDOC" value="Y"
+                                    data-stepdata="pack_mark" data-steptype="source" checked="">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Возврат
+                                    документов</span>
+                                </span>
+
+                              </label>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="formblock__block">
+                      <div class="formfileloader">
+                        <div class="drag-area">
+                          <div class="dragbutton">
+                            <div class="dragtext">Перетащите файлы для загрузки, или <span class='draglink'>выберите
+                                файл
+                              </span>
+                            </div><!-- /.dragtext -->
+                            <div class="draginfo">.pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ</div><!-- /.raginfo -->
+                          </div><!-- /.dragbutton -->
+
+                          <input type="file" name='formfileloader[]' id="fileInput" multiple class='draginput' hidden>
+                        </div>
+
+                        <div class="orderfiles">
+                          <div class="orderfiles__items" id="fileName">
+                            <div class="orderfiles__item">
+                              <div class='orderfiles__wrapper'>
+                                <div class="orderfiles__title">Счет на оплату 8434818414819.pdf <a href='#' data-fileremove='fileName_id_1'></a></div>
+                                <div class="orderfiles__info">78 кБ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        </span>
+                      </div><!-- /.formfileloader -->
+                    </div><!-- /.formblock__block -->
+
+                      <div class="formblock__buttons">
+                        <div class="formblock__button">
+                          <button type="reset" name="" >
+                            <span class="btn_reset">Сбросить</span></button>
+                        </div><!-- /.formblock__button -->
+                        <div class="formblock__button">
+                          <button type="submit" name="" >
+                            <span class="btn_submit">Изменить</span></button>
+                        </div><!-- /.formblock__button -->
+                      </div><!-- /.formblock__buttons -->
+
+                  </form>
+                </div><!-- /.formblock__form -->
+              </div>
+
+
             </div>
 
           </div>
@@ -1082,6 +1355,97 @@
       </div>
     </div>
 
+    <script>
+      //selecting all required elements
+      const dropArea = document.querySelector(".drag-area"),
+        /*    dragText = dropArea.querySelector(".dragheader"), */
+        button = dropArea.querySelector(".dragbutton"),
+        input = dropArea.querySelector(".draginput");
+      let files; //this is a global variable and we'll use it inside multiple functions
+      let filesLength; 
+
+
+
+
+      button.onclick = (e) => {
+        e.preventDefault()
+        input.click(); //if user click on the button then the input also clicked
+      }
+
+
+
+
+      input.addEventListener("change", function () {
+        //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+        files = this.files;
+        dropArea.classList.add("active");
+        showFile(); //calling function
+      });
+      //If user Drag File Over DropArea
+      dropArea.addEventListener("dragover", (event) => {
+        event.preventDefault(); //preventing from default behaviour
+        dropArea.classList.add("active");
+        /*        dragText.textContent = "Release to Upload File"; */
+      });
+
+
+
+
+      //If user leave dragged File from DropArea
+      dropArea.addEventListener("dragleave", () => {
+        dropArea.classList.remove("active");
+        /*    dragText.textContent = "Drag & Drop to Upload File"; */
+      });
+
+
+
+
+      //If user drop File on DropArea
+      dropArea.addEventListener("drop", (event) => {
+        event.preventDefault(); //preventing from default behaviour
+        //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+        files = event.dataTransfer.files;
+        showFile(); //calling function
+      });
+
+
+
+
+      function showFile() {
+        filesLength = files.length;
+        let validExtensions = ["pdf", "docx", "txt", ".tiff", "image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+
+
+        for (let i = 0; i < filesLength; i++) {
+          let fileType = files[i].type; 
+          if (!validExtensions.includes(fileType)) {
+            alert(".pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ!");
+          } else {
+            showFilename(i)
+          }
+        }
+       
+      }
+
+      function showFilename(i) {
+     
+        const uploader = $('#fileInput');
+        const list = $('#fileName');
+
+
+            list.append(`
+               <div class="orderfiles__item">
+                  <div class="orderfiles__wrapper">
+                    <div class="orderfiles__title">${files[i].name} <a href='#' data-fileremove='fileName_id_new${i}'></a></div>
+                    <div class="orderfiles__info">${Math.floor(files[i].size/1000) + ' кБ'}</div>
+                  </div>
+                </div>  `)
+              
+        
+     
+      }
+    
+    </script>
 
 
     <footer id="footer">
