@@ -1,0 +1,31 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+
+<style>
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+</style>
+
+<div class="container">
+  <div class='center'>
+    <ul>
+      <li><a href="auth.html" target='_blank'>авторизация</a></li>
+      <li><a href="auth_register.html" target='_blank'>регистрация</a></li>
+      <li><a href="auth_password.html" target='_blank'>пароль</a></li>
+      <li><a href="auth_success.html" target='_blank'>успех</a></li>
+      <li><a href="index.html" target='_blank'>акции</a></li>
+      <li><a href="profile.html" target='_blank'>профиль</a></li>
+      <li><a href="profile_agents.html" target='_blank'>агенты</a></li>
+      <li><a href="profile_noagents.html" target='_blank'>нет агентов</a></li>
+      <li><a href="order.html" target='_blank'>заказы</a></li>
+      <li><a href="order_detail.html" target='_blank'>детальная заказа</a></li>
+    </ul>
+  </div>
+</div><!-- /.container -->
+
+
+<%= _.template(require('../includes/footer.html').default)(data) %>
