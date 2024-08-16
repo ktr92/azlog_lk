@@ -29,7 +29,13 @@ function closeByClickOutside(element, button) {
 
 
 $(document).ready(function () {
+  $('.pagefilterbtn').on('click', function(e) {
+    e.preventDefault()
 
+    $(this).closest('.pagefilter').toggleClass('active')
+
+    $(this).closest('.pagefilter').find('.pagefilterbtn__hidden').slideToggle()
+})
  
   $('[data-toggleclick]').on('click', function(e) {
     $(this).toggleClass('active')

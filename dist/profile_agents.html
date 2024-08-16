@@ -259,8 +259,7 @@
               <div class="dropdownblock__wrapper">
                 <div class="dropdownblock__links">
                   <menu>
-                    <li><a href="">Зайти</a></li>
-                    <li class="signout"><a href="">Выйти</a></li>
+                    <li class="signout"><a href="">Выход</a></li>
                   </menu>
                 </div>
               </div>
@@ -297,68 +296,68 @@
 
               <div class="pagetable" id='pagetable_agents'>
                 <div class="pagetable__table">
-                 <table>
-                  <thead>
-                    <tr>
-                      <th class="col_tableid">
-                        <span>Код клиента</span>
-                      </th>
-                      <th class="col_tablename">
-                        <span >Компания / ФИО</span>
-                      </th>
-                      <th class="col_tablestatus">
-                        <span >Статус</span>
-                      </th>
-                      <th class="col_tablebutton">
-                        <span ></span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="col_tableid">
-                        <span class="onlyMobile th">Код клиента</span>
-                        <span class="tableid">85858581888148</span>
-                      </td>
-                      <td class="col_tablename">
-                        <span class="onlyMobile th">Компания / ФИО</span>
-                        <span class="tablename">Иванов Иван Иванович</span>
-                      </td>
-                      <td  class="col_tablestatus">
-                        <span class="tablestatus tablestatus_ok">Подтвержденный</span>
-                      </td>
-                      <td class="col_tablebutton">
-                        <span class="tablebutton">
-                          <a href="#agent_1" data-toggle='popup' class='btn_white'>Просмотр</a>
-                        </span><!-- /.tablebutton -->
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="col_tableid">
-                        <span class="onlyMobile th">Код клиента</span>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th class="col_tableid">
+                          <span>Код клиента</span>
+                        </th>
+                        <th class="col_tablename">
+                          <span>Компания / ФИО</span>
+                        </th>
+                        <th class="col_tablestatus">
+                          <span>Статус</span>
+                        </th>
+                        <th class="col_tablebutton">
+                          <span></span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="col_tableid">
+                          <span class="onlyMobile th">Код клиента</span>
+                          <span class="tableid">85858581888148</span>
+                        </td>
+                        <td class="col_tablename">
+                          <span class="onlyMobile th">Компания / ФИО</span>
+                          <span class="tablename">Иванов Иван Иванович</span>
+                        </td>
+                        <td class="col_tablestatus">
+                          <span class="tablestatus tablestatus_ok">Подтвержденный</span>
+                        </td>
+                        <td class="col_tablebutton">
+                          <span class="tablebutton">
+                            <a href="#agent_1" data-toggle='popup' class='btn_white'>Просмотр</a>
+                          </span><!-- /.tablebutton -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col_tableid">
+                          <span class="onlyMobile th">Код клиента</span>
 
-                        <span class="tableid">65190 5191959159</span>
-                      </td>
-                      <td class="col_tablename">
-                        <span class="onlyMobile th">Компания / ФИО</span>
+                          <span class="tableid">65190 5191959159</span>
+                        </td>
+                        <td class="col_tablename">
+                          <span class="onlyMobile th">Компания / ФИО</span>
 
-                        <span class="tablename">ООО “ТРАНС КАРГО”</span>
-                      </td>
-                      <td  class="col_tablestatus">
-                        <span class="tablestatus tablestatus_reject">Не подтвержденный</span>
-                      </td>
-                      <td class="col_tablebutton">
-                        <span class="tablebutton">
-                          <a href="#agent_2" data-toggle='popup' class='btn_white'>Просмотр</a>
-                        </span><!-- /.tablebutton -->
-                      </td>
-                    </tr>
-                  </tbody>
-                 </table>
+                          <span class="tablename">ООО “ТРАНС КАРГО”</span>
+                        </td>
+                        <td class="col_tablestatus">
+                          <span class="tablestatus tablestatus_reject">Не подтвержденный</span>
+                        </td>
+                        <td class="col_tablebutton">
+                          <span class="tablebutton">
+                            <a href="#agent_2" data-toggle='popup' class='btn_white'>Просмотр</a>
+                          </span><!-- /.tablebutton -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div><!-- /.pagetable__table -->
 
                 <div class="pagetable__add">
-                  <a href="#" class='linkadd'>Добавить контрагента</a>
+                  <a href="#popup_newagent" data-toggle="modal" class='linkadd'>Добавить контрагента</a>
                 </div><!-- /.pagetable__add -->
               </div><!-- /.pagetable -->
 
@@ -456,6 +455,92 @@
 
         </main>
     </section><!-- /#content -->
+
+    <div id="popup_newagent" class="modal fade modal_calc modal_large">
+      <div class="modal-dialog">
+        <span class="modalclose" data-dismiss="modal" aria-hidden="true">
+          <img src="img/modalclose.svg" alt="" class='onlyDesktop'>
+          <img src="img/closepopup.svg" alt="" class='onlyMobile'>
+        </span>
+        <div class="modal-content">
+
+          <div class="modal-body">
+            <div class="modal__header">
+              <div class="modal__title">Добавление контрагента</div>
+              <div class="modal__radiotabs">
+                <div class="radiotabs">
+                  <div class="radiotabs__item">
+                    <input type="radio" checked id="radio-btn-1" name="radio-btns">
+                    <label for="radio-btn-1" class="btn">Физ. лицо</label>
+                  </div><!-- /.radiotabs__item -->
+                  <div class="radiotabs__item">
+                    <input type="radio" id="radio-btn-2" name="radio-btns">
+                    <label for="radio-btn-2" class="btn">Юр. лицо</label>
+                  </div><!-- /.radiotabs__item -->
+                  <div class="radiotabs__item">
+                    <input type="radio" id="radio-btn-3" name="radio-btns">
+                    <label for="radio-btn-3" class="btn">ИП</label>
+                  </div><!-- /.radiotabs__item -->
+                </div><!-- /.radiotabs -->
+              </div><!-- /.modal__tab -->
+            </div>
+
+            <div class="modal__content ">
+              <div class="formblock">
+                <div class="formblock__form">
+                  <form action="">
+                    <div class="formblock__main">
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <label for="">Название организации</label>
+                          <input type="text" value="">
+                        </div><!-- /.formblock__input -->
+                      </div><!-- /.formblock__row -->
+                      <div class="formblock__row">
+                        <div class="formblock__col">
+                          <div class="formblock__input ">
+                            <label for="">ИНН</label>
+                            <input type="text" value="">
+                          </div><!-- /.formblock__input -->
+                        </div><!-- /.formblock__col -->
+                        <div class="formblock__col">
+                          <div class="formblock__input ">
+                            <label for="">КПП</label>
+                            <input type="text" value="">
+
+                          </div><!-- /.formblock__input -->
+                        </div><!-- /.formblock__col -->
+
+                      </div><!-- /.formblock__main -->
+
+                    </div><!-- /.formblock__row -->
+                    <div class="formblock__row">
+                      <div class="formblock__input">
+                        <label for="">Контактное лицо</label>
+                        <input type="text" value="">
+                      </div><!-- /.formblock__input -->
+                    </div><!-- /.formblock__row -->
+
+
+
+                    <div class="formblock__buttons between">
+                      <button type="reset" name="">
+                        <span class="btn_reset">Сбросить</span></button>
+                      <button type="submit" name="" class='btn_main'>
+                        Добавить</button>
+                    </div><!-- /.formblock__buttons -->
+
+                  </form>
+                </div><!-- /.formblock__form -->
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
     <footer id="footer">
   <div class="footermain w-full">
     <div class="container">

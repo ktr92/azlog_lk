@@ -990,6 +990,7 @@ padding: 3px 6px;
     bottom: unset;
     overflow: visible !important;
 
+
     .modalclose {
       width: unset;
       height: unset;opacity: 1;
@@ -1007,16 +1008,20 @@ padding: 3px 6px;
     margin: 0;
     left: 0;top: 0;
     right: unset;
-    overflow: visible !important;
+    overflow-x: visible !important;
+      
     bottom: unset;
   }
   .modal_large .modal-content{
    border-radius: 0;
    padding: 28px 18px 18px 18px;
-   overflow: visible !important;
-
+   overflow-y: auto !important;
+   max-height: 100vh;
   }
   .orderfiles__item {
+    width: 100%;
+  }
+  .formblock__row .formblock__col {
     width: 100%;
   }
 
@@ -1027,5 +1032,31 @@ padding: 3px 6px;
     .orderparams_dt {
       font-size: 14px;
     }
+  }
+  .formblock__row {
+    flex-wrap: wrap;
+  }
+  .orderfiles__title {
+    font-size: 12px;
+  }
+  .formblock__button {
+    width: unset;
+  }
+  .formblock__button button {
+    border: none;
+    height: unset;
+  }
+  .formblock__block {
+    margin: 20px 0;
+  }
+  .formblock__buttons.between .btn_main {
+    min-width: unset;
+  }
+  .radiotabs input[type=radio] + label.btn {
+    padding: 9px;
+    font-size: 12px;
+  }
+  .radiotabs__item {
+    margin-right: 5px;
   }
 }
