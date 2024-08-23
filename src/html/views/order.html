@@ -974,7 +974,7 @@
                           <span class="onlyMobile th">Сумма</span>
                           <span class="">
                             <span class="pagetable__ttn">20 000 ₽ </span>
-                            <span class="pagetable__info green">Оплачено</span>
+                            <span class="pagetable__info red">Не оплачено</span>
                           </span>
                         </td>
                         <td class="pagetable__ttnstatus">
@@ -990,56 +990,59 @@
                 </div><!-- /.pagetable__table -->
 
 
-                <!--  общий тулбар для строк таблицы -->
-                <div class="dropdownblock toolbarmenu" data-toggle="toolbarmenu">
-                  <div class="dropdownblock__wrapper">
-                    <div class="dropdownblock__links">
-                      <menu>
-                        <li>
-                          <a href="#" class='eyeicon' data-actionid='view'>Просмотр</a>
-                        </li>
-                        <li>
-                          <a href="#" class='copyicon' data-actionid='copy'>Копировать</a>
-                        </li>
-                        <li>
-                          <a href="#" class='docicon' data-actionid='doc'>Запросить документы</a>
-                        </li>
-                        <li>
-                          <a href="#" class='downloadicon' data-actionid='download'>Скачать архив документов</a>
-                        </li>
-                        <li>
-                          <a href="#" class='claimicon' data-actionid='claim'>Оформить претензию</a>
-                        </li>
-                      </menu>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- /.pagetable -->
-              <script>
-                // при вызове подставляем ID
-                $('[data-itemid]').on('click', function (e) {
-                  const params = {
-                    id: $(this).data('itemid'),
-                    top: $(this).offset().top,
-                    left: $(this).offset().left
-                  }
-
-                  console.log(params)
-
-                  $('[data-toggle="toolbarmenu"]').css('top', params.top);
-                  $('[data-toggle="toolbarmenu"]').css('left', params.left);
-                  $('[data-actionid="view"]').attr('href', `#view_${params.id}`)
-                  $('[data-actionid="copy"]').attr('href', `#copy_${params.id}`)
-                  $('[data-actionid="doc"]').attr('href', `#doc_${params.id}`)
-                  $('[data-actionid="download"]').attr('href', `#download_${params.id}`)
-                  $('[data-actionid="claim"]').attr('href', `#claim_${params.id}`)
-                })
-              </script>
-
+              
 
             </div><!-- /.container -->
           </div><!-- /.wrapper -->
 
         </main>
     </section><!-- /#content -->
+
+      <!--  общий тулбар для строк таблицы -->
+      <div class="dropdownblock toolbarmenu" data-toggle="toolbarmenu">
+        <div class="dropdownblock__wrapper">
+          <div class="dropdownblock__links">
+            <menu>
+              <li>
+                <a href="#" class='eyeicon' data-actionid='view'>Просмотр</a>
+              </li>
+              <li>
+                <a href="#" class='copyicon' data-actionid='copy'>Копировать</a>
+              </li>
+              <li>
+                <a href="#" class='docicon' data-actionid='doc'>Запросить документы</a>
+              </li>
+              <li>
+                <a href="#" class='downloadicon' data-actionid='download'>Скачать архив документов</a>
+              </li>
+              <li>
+                <a href="#" class='claimicon' data-actionid='claim'>Оформить претензию</a>
+              </li>
+            </menu>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.pagetable -->
+    <script>
+      // при вызове подставляем ID
+      $('[data-itemid]').on('click', function (e) {
+        const params = {
+          id: $(this).data('itemid'),
+          top: $(this).offset().top,
+          left: $(this).offset().left
+        }
+
+        console.log(params)
+
+        $('[data-toggle="toolbarmenu"]').css('top', params.top);
+        $('[data-toggle="toolbarmenu"]').css('left', params.left);
+        $('[data-actionid="view"]').attr('href', `#view_${params.id}`)
+        $('[data-actionid="copy"]').attr('href', `#copy_${params.id}`)
+        $('[data-actionid="doc"]').attr('href', `#doc_${params.id}`)
+        $('[data-actionid="download"]').attr('href', `#download_${params.id}`)
+        $('[data-actionid="claim"]').attr('href', `#claim_${params.id}`)
+      })
+    </script>
+
+
     <%= _.template(require('../includes/footer.html').default)(data) %>

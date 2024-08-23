@@ -124,7 +124,7 @@
                     <div class="popupdata__item">
                       <div class="popupdata__label">Паспорт серия / номер</div>
                       <div class="popupdata__value">
-                        1234 3949491
+                        1234 394991
                       </div>
                     </div><!-- /.popupdata__item -->
                   </div><!-- /.popupdata -->
@@ -193,69 +193,247 @@
             <div class="modal__header">
               <div class="modal__title">Добавление контрагента</div>
               <div class="modal__radiotabs">
-                <div class="radiotabs">
-                  <div class="radiotabs__item">
+                <div class="radiotabs" data-headertabs="tabs_form">
+                  <ul>
+                    <li class="radiotabs__item active">
+                      Физ. лицо
+                    </li>
+                    <li class="radiotabs__item ">
+                      Юр. лицо
+                    </li>
+                    <li class="radiotabs__item ">
+                      ИП
+                    </li>
+                  </ul>
+
+                  <!-- <div class="radiotabs__item">
                     <input type="radio" checked id="radio-btn-1" name="radio-btns">
                     <label for="radio-btn-1" class="btn">Физ. лицо</label>
-                  </div><!-- /.radiotabs__item -->
+                  </div>
                   <div class="radiotabs__item">
                     <input type="radio" id="radio-btn-2" name="radio-btns">
                     <label for="radio-btn-2" class="btn">Юр. лицо</label>
-                  </div><!-- /.radiotabs__item -->
+                  </div>
                   <div class="radiotabs__item">
                     <input type="radio" id="radio-btn-3" name="radio-btns">
                     <label for="radio-btn-3" class="btn">ИП</label>
-                  </div><!-- /.radiotabs__item -->
+                  </div> -->
                 </div><!-- /.radiotabs -->
               </div><!-- /.modal__tab -->
             </div>
 
             <div class="modal__content ">
               <div class="formblock">
-                <div class="formblock__form">
-                  <form action="">
-                    <div class="formblock__main">
-                      <div class="formblock__row">
-                        <div class="formblock__input">
-                          <label for="">Название организации</label>
-                          <input type="text" value="">
-                        </div><!-- /.formblock__input -->
+                <div class="formblock__form" data-tabswrapper="tabs_form">
+                  <div class="tabs__content active" data-contenttabs="tabs_form">
+
+                    <form action="">
+                      <div class="formblock__main">
+                        <div class="formblock__row">
+                          <div class="formblock__input">
+                            <label for="">ФИО</label>
+                            <input type="text" value="">
+                          </div><!-- /.formblock__input -->
+                        </div><!-- /.formblock__row -->
+                        <div class="formblock__row">
+                          <div class="formblock__col">
+                            <div class="formblock__input">
+                              <label class="calcform__title">Документ</label>
+                              <select name="F_DOCTYPE" id="" data-select=" $sendParams['INFO_TEXT']oc"
+                                data-stepdata="send_doc" data-steptype="source">
+                                <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
+                                <option value="Водительское удостоверение" data-select="doc">
+                                  Водительское удостоверение
+                                </option>
+                                <option value="Иностранный паспорт" data-select="doc">Иностранный
+                                  паспорт
+                                </option>
+                                <option value="Удостоверение личности офицера" data-select="doc">
+                                  Удостоверение личности офицера
+                                </option>
+                                <option value="Паспорт моряка" data-select="doc">Паспорт моряка</option>
+                                <option value="Загран. паспорт" data-select="doc">Загран. паспорт
+                                </option>
+                                <option value="Военный билет" data-select="doc">Военный билет</option>
+
+                              </select>
+                              <!-- /# -->
+                            </div>
+                          </div><!-- /.formblock__col -->
+                          <div class="formblock__col">
+                            <div class="formblock__input">
+                              <label class="calcform__title">Номер документа</label>
+                              <div class="calcform__multipleInput" data-select="input_doc">
+                                <div class="inputDoc calcform__multipleInput" data-select="passport">
+                                  <input type="text" name="F_PASS_1" placeholder="СССС" class="inputPassport1"
+                                    data-steptype="source" data-stepdata="send_pasp1" data-required="required"
+                                    data-min="4" data-max="4">
+                                  <input type="text" name="F_PASS_2" placeholder="000000" class="inputPassport2"
+                                    data-steptype="source" data-stepdata="send_pasp2" data-required="required"
+                                    data-min="6" data-max="6">
+                                </div>
+                                <div class="inputDoc " data-select="doc" style="display: none; width: 100%;">
+                                  <input type="text" name="F_DOC" placeholder="" class="inputDocument"
+                                    style="width: 100%;" data-steptype="source" data-stepdata="send_anotherdoc"
+                                    data-required="required" data-min="3" data-max="30">
+                                </div>
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+
+                            </div>
+                          </div><!-- /.formblock__col -->
+
+                        </div><!-- /.formblock__main -->
+
                       </div><!-- /.formblock__row -->
                       <div class="formblock__row">
                         <div class="formblock__col">
-                          <div class="formblock__input ">
-                            <label for="">ИНН</label>
-                            <input type="text" value="">
-                          </div><!-- /.formblock__input -->
-                        </div><!-- /.formblock__col -->
+                          <div class="formblock__input">
+                            <label class="calcform__title">Телефон</label>
+                            <input type="tel" name="F_PHONE" data-stepdata="send_tel" data-steptype="source"
+                              data-required="required" data-min="18" data-max="18">
+                          </div>
+                        </div>
                         <div class="formblock__col">
-                          <div class="formblock__input ">
-                            <label for="">КПП</label>
-                            <input type="text" value="">
+                          <div class="formblock__input">
+                            <label class="calcform__title">E-mail (необязательно)</label>
 
-                          </div><!-- /.formblock__input -->
-                        </div><!-- /.formblock__col -->
+                            <input type="text" name="F_EMAIL" data-stepdata="send_email" data-steptype="source">
+                          </div>
+                        </div>
+                      </div><!-- /.formblock__row -->
 
-                      </div><!-- /.formblock__main -->
+                      <div class="formblock__buttons between">
+                        <button type="reset" name="">
+                          <span class="btn_reset">Сбросить</span></button>
+                        <button type="submit" name="" class='btn_main'>
+                          Добавить</button>
+                      </div><!-- /.formblock__buttons -->
 
-                    </div><!-- /.formblock__row -->
-                    <div class="formblock__row">
-                      <div class="formblock__input">
-                        <label for="">Контактное лицо</label>
-                        <input type="text" value="">
-                      </div><!-- /.formblock__input -->
-                    </div><!-- /.formblock__row -->
+                    </form>
+                  </div>
+                  <div class="tabs__content " data-contenttabs="tabs_form">
+                    <form action="">
+                      <div class="formblock__main">
+                        <div class="formblock__row">
+                          <div class="formblock__col">
+                            <div class="formblock__input ">
+                              <label for="">ИНН</label>
+                              <input type="text" value="" data-stepdata="send_inn">
+                            </div><!-- /.formblock__input -->
+                          </div><!-- /.formblock__col -->
+                          <div class="formblock__col">
+                            <div class="formblock__input ">
+                              <label for="">КПП</label>
+                              <input type="text" value="" data-stepdata="send_kpp">
+
+                            </div><!-- /.formblock__input -->
+                          </div><!-- /.formblock__col -->
+
+                        </div><!-- /.formblock__main -->
+
+                        <div class="formblock__row">
+                          <div class="formblock__col">
+
+                            <div class="formblock__input calcform__item_small">
+                              <label class="calcform__title">Правовая форма</label>
+                              <select name="U_FORM" id="" data-stepdata="send_yurform" data-steptype="source">
+                                <option value="ООО" selected="">ООО</option>
+                                <option value="ОАО">ОАО</option>
+                                <option value="ЗАО">ЗАО</option>
+                              </select>
+                              <!-- /# -->
+                            </div>
+                          </div>
+                          <div class="formblock__col">
+
+                            <div class="formblock__input calcform__item_notsmall">
+                              <label class="calcform__title">Название компании</label>
+                              <input type="text" name="U_COMPANY" placeholder="Название компании"
+                                data-stepdata="send_yurname" data-steptype="source" data-required="required"
+                                data-min="2" data-max="300">
+                            </div>
+                          </div>
+
+                        </div><!-- /.formblock__row -->
+
+                      </div><!-- /.formblock__row -->
+                      <div class="formblock__row">
+                        <div class="formblock__col">
+                          <div class="formblock__input">
+                            <label class="calcform__title">Телефон</label>
+                            <input type="tel" name="U_PHONE" data-stepdata="send_tel" data-steptype="source"
+                              data-required="required" data-min="18" data-max="18">
+                          </div>
+                        </div>
+                        <div class="formblock__col">
+                          <div class="formblock__input">
+                            <label class="calcform__title">E-mail (необязательно)</label>
+
+                            <input type="text" name="U_EMAIL" data-stepdata="send_email" data-steptype="source">
+                          </div>
+                        </div>
+                      </div><!-- /.formblock__row -->
+                      <div class="formblock__buttons between">
+                        <button type="reset" name="">
+                          <span class="btn_reset">Сбросить</span></button>
+                        <button type="submit" name="" class='btn_main'>
+                          Добавить</button>
+                      </div><!-- /.formblock__buttons -->
+
+                    </form>
+                  </div>
+                  <div class="tabs__content " data-contenttabs="tabs_form">
+                    <form action="">
+                      <div class="formblock__main">
+                        <div class="formblock__row">
 
 
+                          <div class="formblock__input calcform__item_notsmall">
+                            <label class="calcform__title">Название компании</label>
+                            <input type="text" name="U_COMPANY" placeholder="Название компании"
+                              data-stepdata="send_yurname" data-steptype="source" data-required="required" data-min="2"
+                              data-max="300">
+                          </div>
 
-                    <div class="formblock__buttons between">
-                      <button type="reset" name="">
-                        <span class="btn_reset">Сбросить</span></button>
-                      <button type="submit" name="" class='btn_main'>
-                        Добавить</button>
-                    </div><!-- /.formblock__buttons -->
+                        </div><!-- /.formblock__row -->
+                        <div class="formblock__row">
+                            <div class="formblock__input ">
+                              <label for="">ИНН</label>
+                              <input type="text" value="" data-stepdata="send_inn">
+                            </div><!-- /.formblock__input -->
+                          
 
-                  </form>
+                        </div><!-- /.formblock__main -->
+
+                      
+
+                      </div><!-- /.formblock__row -->
+                      <div class="formblock__row">
+                        <div class="formblock__col">
+                          <div class="formblock__input">
+                            <label class="calcform__title">Телефон</label>
+                            <input type="tel" name="IP_PHONE" data-stepdata="send_tel" data-steptype="source"
+                              data-required="required" data-min="18" data-max="18">
+                          </div>
+                        </div>
+                        <div class="formblock__col">
+                          <div class="formblock__input">
+                            <label class="calcform__title">E-mail (необязательно)</label>
+
+                            <input type="text" name="IP_EMAIL" data-stepdata="send_email" data-steptype="source">
+                          </div>
+                        </div>
+                      </div><!-- /.formblock__row -->
+                      <div class="formblock__buttons between">
+                        <button type="reset" name="">
+                          <span class="btn_reset">Сбросить</span></button>
+                        <button type="submit" name="" class='btn_main'>
+                          Добавить</button>
+                      </div><!-- /.formblock__buttons -->
+
+                    </form>
+                  </div>
                 </div><!-- /.formblock__form -->
               </div>
 

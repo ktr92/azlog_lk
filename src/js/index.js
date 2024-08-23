@@ -29,6 +29,65 @@ function closeByClickOutside(element, button) {
 
 
 $(document).ready(function () {
+
+  $.fn.setCursorPosition = function(pos) {
+    if ($(this).get(0).setSelectionRange) {
+      $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+      var range = $(this).get(0).createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+    }
+  };
+
+  $('input[type="tel"]').focus(function(){
+    $(this).setCursorPosition(3);
+  }).mask("+7 (999) 999-99-99")
+
+
+  $("input.phonedob").focus(function(){
+    $(this).setCursorPosition(3);
+  }).mask("9999", {autoclear: false})
+  $('input[data-stepdata="send_pasp1"]').mask("9999")
+  $('input[data-stepdata="send_pasp2"]').mask("999999")
+  $('input[data-stepdata="receive_pasp1"]').mask("9999")
+  $('input[data-stepdata="receive_pasp2"]').mask("999999")
+  $('input[data-stepdata="payer_pasp1"]').mask("9999")
+  $('input[data-stepdata="payer_pasp2"]').mask("999999")
+  $('input[data-stepdata="send_kpp"]').mask("99999999")
+  $('input[data-stepdata="send_inn"]').mask("999999999?999")
+  $('input[data-stepdata="receive_yurkpp"]').mask("99999999")
+  $('input[data-stepdata="receive_yurinn"]').mask("999999999?999")
+  $('input[name="FLOOR"]').mask("9?9")
+  $('input[name="TO_FLOOR"]').mask("9?9")
+
+  const $tabs = document.querySelector('[data-headertabs]')
+
+  if ($tabs) {
+    $tabs.addEventListener('click', function(e) {
+      const el = e.target
+      if (el.tagName === 'LI') {
+          if (!el.classList.contains('active')) {
+              let index = Array.from(el.parentNode.children).indexOf(el)
+  
+              document.querySelectorAll('[data-headertabs] li').forEach(item => {
+                  item.classList.remove('active')
+              })
+              el.classList.add('active')
+  
+              document.querySelectorAll('[data-contenttabs]').forEach(item => {
+                  item.classList.remove('active')
+              })
+              const items = Array.from(document.querySelector('[data-tabswrapper]').children)
+              items[index].classList.add('active')
+          }
+      }
+  })
+  }
+
+
   $('.pagefilterbtn').on('click', function(e) {
     e.preventDefault()
 
