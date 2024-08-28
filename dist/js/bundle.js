@@ -53,6 +53,19 @@ function closeByClickOutside(element, button) {
 
 $(document).ready(function () {
 
+  $('[data-click="newtel"]').on('click', function(e) {
+    $(this).hide()
+    $(this).siblings('.tel2').addClass('active')
+  })
+
+  $('[name=F_DOCTYPE]').on('change', function() {
+    if ($(this).val() !== 'Паспорт РФ') {
+      $('[name=F_PASS_1]').hide()
+    } else {
+      $('[name=F_PASS_1]').show()
+    }
+  })
+
   $.fn.setCursorPosition = function(pos) {
     if ($(this).get(0).setSelectionRange) {
       $(this).get(0).setSelectionRange(pos, pos);

@@ -387,7 +387,7 @@
                     <div class="popupdata__item">
                       <div class="popupdata__label">Email</div>
                       <div class="popupdata__value">
-                        <a href="mailto:xolxllz@gmail.com">xolxllz@gmail.com</a>
+                        <a href="mailto:xolxllz@gmail.com">xolxllz@gmail.com</a> 
                       </div>
                     </div><!-- /.popupdata__item -->
                     <div class="popupdata__item">
@@ -399,7 +399,7 @@
                     <div class="popupdata__item">
                       <div class="popupdata__label">Паспорт серия / номер</div>
                       <div class="popupdata__value">
-                        1234 394991
+                        1234 39499
                       </div>
                     </div><!-- /.popupdata__item -->
                   </div><!-- /.popupdata -->
@@ -514,7 +514,7 @@
                           <div class="formblock__col">
                             <div class="formblock__input">
                               <label class="calcform__title">Документ</label>
-                              <select name="F_DOCTYPE" id="" data-select=" $sendParams['INFO_TEXT']oc"
+                              <select name="F_DOCTYPE" id="" data-select=""
                                 data-stepdata="send_doc" data-steptype="source">
                                 <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
                                 <option value="Водительское удостоверение" data-select="doc">
@@ -558,6 +558,8 @@
                             </div>
                           </div><!-- /.formblock__col -->
 
+
+
                         </div><!-- /.formblock__main -->
 
                       </div><!-- /.formblock__row -->
@@ -565,8 +567,16 @@
                         <div class="formblock__col">
                           <div class="formblock__input">
                             <label class="calcform__title">Телефон</label>
-                            <input type="tel" name="F_PHONE" data-stepdata="send_tel" data-steptype="source"
+                            <input type="tel" name="F_PHONE[]" data-stepdata="send_tel" data-steptype="source"
                               data-required="required" data-min="18" data-max="18">
+                          </div>
+
+                          <span data-click="newtel" class="calcform__addTel">
+                            <span>Добавить номер
+                              телефона</span>
+                          </span>
+                          <div class="tel2 ">
+                            <input type="tel" name="F_PHONE[]" data-stepdata="send_tel2" data-steptype="source"  data-min="18" data-max="18">
                           </div>
                         </div>
                         <div class="formblock__col">
@@ -592,23 +602,6 @@
                       <div class="formblock__main">
                         <div class="formblock__row">
                           <div class="formblock__col">
-                            <div class="formblock__input ">
-                              <label for="">ИНН</label>
-                              <input type="text" value="" data-stepdata="send_inn">
-                            </div><!-- /.formblock__input -->
-                          </div><!-- /.formblock__col -->
-                          <div class="formblock__col">
-                            <div class="formblock__input ">
-                              <label for="">КПП</label>
-                              <input type="text" value="" data-stepdata="send_kpp">
-
-                            </div><!-- /.formblock__input -->
-                          </div><!-- /.formblock__col -->
-
-                        </div><!-- /.formblock__main -->
-
-                        <div class="formblock__row">
-                          <div class="formblock__col">
 
                             <div class="formblock__input calcform__item_small">
                               <label class="calcform__title">Правовая форма</label>
@@ -631,6 +624,24 @@
                           </div>
 
                         </div><!-- /.formblock__row -->
+                        <div class="formblock__row">
+                          <div class="formblock__col">
+                            <div class="formblock__input ">
+                              <label for="">ИНН</label>
+                              <input type="text" value="" data-stepdata="send_inn">
+                            </div><!-- /.formblock__input -->
+                          </div><!-- /.formblock__col -->
+                          <div class="formblock__col">
+                            <div class="formblock__input ">
+                              <label for="">КПП</label>
+                              <input type="text" value="" data-stepdata="send_kpp">
+
+                            </div><!-- /.formblock__input -->
+                          </div><!-- /.formblock__col -->
+
+                        </div><!-- /.formblock__main -->
+
+                       
 
                       </div><!-- /.formblock__row -->
                       <div class="formblock__row">
@@ -642,13 +653,24 @@
                           </div>
                         </div>
                         <div class="formblock__col">
+                          <div class="calcform__item ">
+                            <div class="calcform__title">Контактное лицо</div>
+                            <input type="text" name="U_FIO" placeholder="ФИО лица" data-stepdata="send_yurfio" data-steptype="source" data-min="3" data-max="300">
+      
+                          </div>
+                        </div><!-- /.formblock__col -->
+                    
+                       
+                      </div><!-- /.formblock__row -->
+                      <div class="formblock__row">
+                        <div class="formblock__col">
                           <div class="formblock__input">
                             <label class="calcform__title">E-mail (необязательно)</label>
 
                             <input type="text" name="U_EMAIL" data-stepdata="send_email" data-steptype="source">
                           </div>
                         </div>
-                      </div><!-- /.formblock__row -->
+                      </div>
                       <div class="formblock__buttons between">
                         <button type="reset" name="">
                           <span class="btn_reset">Сбросить</span></button>
@@ -693,6 +715,15 @@
                           </div>
                         </div>
                         <div class="formblock__col">
+                          <div class="calcform__item ">
+                            <div class="calcform__title">Контактное лицо</div>
+                            <input type="text" name="IP_FIO" placeholder="ФИО лица" data-stepdata="send_yurfio" data-steptype="source" data-min="3" data-max="300">
+      
+                          </div>
+                        </div><!-- /.formblock__col -->
+                      </div>
+                      <div class="formblock__row">
+                        <div class="formblock__col">
                           <div class="formblock__input">
                             <label class="calcform__title">E-mail (необязательно)</label>
 
@@ -700,6 +731,7 @@
                           </div>
                         </div>
                       </div><!-- /.formblock__row -->
+                      
                       <div class="formblock__buttons between">
                         <button type="reset" name="">
                           <span class="btn_reset">Сбросить</span></button>
@@ -719,6 +751,63 @@
         </div>
       </div>
     </div>
+
+    <script>
+
+
+
+
+      $('[type="submit"]').on("click", function (e) {
+      e.preventDefault()
+      const $form = $(this).parents("form")
+
+      function validateRequired() {
+        let valid = true
+        const required = []
+        const $required = $form.find("input[data-required]")
+        $required.each(function () {
+          const obj = {
+            input: $(this),
+            val: $(this).val().toString(),
+          }
+          required.push(obj)
+        })
+
+        required.forEach(function (item) {
+          if (item.val.length < 1) {
+            valid = false
+            item.input.addClass("error")
+          } else {
+            item.input.removeClass("error")
+          }
+        })
+
+        if ($(".error").length) {
+          $("html, body").animate(
+            {
+              scrollTop: $(".error").offset().top - 50,
+            },
+            500
+          )
+        }
+
+        return valid
+      }
+
+      let errorList = []
+      $.each($(".calcerrors__text:visible"), function (i, val) {
+        errorList.push($(this).text())
+      })
+      $('[name="ERRORS"]').val(errorList.join(","))
+
+      if (validateRequired()) {
+        // sendform
+      }
+    })
+
+
+    </script>
+
     <footer id="footer">
   <div class="footermain w-full">
     <div class="container">

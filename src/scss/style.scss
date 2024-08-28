@@ -350,6 +350,9 @@ input[type="password"] {
   &.input-error {
     border-color: #f23f34;
   }
+  &.error {
+    border-color: #f23f34;
+  }
 
   &:focus {
     border-color: $focus;
@@ -3270,7 +3273,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .formblock__row {
   margin-bottom: 16px;
   display: flex;
-  align-items: flex-end;
+/*   align-items: flex-end; */
   width: 100%;
   gap: 19px;
   .formblock__col {
@@ -3747,7 +3750,21 @@ border-radius: 5px;
 background: #fff;
     }
   }
-
+  .formblock__input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+  .calcform__addTel {
+    cursor: pointer
+  }
+  .tel2 {
+    display: none;
+  }
+  .tel2.active {
+    display: block;
+  }
 
   [data-contenttabs] {
     display: none; 
