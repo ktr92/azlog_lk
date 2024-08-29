@@ -3282,6 +3282,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 select {
+  font-family: var(--font-family);
   background-color: #f3f3f7;
     border-radius: 8px;
     display: flex;

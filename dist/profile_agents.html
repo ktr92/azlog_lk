@@ -399,7 +399,7 @@
                     <div class="popupdata__item">
                       <div class="popupdata__label">Паспорт серия / номер</div>
                       <div class="popupdata__value">
-                        1234 39499
+                        1234 394991
                       </div>
                     </div><!-- /.popupdata__item -->
                   </div><!-- /.popupdata -->
@@ -419,7 +419,7 @@
                     <div class="popupdata__item">
                       <div class="popupdata__label">Статус</div>
                       <div class="popupdata__value">
-                        <span class="tablestatus tablestatus_ok">Подтвержденный</span>
+                        <span class="tablestatus tablestatus_reject">Не подтвержденный</span>
                       </div>
                     </div><!-- /.popupdata__item -->
                     <div class="popupdata__item">
@@ -443,7 +443,7 @@
                     <div class="popupdata__item">
                       <div class="popupdata__label">Паспорт серия / номер</div>
                       <div class="popupdata__value">
-                        1234 3949491
+                        1234 394991
                       </div>
                     </div><!-- /.popupdata__item -->
                   </div><!-- /.popupdata -->
@@ -646,13 +646,6 @@
                       </div><!-- /.formblock__row -->
                       <div class="formblock__row">
                         <div class="formblock__col">
-                          <div class="formblock__input">
-                            <label class="calcform__title">Телефон</label>
-                            <input type="tel" name="U_PHONE" data-stepdata="send_tel" data-steptype="source"
-                              data-required="required" data-min="18" data-max="18">
-                          </div>
-                        </div>
-                        <div class="formblock__col">
                           <div class="calcform__item ">
                             <div class="calcform__title">Контактное лицо</div>
                             <input type="text" name="U_FIO" placeholder="ФИО лица" data-stepdata="send_yurfio" data-steptype="source" data-min="3" data-max="300">
@@ -660,6 +653,14 @@
                           </div>
                         </div><!-- /.formblock__col -->
                     
+                        <div class="formblock__col">
+                          <div class="formblock__input">
+                            <label class="calcform__title">Телефон</label>
+                            <input type="tel" name="U_PHONE" data-stepdata="send_tel" data-steptype="source"
+                              data-required="required" data-min="18" data-max="18">
+                          </div>
+                        </div>
+                        
                        
                       </div><!-- /.formblock__row -->
                       <div class="formblock__row">
@@ -708,19 +709,20 @@
                       </div><!-- /.formblock__row -->
                       <div class="formblock__row">
                         <div class="formblock__col">
-                          <div class="formblock__input">
-                            <label class="calcform__title">Телефон</label>
-                            <input type="tel" name="IP_PHONE" data-stepdata="send_tel" data-steptype="source"
-                              data-required="required" data-min="18" data-max="18">
-                          </div>
-                        </div>
-                        <div class="formblock__col">
                           <div class="calcform__item ">
                             <div class="calcform__title">Контактное лицо</div>
                             <input type="text" name="IP_FIO" placeholder="ФИО лица" data-stepdata="send_yurfio" data-steptype="source" data-min="3" data-max="300">
       
                           </div>
                         </div><!-- /.formblock__col -->
+                        <div class="formblock__col">
+                          <div class="formblock__input">
+                            <label class="calcform__title">Телефон</label>
+                            <input type="tel" name="IP_PHONE" data-stepdata="send_tel" data-steptype="source"
+                              data-required="required" data-min="18" data-max="18">
+                          </div>
+                        </div>
+                        
                       </div>
                       <div class="formblock__row">
                         <div class="formblock__col">
