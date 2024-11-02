@@ -6,7 +6,49 @@ function initFE() {
   closeByClickOutside('[data-toggle="agentblock"]', '[data-toggleclick="agentblock"]')
   closeByClickOutside('[data-toggle="toolbarmenu"]', '[data-toggleclick="toolbarmenu"]')
   closeByClickOutside('.popup', '[data-toggle="popup"]')
+  dateInit() 
+}
 
+const dateInit = (disabledDays = []) => {
+  // 0 = ВС, 1 = ПН, 2 = ВТ, 3 = СР, 4 = ЧТ, 5 = ПТ, 6 = СБ
+ /*  $('.inputlabel_date').on('click', function(e) {
+    e.preventDefault()
+    e.stopPropagation()
+    let dp = $(this).find('.lk-datepicker').datepicker({
+      minDate: new Date(),
+      onRenderCell: function (date, cellType) {
+        if (cellType == "day") {
+          var day = date.getDay(),
+            isDisabled = disabledDays.indexOf(day) != -1
+
+          return {
+            disabled: isDisabled,
+          }
+        }
+      },
+    })
+  }) */
+  $(".lk-datepicker").each(function () {
+    $(this).datepicker().data("datepicker").destroy()
+    let dp = $(this).datepicker({
+      minDate: new Date(),
+      onRenderCell: function (date, cellType) {
+        if (cellType == "day") {
+          var day = date.getDay(),
+            isDisabled = disabledDays.indexOf(day) != -1
+          return {
+            disabled: isDisabled,
+          }
+        }
+      },
+    })
+
+    console.log(dp)
+
+    $(this).closest('.inputlabel_date').on('click', function() {
+      dp.show()
+    })
+  })
 }
 
 function closeByClickOutside(element, button) {

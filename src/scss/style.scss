@@ -2198,6 +2198,16 @@ button {
   background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_2259_2690)"><path d="M4.99967 1.6665C4.08051 1.6665 3.33301 2.414 3.33301 3.33317V16.6665C3.33301 17.5857 4.08051 18.3332 4.99967 18.3332H12.1156C11.6839 17.8515 11.3452 17.2882 11.1243 16.6665H4.99967V3.33317H10.833V7.49984H14.9997V9.99984H16.6663V6.6665L11.6663 1.6665H4.99967ZM15.833 11.6665C14.0019 11.6665 12.4997 13.1687 12.4997 14.9998V15.8332H12.6689C13.0492 17.2551 14.2967 18.3332 15.833 18.3332H17.4997V19.9998L19.9997 17.4998L17.4997 14.9998V16.6665H15.833C14.9025 16.6665 14.1663 15.9304 14.1663 14.9998C14.1663 14.0693 14.9025 13.3332 15.833 13.3332H19.9997V11.6665H15.833Z" fill="%23F23F34" /></g><defs><clipPath id="clip0_2259_2690"><rect width="20" height="20" fill="white" /></clipPath></defs></svg>');
 }
 
+.dotsicon {
+  background-image: url('data:image/svg+xml,<svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" width="14" height="2" fill="%23373737"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  &:hover {
+    background-image: url('data:image/svg+xml,<svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" width="14" height="2" fill="%23373737"/></svg>');
+  }
+}
+
 .pagetablr_indicator {
   display: block;
   background-position: center;
@@ -3810,4 +3820,284 @@ background: #fff;
 .calcform__items {
   display: flex;
 
+}
+
+.orderpage {
+  display: flex;
+  gap: 60px;
+
+}
+.orderpage__main {
+  width: 100%;
+}
+.orderpage__aside {
+  max-width: 467px;
+  width: 100%;
+}
+
+.orderpage__asideblock {
+  margin-bottom: 14px;
+}
+
+
+.btn_green{
+  font-family: var(--font-family);
+font-weight: 700;
+font-size: 14px;
+line-height: 100%;
+color: #49b48d;
+background: rgba(73, 180, 141, 0.15);border-radius: 4px;
+padding: 10px 27px;
+text-align: center;
+width: 100%;
+display: inline-block;
+
+&:hover {
+  background: rgba(73, 180, 141, 0.35)
+}
+}
+.orderpage__aside {
+  .ordertoolbar {
+    margin: 34px 0;
+  }
+  .ordertoolbar__items{
+    gap: 5px;
+    justify-content: space-between;
+  }
+  .ordertoolbar__item {
+    min-width: 70px;
+    max-width: 70px;
+    padding-top: 36px;
+    background-size: 26px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    span {
+      font-weight: 600;
+      display: block;
+font-size: 9px;
+line-height: 100%;
+text-align: center;
+color: #323232;
+    }
+  }
+    .orderitem__btnpanel{
+      max-width: 145px;
+      min-width: 145px;
+ 
+  }
+
+  .orderparams_dd {
+    max-width: 145px;
+    min-width: 145px;
+  }
+}
+.btn_large {
+  padding: 16px;
+  display: block;
+  width: 100%;
+  height: unset;
+  font-size: 14px;
+line-height: 100%;
+text-align: center;
+line-height: 1;
+text-align: center;
+border-radius: 8px;
+
+font-weight: 700;
+}
+.btn_blue{
+  background: rgba(32, 121, 255, 0.15);
+  color: #2079ff;
+
+  &:hover {
+    background: rgba(32, 121, 255, 0.25);
+  }
+}
+.orderitem__button {
+  margin-bottom: 10px;
+}
+.orderitem__buttons {
+  margin-top: 29px;
+  .btn_main {
+
+  }
+  a {
+    width: 100%;
+    display: block;
+  }
+}
+
+.orderitem__info {
+  margin: 22px 0;
+  color: rgba(55, 55, 55, 0.4);
+  text-align: center;
+  font-weight: 500;
+font-size: 14px;
+line-height: 100%;
+
+}
+.orderpage__asideblock {
+  .orderitem__info {
+    margin: 22px 0 0 0;
+  }
+}
+
+
+.red {
+  color: #f23f34 !important;
+}
+
+.newslistaside {
+  .newslist__title{
+    font-weight: 700;
+font-size: 18px;
+line-height: 100%;
+color: #373737;
+  }
+}
+
+.orderhistory__items {
+  max-height: 242px;
+  overflow-y: auto;
+
+}
+.orderhistory__item {
+  margin-bottom: 29px;
+}
+.orderhistory__link {
+  display: block;
+}
+.orderhistory__name {
+  font-weight: 500;
+  display: block;
+font-size: 14px;
+line-height: 100%;
+color: #373737;
+margin-bottom: 11px;
+}
+.orderhistory__date {
+  display: block;
+  font-weight: 500;
+font-size: 12px;
+line-height: 100%;
+color: #373737;
+opacity: 0.5;
+}
+
+.stepform__number {
+  display: block;
+  width: 46px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+  background: #ff4d42;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+.orderpage {
+  .stepform__row {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .stepform__col {
+    position: relative;
+  }
+
+  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #373737;
+  }
+  input::-moz-placeholder { /* Firefox 19+ */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #373737;
+  }
+  input:-ms-input-placeholder { /* IE 10+ */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #373737;
+  }
+  input:-moz-placeholder { /* Firefox 18- */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #373737;
+  }
+}
+
+.inputLocation {
+  position: relative;
+
+
+  input {
+    padding-left: 38px;
+  }
+}
+.inputLocation svg {
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 19px;
+}
+
+.stepform__main_type2 {
+  margin-left: 20px;
+  border-left: 2px dotted rgba(55, 55, 55, 0.2);
+
+  .stepform__content {
+    border-bottom: none;
+    padding-bottom: 15px;
+    margin-bottom: 12px;
+  }
+}
+
+.inputlabel {
+  position: relative;
+  height: 50px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px 20px;
+
+  
+  input {
+    font-weight: 700 !important;
+    font-size: 14px;
+    line-height: 100%;
+    color: #373737;
+    height: 14px;
+    width: 145px;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    font-family: var(--font-family);
+
+  }
+  label {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    color: #373737;
+    opacity: 0.5;
+    margin-bottom: 2px;
+ 
+  }
+}
+.inputlabel_date {
+  width: 225px;
+}
+.inputlabel_dropdown::after {
+  content: url('data:image/svg+xml,<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M7.72581 5.32211L12.981 -7.8575e-08L14.7969 1.83894L7.72581 9L0.654742 1.83894L2.47058 -5.33384e-07L7.72581 5.32211Z" fill="%23373737" /></svg>');
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }

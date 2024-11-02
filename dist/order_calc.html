@@ -299,563 +299,294 @@
                       Выдача приостановлена
                     </div><!-- /.pageheader__status -->
                   </div><!-- /.pageheader__main -->
-                  <div class="pageheader__toolbar">
-                    <div class="ordertoolbar">
-                      <div class="ordertoolbar__items flex">
-                        <a href="#" class="ordertoolbar__item ordertb_update"></a><!-- /.ordertoolbar__item -->
-                        <a href="#" class="ordertoolbar__item ordertb_docs"></a><!-- /.ordertoolbar__item -->
-                        <a href="#" class="ordertoolbar__item ordertb_pause"></a><!-- /.ordertoolbar__item -->
-                        <a href="#" class="ordertoolbar__item ordertb_warning"></a><!-- /.ordertoolbar__item -->
-                        <a href="#" class="ordertoolbar__item ordertb_email"></a><!-- /.ordertoolbar__item -->
-                        <a href="#" class="ordertoolbar__item ordertb_disable"></a><!-- /.ordertoolbar__item -->
-                      </div><!-- /.ordertoolbar__items -->
-                    </div><!-- /.ordertoolbar -->
-                  </div><!-- /.pageheader__toolbar -->
+
                 </div><!-- /.pageheader__wrapper flex items-center -->
 
 
               </div><!-- /.pageheader -->
 
-              <div class="orderblocks">
-                <div class="orderblocks__row">
-                  <div class="orderblocks__col orderblocks__col_map">
-                    <div class="orderitem">
-                      <div class="orderitem__wrapper orderitem__wrapper_wide">
-                        <div class="orderitem__header">
-                          <div class="orderitem__title">Отслеживание посылки</div><!-- /.orderitem__title -->
-                        </div><!-- /.orderitem__header -->
-
-                        <div class="orderitem__content">
-                          <div class="ordermap">
-                            <div id="ordermap">
-                              <img src="img/ordermap.jpg" alt="">
-                            </div><!-- /#ordermap -->
-                          </div><!-- /.ordermap -->
-                          <div class="ordertrack">
-                            <div class="ordertrack__wrapper">
-                              <div class="ordertrack__point">
-                                <div class="ordertrack__status ordertrack__status_in">
-                                  <img src="img/ordertrack__status_in.svg" alt="">
-                                </div><!-- /.ordertrack__status -->
-                                <div class="ordertrack__current">
-                                  <div class="ordertrack__title">Текущее местоположение</div>
-                                  <!-- /.ordertrack__title -->
-                                  <div class="ordertrack__value">Краснодар</div><!-- /.ordertrack__value -->
-                                </div><!-- /.ordertrack__current -->
-                              </div><!-- /.ordertrack__point -->
-                              <div class="ordertrack__pin">ПИН:4141</div><!-- /.ordertrack__pin -->
-                            </div><!-- /.ordertrack__wrapper -->
-                          </div><!-- /.ordertrack -->
-                        </div><!-- /.orderitem__content -->
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div><!-- /.orderblocks__col -->
-                  <div class="orderblocks__col orderblocks__col_docs">
-                    <div class="orderitem">
-                      <div class="orderitem__wrapper orderitem__wrapper_wide">
-                        <div class="orderitem__header">
-                          <div class="orderitem__title">Документы</div>
-                          <div class="orderitem__toolbar flex items-center">
-                            <a href="#" class='icondefault downloadicon2'></a>
-                           <!--  <a href="#" class='icondefault infoicon'></a> -->
-                          </div><!-- /.orderitem__toolbar -->
-                        </div><!-- /.orderitem__header -->
-
-                        <div class="orderitem__content">
-                          <div class="orderdocs">
-                            <div class="orderdocs__item"><a href="#">Счет на забор груза</a></div>
-                            <div class="orderdocs__item"><a href="#">Счет на межтерминальную перевозку</a></div>
-                            <div class="orderdocs__item disabled"><a href="#">Счет на адресную доставку груза</a></div>
-                            <div class="orderdocs__item"><a href="#">Обьединенный счет</a></div>
-                            <div class="orderdocs__item"><a href="#">ТТН</a></div>
-                            <div class="orderdocs__item disabled" disabled><a href="#">УПД/Акт</a></div>
-                          </div><!-- /.orderdocs -->
-                        </div><!-- /.orderitem__content -->
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div><!-- /.orderblocks__col -->
-                  <div class="orderblocks__col orderblocks__col_params">
-                    <div class="orderitem">
-                      <div class="orderitem__wrapper orderitem__wrapper_wide">
-                        <div class="orderitem__header">
-                          <div class="orderitem__title">Стоимость</div>
-                          <div class="orderitem__toolbar flex items-center">
-                            <a href="#" class='btn_redd'>Оплатить</a>
-                          </div><!-- /.orderitem__toolbar -->
-                        </div><!-- /.orderitem__header -->
-
-                        <div class="orderitem__content">
-                          <div class="orderparams">
-                            <div class="orderparams__item">
-                              <div class="orderparams__dt">Межтерминальная перевозка</div>
-                              <div class="orderparams_dd">456 000 ₽ </div>
-                            </div><!-- /.orderparams__item -->
-                            <div class="orderparams__item">
-                              <div class="orderparams__dt">Адресный забор груза</div>
-                              <div class="orderparams_dd">25 000 ₽ </div>
-                            </div><!-- /.orderparams__item -->
-                            <div class="orderparams__item">
-                              <div class="orderparams__dt">Адресная доставка груза</div>
-                              <div class="orderparams_dd">-</div>
-                            </div><!-- /.orderparams__item -->
-                            <div class="orderparams__item">
-                              <div class="orderparams__dt">Стоимость страхования</div>
-                              <div class="orderparams_dd">104,45 ₽ </div>
-                            </div><!-- /.orderparams__item -->
-                            <div class="orderparams__item">
-                              <div class="orderparams__dt">Промокод</div>
-                              <div class="orderparams_dd">GPRI555</div>
-                            </div><!-- /.orderparams__item -->
-                            <div class="orderparams__item">
-                              <div class="orderparams__dt">Размер скидки</div>
-                              <div class="orderparams_dd ">
-                                <div class="discountbadge"> <span>13%</span>
-                                </div><!-- /.discountbadge -->
-                              </div>
-                            </div><!-- /.orderparams__item -->
-                            <div class="orderparams__item">
-                              <div class="orderparams__dt">Статус</div>
-                              <div class="orderparams_dd red">Не оплачено</div>
-                            </div><!-- /.orderparams__item -->
-                          </div><!-- /.orderparams -->
-                        </div><!-- /.orderitem__content -->
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div><!-- /.orderblocks__col -->
-                </div><!-- /.orderblocks__row -->
-                <div class="orderblocks__row">
-                  <div class="orderblocks__col w-full">
-                    <div class="orderitem w_full">
-                      <div class="orderitem__wrapper orderitem__wrapper_wide">
-                        <div class="orderitem__header flex items-center">
-                          <div class='flex items-center'>
-                            <div class="orderitem__title">Информация по заказу</div>
-                            <div class="orderheader__icons flex items-center">
-                              <span class="ordicon icon_temperature"></span>
-                              <span class="ordicon icon_oil"></span>
-                            </div>
-                          </div>
-                          <div class="orderitem__toolbar flex items-center">
-                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
-                          </div>
-
-                        </div><!-- /.orderitem__header -->
-                        <div class="orderitem__cols">
-                          <div class="orderitem__col">
-                            <div class="orderhistory tracking">
-                              <div class="container py-5">
-                                <div class="row">
-
-                                  <div class="col-md-12 col-lg-12">
-                                    <div id="tracking-pre"></div>
-                                    <div id="tracking">
-                                      <div class="tracking-list">
-
-                                        <div class="tracking-item">
-                                          <div class="tracking-icon">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                              xmlns="http://www.w3.org/2000/svg">
-                                              <circle cx="8" cy="8" r="7" fill="white" stroke="#E6E6E6"
-                                                stroke-width="2" />
-                                              <circle cx="8" cy="8" r="4" fill="#E6E6E6" />
-                                            </svg>
-
-                                          </div>
-
-                                          <div class="tracking-content">г.Комсомольск-на-Амуре, ул.Строительная, дом
-                                            222,
-                                            кв. 222</span></div>
-                                        </div>
-                                        <div class="tracking-item">
-                                          <div class="tracking-icon">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                              xmlns="http://www.w3.org/2000/svg">
-                                              <circle cx="8" cy="8" r="7" fill="white" stroke="#E6E6E6"
-                                                stroke-width="2" />
-                                              <circle cx="8" cy="8" r="4" fill="#E6E6E6" />
-                                            </svg>
-                                          </div>
-
-                                          <div class="tracking-content">Комсомольск-на-Амуре</div>
-                                        </div>
-                                        <div class="tracking-item tracking-item-lastofactive">
-                                          <div class="tracking-icon">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                              xmlns="http://www.w3.org/2000/svg">
-                                              <circle cx="8" cy="8" r="7" fill="white" stroke="#E6E6E6"
-                                                stroke-width="2" />
-                                              <circle cx="8" cy="8" r="4" fill="#E6E6E6" />
-                                            </svg>
-                                          </div>
-
-                                          <div class="tracking-content">Петропавлоск-Камчатский</div>
-                                        </div>
-
-
-                                        <div class="tracking-item tracking-item-pending">
-                                          <div class="tracking-icon ">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                              xmlns="http://www.w3.org/2000/svg">
-                                              <circle cx="8" cy="8" r="7" fill="white" stroke="#E6E6E6"
-                                                stroke-width="2" />
-                                              <circle cx="8" cy="8" r="4" fill="#E6E6E6" />
-                                            </svg>
-                                          </div>
-
-                                          <div class="tracking-content">г.Комсомольск-на-Амуре, ул.Строительная, дом
-                                            222,
-                                            кв. 222</span></div>
-                                        </div>
-                                      </div>
+              <div class="orderpage">
+                <div class="orderpage__main">
+                  <div class="orderpage__steps">
+                    <div class="stepform__items">
+                      <div class="stepform__header flex items-center">
+                        <div class="stepform__icon">
+                          <span class='stepform__number avtive'>01</span>
+                        </div><!-- /.stepform__icon -->
+                        <div class="stepform__title">Направление</div><!-- /.stepform__title -->
+                      </div>
+                      <div class="stepform__main stepform__main_type2">
+                        <div class="stepform__content">
+                          <div class="stepform__row stepform__row_col2 flex">
+                            <div class="stepform__col">
+                              <div class="stepform__input">
+                                <div class="inputLocation">
+                                  <input data-stepdata="f_otpravki" data-steptype="source" type="text"
+                                    autocomplete="off" id="cityInput1" class="cityInput" data-entity="city-autocomplete"
+                                    placeholder="Откуда" name="from_text" value="">
+                                  <input type="hidden" name="from" value="" data-entity="city-kladr-id">
+                                  <ul id="cityList1" class="cityList" style="display: none;">
+                                    <div class="cityListContainer">
                                     </div>
-                                  </div>
+                                  </ul>
+                                  <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M5.99999 0.359863C2.82468 0.359863 0.23999 2.94455 0.23999 6.11986C0.23999 11.2006 5.5064 17.2602 5.72999 17.5161C5.7989 17.5949 5.89593 17.6399 5.99999 17.6399C6.11108 17.6328 6.20109 17.5949 6.26999 17.5161C6.49359 17.256 11.76 11.0924 11.76 6.11986C11.76 2.94455 9.1753 0.359863 5.99999 0.359863ZM5.99999 4.31986C7.19249 4.31986 8.15999 5.28736 8.15999 6.47986C8.15999 7.67236 7.19249 8.63986 5.99999 8.63986C4.80749 8.63986 3.83999 7.67236 3.83999 6.47986C3.83999 5.28736 4.80749 4.31986 5.99999 4.31986Z"
+                                      fill="#C4C4C4"></path>
+                                  </svg>
                                 </div>
                               </div>
-                            </div><!-- /.orderhistory timelapse -->
-                            <div class="orderitem__panel">
-                              <a href="#popup_history" data-toggle="modal" class="btn_gray ">
-                                <span class='icondefault icontime'></span>
-                                <span>История заказа</span>
-                              </a><!-- /.btn_gray -->
-                            </div><!-- /.orderitem__panel -->
-                          </div><!-- /.orderitem__col -->
-                          <div class="orderitem__col">
+                            </div>
+                            <div class="stepform__col">
+                              <div class="stepform__input">
+                                <div class="inputLocation">
+                                  <input data-stepdata="f_dostavki" data-steptype="source" type="text"
+                                    autocomplete="off" name="to_text" id="cityInput2" class="cityInput"
+                                    placeholder="Куда" data-entity="city-autocomplete" value="">
+                                  <input type="hidden" name="to" value="" data-entity="city-kladr-id">
+                                  <ul id="cityList2" class="cityList" style="display: none;">
+                                    <div class="cityListContainer">
+                                    </div>
+                                  </ul>
+                                  <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M5.99999 0.359863C2.82468 0.359863 0.23999 2.94455 0.23999 6.11986C0.23999 11.2006 5.5064 17.2602 5.72999 17.5161C5.7989 17.5949 5.89593 17.6399 5.99999 17.6399C6.11108 17.6328 6.20109 17.5949 6.26999 17.5161C6.49359 17.256 11.76 11.0924 11.76 6.11986C11.76 2.94455 9.1753 0.359863 5.99999 0.359863ZM5.99999 4.31986C7.19249 4.31986 8.15999 5.28736 8.15999 6.47986C8.15999 7.67236 7.19249 8.63986 5.99999 8.63986C4.80749 8.63986 3.83999 7.67236 3.83999 6.47986C3.83999 5.28736 4.80749 4.31986 5.99999 4.31986Z"
+                                      fill="#C4C4C4"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- /.stepform__row -->
+                          <div class="stepform__row stepform__row_col3 flex">
+                            <div class="stepform__col  ">
+                              <div class="inputlabel inputlabel_date inputlabel_dropdown">
+                                <label>Дата отправки</label><!-- /.placeholder -->
+
+                                <input readonly='' class="lk-datepicker datepicker-send" value="" type="text"
+                                  data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"
+                                  data-required="required" data-min="10" data-max="10" placeholder="Выбрать дату">
+                              </div><!-- /.inputlabel -->
+
+
+                            </div><!-- /.stepform__col -->
+                          </div>
+
+                        </div><!-- /.stepform__content -->
+                      </div>
+                    </div><!-- /.stepform__items -->
+                  </div><!-- /.orderpage__steps -->
+                </div><!-- /.orderpage__main -->
+                <div class="orderpage__aside">
+                  <div class="orderpage__asideblocks">
+                    <div class="orderpage__asideblock">
+                      <div class="orderitem">
+                        <div class="orderitem__wrapper orderitem__wrapper_wide">
+                          <div class="orderitem__header">
+                            <div class="orderitem__title">Стоимость</div>
+                            <div class="orderitem__btnpanel flex items-center">
+                              <a href="#" class="btn_green">Оплатить</a>
+                            </div><!-- /.orderitem__toolbar -->
+                          </div><!-- /.orderitem__header -->
+
+                          <div class="orderitem__content">
                             <div class="orderparams">
                               <div class="orderparams__item">
-                                <div class="orderparams__dt">Тип перевозки</div>
-                                <div class="orderparams_dd">Контейнер</div>
+                                <div class="orderparams__dt">Межтерминальная перевозка</div>
+                                <div class="orderparams_dd">456 000 ₽ </div>
                               </div><!-- /.orderparams__item -->
                               <div class="orderparams__item">
-                                <div class="orderparams__dt">Вес груза</div>
-                                <div class="orderparams_dd">25,5 кг</div>
+                                <div class="orderparams__dt">Адресный забор груза</div>
+                                <div class="orderparams_dd">25 000 ₽ </div>
                               </div><!-- /.orderparams__item -->
                               <div class="orderparams__item">
-                                <div class="orderparams__dt">Обьем</div>
-                                <div class="orderparams_dd">5.5 м3</div>
+                                <div class="orderparams__dt">Адресная доставка груза</div>
+                                <div class="orderparams_dd">-</div>
                               </div><!-- /.orderparams__item -->
                               <div class="orderparams__item">
-                                <div class="orderparams__dt">Макс. габарит</div>
-                                <div class="orderparams_dd">50 х 50 х 50 </div>
+                                <div class="orderparams__dt">Стоимость страхования</div>
+                                <div class="orderparams_dd">104,45 ₽ </div>
                               </div><!-- /.orderparams__item -->
                               <div class="orderparams__item">
-                                <div class="orderparams__dt">Мест</div>
-                                <div class="orderparams_dd">5</div>
+                                <div class="orderparams__dt">Промокод</div>
+                                <div class="orderparams_dd">GPRI555</div>
                               </div><!-- /.orderparams__item -->
                               <div class="orderparams__item">
-                                <div class="orderparams__dt">Стоимость груза</div>
-                                <div class="orderparams_dd">500 000 ₽ </div>
+                                <div class="orderparams__dt">Размер скидки</div>
+                                <div class="orderparams_dd ">
+                                  <div class="discountbadge"> <span>13%</span>
+                                  </div><!-- /.discountbadge -->
+                                </div>
                               </div><!-- /.orderparams__item -->
+                              <div class="orderparams__item">
+                                <div class="orderparams__dt">Статус</div>
+                                <div class="orderparams_dd red">Не оплачено</div>
+                              </div><!-- /.orderparams__item -->
+                            </div><!-- /.orderparams -->
+                          </div><!-- /.orderitem__content -->
+                          <div class="orderitem__buttons">
+                            <div class="orderitem__button"><a href="" class="btn_blue btn_large">Сохранить черновик</a>
+                            </div>
+                            <div class="orderitem__button"><a href="" class="btn_main btn_large">Оформить заявку</a>
+                            </div>
+                            <div class="orderitem__info">
+                              <span class='red'>*</span> Указана ориентировочная стоимость
+                            </div><!-- /.orderitem__info -->
+                          </div><!-- /.orderitem__buttons -->
+                        </div><!-- /.orderitem__wrapper -->
+                      </div>
+                    </div>
+                    <div class="orderpage__asideblock">
+                      <div class="ordertoolbar">
+                        <div class="ordertoolbar__items flex">
+                          <a href="#" class="ordertoolbar__item ordertb_update">
+                            <span>Повторить</span>
+                          </a><!-- /.ordertoolbar__item -->
+                          <a href="#" class="ordertoolbar__item ordertb_docs">
+                            <span>Документы</span>
+                          </a><!-- /.ordertoolbar__item -->
+                          <a href="#" class="ordertoolbar__item ordertb_pause">
+                            <span>Приостановить</span>
+                          </a><!-- /.ordertoolbar__item -->
+                          <a href="#" class="ordertoolbar__item ordertb_warning">
+                            <span>Претензия</span>
+                          </a><!-- /.ordertoolbar__item -->
+                          <a href="#" class="ordertoolbar__item ordertb_email">
+                            <span>Написать нам</span>
+                          </a><!-- /.ordertoolbar__item -->
+                          <a href="#" class="ordertoolbar__item ordertb_disable">
+                            <span>Отменить</span>
+                          </a><!-- /.ordertoolbar__item -->
+                        </div><!-- /.ordertoolbar__items -->
+                      </div>
+                    </div>
+                    <div class="orderpage__asideblock">
+                      <div class="orderitem">
+                        <div class="orderitem__wrapper orderitem__wrapper_wide">
+                          <div class="orderitem__header">
+                            <div class="orderitem__title">Отслеживание посылки</div><!-- /.orderitem__title -->
+                          </div><!-- /.orderitem__header -->
+
+                          <div class="orderitem__content">
+                            <div class="ordermap">
+                              <div id="ordermap">
+                                <img src="img/ordermap.jpg" alt="">
+                              </div><!-- /#ordermap -->
+                            </div><!-- /.ordermap -->
+                            <div class="ordertrack">
+                              <div class="ordertrack__wrapper">
+                                <div class="ordertrack__point">
+                                  <div class="ordertrack__status ordertrack__status_in">
+                                    <img src="img/ordertrack__status_in.svg" alt="">
+                                  </div><!-- /.ordertrack__status -->
+                                  <div class="ordertrack__current">
+                                    <div class="ordertrack__title">Текущее местоположение</div>
+                                    <!-- /.ordertrack__title -->
+                                    <div class="ordertrack__value">Краснодар</div><!-- /.ordertrack__value -->
+                                  </div><!-- /.ordertrack__current -->
+                                </div><!-- /.ordertrack__point -->
+                                <div class="ordertrack__pin">ПИН:4141</div><!-- /.ordertrack__pin -->
+                              </div><!-- /.ordertrack__wrapper -->
+                            </div><!-- /.ordertrack -->
+                          </div><!-- /.orderitem__content -->
+                        </div><!-- /.orderitem__wrapper -->
+                      </div>
+                    </div><!-- /.orderpage__block -->
+                    <div class="orderpage__asideblock">
+                      <div class="orderitem">
+                        <div class="orderitem__wrapper orderitem__wrapper_wide">
+                          <div class="orderitem__header">
+                            <div class="orderitem__title">История изменений</div>
+                            <div class="orderitem__toolbar flex items-center">
+                              <a href="#" class='icondefault dotsicon'></a>
+                            </div><!-- /.orderitem__toolbar -->
+                          </div><!-- /.orderitem__header -->
+                          <div class="orderitem__content">
+                            <div class="orderhistory__items">
+                              <div class="orderhistory__item">
+                                <a href="#" class="orderhistory__link">
+                                  <span class="orderhistory__name">Груз на терминале в пункте отправления</span>
+                                  <span class="orderhistory__date">14.01.2024 15:001</span>
+                                </a>
+                              </div>
+                              <div class="orderhistory__item">
+                                <a href="#" class="orderhistory__link">
+                                  <span class="orderhistory__name">Груз на терминале в пункте отправления</span>
+                                  <span class="orderhistory__date">14.01.2024 15:001</span>
+                                </a>
+                              </div>
+                              <div class="orderhistory__item">
+                                <a href="#" class="orderhistory__link">
+                                  <span class="orderhistory__name">Груз на терминале в пункте отправления</span>
+                                  <span class="orderhistory__date">14.01.2024 15:001</span>
+                                </a>
+                              </div>
+                              <div class="orderhistory__item">
+                                <a href="#" class="orderhistory__link">
+                                  <span class="orderhistory__name">Груз на терминале в пункте отправления</span>
+                                  <span class="orderhistory__date">14.01.2024 15:001</span>
+                                </a>
+                              </div>
+                              <div class="orderhistory__item">
+                                <a href="#" class="orderhistory__link">
+                                  <span class="orderhistory__name">Груз на терминале в пункте отправления</span>
+                                  <span class="orderhistory__date">14.01.2024 15:001</span>
+                                </a>
+                              </div>
+                              <div class="orderhistory__item">
+                                <a href="#" class="orderhistory__link">
+                                  <span class="orderhistory__name">Груз на терминале в пункте отправления</span>
+                                  <span class="orderhistory__date">14.01.2024 15:001</span>
+                                </a>
+                              </div>
+                              <div class="orderhistory__item">
+                                <a href="#" class="orderhistory__link">
+                                  <span class="orderhistory__name">Груз на терминале в пункте отправления</span>
+                                  <span class="orderhistory__date">14.01.2024 15:001</span>
+                                </a>
+                              </div>
+
 
 
                             </div>
-                            <div class="orderitem__panel">
-                              <a href="#popup_about" data-toggle="modal" class="btn_gray ">
-                                <span class='icondefault infoicon'></span>
-                                <span>Подробнее</span>
-                              </a><!-- /.btn_gray -->
-                            </div><!-- /.orderitem__panel -->
-                          </div><!-- /.orderitem__col -->
-                          <div class="orderitem__col">
-                            <div class="orderitem__checkboxes">
-                              <div class="formcheckbox">
-                                <div class="formcheckbox__item">
-                                  <label for="check10-1" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-1" name="CWOOD" value="Y"
-                                        data-stepdata="pack_wooden" data-steptype="source">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Деревянная
-                                        обрешетка</span>
-                                    </span>
-
-                                  </label>
-                                  <label for="check10-012" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-012" name="PALET" value="Y"
-                                        data-stepdata="pack_palet" data-steptype="source">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Паллетный
-                                        борт</span>
-                                    </span>
-
-                                  </label>
-                                  <label for="check10-2" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-2" name="BUBBLE" value="Y"
-                                        data-stepdata="pack_bubble" data-steptype="source">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Пузырчатая
-                                        пленка</span>
-                                    </span>
-
-                                  </label>
-                                  <label for="check10-3" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-3" name="STRETCHFILM"
-                                        data-stepdata="pack_stretch" data-steptype="source" value="Y">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Стретч
-                                        пленка</span>
-                                    </span>
-
-                                  </label>
-                                  <label for="check10-4" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-4" name="CORRUGATEDBOARD" value="Y"
-                                        data-stepdata="pack_gofro" data-steptype="source">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон</span>
-                                    </span>
-
-                                  </label>
-                                  <label for="check10-5" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-5" name="BAG" value="Y"
-                                        data-stepdata="pack_meshkotara" data-steptype="source">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара</span>
-                                    </span>
-
-                                  </label>
-                                  <label for="check10-8" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-8" name="InternalRecalculate"
-                                        data-stepdata="pack_recalc" data-steptype="source" value="Y">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Пересчет
-                                        внутренних вложений</span>
-                                    </span>
-
-
-                                  </label>
-                                  <label for="check10-9" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-9" name="MARKING" value="Y"
-                                        data-stepdata="pack_mark" data-steptype="source" checked="">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Маркировка</span>
-                                    </span>
-
-                                  </label>
-                                  <label for="check10-10" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-10" name="CDOC" value="Y"
-                                        data-stepdata="pack_mark" data-steptype="source" checked="">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Перевозка
-                                        сопроводительных
-                                        документов</span>
-                                    </span>
-
-                                  </label>
-                                  <label for="check10-11" class="formcheckbox__label formcheckbox__label_type2">
-                                    <span>
-                                      <input type="checkbox" id="check10-11" name="CBACKDOC" value="Y"
-                                        data-stepdata="pack_mark" data-steptype="source" checked="">
-                                      <span class="formcheckbox__text" data-text="checkboxtext">Возврат
-                                        документов</span>
-                                    </span>
-
-                                  </label>
-                                </div>
-                              </div>
-                            </div><!-- /.orderitem__checkboxes -->
-                            <div class="orderitem__panel">
-                              <span class="btn_gray ">
-                                <span class='light'>Возвратные документы:</span>
-                                <span>19.01.2025</span>
-                              </span><!-- /.btn_gray -->
-                            </div><!-- /.orderitem__panel -->
-                          </div><!-- /.orderitem__col -->
-                        </div><!-- /.orderitem__cols -->
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div><!-- /.orderblocks__col -->
-                </div><!-- /.orderblocks__row -->
-                <div class="orderblocks__row ">
-                  <div class="orderblocks__col w-half">
-                    <div class="orderitem">
-                      <div class="orderitem__wrapper">
-                        <div class="orderitem__header">
-                          <div class="orderitem__title">Забор по адресу
-
-                            <span class="redlabel">24.24.2024, с 11:00 до 12:00</span><!-- /.redlabel -->
                           </div>
-                          <div class="orderitem__toolbar flex items-center">
-                            <a href="#popup_info" data-toggle="modal" class="icondefault infoicon"></a>
-                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
-                          </div><!-- /.orderitem__toolbar -->
-                        </div><!-- /.orderitem__header -->
-
-                        <div class="orderparams orderparams_full">
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Адрес</div>
-                            <div class="orderparams_dd">г.Комсомольск-на-Амуре, ул.Строителей, д.156 к.1</div>
-
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Контактное лицо</div>
-                            <div class="orderparams_dd">Маринович Андрей </div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Телефон</div>
-                            <div class="orderparams_dd">+7 949 949 88 22</div>
-                          </div><!-- /.orderparams__item -->
-
-
-
                         </div>
+                      </div>
+                    </div>
+                    <div class="orderpage__asideblock">
+                      <div class="orderitem">
+                        <div class="orderitem__wrapper orderitem__wrapper_wide">
+                          <div class="orderitem__header">
+                            <div class="orderitem__title">Документы</div>
+                            <div class="orderitem__toolbar flex items-center">
+                              <a href="#" class="icondefault downloadicon2"></a>
 
-                        <div class="orderdriver">
-                          <div class="orderdriver__items">
-                            <div class="orderdriver__item">
-                              <div class="orderdriver__title">Водитель</div>
-                              <div class="orderdriver__name">Имя водителя</div>
-                              <div class="orderdriver__info">+8 484 838 28 92</div>
-                            </div><!-- /.orderdriver__item -->
-                            <div class="orderdriver__item">
-                              <div class="orderdriver__title">Авто</div>
-                              <div class="orderdriver__name">BMW 7 series, 1.2 turbodiesel</div>
-                              <div class="orderdriver__info">В 777 ОР</div>
-                            </div><!-- /.orderdriver__item -->
-                          </div><!-- /.orderdriver__items -->
-                        </div><!-- /.orderdriver -->
+                              <a href="#" class='icondefault infoicon'></a>
+                            </div><!-- /.orderitem__toolbar -->
+                          </div><!-- /.orderitem__header -->
 
-
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div>
-                  <div class="orderblocks__col w-half">
-                    <div class="orderitem">
-                      <div class="orderitem__wrapper">
-                        <div class="orderitem__header">
-                          <div class="orderitem__title">Доставка по адресу</div>
-
-                        </div><!-- /.orderitem__header -->
-
-                        <div class="orderitem__addnew">
-                          <a href='#' class="orderadd">
-                            <div class="orderadd__button">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g opacity="0.3">
-                                  <path
-                                    d="M10.9997 1.8335C5.94517 1.8335 1.83301 5.94566 1.83301 11.0002C1.83301 16.0547 5.94517 20.1668 10.9997 20.1668C16.0542 20.1668 20.1663 16.0547 20.1663 11.0002C20.1663 5.94566 16.0542 1.8335 10.9997 1.8335ZM10.9997 3.66683C15.0431 3.66683 18.333 6.95675 18.333 11.0002C18.333 15.0436 15.0431 18.3335 10.9997 18.3335C6.95626 18.3335 3.66634 15.0436 3.66634 11.0002C3.66634 6.95675 6.95626 3.66683 10.9997 3.66683ZM10.083 7.3335V10.0835H7.33301V11.9168H10.083V14.6668H11.9163V11.9168H14.6663V10.0835H11.9163V7.3335H10.083Z"
-                                    fill="#323232" />
-                                </g>
-                              </svg>
-                              <span>Добавить</span>
-                            </div><!-- /.orderadd__button -->
-                          </a><!-- /.orderadd -->
-                        </div><!-- /.orderitem__addnew -->
-
-
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div>
-                </div><!-- /.orderblocks__row -->
-
-                <div class="orderblocks__row ">
-                  <div class="orderblocks__col w-half">
-                    <div class="orderitem">
-                      <div class="orderitem__wrapper">
-                        <div class="orderitem__header">
-                          <div class="orderitem__title">Отправитель</div>
-                          <div class="orderitem__toolbar flex items-center">
-                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
-                          </div><!-- /.orderitem__toolbar -->
-                        </div><!-- /.orderitem__header -->
-
-                        <div class="orderparams orderparams_full">
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Организация</div>
-                            <div class="orderparams_dd">ООО “МоскваМамонтИнвест”</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">ИНН</div>
-                            <div class="orderparams_dd">5941</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">КПП</div>
-                            <div class="orderparams_dd">88581</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Контактное лицо</div>
-                            <div class="orderparams_dd">Маринович Андрей Валерьевич</div>
-                          </div><!-- /.orderparams__item -->
-                        </div>
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div>
-                  <div class="orderblocks__col w-half">
-                    <div class="orderitem">
-                      <div class="orderitem__wrapper">
-                        <div class="orderitem__header">
-                          <div class="orderitem__title">Получатель</div>
-                          <div class="orderitem__toolbar flex items-center">
-                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
-                          </div><!-- /.orderitem__toolbar -->
-                        </div><!-- /.orderitem__header -->
-
-                        <div class="orderparams orderparams_full">
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">ФИО</div>
-                            <div class="orderparams_dd">ООО “МоскваМамонтИнвест”</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Документ</div>
-                            <div class="orderparams_dd">5941</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Телефон</div>
-                            <div class="orderparams_dd">88581</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Email</div>
-                            <div class="orderparams_dd">xolxllz@gmail.com</div>
-                          </div><!-- /.orderparams__item -->
-                        </div>
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div>
-
-                </div>
-
-                <div class="orderblocks__row ">
-                  <div class="orderblocks__col w-half">
-                    <div class="orderitem">
-                      <div class="orderitem__wrapper">
-                        <div class="orderitem__header">
-                          <div class="orderitem__title">Плательщик</div>
-                          <div class="orderitem__toolbar flex items-center">
-                            <a href="#popup_edit" data-toggle="modal" class="icondefault iconedit"></a>
-                          </div><!-- /.orderitem__toolbar -->
-                        </div><!-- /.orderitem__header -->
-
-                        <div class="orderparams orderparams_full">
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Организация</div>
-                            <div class="orderparams_dd">ООО “МоскваМамонтИнвест”</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">ИНН</div>
-                            <div class="orderparams_dd">5941</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">КПП</div>
-                            <div class="orderparams_dd">88581</div>
-                          </div><!-- /.orderparams__item -->
-                          <div class="orderparams__item">
-                            <div class="orderparams__dt">Контактное лицо</div>
-                            <div class="orderparams_dd">Маринович Андрей Валерьевич</div>
-                          </div><!-- /.orderparams__item -->
-                        </div>
-                      </div><!-- /.orderitem__wrapper -->
-                    </div><!-- /.orderitem -->
-                  </div>
-                </div>
-
-              </div><!-- /.orderblocks -->
-
-
+                          <div class="orderitem__content">
+                            <div class="orderdocs">
+                              <div class="orderdocs__item"><a href="#">Счет на забор груза</a></div>
+                              <div class="orderdocs__item"><a href="#">Счет на межтерминальную перевозку</a></div>
+                              <div class="orderdocs__item disabled"><a href="#">Счет на адресную доставку груза</a>
+                              </div>
+                              <div class="orderdocs__item"><a href="#">Обьединенный счет</a></div>
+                              <div class="orderdocs__item"><a href="#">ТТН</a></div>
+                              <div class="orderdocs__item disabled" disabled=""><a href="#">УПД/Акт</a></div>
+                            </div><!-- /.orderdocs -->
+                          </div><!-- /.orderitem__content -->
+                        </div><!-- /.orderitem__wrapper -->
+                      </div>
+                    </div><!-- /.orderpage__asideblock -->
+                  </div><!-- /.orderpage__blocks -->
+                </div><!-- /.orderpage__aside -->
+              </div><!-- /.orderpage -->
 
             </div><!-- /.container -->
           </div><!-- /.wrapper -->
 
-          <div class="wrapper_dark">
-            <div class="container"></div><!-- /.container -->
-          </div><!-- /.wrapper_dark -->
 
         </main>
     </section><!-- /#content -->
@@ -1021,7 +752,7 @@
 
         </span>
         <div class="modal-content">
-        
+
           <div class="modal-body">
             <div class="modal__header">
               <div class="modal__title">Подробнее <a href="#" class="icondefault iconedit"></a>
@@ -1114,7 +845,7 @@
           <img src="img/closepopup.svg" alt="" class='onlyMobile'>
         </span>
         <div class="modal-content">
-         
+
           <div class="modal-body">
             <div class="modal__header">
               <div class="modal__title">Редактирование</div>
@@ -1324,7 +1055,8 @@
                           <div class="orderfiles__items" id="fileName">
                             <div class="orderfiles__item">
                               <div class='orderfiles__wrapper'>
-                                <div class="orderfiles__title">Счет на оплату 8434818414819.pdf <a href='#' data-fileremove='fileName_id_1'></a></div>
+                                <div class="orderfiles__title">Счет на оплату 8434818414819.pdf <a href='#'
+                                    data-fileremove='fileName_id_1'></a></div>
                                 <div class="orderfiles__info">78 кБ</div>
                               </div>
                             </div>
@@ -1336,16 +1068,16 @@
                       </div><!-- /.formfileloader -->
                     </div><!-- /.formblock__block -->
 
-                      <div class="formblock__buttons">
-                        <div class="formblock__button">
-                          <button type="reset" name="" >
-                            <span class="btn_reset">Сбросить</span></button>
-                        </div><!-- /.formblock__button -->
-                        <div class="formblock__button">
-                          <button type="submit" name="" >
-                            <span class="btn_submit">Изменить</span></button>
-                        </div><!-- /.formblock__button -->
-                      </div><!-- /.formblock__buttons -->
+                    <div class="formblock__buttons">
+                      <div class="formblock__button">
+                        <button type="reset" name="">
+                          <span class="btn_reset">Сбросить</span></button>
+                      </div><!-- /.formblock__button -->
+                      <div class="formblock__button">
+                        <button type="submit" name="">
+                          <span class="btn_submit">Изменить</span></button>
+                      </div><!-- /.formblock__button -->
+                    </div><!-- /.formblock__buttons -->
 
                   </form>
                 </div><!-- /.formblock__form -->
@@ -1366,7 +1098,7 @@
         button = dropArea.querySelector(".dragbutton"),
         input = dropArea.querySelector(".draginput");
       let files; //this is a global variable and we'll use it inside multiple functions
-      let filesLength; 
+      let filesLength;
 
 
 
@@ -1421,34 +1153,34 @@
 
 
         for (let i = 0; i < filesLength; i++) {
-          let fileType = files[i].type; 
+          let fileType = files[i].type;
           if (!validExtensions.includes(fileType)) {
             alert(".pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ!");
           } else {
             showFilename(i)
           }
         }
-       
+
       }
 
       function showFilename(i) {
-     
+
         const uploader = $('#fileInput');
         const list = $('#fileName');
 
 
-            list.append(`
+        list.append(`
                <div class="orderfiles__item">
                   <div class="orderfiles__wrapper">
                     <div class="orderfiles__title">${files[i].name} <a href='#' data-fileremove='fileName_id_new${i}'></a></div>
-                    <div class="orderfiles__info">${Math.floor(files[i].size/1000) + ' кБ'}</div>
+                    <div class="orderfiles__info">${Math.floor(files[i].size / 1000) + ' кБ'}</div>
                   </div>
                 </div>  `)
-              
-        
-     
+
+
+
       }
-    
+
     </script>
 
 
