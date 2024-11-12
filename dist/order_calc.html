@@ -20,6 +20,8 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/maskedinput.min.js"></script>
+  <script src="js/jquery.inputmask.min.js"></script>
+  <script src="js/inputmask.binding.js"></script>
   <script src="js/datepicker.min.js"></script>
   <script src="js/slick.min.js"></script>
 
@@ -308,75 +310,171 @@
               <div class="orderpage">
                 <div class="orderpage__main">
                   <div class="orderpage__steps">
-                    <div class="stepform__items">
-                      <div class="stepform__header flex items-center">
-                        <div class="stepform__icon">
-                          <span class='stepform__number avtive'>01</span>
-                        </div><!-- /.stepform__icon -->
-                        <div class="stepform__title">Направление</div><!-- /.stepform__title -->
+                    <div class="orderpage__step">
+                      <div class="stepform__items">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__headercontent">
+                            <div class="stepform__icon">
+                              <span class='stepform__number avtive'>01</span>
+                            </div>
+                            <div class="stepform__title">Направление</div>
+                          </div>
+                        </div>
+                        <div class="stepform__main stepform__main_type2">
+                          <div class="stepform__content">
+                            <div class="stepform__row stepform__row_col2 flex">
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <div class="inputLocation">
+                                    <input data-stepdata="f_otpravki" data-steptype="source" type="text"
+                                      autocomplete="off" id="cityInput1" class="cityInput"
+                                      data-entity="city-autocomplete" placeholder="Откуда" name="from_text" value="">
+                                    <input type="hidden" name="from" value="" data-entity="city-kladr-id">
+                                    <ul id="cityList1" class="cityList" style="display: none;">
+                                      <div class="cityListContainer">
+                                      </div>
+                                    </ul>
+                                    <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M5.99999 0.359863C2.82468 0.359863 0.23999 2.94455 0.23999 6.11986C0.23999 11.2006 5.5064 17.2602 5.72999 17.5161C5.7989 17.5949 5.89593 17.6399 5.99999 17.6399C6.11108 17.6328 6.20109 17.5949 6.26999 17.5161C6.49359 17.256 11.76 11.0924 11.76 6.11986C11.76 2.94455 9.1753 0.359863 5.99999 0.359863ZM5.99999 4.31986C7.19249 4.31986 8.15999 5.28736 8.15999 6.47986C8.15999 7.67236 7.19249 8.63986 5.99999 8.63986C4.80749 8.63986 3.83999 7.67236 3.83999 6.47986C3.83999 5.28736 4.80749 4.31986 5.99999 4.31986Z"
+                                        fill="#C4C4C4"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="stepform__col">
+                                <div class="stepform__input">
+                                  <div class="inputLocation">
+                                    <input data-stepdata="f_dostavki" data-steptype="source" type="text"
+                                      autocomplete="off" name="to_text" id="cityInput2" class="cityInput"
+                                      placeholder="Куда" data-entity="city-autocomplete" value="">
+                                    <input type="hidden" name="to" value="" data-entity="city-kladr-id">
+                                    <ul id="cityList2" class="cityList" style="display: none;">
+                                      <div class="cityListContainer">
+                                      </div>
+                                    </ul>
+                                    <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M5.99999 0.359863C2.82468 0.359863 0.23999 2.94455 0.23999 6.11986C0.23999 11.2006 5.5064 17.2602 5.72999 17.5161C5.7989 17.5949 5.89593 17.6399 5.99999 17.6399C6.11108 17.6328 6.20109 17.5949 6.26999 17.5161C6.49359 17.256 11.76 11.0924 11.76 6.11986C11.76 2.94455 9.1753 0.359863 5.99999 0.359863ZM5.99999 4.31986C7.19249 4.31986 8.15999 5.28736 8.15999 6.47986C8.15999 7.67236 7.19249 8.63986 5.99999 8.63986C4.80749 8.63986 3.83999 7.67236 3.83999 6.47986C3.83999 5.28736 4.80749 4.31986 5.99999 4.31986Z"
+                                        fill="#C4C4C4"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div><!-- /.stepform__row -->
+                            <div class="stepform__row  flex">
+                              <div class="stepform__col  ">
+                                <div class="inputlabel inputlabel_date inputlabel_dropdown">
+                                  <label>Дата отправки</label><!-- /.placeholder -->
+
+                                  <input readonly='' class="lk-datepicker datepicker-send" value="" type="text"
+                                    data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"
+                                    data-required="required" data-min="10" data-max="10" placeholder="Выбрать дату">
+                                </div><!-- /.inputlabel -->
+
+
+                              </div><!-- /.stepform__col -->
+                              <div class="stepform__col  ">
+                                <div class="inputlabel inputlabel_date inputlabel_dropdown inputselect"
+                                  data-toggleitem='sendtype'>
+                                  <div class="inputselect__wrapper" data-toggleclick="sendtype">
+                                    <div class="inputselect__icon">
+                                      <img src="img/conteiner.svg" alt="">
+                                    </div>
+                                    <div class="inputselect__content">
+                                      <div class="inputselect__title" data-value='sendtype'>Контейнеры</div>
+                                      <div class="inputselect__info">10-14 дней</div>
+                                      <input type="hidden" value='Контейнеры' data-inputvalue='sendtype'>
+
+                                    </div><!-- /.inputselect__content -->
+                                  </div><!-- /.inputselect__wrapper -->
+                                  <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="sendtype">
+                                    <div class="dropdownblock__wrapper">
+                                      <div class="dropdownblock__links">
+                                        <menu>
+                                          <li><a href="#" data-togglevalue='Контейнеры'>Контейнеры</a></li>
+                                          <li><a href="#" data-togglevalue='Коробки'>Коробки</a></li>
+
+
+                                        </menu>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div><!-- /.inputlabel -->
+
+
+                              </div><!-- /.stepform__col -->
+                              <div class="stepform__col  w_full">
+                                <div class="stepform__showdata inputdata">
+                                  <div class="inputdata__label">Ориентировочная дата доставки</div>
+                                  <div class="inputdata__value">~22 мая</div>
+                                </div><!-- /.stepform__showdata -->
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
                       </div>
-                      <div class="stepform__main stepform__main_type2">
-                        <div class="stepform__content">
-                          <div class="stepform__row stepform__row_col2 flex">
-                            <div class="stepform__col">
-                              <div class="stepform__input">
-                                <div class="inputLocation">
-                                  <input data-stepdata="f_otpravki" data-steptype="source" type="text"
-                                    autocomplete="off" id="cityInput1" class="cityInput" data-entity="city-autocomplete"
-                                    placeholder="Откуда" name="from_text" value="">
-                                  <input type="hidden" name="from" value="" data-entity="city-kladr-id">
-                                  <ul id="cityList1" class="cityList" style="display: none;">
-                                    <div class="cityListContainer">
-                                    </div>
-                                  </ul>
-                                  <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M5.99999 0.359863C2.82468 0.359863 0.23999 2.94455 0.23999 6.11986C0.23999 11.2006 5.5064 17.2602 5.72999 17.5161C5.7989 17.5949 5.89593 17.6399 5.99999 17.6399C6.11108 17.6328 6.20109 17.5949 6.26999 17.5161C6.49359 17.256 11.76 11.0924 11.76 6.11986C11.76 2.94455 9.1753 0.359863 5.99999 0.359863ZM5.99999 4.31986C7.19249 4.31986 8.15999 5.28736 8.15999 6.47986C8.15999 7.67236 7.19249 8.63986 5.99999 8.63986C4.80749 8.63986 3.83999 7.67236 3.83999 6.47986C3.83999 5.28736 4.80749 4.31986 5.99999 4.31986Z"
-                                      fill="#C4C4C4"></path>
-                                  </svg>
-                                </div>
-                              </div>
+                    </div>
+                    <div class="orderpage__step">
+                      <div class="stepform__items">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__headercontent">
+                            <div class="stepform__icon">
+                              <span class='stepform__number '>02</span>
                             </div>
-                            <div class="stepform__col">
-                              <div class="stepform__input">
-                                <div class="inputLocation">
-                                  <input data-stepdata="f_dostavki" data-steptype="source" type="text"
-                                    autocomplete="off" name="to_text" id="cityInput2" class="cityInput"
-                                    placeholder="Куда" data-entity="city-autocomplete" value="">
-                                  <input type="hidden" name="to" value="" data-entity="city-kladr-id">
-                                  <ul id="cityList2" class="cityList" style="display: none;">
-                                    <div class="cityListContainer">
-                                    </div>
-                                  </ul>
-                                  <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M5.99999 0.359863C2.82468 0.359863 0.23999 2.94455 0.23999 6.11986C0.23999 11.2006 5.5064 17.2602 5.72999 17.5161C5.7989 17.5949 5.89593 17.6399 5.99999 17.6399C6.11108 17.6328 6.20109 17.5949 6.26999 17.5161C6.49359 17.256 11.76 11.0924 11.76 6.11986C11.76 2.94455 9.1753 0.359863 5.99999 0.359863ZM5.99999 4.31986C7.19249 4.31986 8.15999 5.28736 8.15999 6.47986C8.15999 7.67236 7.19249 8.63986 5.99999 8.63986C4.80749 8.63986 3.83999 7.67236 3.83999 6.47986C3.83999 5.28736 4.80749 4.31986 5.99999 4.31986Z"
-                                      fill="#C4C4C4"></path>
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          </div><!-- /.stepform__row -->
-                          <div class="stepform__row stepform__row_col3 flex">
-                            <div class="stepform__col  ">
-                              <div class="inputlabel inputlabel_date inputlabel_dropdown">
-                                <label>Дата отправки</label><!-- /.placeholder -->
-
-                                <input readonly='' class="lk-datepicker datepicker-send" value="" type="text"
-                                  data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"
-                                  data-required="required" data-min="10" data-max="10" placeholder="Выбрать дату">
-                              </div><!-- /.inputlabel -->
-
-
-                            </div><!-- /.stepform__col -->
+                            <div class="stepform__title">О грузе</div>
+                          </div>
+                          <div class="stepform__headerlink">
+                            <a href="">Как это работает?</a>
                           </div>
 
-                        </div><!-- /.stepform__content -->
+                        </div>
+                        <div class="stepform__main stepform__main_type2">
+                          <div class="stepform__content">
+                              <div class="calcobject" data-box='1'>
+                                <div class="calcobject__row">
+                                  <div class="calcobject__number">
+                                    1
+                                  </div>
+                                  <div class="calcobject__input floating">
+                                    <div class="floating">
+                                      <input type="text" name='boxVolume[]' value='' onkeyup="this.setAttribute('value', this.value);" data-volume-format=""> 
+                                      <span class="floating-label">Обьем<span class="red">*</span></span>
+                                    </div>
+                                  </div>
+                                  <div class="calcobject__input">
+                                    <div class="floating">
+                                      <input type="text" name='boxWeight[]' value='' onkeyup="this.setAttribute('value', this.value);" data-weight-format=""> 
+                                      <span class="floating-label">Вес места<span class="red">*</span></span>
+                                    </div>
+                                  </div>
+                                  <div class="calcobject__input">
+                                    <div class="floating">
+                                      <input type="text" name='boxCount[]' name='volume_1' value='' onkeyup="this.setAttribute('value', this.value);" data-number-format=""> 
+                                      <span class="floating-label">Одинаковых мест </span>
+                                    </div>
+                                  </div>
+                                  <div class="calcobject__input w-full">
+                                    <div class="floating">
+                                      <input type="text" name='boxSizes[]' value='' onkeyup="this.setAttribute('value', this.value);" data-separate-format=""> 
+                                      <span class="floating-label">Габариты <span class="gray">(Необязательно)</span></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              
+                              </div>
+                              <div id="calcobjects"></div>
+                              <a href="#" data-action='addbox' class='bluelink'>+ Добавить</a>
+
+                          </div>
+                        </div>
                       </div>
-                    </div><!-- /.stepform__items -->
-                  </div><!-- /.orderpage__steps -->
+                    </div>
+                  </div>
                 </div><!-- /.orderpage__main -->
                 <div class="orderpage__aside">
                   <div class="orderpage__asideblocks">
