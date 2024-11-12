@@ -148,7 +148,56 @@ function initBoxMask(count = "") {
 }
 
 $(document).ready(function () {
+
+  (jQuery)
+  ;(function ($) {
+    $(function () {
+      $(".calctabs-js").on("click", "label:not(.active)", function () {
+        $(this).addClass("active").siblings().removeClass("active")
+        $(this)
+          .closest("[data-tabswrapper]")
+        
+          .find("[data-tabs]")
+          .removeClass("active")
+          .eq($(this).index())
+          .addClass("active")
+        $(this)
+        .closest("[data-tabswrapper]")
+        
+          .find("[data-tabscontent]")
+          .removeClass("active")
+          .eq($(this).index())
+          .addClass("active")
+        /* if ($('input[name="fromAddress"]').val() !== "") {
+          $('span[data-stepdata="p_otpravki"]')
+            .closest(".dropdownJS")
+            .find(".dropdownJS__menu li:first")
+            .trigger("click")
+        }
+        if ($('input[name="toAddress"]').val() !== "") {
+          $('span[data-stepdata="p_dostavki"]')
+            .closest(".dropdownJS")
+            .find(".dropdownJS__menu li:first")
+            .trigger("click")
+        } */
+      })
+    })
+  })(jQuery)
+
+  $('.inputhints a').on('click', function(e) {
+    e.preventDefault()
+    const val = $(this).text()
+    $(this).closest('[data-wrapper]').find('input').val(val)
+  })
  
+  $('.checkblock input').on("change", function (e) {
+    const label = $(this).closest('.checkblock').find('[data-dependon]')
+    if ($(this).is(':checked')) {
+      label.text("Активирован")
+    } else {
+      label.text("Отключен")
+    }
+  })
   $("[data-action='addbox']").on("click", function (e) {
     e.preventDefault()
 
@@ -312,6 +361,7 @@ $(document).ready(function () {
     $(this).toggleClass("active")
     // get value
     let val = $(this).data("togglevalue")
+   
     // get wrapper leement
     const $wrapper = $(this).closest("[data-toggleitem]")
     // get dropdown ID
@@ -321,6 +371,11 @@ $(document).ready(function () {
     // set value
     $(`[data-value=${id}]`).text(val)
     $(`[data-inputvalue=${id}]`).val(val)
+
+    if ($(this).data("togglevalue2")) {
+      let val2 = $(this).data("togglevalue2")
+      $(`[data-value2=${id}]`).text(val2)
+    }
   })
 
   $("[data-toggleclickset]").on("click", function (e) {

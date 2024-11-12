@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/slick.css" />
   <link rel="stylesheet" href="css/lightbox.min.css" />
   <link rel="stylesheet" href="css/datepicker.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/style.bundle.css" />
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -385,7 +386,7 @@
                                     </div>
                                     <div class="inputselect__content">
                                       <div class="inputselect__title" data-value='sendtype'>Контейнеры</div>
-                                      <div class="inputselect__info">10-14 дней</div>
+                                      <div class="inputselect__info" data-value2="sendtype">10-14 дней</div>
                                       <input type="hidden" value='Контейнеры' data-inputvalue='sendtype'>
 
                                     </div><!-- /.inputselect__content -->
@@ -394,8 +395,10 @@
                                     <div class="dropdownblock__wrapper">
                                       <div class="dropdownblock__links">
                                         <menu>
-                                          <li><a href="#" data-togglevalue='Контейнеры'>Контейнеры</a></li>
-                                          <li><a href="#" data-togglevalue='Коробки'>Коробки</a></li>
+                                          <li><a href="#" data-togglevalue='Контейнеры'
+                                              data-togglevalue2="10-14 дней">Контейнеры</a></li>
+                                          <li><a href="#" data-togglevalue='Коробки'
+                                              data-togglevalue2="2-3 дня">Коробки</a></li>
 
 
                                         </menu>
@@ -408,7 +411,7 @@
 
                               </div><!-- /.stepform__col -->
                               <div class="stepform__col  w_full">
-                                <div class="stepform__showdata inputdata">
+                                <div class="stepform__showdata borderblock">
                                   <div class="inputdata__label">Ориентировочная дата доставки</div>
                                   <div class="inputdata__value">~22 мая</div>
                                 </div><!-- /.stepform__showdata -->
@@ -435,43 +438,334 @@
                         </div>
                         <div class="stepform__main stepform__main_type2">
                           <div class="stepform__content">
-                              <div class="calcobject" data-box='1'>
-                                <div class="calcobject__row">
-                                  <div class="calcobject__number">
-                                    1
+                            <div class="calcobject" data-box='1'>
+                              <div class="calcobject__row">
+                                <div class="calcobject__number">
+                                  1
+                                </div>
+                                <div class="calcobject__input floating">
+                                  <div class="floating">
+                                    <input type="text" name='boxVolume[]' value=''
+                                      onkeyup="this.setAttribute('value', this.value);" data-volume-format="">
+                                    <span class="floating-label">Обьем<span class="red">*</span></span>
                                   </div>
-                                  <div class="calcobject__input floating">
-                                    <div class="floating">
-                                      <input type="text" name='boxVolume[]' value='' onkeyup="this.setAttribute('value', this.value);" data-volume-format=""> 
-                                      <span class="floating-label">Обьем<span class="red">*</span></span>
+                                </div>
+                                <div class="calcobject__input">
+                                  <div class="floating">
+                                    <input type="text" name='boxWeight[]' value=''
+                                      onkeyup="this.setAttribute('value', this.value);" data-weight-format="">
+                                    <span class="floating-label">Вес места<span class="red">*</span></span>
+                                  </div>
+                                </div>
+                                <div class="calcobject__input">
+                                  <div class="floating">
+                                    <input type="text" name='boxCount[]' name='volume_1' value=''
+                                      onkeyup="this.setAttribute('value', this.value);" data-number-format="">
+                                    <span class="floating-label">Одинаковых мест </span>
+                                  </div>
+                                </div>
+                                <div class="calcobject__input w-full">
+                                  <div class="floating">
+                                    <input type="text" name='boxSizes[]' value=''
+                                      onkeyup="this.setAttribute('value', this.value);" data-separate-format="">
+                                    <span class="floating-label">Габариты <span
+                                        class="gray">(Необязательно)</span></span>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div id="calcobjects"></div>
+                            <a href="#" data-action='addbox' class='bluelink'>+ Добавить</a>
+
+                          </div>
+                          <div class="stepform__borderblock">
+                            <div class="stepform__row  flex">
+                              <div class="stepform__col w-full">
+                                <input type="text" placeholder='Обьявленная стоимость, руб.' data-number-format="">
+                              </div>
+                              <div class="stepform__col checkblock_col">
+                                <div class="borderblock">
+                                  <div class="checkblock">
+                                    <div class="checkblock__content">
+                                      <div class="checkblock__icon">
+                                        <img src="img/warnicon.svg" alt="">
+                                      </div>
+                                      <div class="checkblock__text">
+                                        <div class="checkblock__label">Хрупкий / жидкий груз</div>
+                                        <div class="checkblock__value" data-dependon='liquidCargo'>Отключен</div>
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="calcobject__input">
-                                    <div class="floating">
-                                      <input type="text" name='boxWeight[]' value='' onkeyup="this.setAttribute('value', this.value);" data-weight-format=""> 
-                                      <span class="floating-label">Вес места<span class="red">*</span></span>
-                                    </div>
-                                  </div>
-                                  <div class="calcobject__input">
-                                    <div class="floating">
-                                      <input type="text" name='boxCount[]' name='volume_1' value='' onkeyup="this.setAttribute('value', this.value);" data-number-format=""> 
-                                      <span class="floating-label">Одинаковых мест </span>
-                                    </div>
-                                  </div>
-                                  <div class="calcobject__input w-full">
-                                    <div class="floating">
-                                      <input type="text" name='boxSizes[]' value='' onkeyup="this.setAttribute('value', this.value);" data-separate-format=""> 
-                                      <span class="floating-label">Габариты <span class="gray">(Необязательно)</span></span>
+                                    <div class="checkblock__checkbox">
+                                      <input type="checkbox" id="fragileCargo" name='fragileCargo' value='Y'>
+                                      <label for="fragileCargo">
+                                        <span></span>
+                                      </label>
                                     </div>
                                   </div>
                                 </div>
-                              
                               </div>
-                              <div id="calcobjects"></div>
-                              <a href="#" data-action='addbox' class='bluelink'>+ Добавить</a>
+                            </div>
+                            <div class="stepform__row  flex" data-wrapper=''>
+                              <div class="stepform__col w-full">
+                                <input type="text" placeholder='Тип груза'>
+                                <div class="inputhints">
+                                  <span>Например:</span>
+                                  <a href="#">Запчасти</a>,
+                                  <a href="#">Личные вещи</a>,
+                                  <a href="#">Мебель</a>
+                                </div>
+                              </div>
+                              <div class="stepform__col checkblock_col">
+                                <div class="borderblock" style='background-image: url(img/warmbg.png);'>
+                                  <div class="checkblock checkblock_white">
+                                    <div class="checkblock__content">
+                                      <div class="checkblock__icon">
+                                        <img src="img/warmicon.svg" alt="">
+                                      </div>
+                                      <div class="checkblock__text">
+                                        <div class="checkblock__label">Теплый режим</div>
+                                        <div class="checkblock__value" data-dependon='liquidCargo'>Отключен</div>
+                                      </div>
+                                    </div>
+                                    <div class="checkblock__checkbox">
+                                      <input type="checkbox" id="liquidCargo" name='liquidCargo' value='Y'>
+                                      <label for="liquidCargo">
+                                        <span></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- /.stepform__borderblock -->
+                          <div class="stepform__borderblock">
+                            <div class="calcform__cols">
+                              <div class="calcform__col calcform__col_1">
+                                <div class="calcform__title">Упаковка груза</div>
 
-                          </div>
+                                <div class="formcheckbox">
+                                  <div class="formcheckbox__item">
+                                    <label for="check10-1" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check10-1" name="CRATE" value="Y"
+                                          data-stepdata="pack_wooden" data-steptype="source">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Деревянная
+                                          обрешетка</span>
+                                      </span>
+
+                                    </label>
+                                    <label for="check10-012" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check10-012" name="PALET" value="Y"
+                                          data-stepdata="pack_palet" data-steptype="source">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Паллетный
+                                          борт</span>
+                                      </span>
+
+                                    </label>
+                                    <label for="check10-2" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check10-2" name="BUBBLE" value="Y"
+                                          data-stepdata="pack_bubble" data-steptype="source">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Пузырчатая
+                                          пленка</span>
+                                      </span>
+
+                                    </label>
+                                    <label for="check10-3" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check10-3" name="STRETCHFILM"
+                                          data-stepdata="pack_stretch" data-steptype="source" value="Y">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Стретч
+                                          пленка</span>
+                                      </span>
+
+                                    </label>
+                                    <label for="check10-4" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check10-4" name="CORRUGATEDBOARD" value="Y"
+                                          data-stepdata="pack_gofro" data-steptype="source">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон</span>
+                                      </span>
+
+                                    </label>
+                                    <label for="check10-5" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check10-5" name="BAG" value="Y"
+                                          data-stepdata="pack_meshkotara" data-steptype="source">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара</span>
+                                      </span>
+
+                                    </label>
+                                    <label for="check10-8" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check10-8" name="InternalRecalculate"
+                                          data-stepdata="pack_recalc" data-steptype="source" value="Y">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Пересчет
+                                          внутренних вложений</span>
+                                      </span>
+
+
+                                    </label>
+                                    <label for="check10-9" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check10-9" name="MARKING" value="Y"
+                                          data-stepdata="pack_mark" data-steptype="source" checked="" disabled="">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Маркировка</span>
+                                      </span>
+
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="calcform__col calcform__col_2">
+                                <div class="calcform__title">Доп услуги</div>
+                                <div class="formcheckbox">
+                                  <div class="">
+                                    <label for="check11-1" class="formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input type="checkbox" id="check11-1" name="SendingAccompanyingDocuments"
+                                          value="Y" data-stepdata="dop_doc" data-steptype="source">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Перевозка
+                                          сопроводительных документов</span>
+                                      </span>
+
+                                    </label>
+
+
+                                    <label for="check11-2" data-entity="doc-checkbox"
+                                      class="disabled formcheckbox__label formcheckbox__label_type2">
+                                      <span>
+                                        <input disabled="" type="checkbox" id="check11-2"
+                                          name="ReturnOfAccompanyingDocuments" value="Y" data-stepdata="dop_return"
+                                          data-steptype="source">
+                                        <span class="formcheckbox__text" data-text="checkboxtext">Возврат
+                                          документов</span>
+                                      </span>
+                                    </label>
+
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="calcform__col calcform__col_2">
+
+
+                              </div>
+                            </div>
+                          </div><!-- /.stepform__borderblock -->
                         </div>
+                      </div>
+                    </div>
+                    <div class="orderpage__step" data-tabswrapper='sendfrom'>
+                      <div class="stepform__items">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__headercontent">
+                            <div class="stepform__icon">
+                              <span class="stepform__number ">03</span>
+                            </div>
+                            <div class="stepform__tabs stepform__title">
+                              <div class="calctabs calctabs-js" data-tabs='sendfrom'>
+                                <ul>
+                                  <label class="active" for="send_terminal">От терминала
+                                    <input data-radiotab="tab" type="radio" id="send_terminal" name="sendpointtab"
+                                      checked="">
+                                  </label>
+                                  <label class="" for="send_address">От адреса
+                                    <input data-radiotab="tab" type="radio" data-isrequired="send_address"
+                                      id="send_address" name="sendpointtab" value="Y"></label>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <div class="stepform__main stepform__main_type2">
+                          <div class='active' data-tabscontent='send_terminal'>
+                            <div class="inputlabel  inputlabel_dropdown inputlabel_lg inputselect"
+                              data-toggleitem='send_terminal'>
+                              <div class="inputselect__wrapper" data-toggleclick="send_terminal">
+                                <div class="inputselect__icon">
+                                  <img src="img/locicon.svg" alt="">
+                                </div>
+                                <div class="inputselect__content">
+                                  <div class="inputselect__title" data-value='send_terminal'>222148481 г. Москва, ул.
+                                    Освобождения Ленинских прос-ктов 49491</div>
+                                  <div class="inputselect__info" data-value2='send_terminal'>10-14 дней</div>
+                                  <input type="hidden"
+                                    value='222148481 г. Москва, ул. Освобождения Ленинских прос-ктов 49491'
+                                    data-inputvalue='send_terminal'>
+
+                                </div><!-- /.inputselect__content -->
+                              </div><!-- /.inputselect__wrapper -->
+                              <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="send_terminal">
+                                <div class="dropdownblock__wrapper">
+                                  <div class="dropdownblock__links">
+                                    <menu>
+                                      <li><a href="#"
+                                          data-togglevalue='222148481 г. Москва, ул. Освобождения Ленинских прос-ктов 49491'
+                                          data-togglevalue2='10:00 - 19:00 (GMT +2)'>222148481 г. Москва, ул.
+                                          Освобождения Ленинских прос-ктов 49491</a></li>
+                                      <li><a href="#" data-togglevalue='33333333 г. Москва'
+                                          data-togglevalue2='8:00 - 22:00 (GMT +2)'>33333333 г. Москва</a></li>
+
+
+
+                                    </menu>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div><!-- /.inputlabel -->
+                          </div>
+                          <div data-tabscontent='sendfrom'>
+                            <div class="stepform__row  flex">
+                              <div class="stepform__col w-full">
+                                <div class="inputlabel  inputlabel_dropdown  inputselect"
+                                  >
+                                  <div class="inputselect__wrapper" >
+                                    <div class="inputselect__icon">
+                                      <img src="img/locicon.svg" alt="">
+                                    </div>
+                                    <div class="inputselect__content w-full">
+                                      <div class="inputselect__label">Улица, дом, квартира</div>
+                                      <input type="text" name='toAddress' value='г. Москва, ул Освобождения, Ленинский пр-кт, 48 148а'>
+
+                                    </div><!-- /.inputselect__content -->
+                                  </div><!-- /.inputselect__wrapper -->
+                                 
+                                </div><!-- /.inputlabel -->
+                              </div>
+                              <div class="stepform__col">
+                                <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_w184"
+                                  data-toggleitem='select-time-day'>
+                                  <div class="inputselect__wrapper" data-toggleclick="select-time-day">
+
+                                    <div class="inputselect__content">
+                                      <div class="inputselect__label">Выберите время</div>
+                                      <div class="inputselect__title" data-value='select-time-day'>с 10:00 до 11:00</div>
+                                      <input type="hidden" value='Контейнеры' data-inputvalue='select-time-day' name='select-time-day'>
+
+                                    </div><!-- /.inputselect__content -->
+                                  </div><!-- /.inputselect__wrapper -->
+                                  <div class="dateblock__menu dropdownblock dropdownblock_sm"
+                                    data-toggle="select-time-day">
+                                    <div class="dropdownblock__wrapper">
+                                      <div class="dropdownblock__links">
+                                        <menu>
+                                          <li><a href="#" data-togglevalue='с 10:00 до 11:00'>с 10:00 до 11:00</a></li>
+                                          <li><a href="#" data-togglevalue='с 22:00 до 11:00'>с 22:00 до 11:00</a></li>
+                                        </menu>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div><!-- /.inputlabel -->
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- /.stepform__main -->
                       </div>
                     </div>
                   </div>

@@ -107,6 +107,10 @@ const config = {
           to: "./img",
         },
         {
+          from: "./src/images",
+          to: "./images",
+        },
+        {
           from: "./src/js",
           to: "./js",
         },
