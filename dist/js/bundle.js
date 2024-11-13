@@ -189,6 +189,17 @@ $(document).ready(function () {
     const val = $(this).text()
     $(this).closest('[data-wrapper]').find('input').val(val)
   })
+  
+  $('[data-action="newtel"]').on('click', function(e) {
+    e.preventDefault()
+    $('#newtel').append(`
+      <div class="floating">
+        <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel"
+          data-steptype="source" data-required="required" data-min="18" data-max="18">
+        <span class="floating-label">Телефон</span></span>
+      </div>
+      `)
+  })
  
   $('.checkblock input').on("change", function (e) {
     const label = $(this).closest('.checkblock').find('[data-dependon]')
