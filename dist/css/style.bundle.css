@@ -4346,7 +4346,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 .w-full input {
   width: 100%; }
 
-.w-full .floating-label {
+.floating-label {
   font-size: 14px; }
 
 .calcobject__input_large {
@@ -4417,7 +4417,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 
 .checkblock label span:last-child::after {
   top: 50%;
-  right: 4px;
+  left: 4px;
   width: 16px;
   height: 16px;
   transform: translateY(-50%);
@@ -4432,7 +4432,8 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
   transform: translateX(20px); }
 
 .checkblock [type="checkbox"]:checked + label span:last-child::after {
-  left: 4px; }
+  left: unset;
+  right: 4px; }
 
 .checkblock [type="checkbox"] {
   position: absolute;
@@ -4561,7 +4562,7 @@ span.formcheckbox__text {
   line-height: 100%;
   color: #373737;
   opacity: 0.5;
-  margin-bottom: 1px; }
+  margin-bottom: 3px; }
 
 .inputselect__content input {
   border: none !important; }
@@ -4642,7 +4643,7 @@ span.formcheckbox__text {
 .orderpage__step {
   margin-bottom: 32px; }
 
-.orderpage__step_type2 {
+.orderpage__step_type2 .calcform__content {
   padding-bottom: 20px;
   margin-bottom: 32px;
   border-bottom: 2px solid #f3f3f3; }
@@ -4669,9 +4670,9 @@ span.formcheckbox__text {
 .floating + .floating {
   margin-left: 8px; }
 
-#newtel {
+.newtel {
   margin: 20px 0; }
-  #newtel .floating {
+  .newtel .floating {
     margin: 20px 0; }
 
 .stepform__row .calcform__addTel {
@@ -4693,6 +4694,35 @@ span.formcheckbox__text {
   .stepform__row .calcform__addTel span {
     display: inline-block;
     margin-left: 0; }
+
+.stepform__row3 .stepform__col {
+  width: calc(100% / 3); }
+
+.orderpage__step .calcform__title {
+  margin: 24px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737; }
+
+.orderpage__step .calcitem__info span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737; }
+  .orderpage__step .calcitem__info span img {
+    display: inline-block;
+    margin-right: 9px; }
+  .orderpage__step .calcitem__info span a {
+    color: #2079ff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: capitalize;
+    border: none; }
+
+.checkblock_purple.checkblock [type="checkbox"]:checked + label span:last-child {
+  background: #8235FF; }
 
 @media (max-width: 1440px) {
   .authpage__form {

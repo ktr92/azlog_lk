@@ -1,9 +1,7 @@
 <% var data={ title: "MAIN" , author: "" }; %>
   <%= _.template(require('../includes/head.html').default)(data) %>
-
     <section id="content">
       <%= _.template(require('../includes/header.html').default)(data) %>
-
         <main>
           <div class="wrapper wrapper_orderpage">
             <div class="container">
@@ -12,22 +10,24 @@
                   <a href="#" class='flex items-center'>
                     <img src="img/backl.svg" alt=""><span>Назад</span>
                   </a>
-                </div><!-- /.pageheader__back -->
+                </div>
+                <!-- /.pageheader__back -->
                 <div class="pageheader__wrapper flex items-center content-between">
                   <div class="pageheader__main flex items-center">
                     <div class="pageheader__title">
                       <h1>Заказ №000114456890 от 20.20.2020</h1>
-                    </div><!-- /.pageheader__title -->
+                    </div>
+                    <!-- /.pageheader__title -->
                     <div class="pageheader__status">
                       Выдача приостановлена
-                    </div><!-- /.pageheader__status -->
-                  </div><!-- /.pageheader__main -->
-
-                </div><!-- /.pageheader__wrapper flex items-center -->
-
-
-              </div><!-- /.pageheader -->
-
+                    </div>
+                    <!-- /.pageheader__status -->
+                  </div>
+                  <!-- /.pageheader__main -->
+                </div>
+                <!-- /.pageheader__wrapper flex items-center -->
+              </div>
+              <!-- /.pageheader -->
               <div class="orderpage">
                 <div class="orderpage__main">
                   <div class="orderpage__steps">
@@ -84,19 +84,19 @@
                                   </div>
                                 </div>
                               </div>
-                            </div><!-- /.stepform__row -->
+                            </div>
+                            <!-- /.stepform__row -->
                             <div class="stepform__row  flex">
                               <div class="stepform__col  ">
                                 <div class="inputlabel inputlabel_date inputlabel_dropdown">
                                   <label>Дата отправки</label><!-- /.placeholder -->
-
                                   <input readonly='' class="lk-datepicker datepicker-send" value="" type="text"
                                     data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"
                                     data-required="required" data-min="10" data-max="10" placeholder="Выбрать дату">
-                                </div><!-- /.inputlabel -->
-
-
-                              </div><!-- /.stepform__col -->
+                                </div>
+                                <!-- /.inputlabel -->
+                              </div>
+                              <!-- /.stepform__col -->
                               <div class="stepform__col  ">
                                 <div class="inputlabel inputlabel_date inputlabel_dropdown inputselect"
                                   data-toggleitem='sendtype'>
@@ -108,9 +108,10 @@
                                       <div class="inputselect__title" data-value='sendtype'>Контейнеры</div>
                                       <div class="inputselect__info" data-value2="sendtype">10-14 дней</div>
                                       <input type="hidden" value='Контейнеры' data-inputvalue='sendtype'>
-
-                                    </div><!-- /.inputselect__content -->
-                                  </div><!-- /.inputselect__wrapper -->
+                                    </div>
+                                    <!-- /.inputselect__content -->
+                                  </div>
+                                  <!-- /.inputselect__wrapper -->
                                   <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="sendtype">
                                     <div class="dropdownblock__wrapper">
                                       <div class="dropdownblock__links">
@@ -119,25 +120,22 @@
                                               data-togglevalue2="10-14 дней">Контейнеры</a></li>
                                           <li><a href="#" data-togglevalue='Коробки'
                                               data-togglevalue2="2-3 дня">Коробки</a></li>
-
-
                                         </menu>
                                       </div>
                                     </div>
                                   </div>
-
-                                </div><!-- /.inputlabel -->
-
-
-                              </div><!-- /.stepform__col -->
+                                </div>
+                                <!-- /.inputlabel -->
+                              </div>
+                              <!-- /.stepform__col -->
                               <div class="stepform__col  w_full">
                                 <div class="stepform__showdata borderblock">
                                   <div class="inputdata__label">Ориентировочная дата доставки</div>
                                   <div class="inputdata__value">~22 мая</div>
-                                </div><!-- /.stepform__showdata -->
+                                </div>
+                                <!-- /.stepform__showdata -->
                               </div>
                             </div>
-
                           </div>
                         </div>
                       </div>
@@ -154,7 +152,6 @@
                           <div class="stepform__headerlink">
                             <a href="">Как это работает?</a>
                           </div>
-
                         </div>
                         <div class="stepform__main stepform__main_type2">
                           <div class="stepform__content">
@@ -193,11 +190,9 @@
                                   </div>
                                 </div>
                               </div>
-
                             </div>
                             <div id="calcobjects"></div>
                             <a href="#" data-action='addbox' class='bluelink'>+ Добавить</a>
-
                           </div>
                           <div class="stepform__borderblock">
                             <div class="stepform__row  flex">
@@ -258,12 +253,12 @@
                                 </div>
                               </div>
                             </div>
-                          </div><!-- /.stepform__borderblock -->
+                          </div>
+                          <!-- /.stepform__borderblock -->
                           <div class="stepform__borderblock">
                             <div class="calcform__cols">
-                              <div class="calcform__col calcform__col_1">
+                              <div class="calcform__col ">
                                 <div class="calcform__title">Упаковка груза</div>
-
                                 <div class="formcheckbox">
                                   <div class="formcheckbox__item">
                                     <label for="check10-1" class="formcheckbox__label formcheckbox__label_type2">
@@ -273,7 +268,6 @@
                                         <span class="formcheckbox__text" data-text="checkboxtext">Деревянная
                                           обрешетка</span>
                                       </span>
-
                                     </label>
                                     <label for="check10-012" class="formcheckbox__label formcheckbox__label_type2">
                                       <span>
@@ -282,7 +276,6 @@
                                         <span class="formcheckbox__text" data-text="checkboxtext">Паллетный
                                           борт</span>
                                       </span>
-
                                     </label>
                                     <label for="check10-2" class="formcheckbox__label formcheckbox__label_type2">
                                       <span>
@@ -291,7 +284,6 @@
                                         <span class="formcheckbox__text" data-text="checkboxtext">Пузырчатая
                                           пленка</span>
                                       </span>
-
                                     </label>
                                     <label for="check10-3" class="formcheckbox__label formcheckbox__label_type2">
                                       <span>
@@ -300,7 +292,6 @@
                                         <span class="formcheckbox__text" data-text="checkboxtext">Стретч
                                           пленка</span>
                                       </span>
-
                                     </label>
                                     <label for="check10-4" class="formcheckbox__label formcheckbox__label_type2">
                                       <span>
@@ -308,7 +299,6 @@
                                           data-stepdata="pack_gofro" data-steptype="source">
                                         <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон</span>
                                       </span>
-
                                     </label>
                                     <label for="check10-5" class="formcheckbox__label formcheckbox__label_type2">
                                       <span>
@@ -316,7 +306,6 @@
                                           data-stepdata="pack_meshkotara" data-steptype="source">
                                         <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара</span>
                                       </span>
-
                                     </label>
                                     <label for="check10-8" class="formcheckbox__label formcheckbox__label_type2">
                                       <span>
@@ -325,8 +314,6 @@
                                         <span class="formcheckbox__text" data-text="checkboxtext">Пересчет
                                           внутренних вложений</span>
                                       </span>
-
-
                                     </label>
                                     <label for="check10-9" class="formcheckbox__label formcheckbox__label_type2">
                                       <span>
@@ -334,12 +321,11 @@
                                           data-stepdata="pack_mark" data-steptype="source" checked="" disabled="">
                                         <span class="formcheckbox__text" data-text="checkboxtext">Маркировка</span>
                                       </span>
-
                                     </label>
                                   </div>
                                 </div>
                               </div>
-                              <div class="calcform__col calcform__col_2">
+                              <div class="calcform__col ">
                                 <div class="calcform__title">Доп услуги</div>
                                 <div class="formcheckbox">
                                   <div class="">
@@ -350,10 +336,7 @@
                                         <span class="formcheckbox__text" data-text="checkboxtext">Перевозка
                                           сопроводительных документов</span>
                                       </span>
-
                                     </label>
-
-
                                     <label for="check11-2" data-entity="doc-checkbox"
                                       class="disabled formcheckbox__label formcheckbox__label_type2">
                                       <span>
@@ -364,16 +347,13 @@
                                           документов</span>
                                       </span>
                                     </label>
-
                                   </div>
                                 </div>
                               </div>
-                              <div class="calcform__col calcform__col_2">
-
-
-                              </div>
+                             
                             </div>
-                          </div><!-- /.stepform__borderblock -->
+                          </div>
+                          <!-- /.stepform__borderblock -->
                         </div>
                       </div>
                     </div>
@@ -398,8 +378,6 @@
                               </div>
                             </div>
                           </div>
-
-
                         </div>
                         <div class="stepform__main stepform__main_type2">
                           <div class='active' data-tabscontent='send_terminal'>
@@ -411,14 +389,16 @@
                                 </div>
                                 <div class="inputselect__content">
                                   <div class="inputselect__title" data-value='send_terminal'>222148481 г. Москва, ул.
-                                    Освобождения Ленинских прос-ктов 49491</div>
+                                    Освобождения Ленинских прос-ктов 49491
+                                  </div>
                                   <div class="inputselect__info" data-value2='send_terminal'>10-14 дней</div>
                                   <input type="hidden"
                                     value='222148481 г. Москва, ул. Освобождения Ленинских прос-ктов 49491'
                                     data-inputvalue='send_terminal'>
-
-                                </div><!-- /.inputselect__content -->
-                              </div><!-- /.inputselect__wrapper -->
+                                </div>
+                                <!-- /.inputselect__content -->
+                              </div>
+                              <!-- /.inputselect__wrapper -->
                               <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="send_terminal">
                                 <div class="dropdownblock__wrapper">
                                   <div class="dropdownblock__links">
@@ -426,18 +406,16 @@
                                       <li><a href="#"
                                           data-togglevalue='222148481 г. Москва, ул. Освобождения Ленинских прос-ктов 49491'
                                           data-togglevalue2='10:00 - 19:00 (GMT +2)'>222148481 г. Москва, ул.
-                                          Освобождения Ленинских прос-ктов 49491</a></li>
+                                          Освобождения Ленинских прос-ктов 49491</a>
+                                      </li>
                                       <li><a href="#" data-togglevalue='33333333 г. Москва'
                                           data-togglevalue2='8:00 - 22:00 (GMT +2)'>33333333 г. Москва</a></li>
-
-
-
                                     </menu>
                                   </div>
                                 </div>
                               </div>
-
-                            </div><!-- /.inputlabel -->
+                            </div>
+                            <!-- /.inputlabel -->
                           </div>
                           <div data-tabscontent='sendfrom'>
                             <div class="stepform__row  flex">
@@ -451,26 +429,27 @@
                                       <div class="inputselect__label">Улица, дом, квартира</div>
                                       <input type="text" name='fromAddress'
                                         value='г. Москва, ул Освобождения, Ленинский пр-кт, 48 148а'>
-
-                                    </div><!-- /.inputselect__content -->
-                                  </div><!-- /.inputselect__wrapper -->
-
-                                </div><!-- /.inputlabel -->
+                                    </div>
+                                    <!-- /.inputselect__content -->
+                                  </div>
+                                  <!-- /.inputselect__wrapper -->
+                                </div>
+                                <!-- /.inputlabel -->
                               </div>
                               <div class="stepform__col">
                                 <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_w184"
                                   data-toggleitem='select-time-day1'>
                                   <div class="inputselect__wrapper" data-toggleclick="select-time-day1">
-
                                     <div class="inputselect__content">
                                       <div class="inputselect__label">Выберите время</div>
                                       <div class="inputselect__title" data-value='select-time-day1'>с 10:00 до 11:00
                                       </div>
                                       <input type="hidden" value='Контейнеры' data-inputvalue='select-time-day1'
                                         name='select-time-day1'>
-
-                                    </div><!-- /.inputselect__content -->
-                                  </div><!-- /.inputselect__wrapper -->
+                                    </div>
+                                    <!-- /.inputselect__content -->
+                                  </div>
+                                  <!-- /.inputselect__wrapper -->
                                   <div class="dateblock__menu dropdownblock dropdownblock_sm"
                                     data-toggle="select-time-day1">
                                     <div class="dropdownblock__wrapper">
@@ -482,8 +461,8 @@
                                       </div>
                                     </div>
                                   </div>
-
-                                </div><!-- /.inputlabel -->
+                                </div>
+                                <!-- /.inputlabel -->
                               </div>
                             </div>
                             <div class="stepform__row stepform__row_col2 flex">
@@ -506,7 +485,8 @@
                                       </label>
                                     </div>
                                   </div>
-                                </div><!-- /.borderblock -->
+                                </div>
+                                <!-- /.borderblock -->
                               </div>
                               <div class="stepform__col">
                                 <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_md"
@@ -519,9 +499,10 @@
                                       <div class="inputselect__title" data-value='dop'>Доп услуги
                                       </div>
                                       <input type="hidden" value='' data-inputvalue='dop' name='dop'>
-
-                                    </div><!-- /.inputselect__content -->
-                                  </div><!-- /.inputselect__wrapper -->
+                                    </div>
+                                    <!-- /.inputselect__content -->
+                                  </div>
+                                  <!-- /.inputselect__wrapper -->
                                   <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
                                     <div class="dropdownblock__wrapper">
                                       <div class="dropdownblock__links">
@@ -532,8 +513,8 @@
                                       </div>
                                     </div>
                                   </div>
-
-                                </div><!-- /.inputlabel -->
+                                </div>
+                                <!-- /.inputlabel -->
                               </div>
                             </div>
                             <div class="stepform__row stepform__row_col2 flex mt-32">
@@ -542,26 +523,27 @@
                                   <textarea name="send_comment" id="" rows='1' placeholder='Комментарий'></textarea>
                                 </div>
                               </div>
-
                             </div>
-
-
                             <div class="orderdriver">
                               <div class="orderdriver__items">
                                 <div class="orderdriver__item">
                                   <div class="orderdriver__title">Водитель</div>
                                   <div class="orderdriver__name">Имя водителя</div>
                                   <div class="orderdriver__info">+8 484 838 28 92</div>
-                                </div><!-- /.orderdriver__item -->
+                                </div>
+                                <!-- /.orderdriver__item -->
                                 <div class="orderdriver__item">
                                   <div class="orderdriver__title">Авто</div>
                                   <div class="orderdriver__name">BMW 7 series, 1.2 turbodiesel</div>
                                   <div class="orderdriver__info">В 777 ОР</div>
-                                </div><!-- /.orderdriver__item -->
-                              </div><!-- /.orderdriver__items -->
+                                </div>
+                                <!-- /.orderdriver__item -->
+                              </div>
+                              <!-- /.orderdriver__items -->
                             </div>
                           </div>
-                        </div><!-- /.stepform__main -->
+                        </div>
+                        <!-- /.stepform__main -->
                       </div>
                     </div>
                     <div class="orderpage__step" data-tabswrapper='receive_terminal'>
@@ -585,8 +567,6 @@
                               </div>
                             </div>
                           </div>
-
-
                         </div>
                         <div class="stepform__main stepform__main_type2">
                           <div class='active' data-tabscontent='receive_terminal'>
@@ -598,14 +578,16 @@
                                 </div>
                                 <div class="inputselect__content">
                                   <div class="inputselect__title" data-value='receive_terminal'>222148481 г. Москва, ул.
-                                    Освобождения Ленинских прос-ктов 49491</div>
+                                    Освобождения Ленинских прос-ктов 49491
+                                  </div>
                                   <div class="inputselect__info" data-value2='receive_terminal'>10-14 дней</div>
                                   <input type="hidden"
                                     value='222148481 г. Москва, ул. Освобождения Ленинских прос-ктов 49491'
                                     data-inputvalue='receive_terminal'>
-
-                                </div><!-- /.inputselect__content -->
-                              </div><!-- /.inputselect__wrapper -->
+                                </div>
+                                <!-- /.inputselect__content -->
+                              </div>
+                              <!-- /.inputselect__wrapper -->
                               <div class="dateblock__menu dropdownblock dropdownblock_sm"
                                 data-toggle="receive_terminal">
                                 <div class="dropdownblock__wrapper">
@@ -614,18 +596,16 @@
                                       <li><a href="#"
                                           data-togglevalue='222148481 г. Москва, ул. Освобождения Ленинских прос-ктов 49491'
                                           data-togglevalue2='10:00 - 19:00 (GMT +2)'>222148481 г. Москва, ул.
-                                          Освобождения Ленинских прос-ктов 49491</a></li>
+                                          Освобождения Ленинских прос-ктов 49491</a>
+                                      </li>
                                       <li><a href="#" data-togglevalue='33333333 г. Москва'
                                           data-togglevalue2='8:00 - 22:00 (GMT +2)'>33333333 г. Москва</a></li>
-
-
-
                                     </menu>
                                   </div>
                                 </div>
                               </div>
-
-                            </div><!-- /.inputlabel -->
+                            </div>
+                            <!-- /.inputlabel -->
                           </div>
                           <div data-tabscontent='receiveto'>
                             <div class="stepform__row  flex">
@@ -639,26 +619,27 @@
                                       <div class="inputselect__label">Улица, дом, квартира</div>
                                       <input type="text" name='toAddress'
                                         value='г. Москва, ул Освобождения, Ленинский пр-кт, 48 148а'>
-
-                                    </div><!-- /.inputselect__content -->
-                                  </div><!-- /.inputselect__wrapper -->
-
-                                </div><!-- /.inputlabel -->
+                                    </div>
+                                    <!-- /.inputselect__content -->
+                                  </div>
+                                  <!-- /.inputselect__wrapper -->
+                                </div>
+                                <!-- /.inputlabel -->
                               </div>
                               <div class="stepform__col">
                                 <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_w184"
                                   data-toggleitem='select-time-day'>
                                   <div class="inputselect__wrapper" data-toggleclick="select-time-day">
-
                                     <div class="inputselect__content">
                                       <div class="inputselect__label">Выберите время</div>
                                       <div class="inputselect__title" data-value='select-time-day'>с 10:00 до 11:00
                                       </div>
                                       <input type="hidden" value='Контейнеры' data-inputvalue='select-time-day'
                                         name='select-time-day'>
-
-                                    </div><!-- /.inputselect__content -->
-                                  </div><!-- /.inputselect__wrapper -->
+                                    </div>
+                                    <!-- /.inputselect__content -->
+                                  </div>
+                                  <!-- /.inputselect__wrapper -->
                                   <div class="dateblock__menu dropdownblock dropdownblock_sm"
                                     data-toggle="select-time-day">
                                     <div class="dropdownblock__wrapper">
@@ -670,8 +651,8 @@
                                       </div>
                                     </div>
                                   </div>
-
-                                </div><!-- /.inputlabel -->
+                                </div>
+                                <!-- /.inputlabel -->
                               </div>
                             </div>
                             <div class="stepform__row stepform__row_col2 flex">
@@ -694,7 +675,8 @@
                                       </label>
                                     </div>
                                   </div>
-                                </div><!-- /.borderblock -->
+                                </div>
+                                <!-- /.borderblock -->
                               </div>
                               <div class="stepform__col">
                                 <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_md"
@@ -707,9 +689,10 @@
                                       <div class="inputselect__title" data-value='dop2'>Доп услуги
                                       </div>
                                       <input type="hidden" value='' data-inputvalue='dop2' name='dop2'>
-
-                                    </div><!-- /.inputselect__content -->
-                                  </div><!-- /.inputselect__wrapper -->
+                                    </div>
+                                    <!-- /.inputselect__content -->
+                                  </div>
+                                  <!-- /.inputselect__wrapper -->
                                   <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop2">
                                     <div class="dropdownblock__wrapper">
                                       <div class="dropdownblock__links">
@@ -720,8 +703,8 @@
                                       </div>
                                     </div>
                                   </div>
-
-                                </div><!-- /.inputlabel -->
+                                </div>
+                                <!-- /.inputlabel -->
                               </div>
                             </div>
                             <div class="stepform__row stepform__row_col2 flex mt-32">
@@ -730,26 +713,27 @@
                                   <textarea name="receive_comment" id="" rows='1' placeholder='Комментарий'></textarea>
                                 </div>
                               </div>
-
                             </div>
-
-
                             <div class="orderdriver">
                               <div class="orderdriver__items">
                                 <div class="orderdriver__item">
                                   <div class="orderdriver__title">Водитель</div>
                                   <div class="orderdriver__name">Имя водителя</div>
                                   <div class="orderdriver__info">+8 484 838 28 92</div>
-                                </div><!-- /.orderdriver__item -->
+                                </div>
+                                <!-- /.orderdriver__item -->
                                 <div class="orderdriver__item">
                                   <div class="orderdriver__title">Авто</div>
                                   <div class="orderdriver__name">BMW 7 series, 1.2 turbodiesel</div>
                                   <div class="orderdriver__info">В 777 ОР</div>
-                                </div><!-- /.orderdriver__item -->
-                              </div><!-- /.orderdriver__items -->
+                                </div>
+                                <!-- /.orderdriver__item -->
+                              </div>
+                              <!-- /.orderdriver__items -->
                             </div>
                           </div>
-                        </div><!-- /.stepform__main -->
+                        </div>
+                        <!-- /.stepform__main -->
                       </div>
                     </div>
                     <div class="orderpage__step orderpage__step_type2">
@@ -760,11 +744,7 @@
                               <span class="stepform__number ">05</span>
                             </div>
                             <div class="stepform__title">Отправитель</div>
-
-
                           </div>
-
-
                         </div>
                         <div class="stepform__main stepform__main_type2" data-tabswrapper='sender'>
                           <div class="stepform__tabs stepform__tabs_type2 ">
@@ -783,7 +763,6 @@
                             </div>
                           </div>
                           <div class='active' data-tabscontent='sender'>
-
                             <div class="calcform__content">
                               <div class="calcform__inputs">
                                 <div class="stepform__row  flex ">
@@ -791,30 +770,27 @@
                                     <div class="floating">
                                       <input type="text" name="F_FIO" data-stepdata="send_fio" data-steptype="source"
                                         data-required="required" data-min="3" data-max="300" class='w-full'
-                                        placeholder=''>
+                                        onkeyup="this.setAttribute('value', this.value);" value=''>
                                       <span class="floating-label">ФИО</span></span>
                                     </div>
-
                                   </div>
                                 </div>
-
                                 <div class="stepform__row stepform__row_col2 flex ">
                                   <div class="stepform__col">
                                     <div class="inputlabel  inputlabel_dropdown  inputselect "
                                       data-toggleitem='F_DOCTYPE'>
                                       <div class="inputselect__wrapper" data-toggleclick="F_DOCTYPE">
-
                                         <div class="inputselect__content">
                                           <div class="inputselect__label">
                                             Документ
                                           </div>
                                           <div class="inputselect__title" data-value="F_DOCTYPE">Паспорт РФ
                                           </div>
-
                                           <input type="hidden" value='' data-inputvalue='F_DOCTYPE' name='F_DOCTYPE'>
-
-                                        </div><!-- /.inputselect__content -->
-                                      </div><!-- /.inputselect__wrapper -->
+                                        </div>
+                                        <!-- /.inputselect__content -->
+                                      </div>
+                                      <!-- /.inputselect__wrapper -->
                                       <div class="dateblock__menu dropdownblock dropdownblock_sm"
                                         data-toggle="F_DOCTYPE">
                                         <div class="dropdownblock__wrapper">
@@ -822,12 +798,15 @@
                                             <menu>
                                               <li><a href="#" data-togglevalue='>Паспорт РФ'>Паспорт РФ</a></li>
                                               <li><a href="#" data-togglevalue='Водительское удостоверение'>Водительское
-                                                  удостоверение</a></li>
+                                                  удостоверение</a>
+                                              </li>
                                               <li><a href="#" data-togglevalue='Иностранный паспорт'>Иностранный
-                                                  паспорт</a></li>
+                                                  паспорт</a>
+                                              </li>
                                               <li><a href="#"
                                                   data-togglevalue='Удостоверение личности офицера'>Удостоверение
-                                                  личности офицера</a></li>
+                                                  личности офицера</a>
+                                              </li>
                                               <li><a href="#" data-togglevalue='Паспорт моряка'>Паспорт моряка</a></li>
                                               <li><a href="#" data-togglevalue='Загран. паспорт'>Загран. паспорт</a>
                                               </li>
@@ -836,65 +815,55 @@
                                           </div>
                                         </div>
                                       </div>
-
-                                    </div><!-- /.inputlabel -->
-
-
+                                    </div>
+                                    <!-- /.inputlabel -->
                                   </div>
-
-
                                   <div class="stepform__col">
                                     <div class="calcform__multipleInput" data-select="input_doc">
                                       <div class="inputDoc calcform__multipleInput w-full" data-select="passport">
-
                                         <div class="floating">
-                                          <input type="text" placeholder="СССС" name="F_PASS_1" class="inputPassport1"
+                                          <input type="text" placeholder="" name="F_PASS_1" class="inputPassport1"
                                             data-stepdata="send_pasp1" data-steptype="source" data-required="required"
-                                            data-min="4" data-max="4">
+                                            data-min="4" data-max="4" onkeyup="this.setAttribute('value', this.value);"
+                                            value=''>
                                           <span class="floating-label">Серия</span></span>
                                         </div>
                                         <div class="floating w-full">
-                                          <input type="text" placeholder="000000" name="F_PASS_2" class="inputPassport2"
+                                          <input type="text" placeholder="" name="F_PASS_2" class="inputPassport2"
                                             data-stepdata="send_pasp2" data-steptype="source" data-required="required"
-                                            data-min="6" data-max="6">
+                                            data-min="6" data-max="6" onkeyup="this.setAttribute('value', this.value);"
+                                            value=''>
                                           <span class="floating-label">Номер документа</span></span>
                                         </div>
-
-
-
                                       </div>
-
                                     </div>
                                     <!-- /.calcform__multipleInput -->
-
                                   </div>
-
                                 </div>
-
                                 <div class="stepform__row stepform__row_col2 flex ">
                                   <div class="stepform__col ">
                                     <div class="floating">
                                       <input type="tel" name="F_PHONE[]" data-stepdata="send_tel" data-steptype="source"
-                                        data-required="required" data-min="18" data-max="18">
+                                        value='' data-required="required" data-min="18" data-max="18"
+                                        onkeyup="this.setAttribute('value', this.value);">
                                       <span class="floating-label">Телефон</span></span>
                                     </div>
+                                    <div class="newtel"></div>
                                     <span data-action="newtel" class="calcform__addTel">
                                       <span class='newtel_img'>
                                         <img src="img/newtel.svg" alt="">
-
                                       </span>
                                       <span>Добавить номер
                                         телефона</span>
                                     </span>
-                                    <div id="newtel"></div>
                                   </div>
-
                                   <div class="stepform__col">
                                     <div class="calcform__multipleInput">
                                       <div class="floating">
-                                        <input type="text" name="F_EMAIL" data-stepdata="send_fio"
-                                          data-steptype="source">
-                                        <span class="floating-label">Email <span>(необязательно)</span></span>
+                                        <input type="text" name="F_EMAIL" data-stepdata="send_fio" value=''
+                                          data-steptype="source" onkeyup="this.setAttribute('value', this.value);">
+                                        <span class="floating-label">Email <span
+                                            class='gray'>(необязательно)</span></span>
                                       </div>
                                     </div>
                                   </div>
@@ -902,13 +871,600 @@
                               </div>
                             </div>
                           </div>
+                          <div class='' data-tabscontent='sender'>
+                            <div class="calcform__content">
+                              <div class="stepform__row  flex w-full">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="U_COMPANY" data-stepdata="send_yurname" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="2" data-max="300">
+                                    <span class="floating-label">Название компании</span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="stepform__row stepform__row3 w-full flex ">
+                                <div class="stepform__col ">
+                                  <div class="inputlabel  inputlabel_dropdown  inputselect " data-toggleitem='U_FORM'>
+                                    <div class="inputselect__wrapper" data-toggleclick="U_FORM">
+                                      <div class="inputselect__content">
+                                        <div class="inputselect__label">
+                                          Правовая форма
+                                        </div>
+                                        <div class="inputselect__title" data-value="U_FORM">ООО
+                                        </div>
+                                        <input type="hidden" value='' data-inputvalue='U_FORM' name='U_FORM'>
+                                      </div>
+                                      <!-- /.inputselect__content -->
+                                    </div>
+                                    <!-- /.inputselect__wrapper -->
+                                    <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="U_FORM">
+                                      <div class="dropdownblock__wrapper">
+                                        <div class="dropdownblock__links">
+                                          <menu>
+                                            <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
+                                            <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
+                                            <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
+                                            <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
+                                          </menu>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- /.inputlabel -->
+                                </div>
+                                <div class="stepform__col">
+                                  <div class="floating">
+                                    <input type="text" name="U_INN" data-stepdata="send_inn" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="13" data-max="13">
+                                    <span class="floating-label">ИНН</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col">
+                                  <div class="floating">
+                                    <input type="text" name="U_KPP" data-stepdata="send_kpp" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-min="1" data-max="9">
+                                    <span class="floating-label">КПП</span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="calcform__title">Контактное лицо</div>
+
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="U_FIO" data-stepdata="send_yurfio" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="2" data-max="300">
+                                    <span class="floating-label">ФИО</span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="tel" name="U_PHONE[]" data-stepdata="send_yurtel" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="18" data-max="18">
+                                    <span class="floating-label">Телефон</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col w-full ">
+                                  <div class="floating">
+                                    <input type="text" name="U_EMAIL" data-stepdata="send_email" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="3" data-max="300">
+                                    <span class="floating-label">Email</span></span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="calcitem__info calcitem__info_red">
+                                <img src="img/calcitem__info.svg" alt=""><span>Обязательно нужна <a
+                                    href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf"
+                                    target="_blank">доверенность</a> на
+                                  отправку или получение груза</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class='' data-tabscontent='sender'>
+                            <div class="calcform__content">
+                              <div class="stepform__row  flex w-full">
+                                
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="IP_INN" data-stepdata="send_innip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="13" data-max="13">
+                                    <span class="floating-label">ИНН</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="IP_FIO" data-stepdata="send_fioip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-min="1" data-max="9">
+                                    <span class="floating-label">ФИО</span></span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="tel" name="IP_PHONE[]" data-stepdata="send_yurtelip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="18" data-max="18">
+                                    <span class="floating-label">Телефон</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col w-full ">
+                                  <div class="floating">
+                                    <input type="text" name="IP_EMAIL" data-stepdata="send_emailip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="3" data-max="300">
+                                    <span class="floating-label">Email <span class='gray'>необязательно</span></span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="calcitem__info calcitem__info_red">
+                                <img src="img/calcitem__info.svg" alt=""><span>Обязательно нужна <a
+                                    href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf"
+                                    target="_blank">доверенность</a> на
+                                  отправку или получение груза</span>
+                              </div>
+                             
+                            </div>
+                          </div>
                         </div>
+                      </div>
+                    </div>
+                    <div class="orderpage__step orderpage__step_type2">
+                      <div class="stepform__items">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__headercontent">
+                            <div class="stepform__icon">
+                              <span class="stepform__number ">06</span>
+                            </div>
+                            <div class="stepform__title">Получатель</div>
+                          </div>
+                        </div>
+                        <div class="stepform__main stepform__main_type2" data-tabswrapper='receiver'>
+                          <div class="stepform__tabs stepform__tabs_type2 ">
+                            <div class="calctabs calctabs-js" data-tabs='receiver'>
+                              <ul>
+                                <label class="active" for="receive_yur">Физ. лицо <input data-radiotab="tab" type="radio"
+                                    data-isrequired="delivery-address" value="Y" id="receive_yur" checked=""
+                                    name="receivefizyur"></label>
+                                <label class="" for="receive_fiz">Юр. лицо <input data-radiotab="tab" type="radio"
+                                    value="N" id="receive_fiz" name="receivefizyur">
+                                </label>
+                                <label class="" for="receive_ip">ИП <input data-radiotab="tab" type="radio" value="N"
+                                    id="receive_ip" name="receivefizyur">
+                                </label>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class='active' data-tabscontent='receiver'>
+                            <div class="calcform__content">
+                              <div class="calcform__inputs">
+                                <div class="stepform__row stepform__row_col2 flex ">
+                                  <div class="stepform__col ">
+                                    <div class="floating">
+                                      <input type="text" name="R_F_FIO" data-stepdata="receive_fio" data-steptype="source"
+                                        data-required="required" data-min="3" data-max="300" class='w-full'
+                                        onkeyup="this.setAttribute('value', this.value);" value=''>
+                                      <span class="floating-label">ФИО</span></span>
+                                    </div>
+                                  </div>
+                                  <div class="stepform__col ">
+                                    <div class="borderblock">
+                                      <div class="checkblock checkblock_purple">
+                                        <div class="checkblock__content">
+                                          <div class="checkblock__icon">
+                                            <img src="img/facilitate.svg" alt="">
+                                          </div>
+                                          <div class="checkblock__text">
+                                            <div class="checkblock__label">Упрощенная выдача по смс</div>
+                                            <div class="checkblock__value" data-dependon="R_SIMPLIFY">Отключен</div>
+                                          </div>
+                                        </div>
+                                        <div class="checkblock__checkbox">
+                                          <input type="checkbox" id="R_SIMPLIFY" name="R_SIMPLIFY" value="Y" data-dependcheckbox='R_SIMPLIFY'>
+                                          <label for="R_SIMPLIFY">
+                                            <span></span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="stepform__row stepform__row_col2 flex ">
+                                  <div class="stepform__col">
+                                    <div class="inputlabel  inputlabel_dropdown  inputselect "
+                                      data-toggleitem='R_F_DOCTYPE'>
+                                      <div class="inputselect__wrapper" data-toggleclick="R_F_DOCTYPE">
+                                        <div class="inputselect__content">
+                                          <div class="inputselect__label">
+                                            Документ
+                                          </div>
+                                          <div class="inputselect__title" data-value="R_F_DOCTYPE">Паспорт РФ
+                                          </div>
+                                          <input type="hidden" value='' data-inputvalue='R_F_DOCTYPE' name='R_F_DOCTYPE'>
+                                        </div>
+                                        <!-- /.inputselect__content -->
+                                      </div>
+                                      <!-- /.inputselect__wrapper -->
+                                      <div class="dateblock__menu dropdownblock dropdownblock_sm"
+                                        data-toggle="R_F_DOCTYPE">
+                                        <div class="dropdownblock__wrapper">
+                                          <div class="dropdownblock__links">
+                                            <menu>
+                                              <li><a href="#" data-togglevalue='>Паспорт РФ'>Паспорт РФ</a></li>
+                                              <li><a href="#" data-togglevalue='Водительское удостоверение'>Водительское
+                                                  удостоверение</a>
+                                              </li>
+                                              <li><a href="#" data-togglevalue='Иностранный паспорт'>Иностранный
+                                                  паспорт</a>
+                                              </li>
+                                              <li><a href="#"
+                                                  data-togglevalue='Удостоверение личности офицера'>Удостоверение
+                                                  личности офицера</a>
+                                              </li>
+                                              <li><a href="#" data-togglevalue='Паспорт моряка'>Паспорт моряка</a></li>
+                                              <li><a href="#" data-togglevalue='Загран. паспорт'>Загран. паспорт</a>
+                                              </li>
+                                              <li><a href="#" data-togglevalue='Военный билет'>Военный билет</a></li>
+                                            </menu>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- /.inputlabel -->
+                                  </div>
+                                  <div class="stepform__col">
+                                    <div class="calcform__multipleInput" data-select="input_doc">
+                                      <div class="inputDoc calcform__multipleInput w-full" data-select="passport">
+                                        <div class="floating">
+                                          <input type="text" placeholder="" name="R_F_PASS_1" class="inputPassport1"
+                                            data-stepdata="receive_pasp1" data-steptype="source" data-required="required"
+                                            data-min="4" data-max="4" onkeyup="this.setAttribute('value', this.value);"
+                                            value=''>
+                                          <span class="floating-label">Серия</span></span>
+                                        </div>
+                                        <div class="floating w-full">
+                                          <input type="text" placeholder="" name="R_F_PASS_2" class="inputPassport2"
+                                            data-stepdata="receive_pasp2" data-steptype="source" data-required="required"
+                                            data-min="6" data-max="6" onkeyup="this.setAttribute('value', this.value);"
+                                            value=''>
+                                          <span class="floating-label">Номер документа</span></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- /.calcform__multipleInput -->
+                                  </div>
+                                </div>
+                                <div class="stepform__row stepform__row_col2 flex ">
+                                  <div class="stepform__col ">
+                                    <div class="floating">
+                                      <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel" data-steptype="source"
+                                        value='' data-required="required" data-min="18" data-max="18"
+                                        onkeyup="this.setAttribute('value', this.value);">
+                                      <span class="floating-label">Телефон</span></span>
+                                    </div>
+                                    <div class="newtel"></div>
+                                    <span data-action="newtel" class="calcform__addTel">
+                                      <span class='newtel_img'>
+                                        <img src="img/newtel.svg" alt="">
+                                      </span>
+                                      <span>Добавить номер
+                                        телефона</span>
+                                    </span>
+                                  </div>
+                                  <div class="stepform__col">
+                                    <div class="calcform__multipleInput">
+                                      <div class="floating">
+                                        <input type="text" name="R_F_EMAIL" data-stepdata="receive_fio" value=''
+                                          data-steptype="source" onkeyup="this.setAttribute('value', this.value);">
+                                        <span class="floating-label">Email <span
+                                            class='gray'>(необязательно)</span></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class='' data-tabscontent='receiver'>
+                            <div class="calcform__content">
+                              <div class="stepform__row  flex w-full">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="R_U_COMPANY" data-stepdata="receive_yurname" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="2" data-max="300">
+                                    <span class="floating-label">Название компании</span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="stepform__row stepform__row3 w-full flex ">
+                                <div class="stepform__col ">
+                                  <div class="inputlabel  inputlabel_dropdown  inputselect " data-toggleitem='R_U_FORM'>
+                                    <div class="inputselect__wrapper" data-toggleclick="R_U_FORM">
+                                      <div class="inputselect__content">
+                                        <div class="inputselect__label">
+                                          Документ
+                                        </div>
+                                        <div class="inputselect__title" data-value="R_U_FORM">ООО
+                                        </div>
+                                        <input type="hidden" value='' data-inputvalue='R_U_FORM' name='R_U_FORM'>
+                                      </div>
+                                      <!-- /.inputselect__content -->
+                                    </div>
+                                    <!-- /.inputselect__wrapper -->
+                                    <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="R_U_FORM">
+                                      <div class="dropdownblock__wrapper">
+                                        <div class="dropdownblock__links">
+                                          <menu>
+                                            <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
+                                            <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
+                                            <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
+                                            <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
+                                          </menu>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- /.inputlabel -->
+                                </div>
+                                <div class="stepform__col">
+                                  <div class="floating">
+                                    <input type="text" name="R_U_INN" data-stepdata="receive_inn" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="13" data-max="13">
+                                    <span class="floating-label">ИНН</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col">
+                                  <div class="floating">
+                                    <input type="text" name="R_U_KPP" data-stepdata="receive_kpp" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-min="1" data-max="9">
+                                    <span class="floating-label">КПП</span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="calcform__title">Контактное лицо</div>
 
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="R_U_FIO" data-stepdata="receive_yurfio" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="2" data-max="300">
+                                    <span class="floating-label">ФИО</span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="tel" name="R_U_PHONE[]" data-stepdata="receive_yurtel" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="18" data-max="18">
+                                    <span class="floating-label">Телефон</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col w-full ">
+                                  <div class="floating">
+                                    <input type="text" name="R_U_EMAIL" data-stepdata="receive_email" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="3" data-max="300">
+                                    <span class="floating-label">Email</span></span>
+                                  </div>
+                                </div>
+                              </div>
 
+                              <div class="calcitem__info calcitem__info_red">
+                                <img src="img/calcitem__info.svg" alt=""><span>Обязательно нужна <a
+                                    href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf"
+                                    target="_blank">доверенность</a> на
+                                  отправку или получение груза</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class='' data-tabscontent='receiver'>
+                            <div class="calcform__content">
+                              <div class="stepform__row  flex w-full">
+                                
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="R_IP_INN" data-stepdata="receive_innip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="13" data-max="13">
+                                    <span class="floating-label">ИНН</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="R_IP_FIO" data-stepdata="receive_fioip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-min="1" data-max="9">
+                                    <span class="floating-label">ФИО</span></span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="tel" name="R_IP_PHONE[]" data-stepdata="receive_yurtelip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="18" data-max="18">
+                                    <span class="floating-label">Телефон</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col w-full ">
+                                  <div class="floating">
+                                    <input type="text" name="R_IP_EMAIL" data-stepdata="receive_emailip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="3" data-max="300">
+                                    <span class="floating-label">Email <span class='gray'>необязательно</span></span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="calcitem__info calcitem__info_red">
+                                <img src="img/calcitem__info.svg" alt=""><span>Обязательно нужна <a
+                                    href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf"
+                                    target="_blank">доверенность</a> на
+                                  отправку или получение груза</span>
+                              </div>
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="orderpage__step orderpage__step_type2">
+                      <div class="stepform__items">
+                        <div class="stepform__header flex items-center">
+                          <div class="stepform__headercontent">
+                            <div class="stepform__icon">
+                              <span class="stepform__number ">07</span>
+                            </div>
+                            <div class="stepform__title">Плательщик</div>
+                          </div>
+                        </div>
+                        <div class="stepform__main stepform__main_type2" data-tabswrapper='payer'>
+                          <div class="stepform__tabs stepform__tabs_type2 ">
+                            <div class="calctabs calctabs-js" data-tabs='payer'>
+                              <ul>
+                                <label class="active" for="payer_yur">Отправитель<input data-radiotab="tab" type="radio"
+                                    data-isrequired="delivery-address" value="1" id="payer_yur" checked=""
+                                    name="PAYER"></label>
+                                <label class="" for="payer_fiz">Получатель<input data-radiotab="tab" type="radio"
+                                    value="2" id="payer_fiz" name="PAYER">
+                                </label>
+                                <label class="" for="payer_third">Третье лицо <input data-radiotab="tab" type="radio" value="3"
+                                    id="payer_third" name="PAYER">
+                                </label>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class='active' data-tabscontent='payer'>
+                            
+                          </div>
+                          <div class='' data-tabscontent='payer'>
+                            
+                          </div>
+                          <div class='' data-tabscontent='payer'>
+                            <div class="calcform__content">
+
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="P_COMPANY" data-stepdata="payer_yurname" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="2" data-max="300">
+                                    <span class="floating-label">Название компании</span></span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="stepform__row stepform__row3 w-full flex ">
+                                <div class="stepform__col ">
+                                  <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_md" data-toggleitem='P_FORM'>
+                                    <div class="inputselect__wrapper" data-toggleclick="P_FORM">
+                                      <div class="inputselect__content">
+                                       
+                                        <div class="inputselect__title" data-value="P_FORM">Правовая форма
+                                        </div>
+                                        <input type="hidden" value='' data-inputvalue='P_FORM' name='P_FORM'>
+                                      </div>
+                                      <!-- /.inputselect__content -->
+                                    </div>
+                                    <!-- /.inputselect__wrapper -->
+                                    <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="P_FORM">
+                                      <div class="dropdownblock__wrapper">
+                                        <div class="dropdownblock__links">
+                                          <menu>
+                                            <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
+                                            <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
+                                            <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
+                                            <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
+                                          </menu>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- /.inputlabel -->
+                                </div>
+                                <div class="stepform__col">
+                                  <div class="floating">
+                                    <input type="text" name="P_INN" data-stepdata="payer_inn" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="13" data-max="13">
+                                    <span class="floating-label">ИНН</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col">
+                                  <div class="floating">
+                                    <input type="text" name="P_KPP" data-stepdata="payer_kpp" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-min="1" data-max="9">
+                                    <span class="floating-label">КПП</span></span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="calcform__title">Контактное лицо</div>
+
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="R_U_FIO" data-stepdata="receive_yurfio" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="2" data-max="300">
+                                    <span class="floating-label">ФИО</span></span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="stepform__row  flex ">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="tel" name="P_IP_PHONE[]" data-stepdata="payer_yurtelip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="18" data-max="18">
+                                    <span class="floating-label">Телефон</span></span>
+                                  </div>
+                                </div>
+                                <div class="stepform__col w-full ">
+                                  <div class="floating">
+                                    <input type="text" name="P_IP_EMAIL" data-stepdata="payer_emailip" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="3" data-max="300">
+                                    <span class="floating-label">Email <span class='gray'>необязательно</span></span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="calcitem__info calcitem__info_red">
+                                <img src="img/calcitem__info.svg" alt=""><span>Обязательно нужна <a
+                                    href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf"
+                                    target="_blank">доверенность</a> на
+                                  отправку или получение груза</span>
+                              </div>
+                             
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div><!-- /.orderpage__main -->
+                </div>
+                <!-- /.orderpage__main -->
                 <div class="orderpage__aside">
                   <div class="orderpage__asideblocks">
                     <div class="orderpage__asideblock">
@@ -918,44 +1474,55 @@
                             <div class="orderitem__title">Стоимость</div>
                             <div class="orderitem__btnpanel flex items-center">
                               <a href="#" class="btn_green">Оплатить</a>
-                            </div><!-- /.orderitem__toolbar -->
-                          </div><!-- /.orderitem__header -->
-
+                            </div>
+                            <!-- /.orderitem__toolbar -->
+                          </div>
+                          <!-- /.orderitem__header -->
                           <div class="orderitem__content">
                             <div class="orderparams">
                               <div class="orderparams__item">
                                 <div class="orderparams__dt">Межтерминальная перевозка</div>
                                 <div class="orderparams_dd">456 000 ₽ </div>
-                              </div><!-- /.orderparams__item -->
+                              </div>
+                              <!-- /.orderparams__item -->
                               <div class="orderparams__item">
                                 <div class="orderparams__dt">Адресный забор груза</div>
                                 <div class="orderparams_dd">25 000 ₽ </div>
-                              </div><!-- /.orderparams__item -->
+                              </div>
+                              <!-- /.orderparams__item -->
                               <div class="orderparams__item">
                                 <div class="orderparams__dt">Адресная доставка груза</div>
                                 <div class="orderparams_dd">-</div>
-                              </div><!-- /.orderparams__item -->
+                              </div>
+                              <!-- /.orderparams__item -->
                               <div class="orderparams__item">
                                 <div class="orderparams__dt">Стоимость страхования</div>
                                 <div class="orderparams_dd">104,45 ₽ </div>
-                              </div><!-- /.orderparams__item -->
+                              </div>
+                              <!-- /.orderparams__item -->
                               <div class="orderparams__item">
                                 <div class="orderparams__dt">Промокод</div>
                                 <div class="orderparams_dd">GPRI555</div>
-                              </div><!-- /.orderparams__item -->
+                              </div>
+                              <!-- /.orderparams__item -->
                               <div class="orderparams__item">
                                 <div class="orderparams__dt">Размер скидки</div>
                                 <div class="orderparams_dd ">
                                   <div class="discountbadge"> <span>13%</span>
-                                  </div><!-- /.discountbadge -->
+                                  </div>
+                                  <!-- /.discountbadge -->
                                 </div>
-                              </div><!-- /.orderparams__item -->
+                              </div>
+                              <!-- /.orderparams__item -->
                               <div class="orderparams__item">
                                 <div class="orderparams__dt">Статус</div>
                                 <div class="orderparams_dd red">Не оплачено</div>
-                              </div><!-- /.orderparams__item -->
-                            </div><!-- /.orderparams -->
-                          </div><!-- /.orderitem__content -->
+                              </div>
+                              <!-- /.orderparams__item -->
+                            </div>
+                            <!-- /.orderparams -->
+                          </div>
+                          <!-- /.orderitem__content -->
                           <div class="orderitem__buttons">
                             <div class="orderitem__button"><a href="" class="btn_blue btn_large">Сохранить
                                 черновик</a>
@@ -965,9 +1532,12 @@
                             </div>
                             <div class="orderitem__info">
                               <span class='red'>*</span> Указана ориентировочная стоимость
-                            </div><!-- /.orderitem__info -->
-                          </div><!-- /.orderitem__buttons -->
-                        </div><!-- /.orderitem__wrapper -->
+                            </div>
+                            <!-- /.orderitem__info -->
+                          </div>
+                          <!-- /.orderitem__buttons -->
+                        </div>
+                        <!-- /.orderitem__wrapper -->
                       </div>
                     </div>
                     <div class="orderpage__asideblock">
@@ -991,7 +1561,8 @@
                           <a href="#" class="ordertoolbar__item ordertb_disable">
                             <span>Отменить</span>
                           </a><!-- /.ordertoolbar__item -->
-                        </div><!-- /.ordertoolbar__items -->
+                        </div>
+                        <!-- /.ordertoolbar__items -->
                       </div>
                     </div>
                     <div class="orderpage__asideblock">
@@ -1000,33 +1571,45 @@
                           <div class="orderitem__header">
                             <div class="orderitem__title">Отслеживание посылки</div>
                             <!-- /.orderitem__title -->
-                          </div><!-- /.orderitem__header -->
-
+                          </div>
+                          <!-- /.orderitem__header -->
                           <div class="orderitem__content">
                             <div class="ordermap">
                               <div id="ordermap">
                                 <img src="img/ordermap.jpg" alt="">
-                              </div><!-- /#ordermap -->
-                            </div><!-- /.ordermap -->
+                              </div>
+                              <!-- /#ordermap -->
+                            </div>
+                            <!-- /.ordermap -->
                             <div class="ordertrack">
                               <div class="ordertrack__wrapper">
                                 <div class="ordertrack__point">
                                   <div class="ordertrack__status ordertrack__status_in">
                                     <img src="img/ordertrack__status_in.svg" alt="">
-                                  </div><!-- /.ordertrack__status -->
+                                  </div>
+                                  <!-- /.ordertrack__status -->
                                   <div class="ordertrack__current">
                                     <div class="ordertrack__title">Текущее местоположение</div>
                                     <!-- /.ordertrack__title -->
-                                    <div class="ordertrack__value">Краснодар</div><!-- /.ordertrack__value -->
-                                  </div><!-- /.ordertrack__current -->
-                                </div><!-- /.ordertrack__point -->
-                                <div class="ordertrack__pin">ПИН:4141</div><!-- /.ordertrack__pin -->
-                              </div><!-- /.ordertrack__wrapper -->
-                            </div><!-- /.ordertrack -->
-                          </div><!-- /.orderitem__content -->
-                        </div><!-- /.orderitem__wrapper -->
+                                    <div class="ordertrack__value">Краснодар</div>
+                                    <!-- /.ordertrack__value -->
+                                  </div>
+                                  <!-- /.ordertrack__current -->
+                                </div>
+                                <!-- /.ordertrack__point -->
+                                <div class="ordertrack__pin">ПИН:4141</div>
+                                <!-- /.ordertrack__pin -->
+                              </div>
+                              <!-- /.ordertrack__wrapper -->
+                            </div>
+                            <!-- /.ordertrack -->
+                          </div>
+                          <!-- /.orderitem__content -->
+                        </div>
+                        <!-- /.orderitem__wrapper -->
                       </div>
-                    </div><!-- /.orderpage__block -->
+                    </div>
+                    <!-- /.orderpage__block -->
                     <div class="orderpage__asideblock">
                       <div class="orderitem">
                         <div class="orderitem__wrapper orderitem__wrapper_wide">
@@ -1034,8 +1617,10 @@
                             <div class="orderitem__title">История изменений</div>
                             <div class="orderitem__toolbar flex items-center">
                               <a href="#" class='icondefault dotsicon'></a>
-                            </div><!-- /.orderitem__toolbar -->
-                          </div><!-- /.orderitem__header -->
+                            </div>
+                            <!-- /.orderitem__toolbar -->
+                          </div>
+                          <!-- /.orderitem__header -->
                           <div class="orderitem__content">
                             <div class="orderhistory__items">
                               <div class="orderhistory__item">
@@ -1087,9 +1672,6 @@
                                   <span class="orderhistory__date">14.01.2024 15:001</span>
                                 </a>
                               </div>
-
-
-
                             </div>
                           </div>
                         </div>
@@ -1102,11 +1684,11 @@
                             <div class="orderitem__title">Документы</div>
                             <div class="orderitem__toolbar flex items-center">
                               <a href="#" class="icondefault downloadicon2"></a>
-
                               <a href="#" class='icondefault infoicon'></a>
-                            </div><!-- /.orderitem__toolbar -->
-                          </div><!-- /.orderitem__header -->
-
+                            </div>
+                            <!-- /.orderitem__toolbar -->
+                          </div>
+                          <!-- /.orderitem__header -->
                           <div class="orderitem__content">
                             <div class="orderdocs">
                               <div class="orderdocs__item"><a href="#">Счет на забор груза</a></div>
@@ -1118,23 +1700,26 @@
                               <div class="orderdocs__item"><a href="#">Обьединенный счет</a></div>
                               <div class="orderdocs__item"><a href="#">ТТН</a></div>
                               <div class="orderdocs__item disabled" disabled=""><a href="#">УПД/Акт</a></div>
-                            </div><!-- /.orderdocs -->
-                          </div><!-- /.orderitem__content -->
-                        </div><!-- /.orderitem__wrapper -->
+                            </div>
+                            <!-- /.orderdocs -->
+                          </div>
+                          <!-- /.orderitem__content -->
+                        </div>
+                        <!-- /.orderitem__wrapper -->
                       </div>
-                    </div><!-- /.orderpage__asideblock -->
-                  </div><!-- /.orderpage__blocks -->
-                </div><!-- /.orderpage__aside -->
-              </div><!-- /.orderpage -->
-
+                    </div>
+                    <!-- /.orderpage__asideblock -->
+                  </div>
+                  <!-- /.orderpage__blocks -->
+                </div>
+                <!-- /.orderpage__aside -->
+              </div>
+              <!-- /.orderpage -->
             </div><!-- /.container -->
           </div><!-- /.wrapper -->
-
-
         </main>
-    </section><!-- /#content -->
-
-
+    </section>
+    <!-- /#content -->
     <div id="popup_history" class="modal fade modal_calc">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -1144,60 +1729,70 @@
           <div class="modal-body">
             <div class="modal__header">
               <div class="modal__title">История изменений</div>
-
             </div>
-
             <div class="modal__content ">
               <div class="wrappedlist">
                 <div class="wrappedlist__items">
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item">
                     <div class="wrappedlist__title">Груз на терминале в пункте отправления</div>
                     <div class="wrappedlist__text">14.01.2024 15:00</div>
-                  </div><!-- /.wrappedlist__item -->
-                </div><!-- /.wrappedlist__items -->
-              </div><!-- /.wrappedlist -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
+                </div>
+                <!-- /.wrappedlist__items -->
+              </div>
+              <!-- /.wrappedlist -->
             </div>
-
           </div>
         </div>
       </div>
@@ -1211,9 +1806,7 @@
           <div class="modal-body">
             <div class="modal__header">
               <div class="modal__title">Подробности о грузе</div>
-
             </div>
-
             <div class="modal__content ">
               <div class="wrappedlist">
                 <div class="wrappedlist__items">
@@ -1224,9 +1817,11 @@
                         <div class="wrappedlist__param">36 мест</div>
                         <div class="wrappedlist__param">0,1 х 1,13 х 2,74</div>
                         <div class="wrappedlist__param">135 кг</div>
-                      </div><!-- /.wrappedlist__params -->
+                      </div>
+                      <!-- /.wrappedlist__params -->
                     </div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item wrappedlist__item_status wrappedlist__item_statusDefault">
                     <div class="wrappedlist__title">Авиазапчасти</div>
                     <div class="wrappedlist__text">
@@ -1234,9 +1829,11 @@
                         <div class="wrappedlist__param">36 мест</div>
                         <div class="wrappedlist__param">0,1 х 1,13 х 2,74</div>
                         <div class="wrappedlist__param">135 кг</div>
-                      </div><!-- /.wrappedlist__params -->
+                      </div>
+                      <!-- /.wrappedlist__params -->
                     </div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item wrappedlist__item_status wrappedlist__item_statusDefault">
                     <div class="wrappedlist__title">Авиазапчасти</div>
                     <div class="wrappedlist__text">
@@ -1244,9 +1841,11 @@
                         <div class="wrappedlist__param">36 мест</div>
                         <div class="wrappedlist__param">0,1 х 1,13 х 2,74</div>
                         <div class="wrappedlist__param">135 кг</div>
-                      </div><!-- /.wrappedlist__params -->
+                      </div>
+                      <!-- /.wrappedlist__params -->
                     </div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item wrappedlist__item_status wrappedlist__item_statusDefault">
                     <div class="wrappedlist__title">Авиазапчасти</div>
                     <div class="wrappedlist__text">
@@ -1254,9 +1853,11 @@
                         <div class="wrappedlist__param">36 мест</div>
                         <div class="wrappedlist__param">0,1 х 1,13 х 2,74</div>
                         <div class="wrappedlist__param">135 кг</div>
-                      </div><!-- /.wrappedlist__params -->
+                      </div>
+                      <!-- /.wrappedlist__params -->
                     </div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item wrappedlist__item_status wrappedlist__item_statusDefault">
                     <div class="wrappedlist__title">Авиазапчасти</div>
                     <div class="wrappedlist__text">
@@ -1264,9 +1865,11 @@
                         <div class="wrappedlist__param">36 мест</div>
                         <div class="wrappedlist__param">0,1 х 1,13 х 2,74</div>
                         <div class="wrappedlist__param">135 кг</div>
-                      </div><!-- /.wrappedlist__params -->
+                      </div>
+                      <!-- /.wrappedlist__params -->
                     </div>
-                  </div><!-- /.wrappedlist__item -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
                   <div class="wrappedlist__item wrappedlist__item_status wrappedlist__item_statusDefault">
                     <div class="wrappedlist__title">Авиазапчасти</div>
                     <div class="wrappedlist__text">
@@ -1274,70 +1877,74 @@
                         <div class="wrappedlist__param">36 мест</div>
                         <div class="wrappedlist__param">0,1 х 1,13 х 2,74</div>
                         <div class="wrappedlist__param">135 кг</div>
-                      </div><!-- /.wrappedlist__params -->
+                      </div>
+                      <!-- /.wrappedlist__params -->
                     </div>
-                  </div><!-- /.wrappedlist__item -->
-
-                </div><!-- /.wrappedlist__items -->
-              </div><!-- /.wrappedlist -->
+                  </div>
+                  <!-- /.wrappedlist__item -->
+                </div>
+                <!-- /.wrappedlist__items -->
+              </div>
+              <!-- /.wrappedlist -->
             </div>
-
           </div>
         </div>
       </div>
     </div>
-
     <div id="popup_info" class="modal fade modal_calc modal_large">
       <div class="modal-dialog">
         <span class="modalclose" data-dismiss="modal" aria-hidden="true">
           <img src="img/modalclose.svg" alt="" class='onlyDesktop'>
           <img src="img/closepopup.svg" alt="" class='onlyMobile'>
-
         </span>
         <div class="modal-content">
-
           <div class="modal-body">
             <div class="modal__header">
               <div class="modal__title">Подробнее <a href="#" class="icondefault iconedit"></a>
               </div>
-
             </div>
-
             <div class="modal__content ">
               <div class="orderparams orderparams_full">
                 <div class="orderparams__item">
                   <div class="orderparams__dt">Адрес</div>
                   <div class="orderparams_dd">г.Комсомольск-на-Амуре, ул.Строителей, д.156 к.1</div>
-
-                </div><!-- /.orderparams__item -->
+                </div>
+                <!-- /.orderparams__item -->
                 <div class="orderparams__item">
                   <div class="orderparams__dt">Время забора</div>
                   <div class="orderparams_dd">24.24.2024, с 11:00 до 12:00 </div>
-                </div><!-- /.orderparams__item -->
+                </div>
+                <!-- /.orderparams__item -->
                 <div class="orderparams__item">
                   <div class="orderparams__dt">Км за город</div>
                   <div class="orderparams_dd">222</div>
-                </div><!-- /.orderparams__item -->
+                </div>
+                <!-- /.orderparams__item -->
                 <div class="orderparams__item">
                   <div class="orderparams__dt">Боковая растентовка</div>
                   <div class="orderparams_dd">Да</div>
-                </div><!-- /.orderparams__item -->
+                </div>
+                <!-- /.orderparams__item -->
                 <div class="orderparams__item">
                   <div class="orderparams__dt">Гидроборт</div>
                   <div class="orderparams_dd">Да</div>
-                </div><!-- /.orderparams__item -->
+                </div>
+                <!-- /.orderparams__item -->
                 <div class="orderparams__item">
                   <div class="orderparams__dt">Контактное лицо</div>
                   <div class="orderparams_dd">Маринович Андрей Валерьевич</div>
-                </div><!-- /.orderparams__item -->
+                </div>
+                <!-- /.orderparams__item -->
                 <div class="orderparams__item">
                   <div class="orderparams__dt">Телефон</div>
                   <div class="orderparams_dd">+7 949 949 88 22</div>
-                </div><!-- /.orderparams__item -->
+                </div>
+                <!-- /.orderparams__item -->
                 <div class="orderparams__item">
                   <div class="orderparams__dt">Комментарий</div>
                   <div class="orderparams_dd">+7 949 949 88 22</div>
-                </div><!-- /.orderparams__item -->
+                </div>
+                <!-- /.orderparams__item -->
               </div>
               <div class="orderdriver">
                 <div class="orderdriver__items">
@@ -1345,13 +1952,16 @@
                     <div class="orderdriver__title">Водитель</div>
                     <div class="orderdriver__name">Имя водителя</div>
                     <div class="orderdriver__info">+8 484 838 28 92</div>
-                  </div><!-- /.orderdriver__item -->
+                  </div>
+                  <!-- /.orderdriver__item -->
                   <div class="orderdriver__item">
                     <div class="orderdriver__title">Авто</div>
                     <div class="orderdriver__name">BMW 7 series, 1.2 turbodiesel</div>
                     <div class="orderdriver__info">В 777 ОР</div>
-                  </div><!-- /.orderdriver__item -->
-                </div><!-- /.orderdriver__items -->
+                  </div>
+                  <!-- /.orderdriver__item -->
+                </div>
+                <!-- /.orderdriver__items -->
               </div>
               <div class="orderfiles">
                 <div class="orderfiles__items">
@@ -1374,9 +1984,9 @@
                     </a>
                   </div>
                 </div>
-              </div><!-- /.orderfiles -->
+              </div>
+              <!-- /.orderfiles -->
             </div>
-
           </div>
         </div>
       </div>
@@ -1388,13 +1998,10 @@
           <img src="img/closepopup.svg" alt="" class='onlyMobile'>
         </span>
         <div class="modal-content">
-
           <div class="modal-body">
             <div class="modal__header">
               <div class="modal__title">Редактирование</div>
-
             </div>
-
             <div class="modal__content ">
               <div class="formblock">
                 <div class="formblock__form">
@@ -1404,15 +2011,19 @@
                         <div class="formblock__input">
                           <label for="">Адрес</label>
                           <input type="text" value="г.Комсомольск-на-Амуре, ул.Строителей, д.156 к.1">
-                        </div><!-- /.formblock__input -->
-                      </div><!-- /.formblock__row -->
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
                       <div class="formblock__row">
                         <div class="formblock__col">
                           <div class="formblock__input ">
                             <label for="">Дата забора</label>
                             <input type="date" value="24/24/2024">
-                          </div><!-- /.formblock__input -->
-                        </div><!-- /.formblock__col -->
+                          </div>
+                          <!-- /.formblock__input -->
+                        </div>
+                        <!-- /.formblock__col -->
                         <div class="formblock__col">
                           <div class="formblock__input ">
                             <label for="">Интервал забора</label>
@@ -1421,52 +2032,66 @@
                               <option value="">с 13:00 до 14:00</option>
                               <option value="">с 15:00 до 16:00</option>
                               <option value="">с 17:00 до 18:00</option>
-                            </select><!-- /# -->
-                          </div><!-- /.formblock__input -->
-                        </div><!-- /.formblock__col -->
-
-                      </div><!-- /.formblock__main -->
-
-                    </div><!-- /.formblock__row -->
+                            </select>
+                            <!-- /# -->
+                          </div>
+                          <!-- /.formblock__input -->
+                        </div>
+                        <!-- /.formblock__col -->
+                      </div>
+                      <!-- /.formblock__main -->
+                    </div>
+                    <!-- /.formblock__row -->
                     <div class="formblock__row">
                       <div class="formblock__input">
                         <label for="">Контактное лицо</label>
                         <input type="text" value="">
-                      </div><!-- /.formblock__input -->
-                    </div><!-- /.formblock__row -->
+                      </div>
+                      <!-- /.formblock__input -->
+                    </div>
+                    <!-- /.formblock__row -->
                     <div class="formblock__row">
                       <div class="formblock__input">
                         <label for="">Телефон</label>
                         <input type="text" value="">
-                      </div><!-- /.formblock__input -->
-                    </div><!-- /.formblock__row -->
+                      </div>
+                      <!-- /.formblock__input -->
+                    </div>
+                    <!-- /.formblock__row -->
                     <div class="formblock__row">
                       <div class="formblock__input">
                         <label for="">Комментарий</label>
                         <input type="text" value="">
-                      </div><!-- /.formblock__input -->
-                    </div><!-- /.formblock__row -->
-
+                      </div>
+                      <!-- /.formblock__input -->
+                    </div>
+                    <!-- /.formblock__row -->
                     <div class="formblock__option">
                       <div class="formoption">
                         <div class="formoption__content">
                           <div class="formoption__icon">
                             <img src="img/formoption.svg" alt="">
-                          </div><!-- /.formoption__icon -->
+                          </div>
+                          <!-- /.formoption__icon -->
                           <div class="formoption__main">
                             <div class="formoption__title">Погрузо-разгрузочные работы</div>
                             <!-- /.formoption__title -->
-                            <div class="formoption__text">Активирован</div><!-- /.formoption__text -->
-                          </div><!-- /.formoption__main -->
-                        </div><!-- /.formoption__content -->
+                            <div class="formoption__text">Активирован</div>
+                            <!-- /.formoption__text -->
+                          </div>
+                          <!-- /.formoption__main -->
+                        </div>
+                        <!-- /.formoption__content -->
                         <div class="formoption__check">
                           <label class="dpswitch">
                             <input type="checkbox" name="dpswitch" id="dpswitch">
                             <span class="dpslider dpround"></span>
                           </label>
-                        </div><!-- /.formoption__check -->
+                        </div>
+                        <!-- /.formoption__check -->
                       </div>
-                    </div><!-- /.formblock__option -->
+                    </div>
+                    <!-- /.formblock__option -->
                     <div class="formblock__block">
                       <div class="formblock__blocktitle">Упаковка груза</div>
                       <div class="formblock__checkoptions">
@@ -1480,7 +2105,6 @@
                                   <span class="formcheckbox__text" data-text="checkboxtext">Деревянная
                                     обрешетка</span>
                                 </span>
-
                               </label>
                               <label for="check210-012" class="formcheckbox__label formcheckbox__label_type2">
                                 <span>
@@ -1489,7 +2113,6 @@
                                   <span class="formcheckbox__text" data-text="checkboxtext">Паллетный
                                     борт</span>
                                 </span>
-
                               </label>
                               <label for="check210-2" class="formcheckbox__label formcheckbox__label_type2">
                                 <span>
@@ -1498,7 +2121,6 @@
                                   <span class="formcheckbox__text" data-text="checkboxtext">Пузырчатая
                                     пленка</span>
                                 </span>
-
                               </label>
                               <label for="check210-3" class="formcheckbox__label formcheckbox__label_type2">
                                 <span>
@@ -1507,7 +2129,6 @@
                                   <span class="formcheckbox__text" data-text="checkboxtext">Стретч
                                     пленка</span>
                                 </span>
-
                               </label>
                               <label for="check210-4" class="formcheckbox__label formcheckbox__label_type2">
                                 <span>
@@ -1515,7 +2136,6 @@
                                     data-stepdata="pack_gofro" data-steptype="source">
                                   <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон</span>
                                 </span>
-
                               </label>
                               <label for="check210-5" class="formcheckbox__label formcheckbox__label_type2">
                                 <span>
@@ -1523,7 +2143,6 @@
                                     data-stepdata="pack_meshkotara" data-steptype="source">
                                   <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара</span>
                                 </span>
-
                               </label>
                               <label for="check210-8" class="formcheckbox__label formcheckbox__label_type2">
                                 <span>
@@ -1532,8 +2151,6 @@
                                   <span class="formcheckbox__text" data-text="checkboxtext">Пересчет
                                     внутренних вложений</span>
                                 </span>
-
-
                               </label>
                               <label for="check210-9" class="formcheckbox__label formcheckbox__label_type2">
                                 <span>
@@ -1541,9 +2158,7 @@
                                     data-stepdata="pack_mark" data-steptype="source" checked="">
                                   <span class="formcheckbox__text" data-text="checkboxtext">Маркировка</span>
                                 </span>
-
                               </label>
-
                             </div>
                           </div>
                         </div>
@@ -1563,7 +2178,6 @@
                                     сопроводительных
                                     документов</span>
                                 </span>
-
                               </label>
                               <label for="check210-11" class="formcheckbox__label formcheckbox__label_type2">
                                 <span>
@@ -1572,9 +2186,7 @@
                                   <span class="formcheckbox__text" data-text="checkboxtext">Возврат
                                     документов</span>
                                 </span>
-
                               </label>
-
                             </div>
                           </div>
                         </div>
@@ -1587,13 +2199,14 @@
                             <div class="dragtext">Перетащите файлы для загрузки, или <span class='draglink'>выберите
                                 файл
                               </span>
-                            </div><!-- /.dragtext -->
-                            <div class="draginfo">.pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ</div><!-- /.raginfo -->
-                          </div><!-- /.dragbutton -->
-
+                            </div>
+                            <!-- /.dragtext -->
+                            <div class="draginfo">.pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ</div>
+                            <!-- /.raginfo -->
+                          </div>
+                          <!-- /.dragbutton -->
                           <input type="file" name='formfileloader[]' id="fileInput" multiple class='draginput' hidden>
                         </div>
-
                         <div class="orderfiles">
                           <div class="orderfiles__items" id="fileName">
                             <div class="orderfiles__item">
@@ -1605,35 +2218,33 @@
                             </div>
                           </div>
                         </div>
-
-
                         </span>
-                      </div><!-- /.formfileloader -->
-                    </div><!-- /.formblock__block -->
-
+                      </div>
+                      <!-- /.formfileloader -->
+                    </div>
+                    <!-- /.formblock__block -->
                     <div class="formblock__buttons">
                       <div class="formblock__button">
                         <button type="reset" name="">
                           <span class="btn_reset">Сбросить</span></button>
-                      </div><!-- /.formblock__button -->
+                      </div>
+                      <!-- /.formblock__button -->
                       <div class="formblock__button">
                         <button type="submit" name="">
                           <span class="btn_submit">Изменить</span></button>
-                      </div><!-- /.formblock__button -->
-                    </div><!-- /.formblock__buttons -->
-
+                      </div>
+                      <!-- /.formblock__button -->
+                    </div>
+                    <!-- /.formblock__buttons -->
                   </form>
-                </div><!-- /.formblock__form -->
+                </div>
+                <!-- /.formblock__form -->
               </div>
-
-
             </div>
-
           </div>
         </div>
       </div>
     </div>
-
     <script>
       //selecting all required elements
       const dropArea = document.querySelector(".drag-area"),
@@ -1713,18 +2324,16 @@
 
 
         list.append(`
-               <div class="orderfiles__item">
-                  <div class="orderfiles__wrapper">
-                    <div class="orderfiles__title">${files[i].name} <a href='#' data-fileremove='fileName_id_new${i}'></a></div>
-                    <div class="orderfiles__info">${Math.floor(files[i].size / 1000) + ' кБ'}</div>
-                  </div>
-                </div>  `)
+           <div class="orderfiles__item">
+              <div class="orderfiles__wrapper">
+                <div class="orderfiles__title">${files[i].name} <a href='#' data-fileremove='fileName_id_new${i}'></a></div>
+                <div class="orderfiles__info">${Math.floor(files[i].size / 1000) + ' кБ'}</div>
+              </div>
+            </div>  `)
 
 
 
       }
 
     </script>
-
-
     <%= _.template(require('../includes/footer.html').default)(data) %>

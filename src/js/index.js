@@ -125,22 +125,21 @@ function initBoxMask(count = "") {
 }
 
 $(document).ready(function () {
-
-  (jQuery)
+  jQuery
   ;(function ($) {
     $(function () {
       $(".calctabs-js").on("click", "label:not(.active)", function () {
         $(this).addClass("active").siblings().removeClass("active")
         $(this)
           .closest("[data-tabswrapper]")
-        
+
           .find("[data-tabs]")
           .removeClass("active")
           .eq($(this).index())
           .addClass("active")
         $(this)
-        .closest("[data-tabswrapper]")
-        
+          .closest("[data-tabswrapper]")
+
           .find("[data-tabscontent]")
           .removeClass("active")
           .eq($(this).index())
@@ -161,29 +160,39 @@ $(document).ready(function () {
     })
   })(jQuery)
 
-  $('.inputhints a').on('click', function(e) {
+  $(".inputhints a").on("click", function (e) {
     e.preventDefault()
     const val = $(this).text()
-    $(this).closest('[data-wrapper]').find('input').val(val)
+    $(this).closest("[data-wrapper]").find("input").val(val)
   })
-  
-  $('[data-action="newtel"]').on('click', function(e) {
+
+  $('[data-action="newtel"]').on("click", function (e) {
     e.preventDefault()
-    $('#newtel').append(`
+    $(this).siblings(".newtel").append(`
       <div class="floating">
         <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel"
-          data-steptype="source" data-required="required" data-min="18" data-max="18">
+          data-steptype="source" data-required="required" data-min="18" data-max="18" onkeyup="this.setAttribute('value', this.value);" value="">
         <span class="floating-label">Телефон</span></span>
       </div>
       `)
+
+    $('input[type="tel"]')
+      .focus(function () {
+        $(this).setCursorPosition(3)
+      })
+      .mask("+7 (999) 999-99-99")
   })
- 
-  $('.checkblock input').on("change", function (e) {
-    const label = $(this).closest('.checkblock').find('[data-dependon]')
-    if ($(this).is(':checked')) {
+
+  $(".checkblock input").on("change", function (e) {
+    const label = $(this).closest(".checkblock").find("[data-dependon]")
+    if ($(this).is(":checked")) {
       label.text("Активирован")
     } else {
       label.text("Отключен")
+    }
+
+    if ($(this).attr('id') === 'R_SIMPLIFY') {
+     
     }
   })
   $("[data-action='addbox']").on("click", function (e) {
@@ -234,16 +243,13 @@ $(document).ready(function () {
     initBoxMask(`[data-new-box=${count}]`)
 
     $("[data-action='boxremove']").on("click", function (e) {
-      const $boxid = $(this).closest('[data-box]')
+      const $boxid = $(this).closest("[data-box]")
       $boxid.remove()
 
-      $('.calcobject__number').each(function(index) {
+      $(".calcobject__number").each(function (index) {
         $(this).text(index + 1)
       })
     })
-
-
-   
   })
 
   initBoxMask()
@@ -349,7 +355,7 @@ $(document).ready(function () {
     $(this).toggleClass("active")
     // get value
     let val = $(this).data("togglevalue")
-   
+
     // get wrapper leement
     const $wrapper = $(this).closest("[data-toggleitem]")
     // get dropdown ID
