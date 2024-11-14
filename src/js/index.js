@@ -183,6 +183,51 @@ $(document).ready(function () {
       .mask("+7 (999) 999-99-99")
   })
 
+  function offDadata(selector) {
+    if ($(selector).attr('data-dadatatype')) {
+      $(selector).removeAttr('data-dadata')
+    } else {
+      $(selector).removeAttr('data-blocked').removeAttr('disabled')
+
+    }
+  }
+
+  function onDadata(selector) {
+    if ($(selector).attr('data-dadatatype')) {
+      $(selector).attr('data-dadata', "org")
+    } else {
+      $(selector).attr('data-blocked', selector).attr('disabled', 'disabled')
+
+    }
+
+  }
+
+
+  $('[data-ondadata]').on("change", function (e) {
+    const selector = $(this).attr('data-ondadata')
+    if ($(this).is(":checked")) {
+      offDadata($(`[data-offdadata=${selector}]`))
+    } else {
+      onDadata($(`[data-offdadata=${selector}]`))
+    }
+    
+  })
+
+
+  $("input").on("change", function (e) {
+    if ($(this).closest('[data-depgroup]').length) {
+      const dep = $(this).attr("data-dependcheck")
+      if (dep) {
+        if ($(this).is(":checked")) {
+          $(`[data-dependbox=${dep}`).addClass('active')
+        } 
+      } else {
+        const depgroup = $(this).closest('[data-depgroup]').attr('data-depgroup')
+        $(`[data-dependbox=${depgroup}`).removeClass('active')
+      }
+    }
+   
+  })
   $(".checkblock input").on("change", function (e) {
     const label = $(this).closest(".checkblock").find("[data-dependon]")
     if ($(this).is(":checked")) {
@@ -190,10 +235,7 @@ $(document).ready(function () {
     } else {
       label.text("Отключен")
     }
-
-    if ($(this).attr('id') === 'R_SIMPLIFY') {
-     
-    }
+    
   })
   $("[data-action='addbox']").on("click", function (e) {
     e.preventDefault()
@@ -297,7 +339,7 @@ $(document).ready(function () {
   $('input[data-stepdata="payer_pasp1"]').mask("9999")
   $('input[data-stepdata="payer_pasp2"]').mask("999999")
   $('input[data-stepdata="send_kpp"]').mask("99999999")
-  $('input[data-stepdata="send_inn"]').mask("999999999?999")
+  $('input[data-stepdata="send_inn"]').mask("999999999")
   $('input[data-stepdata="receive_yurkpp"]').mask("99999999")
   $('input[data-stepdata="receive_yurinn"]').mask("999999999?999")
   $('input[name="FLOOR"]').mask("9?9")
@@ -437,6 +479,146 @@ $(document).ready(function () {
     const target = $(this).closest(".popup")
     $(target).removeClass("active")
     $(".jsbackdrop").removeClass("active")
+  })
+
+  $("[data-dadata='org']").on("keyup", function () {
+    let timeout = 0
+    let val = $(this).val()
+    /*   val = val.replace(/\D/g, ""); */
+    if (val.length >= 3) {
+      var url =
+        "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party"
+      var token = "72536b22937ea398d010960a0631dcdf2316cc6b"
+
+      var options = {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Authorization: "Token " + token,
+        },
+        body: JSON.stringify({ query: val, count: 11 }),
+      }
+
+      if (timeout) {
+        clearTimeout(timeout)
+      }
+
+      timeout = setTimeout(() => {
+        $(".sgstlist").remove()
+
+        fetch(url, options)
+          .then((response) => response.text())
+          .then((result) => {
+            const datatype = $(this).attr("data-dadatatype")
+            const items = JSON.parse(result).suggestions
+            console.log(items)
+            const $wrapper = $(this).closest("div")
+            $wrapper.html()
+            $wrapper.addClass("relative")
+
+            if (items.length < 1) {
+              $wrapper.append(`
+                <div class="sgstlist">
+                  <div class="sgstlist__item">Ничего не найдено</div>
+                </div>
+                `)
+
+              return
+            }
+
+            let list = ""
+            let showdata = ""
+            let related = ""
+            let showinfo = ""
+            let compname = ""
+            let kpp = ""
+            let compform = ""
+
+            items.forEach((item) => {
+              showinfo = ""
+              showdata = item.value.replace(/"/g, "").replace(/'/g, "")
+              related = item.data.inn.replace(/"/g, "").replace(/'/g, "")
+
+              if (item.data.inn) {
+                showinfo += item.data.inn.replace(/"/g, "").replace(/'/g, "")
+              }
+              if (item.data.address) {
+                showinfo +=
+                  " " +
+                  item.data.address.value.replace(/"/g, "").replace(/'/g, "")
+              }
+
+              if (item.data.kpp) {
+                kpp = item.data.kpp.replace(/"/g, "").replace(/'/g, "")
+              }
+              if (item.data.opf) {
+                compform = item.data.opf.short
+                  .replace(/"/g, "")
+                  .replace(/'/g, "")
+              }
+
+              compname = item.value.replace(/"/g, "").replace(/'/g, "")
+
+              if (datatype === "inn") {
+                showdata = item.data.inn.replace(/"/g, "").replace(/'/g, "")
+                related = item.value.replace(/"/g, "").replace(/'/g, "")
+              }
+              list += `<div 
+                    class="sgstlist__item" 
+                    data-suggvalue="${showdata}" data-suggrelated="${related}" data-suggkpp="${kpp}" data-suggform="${compform}" data-compname="${compname}">
+                      <span class="sgstlist__name">${compname}</span>
+                      <span class="sgstlist__info">${showinfo}</span>
+                      
+                     
+                  </div>`
+            })
+
+            /* if (items.length >= 11) {
+                list += `
+                    <div class="sgstlist__item sgstlist__item_warn"></div>
+                  `
+              } */
+
+            $wrapper.append(`
+                <div class="sgstlist">
+                  <div class="sgstlist__title">Выберите вариант или продолжите ввод</div>
+                  <div class="sgstlist__items">${list}</div>
+                </div>
+                `)
+          })
+          /*  .then(result => setInnInfo(result.length)) */
+          .catch((error) => console.log("error", error))
+      }, 1000)
+    }
+  })
+
+  $(document).on("click", "[data-suggvalue]", function (e) {
+    const source = $(this)
+    const $name = source
+      .closest("[data-datatawrapper]")
+      .find("[data-dadata='name']")
+    const $kpp = source
+      .closest("[data-datatawrapper]")
+      .find("[data-dadata='kpp']")
+    const $short = source
+      .closest("[data-datatawrapper]")
+      .find("[data-dadata='short']")
+    /*  const related = source
+        .closest(".relative")
+        .find("[data-dadata]")
+        .not(this) */
+    const name = source.attr("data-compname").replace(/"/g, "")
+    const kpp = source.attr("data-suggkpp").replace(/"/g, "")
+    const short = source.attr("data-suggform").replace(/"/g, "")
+    $(".sgstlist").remove()
+
+    $name.val(name).attr("value", name)
+    $kpp.val(kpp).attr("value", kpp)
+    $short.text(short).attr("value", short)
+
+    console.log($name)
   })
 })
 

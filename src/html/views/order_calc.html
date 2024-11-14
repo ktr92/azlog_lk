@@ -178,7 +178,7 @@
                                   <div class="floating">
                                     <input type="text" name='boxCount[]' name='volume_1' value=''
                                       onkeyup="this.setAttribute('value', this.value);" data-number-format="">
-                                    <span class="floating-label">Одинаковых мест </span>
+                                    <span class="floating-label">Количество </span>
                                   </div>
                                 </div>
                                 <div class="calcobject__input w-full">
@@ -747,20 +747,33 @@
                           </div>
                         </div>
                         <div class="stepform__main stepform__main_type2" data-tabswrapper='sender'>
-                          <div class="stepform__tabs stepform__tabs_type2 ">
-                            <div class="calctabs calctabs-js" data-tabs='sender'>
+                          <div class="stepform__tabs stepform__tabs_type2 stepform__tabs_checkbox">
+                            <div class="calctabs calctabs-js" data-tabs='sender'  data-depgroup='S_DADATA'>
                               <ul>
                                 <label class="active" for="send_yur">Физ. лицо <input data-radiotab="tab" type="radio"
                                     data-isrequired="delivery-address" value="Y" id="send_yur" checked=""
                                     name="sendfizyur"></label>
                                 <label class="" for="send_fiz">Юр. лицо <input data-radiotab="tab" type="radio"
-                                    value="N" id="send_fiz" name="sendfizyur">
+                                    value="N" id="send_fiz" name="sendfizyur" data-dependcheck="S_DADATA">
                                 </label>
                                 <label class="" for="send_ip">ИП <input data-radiotab="tab" type="radio" value="N"
                                     id="send_ip" name="sendfizyur">
                                 </label>
                               </ul>
                             </div>
+                            <div class="stepform__settings">
+                              <div class="checkblock checkblock_sm" data-dependbox='S_DADATA'>
+                                <div class="checkblock__checkbox">
+                                  <input type="checkbox" id="S_DADATA" name="S_DADATA" value="Y" data-ondadata="S_DADATA">
+                                  <label for="S_DADATA">
+                                    <span></span>
+                                  </label>
+                                </div>
+                                <div class="checkblock__content">
+                                  Ввести вручную
+                                </div>
+                              </div>
+                            </div><!-- /.stepform__settings -->
                           </div>
                           <div class='active' data-tabscontent='sender'>
                             <div class="calcform__content">
@@ -871,29 +884,29 @@
                               </div>
                             </div>
                           </div>
-                          <div class='' data-tabscontent='sender'>
+                          <div class='' data-tabscontent='sender' data-datatawrapper='sender'>
                             <div class="calcform__content">
-                              <div class="stepform__row  flex w-full">
-                                <div class="stepform__col w-full">
+                             
+                              <div class="stepform__row stepform__row3 w-full flex ">
+                                <div class="stepform__col">
                                   <div class="floating">
-                                    <input type="text" name="U_COMPANY" data-stepdata="send_yurname" value=''
+                                    <input type="text" name="U_INN" data-stepdata="send_inn" value=''
                                       data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                      data-required="required" data-min="2" data-max="300">
-                                    <span class="floating-label">Название компании</span></span>
+                                      data-required="required" data-min="13" data-max="13"  data-dadatatype="inn" data-dadata="org" >
+                                    <span class="floating-label">ИНН</span></span>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="stepform__row stepform__row3 w-full flex ">
                                 <div class="stepform__col ">
-                                  <div class="inputlabel  inputlabel_dropdown  inputselect " data-toggleitem='U_FORM'>
+                                  <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_dadata" data-toggleitem='U_FORM' data-offdadata='S_DADATA' data-blocked='S_DADATA' disabled='disabled'>
                                     <div class="inputselect__wrapper" data-toggleclick="U_FORM">
-                                      <div class="inputselect__content">
-                                        <div class="inputselect__label">
+                                      <div class="inputselect__content floating">
+                                        <input type="hidden" value='' data-inputvalue='U_FORM' name='U_FORM' data-dadata='short'>
+
+                                        <div class="floating-label">
                                           Правовая форма
                                         </div>
-                                        <div class="inputselect__title" data-value="U_FORM">ООО
+                                        <div class="inputselect__title" data-value="U_FORM" data-dadata='short'>
                                         </div>
-                                        <input type="hidden" value='' data-inputvalue='U_FORM' name='U_FORM'>
                                       </div>
                                       <!-- /.inputselect__content -->
                                     </div>
@@ -913,20 +926,23 @@
                                   </div>
                                   <!-- /.inputlabel -->
                                 </div>
-                                <div class="stepform__col">
-                                  <div class="floating">
-                                    <input type="text" name="U_INN" data-stepdata="send_inn" value=''
-                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                      data-required="required" data-min="13" data-max="13">
-                                    <span class="floating-label">ИНН</span></span>
-                                  </div>
-                                </div>
+                                
                                 <div class="stepform__col">
                                   <div class="floating">
                                     <input type="text" name="U_KPP" data-stepdata="send_kpp" value=''
                                       data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                      data-min="1" data-max="9">
+                                      data-min="1" data-max="9" data-dadata='kpp' data-offdadata='S_DADATA' data-blocked='S_DADATA' disabled='disabled'>
                                     <span class="floating-label">КПП</span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="stepform__row  flex w-full">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="U_COMPANY" data-stepdata="send_yurname" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required" data-min="2" data-max="300" data-dadata='name' data-offdadata='S_DADATA' data-blocked='S_DADATA' disabled='disabled'>
+                                    <span class="floating-label">Название компании</span></span>
                                   </div>
                                 </div>
                               </div>
@@ -1032,20 +1048,33 @@
                           </div>
                         </div>
                         <div class="stepform__main stepform__main_type2" data-tabswrapper='receiver'>
-                          <div class="stepform__tabs stepform__tabs_type2 ">
-                            <div class="calctabs calctabs-js" data-tabs='receiver'>
+                          <div class="stepform__tabs stepform__tabs_type2 stepform__tabs_checkbox">
+                            <div class="calctabs calctabs-js" data-tabs='receiver' data-depgroup='R_DADATA'>
                               <ul>
                                 <label class="active" for="receive_yur">Физ. лицо <input data-radiotab="tab" type="radio"
                                     data-isrequired="delivery-address" value="Y" id="receive_yur" checked=""
                                     name="receivefizyur"></label>
                                 <label class="" for="receive_fiz">Юр. лицо <input data-radiotab="tab" type="radio"
-                                    value="N" id="receive_fiz" name="receivefizyur">
+                                    value="N" id="receive_fiz" name="receivefizyur" data-dependcheck="R_DADATA">
                                 </label>
                                 <label class="" for="receive_ip">ИП <input data-radiotab="tab" type="radio" value="N"
                                     id="receive_ip" name="receivefizyur">
                                 </label>
                               </ul>
                             </div>
+                            <div class="stepform__settings">
+                              <div class="checkblock checkblock_sm" data-dependbox='R_DADATA'>
+                                <div class="checkblock__checkbox">
+                                  <input type="checkbox" id="R_DADATA" name="R_DADATA" value="Y" data-ondadata="R_DADATA">
+                                  <label for="R_DADATA">
+                                    <span></span>
+                                  </label>
+                                </div>
+                                <div class="checkblock__content">
+                                  Ввести вручную
+                                </div>
+                              </div>
+                            </div><!-- /.stepform__settings -->
                           </div>
                           <div class='active' data-tabscontent='receiver'>
                             <div class="calcform__content">
@@ -1177,29 +1206,28 @@
                               </div>
                             </div>
                           </div>
-                          <div class='' data-tabscontent='receiver'>
+                          <div class='' data-tabscontent='receiver' data-datatawrapper='receiver'>
                             <div class="calcform__content">
-                              <div class="stepform__row  flex w-full">
-                                <div class="stepform__col w-full">
+                             
+                              <div class="stepform__row stepform__row3 w-full flex ">
+                                <div class="stepform__col">
                                   <div class="floating">
-                                    <input type="text" name="R_U_COMPANY" data-stepdata="receive_yurname" value=''
+                                    <input type="text" name="R_U_INN" data-stepdata="receive_inn" value=''
                                       data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                      data-required="required" data-min="2" data-max="300">
-                                    <span class="floating-label">Название компании</span></span>
+                                      data-required="required" data-min="13" data-max="13"  data-dadatatype="inn" data-dadata="org" >
+                                    <span class="floating-label">ИНН</span></span>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="stepform__row stepform__row3 w-full flex ">
                                 <div class="stepform__col ">
-                                  <div class="inputlabel  inputlabel_dropdown  inputselect " data-toggleitem='R_U_FORM'>
+                                  <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_dadata" data-toggleitem='R_U_FORM' data-offdadata='R_DADATA' data-blocked='R_DADATA' disabled='disabled'>
                                     <div class="inputselect__wrapper" data-toggleclick="R_U_FORM">
-                                      <div class="inputselect__content">
-                                        <div class="inputselect__label">
-                                          Документ
+                                      <div class="inputselect__content floating">
+                                        <input type="hidden" value='' data-inputvalue='R_U_FORM' name='R_U_FORM' data-dadata='short'>
+
+                                        <div class="floating-label">
+                                          Правовая форма
                                         </div>
-                                        <div class="inputselect__title" data-value="R_U_FORM">ООО
-                                        </div>
-                                        <input type="hidden" value='' data-inputvalue='R_U_FORM' name='R_U_FORM'>
+                                        <div class="inputselect__title" data-value="R_U_FORM" data-dadata='short'></div>
                                       </div>
                                       <!-- /.inputselect__content -->
                                     </div>
@@ -1219,20 +1247,23 @@
                                   </div>
                                   <!-- /.inputlabel -->
                                 </div>
-                                <div class="stepform__col">
-                                  <div class="floating">
-                                    <input type="text" name="R_U_INN" data-stepdata="receive_inn" value=''
-                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                      data-required="required" data-min="13" data-max="13">
-                                    <span class="floating-label">ИНН</span></span>
-                                  </div>
-                                </div>
+                               
                                 <div class="stepform__col">
                                   <div class="floating">
                                     <input type="text" name="R_U_KPP" data-stepdata="receive_kpp" value=''
                                       data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                      data-min="1" data-max="9">
+                                      data-min="1" data-max="9"  data-dadata='kpp' data-offdadata='R_DADATA' data-blocked='R_DADATA' disabled='disabled'>
                                     <span class="floating-label">КПП</span></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="stepform__row  flex w-full">
+                                <div class="stepform__col w-full">
+                                  <div class="floating">
+                                    <input type="text" name="R_U_COMPANY" data-stepdata="receive_yurname" value=''
+                                      data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                      data-required="required"  data-dadata='name' data-min="2" data-max="300"  data-offdadata='R_DADATA' data-blocked='R_DADATA' disabled='disabled'>
+                                    <span class="floating-label">Название компании</span></span>
                                   </div>
                                 </div>
                               </div>
