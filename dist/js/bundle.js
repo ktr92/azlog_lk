@@ -191,6 +191,10 @@ function validateRequired() {
 
 $(document).ready(function () {
 
+  $('.modal-backdrop').on("click", function (e) {
+    $('.modal').modal('hide')
+  })
+
   
   $("[data-modaltab]").on("click", function (e) {
     e.preventDefault()

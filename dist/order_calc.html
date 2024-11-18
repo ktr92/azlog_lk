@@ -2438,7 +2438,7 @@
           <div class="modal__wrapper">
             <div class="modal__aside" data-tabsmenu=''>
               <div class="modalmenu">
-                <div class="modalmenu__title">Выберите тему обращения</div>
+                <div class="modalmenu__title onlyMobile">Выберите тему обращения</div>
                 <div class="modalmenu__items">
                     <a href="" data-modaltab="tabedit" class="modalmenu__link active">
                       <span class="modalmenu__icon">
@@ -2552,13 +2552,13 @@
                             </div>
                             <div class="orderfiles">
                               <div class="orderfiles__items" id="fileName">
-                                <div class="orderfiles__item">
+                               <!--  <div class="orderfiles__item">
                                   <div class='orderfiles__wrapper'>
                                     <div class="orderfiles__title">Счет на оплату 8434818414819.pdf <a href='#'
                                         data-fileremove='fileName_id_1'></a></div>
                                     <div class="orderfiles__info">78 кБ</div>
                                   </div>
-                                </div>
+                                </div> -->
                               </div>
                             </div>
                             </span>
@@ -2594,7 +2594,9 @@
         button = dropArea.querySelector(".dragbutton"),
         input = dropArea.querySelector(".draginput");
       let files; //this is a global variable and we'll use it inside multiple functions
-      let filesLength;
+      let filesLength = 0;
+
+      let filesTotal = 0;
 
 
 
@@ -2640,6 +2642,19 @@
         showFile(); //calling function
       });
 
+      function removeFile(i) {
+        $(`[data-fileremove]`).on('click', function(e) {
+          e.preventDefault()
+
+          var myFiles = Object.entries(document.getElementById('fileInput').files)
+          Object.entries(myFiles.splice(i-1, 1)); 
+          console.log(myFiles);
+
+
+          $(`[data-fileid=${i}]`).remove()
+
+        })
+      }
 
 
 
@@ -2666,15 +2681,15 @@
 
 
         list.append(`
-           <div class="orderfiles__item">
+           <div class="orderfiles__item" data-fileid="${filesTotal}">
               <div class="orderfiles__wrapper">
-                <div class="orderfiles__title">${files[i].name} <a href='#' data-fileremove='fileName_id_new${i}'></a></div>
-                <div class="orderfiles__info">${Math.floor(files[i].size / 1000) + ' кБ'}</div>
+                <div class="orderfiles__title">${files[filesTotal].name} <a href='#' data-fileremove='${filesTotal}'></a></div>
+                <div class="orderfiles__info">${Math.floor(files[filesTotal].size / 1000) + ' кБ'}</div>
               </div>
             </div>  `)
 
-
-
+            removeFile(filesTotal)
+            filesTotal++
       }
 
     </script>

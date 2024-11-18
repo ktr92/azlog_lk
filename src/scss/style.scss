@@ -4975,6 +4975,7 @@ span.formcheckbox__text {
   display: none;
 }
 
+
 @media (max-width: 1023px) {
   [data-modalcontent].active {
     display: none;
@@ -5173,6 +5174,10 @@ span.formcheckbox__text {
   }
   .modal__main {
     padding: 0 18px;
+
+    .orderfiles {
+      margin-top: 18px;
+    }
 
     .modal__title {
       padding-left: 26px;

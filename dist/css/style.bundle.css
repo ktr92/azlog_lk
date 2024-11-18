@@ -5126,6 +5126,8 @@ span:last-child {
       margin: 36px 0 16px 0; }
   .modal__main {
     padding: 0 18px; }
+    .modal__main .orderfiles {
+      margin-top: 18px; }
     .modal__main .modal__title {
       padding-left: 26px;
       background-image: url(../img/modal__title.svg);
