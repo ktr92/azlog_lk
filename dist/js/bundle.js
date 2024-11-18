@@ -69,6 +69,7 @@ const dateInit = (disabledDays = []) => {
   $(".lk-datepicker").each(function () {
     $(this).datepicker().data("datepicker").destroy()
     let dp = $(this).datepicker({
+      startDate : new Date(),
       minDate: new Date(),
       onRenderCell: function (date, cellType) {
         if (cellType == "day") {
@@ -147,7 +148,93 @@ function initBoxMask(count = "") {
   })
 }
 
+
+function validateRequired() {
+  let valid = true
+
+  $('.error').removeClass('error')
+  const required = []
+  const $required = $('input[data-required="required"]:visible')
+
+  $required.each(function () {
+    const obj = {
+      input: $(this),
+      val: $(this).val().toString(),
+      min: +$(this).data("min") || 1,
+      max: +$(this).data("max") || 9999,
+    }
+    required.push(obj)
+  })
+
+  required.forEach(function (item) {
+    if (item.val.length < 1) {
+      valid = false
+      item.input.addClass("error")
+    }
+  })
+
+  if ($(".checkbox_required:visible").length) {
+    return false
+  }
+
+ /*  if ($(".error").length) {
+    $("html, body").animate(
+      {
+        scrollTop: $(".error").offset().top - 50,
+      },
+      500
+    )
+  } */
+
+  return valid
+}
+
 $(document).ready(function () {
+
+  
+  $("[data-modaltab]").on("click", function (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    const tab = $(this).attr('data-modaltab')
+    const $wrapper = $(this).closest("[data-tabswrapper]")
+    $wrapper.find(`.active`).removeClass("active")
+    $wrapper.find(`.mobactive`).removeClass("mobactive")
+    $wrapper.find(`[data-modalcontent=${tab}]`).addClass("active")
+    $wrapper.find(`[data-modalcontent=${tab}]`).addClass("mobactive")
+    $wrapper.find(`[data-tabsmenumain]`).addClass("menuactive")
+    $wrapper.find(`[data-tabsmenu]`).addClass("menuactive")
+    $(this).addClass('active')    
+    $(this).addClass('mobactive')    
+  })
+  $("[data-menuback]").on("click", function (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    const $wrapper = $(this).closest("[data-tabswrapper]")
+    $wrapper.find(`.active`).removeClass("active")
+    $wrapper.find(`.mobactive`).removeClass("mobactive")
+    $wrapper.find(`.menuactive`).removeClass("menuactive")
+    
+  })
+
+
+  $('[data-submit="stepform"]').on('click', function(e) {
+    e.preventDefault()
+    const $form = $(this).parents("form")
+
+    $form.find('.error').removeClass('error')
+
+    let errorList = []
+    $.each($(".calcerrors__text:visible"), function (i, val) {
+      errorList.push($(this).text())
+    })
+    $('[name="ERRORS"]').val(errorList.join(","))
+
+    if (validateRequired()) {
+     // send form
+     alert('its okay')
+    }
+  })
+
   jQuery
   ;(function ($) {
     $(function () {
@@ -183,6 +270,7 @@ $(document).ready(function () {
     })
   })(jQuery)
 
+ 
   $(".inputhints a").on("click", function (e) {
     e.preventDefault()
     const val = $(this).text()
@@ -249,6 +337,8 @@ $(document).ready(function () {
         $(`[data-dependbox=${depgroup}`).removeClass('active')
       }
     }
+
+    validateRequired()
    
   })
   $(".checkblock input").on("change", function (e) {
@@ -257,6 +347,20 @@ $(document).ready(function () {
       label.text("Активирован")
     } else {
       label.text("Отключен")
+    }
+    
+  })
+  $("input#R_SIMPLIFY").on("change", function (e) {
+    const $wrapper = $(this).closest(".calcform__inputs")
+    if ($(this).is(":checked")) {
+      $wrapper.find('[data-dependselect]').attr('data-blocked', 'blocked')
+      $wrapper.find('[data-depend]').removeAttr('data-required')
+      $wrapper.find('[data-depend]').attr('disabled', 'disabled')
+
+    } else {
+      $wrapper.find('[data-dependselect]').removeAttr('data-blocked', 'blocked')
+      $wrapper.find('[data-depend]').attr('data-required', 'required')
+      $wrapper.find('[data-depend]').removeAttr('disabled')
     }
     
   })
@@ -275,13 +379,13 @@ $(document).ready(function () {
           </div>
           <div class="calcobject__input floating">
             <div class="floating">
-              <input data-inputid="boxvolume_${count}" data-new-box=${count} type="text" name='boxVolume[]' value='' onkeyup="this.setAttribute('value', this.value);" data-volume-format=""> 
+              <input data-inputid="boxvolume_${count}" data-new-box=${count} type="text" name='boxVolume[]' value='' onkeyup="this.setAttribute('value', this.value);" data-volume-format=""  data-required="required"> 
               <span class="floating-label">Обьем<span class="red">*</span></span>
             </div>
           </div>
           <div class="calcobject__input">
             <div class="floating">
-              <input data-inputid="boxweight_${count}" data-new-box=${count} type="text" name='boxWeight[]' value='' onkeyup="this.setAttribute('value', this.value);" data-weight-format=""> 
+              <input data-inputid="boxweight_${count}" data-new-box=${count} type="text" name='boxWeight[]' value='' onkeyup="this.setAttribute('value', this.value);" data-weight-format="" data-required="required"> 
               <span class="floating-label">Вес места<span class="red">*</span></span>
             </div>
           </div>
@@ -504,6 +608,85 @@ $(document).ready(function () {
     $(".jsbackdrop").removeClass("active")
   })
 
+  $('[data-entity="city-autocomplete"]').on("keyup", function () {
+    let timeout = 0
+    let val = $(this).val()
+    /*   val = val.replace(/\D/g, ""); */
+    if (val.length >= 3) {
+      var url =
+        "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address"
+      var token = "72536b22937ea398d010960a0631dcdf2316cc6b"
+
+      var options = {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Authorization: "Token " + token,
+        },
+        body: JSON.stringify({ query: val, count: 11 }),
+      }
+
+      if (timeout) {
+        clearTimeout(timeout)
+      }
+
+      timeout = setTimeout(() => {
+        $(".sgstlist").remove()
+
+        fetch(url, options)
+          .then((response) => response.text())
+          .then((result) => {
+            const datatype = $(this).attr("data-dadatatype")
+            const items = JSON.parse(result).suggestions
+            console.log(items)
+            const $wrapper = $(this).closest("div")
+            $wrapper.html()
+            $wrapper.addClass("relative")
+
+            if (items.length < 1) {
+              $wrapper.append(`
+                <div class="sgstlist">
+                  <div class="sgstlist__item">Ничего не найдено</div>
+                </div>
+                `)
+
+              return
+            }
+
+            let list = ""
+            let showdata = ""
+            
+
+            items.forEach((item) => {
+              showinfo = ""
+              showdata = item.value.replace(/"/g, "").replace(/'/g, "")
+              cityid = item.data.city_kladr_id
+             
+
+              list += `<div 
+                    class="sgstlist__item" 
+                    data-suggcity="${showdata}" data-suggcityId=${cityid}>
+                      <span class="sgstlist__name">${showdata}</span>                   
+                     
+                  </div>`
+            })
+
+           
+            $wrapper.append(`
+                <div class="sgstlist">
+                  <div class="sgstlist__title">Выберите вариант или продолжите ввод</div>
+                  <div class="sgstlist__items">${list}</div>
+                </div>
+                `)
+          })
+          /*  .then(result => setInnInfo(result.length)) */
+          .catch((error) => console.log("error", error))
+      }, 1000)
+    }
+  })
+
   $("[data-dadata='org']").on("keyup", function () {
     let timeout = 0
     let val = $(this).val()
@@ -617,6 +800,22 @@ $(document).ready(function () {
     }
   })
 
+  $(document).on("click", "[data-suggcityId]", function (e) {
+    const source = $(this)
+    const $input = source
+    .closest("[data-datatawrapper]")
+    .find("input")
+    const $idinput = source
+    .closest("[data-datatawrapper]")
+    .find('[data-entity="city-kladr-id"]')
+
+    const value = source.attr("data-suggcityId")
+    const name = source.attr("data-suggcity").replace(/"/g, "")
+
+    $idinput.val(value)
+    $input.val(name)
+    $(".sgstlist").remove()
+  })
   $(document).on("click", "[data-suggvalue]", function (e) {
     const source = $(this)
     const $name = source
