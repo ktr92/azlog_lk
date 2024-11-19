@@ -3408,7 +3408,7 @@ select {
 }
 
 .formblock__block {
-  margin: 31px 0;
+  margin: 27px 0;
 }
 
 /* .formfileloader input{
@@ -4953,7 +4953,7 @@ span.formcheckbox__text {
 
 .borderblock__block {
   margin-bottom: 25px;
-  padding: 9px 24px;
+  padding: 9px 17px;
   height: unset;
 }
 
@@ -4975,6 +4975,65 @@ span.formcheckbox__text {
   display: none;
 }
 
+.formcheckbox label.formcheckbox__label_type3 .formcheckbox__text:before {
+  background-image: url(../img/checkdoc.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+}
+.formcheckbox label.formcheckbox__label_type3:hover .formcheckbox__text:before {
+  background-image: url(../img/checkdoc_active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  opacity: 0.5;
+
+  
+}
+.formcheckbox__label_type3 input[type="checkbox"]:checked + .formcheckbox__text:before {
+  background-image: url(../img/checkdoc_active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+
+  
+}
+
+.formblock__row {
+ margin-bottom: 27px;
+}
+
+.formfileloader .orderfiles {
+  margin: 0;
+}
+.dragbutton {
+  margin-bottom: 10px;
+}
+.formcheckbox_docscheck label {
+  margin-bottom: 15px;
+}
+
+.modal__content .stepform__row {
+  margin-bottom: 19px;
+}
+
+.borderblock_lg p {
+  font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+  text-align: left;
+}
+.datepicker {
+  z-index: 9999999999;
+}
+.formcheckbox__item_col2 {
+  width: 100%;
+  label {
+    width: 50%;
+  }
+}
+.formcheckbox_docscheck {
+  width: 100%;
+}
 
 @media (max-width: 1023px) {
   [data-modalcontent].active {

@@ -358,7 +358,7 @@ $(document).ready(function () {
     const $wrapper = $(this).closest(".calcform__inputs")
     if ($(this).is(":checked")) {
       $wrapper.find('[data-dependselect]').attr('data-blocked', 'blocked')
-      $wrapper.find('[data-depend]').removeAttr('data-required')
+      $wrapper.find('[data-depend]').removeAttr('data-required').removeClass('error')
       $wrapper.find('[data-depend]').attr('disabled', 'disabled')
 
     } else {
@@ -543,6 +543,29 @@ $(document).ready(function () {
       let val2 = $(this).data("togglevalue2")
       $(`[data-value2=${id}]`).text(val2)
     }
+  })
+  $("[data-toggletermid]").on("click", function (e) {
+    e.preventDefault()
+    $(this).toggleClass("active")
+    // get value
+    let terminalid = $(this).data("toggletermid")
+    let terminalname = $(this).data("toggletermname")
+    let terminaltime = $(this).data("toggletermtime")
+
+    // get wrapper leement
+    const $wrapper = $(this).closest("[data-toggleitem]")
+    // get dropdown ID
+    let id = $wrapper.data("toggleitem")
+    // close dropdown
+    $(`[data-toggle=${id}]`).toggleClass("active")
+    // set value
+    $wrapper.find(`[data-value=${id}]`).text(terminalid + ' ' + terminalname)
+    $wrapper.find(`[data-value2=${id}]`).text(terminaltime)
+    $wrapper.find(`[data-input="ternimalid"]`).val(terminalid)
+    $wrapper.find(`[data-input="ternimalname"]`).val(terminalname)
+    
+
+    
   })
 
   $("[data-toggleclickset]").on("click", function (e) {
