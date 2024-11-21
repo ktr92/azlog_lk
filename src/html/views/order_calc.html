@@ -111,6 +111,106 @@
 
                 <div class="orderpage">
 
+                  <div class="orderpage__asideblock notasideblock lineborders onlyMobile">
+                    <div class="orderitem">
+                      <div class="orderitem__wrapper orderitem__wrapper_wide">
+                        <div class="orderitem__header">
+                          <div class="orderitem__title">Стоимость</div>
+                          <div class="orderitem__btnpanel flex items-center">
+                            <a href="#" class="btn_green">Оплатить</a>
+                          </div>
+                          <!-- /.orderitem__toolbar -->
+                        </div>
+                        <!-- /.orderitem__header -->
+                        <div class="orderitem__content">
+                          <div class="orderparams">
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Межтерминальная перевозка</div>
+                              <div class="orderparams_dd">456 000 ₽ </div>
+                            </div>
+                            <!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Адресный забор груза</div>
+                              <div class="orderparams_dd">25 000 ₽ </div>
+                            </div>
+                            <!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Адресная доставка груза</div>
+                              <div class="orderparams_dd">-</div>
+                            </div>
+                            <!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Стоимость страхования</div>
+                              <div class="orderparams_dd">104,45 ₽ </div>
+                            </div>
+                            <!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Промокод</div>
+                              <div class="orderparams_dd">GPRI555</div>
+                            </div>
+                            <!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Размер скидки</div>
+                              <div class="orderparams_dd ">
+                                <div class="discountbadge"> <span>13%</span>
+                                </div>
+                                <!-- /.discountbadge -->
+                              </div>
+                            </div>
+                            <!-- /.orderparams__item -->
+                            <div class="orderparams__item">
+                              <div class="orderparams__dt">Статус</div>
+                              <div class="orderparams_dd red">Не оплачено</div>
+                            </div>
+                            <!-- /.orderparams__item -->
+                          </div>
+                          <!-- /.orderparams -->
+                        </div>
+                        <!-- /.orderitem__content -->
+                       
+                      </div>
+                      <!-- /.orderitem__wrapper -->
+                    </div>
+                  </div>
+
+                  <div class="orderpage__asideblock notasideblock onlyMobile">
+                    <div class="orderitem">
+                      <div class="orderitem__wrapper orderitem__wrapper_wide">
+                        <div class="orderitem__header">
+                          <div class="orderitem__title">Документы</div>
+                         
+                        </div>
+                        <!-- /.orderitem__header -->
+                        <div class="orderitem__content">
+                          <div class="orderdocs">
+                            <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
+                            <div class="orderdocs__item"><a href="#" target="blank">Счет на межтерминальную
+                                перевозку</a>
+                            </div>
+                            <div class="orderdocs__item disabled"><a href="#">Счет на адресную доставку
+                                груза</a>
+                            </div>
+                            <div class="orderdocs__item"><a href="#" target="blank">Обьединенный счет</a></div>
+                            <div class="orderdocs__item"><a href="#" target="blank">ТТН</a></div>
+                            <div class="orderdocs__item disabled" ><a href="#">УПД/Акт</a></div>
+                          </div>
+                          <!-- /.orderdocs -->
+                        </div>
+                        <!-- /.orderitem__content -->
+                        <div class="orderitem__toolbar flex items-center orderitem__buttons">
+                          <a href="#" class="btn btn_border ">
+                            <span class='downloadicon2'>Скачать</span>
+                          </a>
+                          <a href="#" class="btn btn_border ">
+                            <span class='infoicon'>Подробнее</span>
+                            </a>
+                        </div>
+                        <!-- /.orderitem__toolbar -->
+                      </div>
+                      <!-- /.orderitem__wrapper -->
+                    </div>
+                  </div>
+
                   <div class="orderpage__main">
                     <div class="orderpage__steps">
                       <div class="orderpage__step">
@@ -170,7 +270,7 @@
                                 </div>
                               </div>
                               <!-- /.stepform__row -->
-                              <div class="stepform__row  flex">
+                              <div class="stepform__row stepform__row_mob2 flex">
                                 <div class="stepform__col  ">
                                   <div class="inputlabel inputlabel_date inputlabel_dropdown ">
                                     <label>Дата отправки</label><!-- /.placeholder -->
@@ -1859,7 +1959,7 @@
                                 </div>
                                 <div class="orderdocs__item"><a href="#" target="blank">Обьединенный счет</a></div>
                                 <div class="orderdocs__item"><a href="#" target="blank">ТТН</a></div>
-                                <div class="orderdocs__item disabled" disabled=""><a href="#">УПД/Акт</a></div>
+                                <div class="orderdocs__item disabled"><a href="#">УПД/Акт</a></div>
                               </div>
                               <!-- /.orderdocs -->
                             </div>
@@ -2305,7 +2405,7 @@
                   </div>
                   <div class="formblock" data-modalcontent='tabdocs'>
                     <div class="modal__header">
-                      <div class="modal__title">Запросить документы</div>
+                      <div class="modal__title" data-menuback="">Запросить документы</div>
                     </div>
                     <div class="formblock__form">
                       <form action="">
@@ -2393,7 +2493,7 @@
                   </div>
                   <div class="formblock" data-modalcontent='tabact'>
                     <div class="modal__header">
-                      <div class="modal__title">Акт сверки</div>
+                      <div class="modal__title" data-menuback="">Акт сверки</div>
                     </div>
                     <div class="formblock__form">
                       <form action="">
@@ -2443,7 +2543,7 @@
                   </div>
                   <div class="formblock" data-modalcontent='tabcomplaint'>
                     <div class="modal__header">
-                      <div class="modal__title">Оставить жалобу</div>
+                      <div class="modal__title" data-menuback="">Оставить жалобу</div>
                     </div>
                     <div class="formblock__form">
                       <form action="">
@@ -2531,7 +2631,7 @@
                   </div>
                   <div class="formblock" data-modalcontent='tabclaim'>
                     <div class="modal__header">
-                      <div class="modal__title">Оформить претензию</div>
+                      <div class="modal__title" data-menuback="">Оформить претензию</div>
                     </div>
                     <div class="formblock__form">
                       <form action="">
@@ -2601,7 +2701,7 @@
                   </div>
                   <div class="formblock" data-modalcontent='tabproblem'>
                     <div class="modal__header">
-                      <div class="modal__title">Запросить документы</div>
+                      <div class="modal__title" data-menuback="">Запросить документы</div>
                     </div>
                     <div class="formblock__form">
                       <form action="">
@@ -2671,7 +2771,7 @@
                   </div>
                   <div class="formblock" data-modalcontent='tabother'>
                     <div class="modal__header">
-                      <div class="modal__title">Прочее</div>
+                      <div class="modal__title" data-menuback="">Прочее</div>
                     </div>
                     <div class="formblock__form">
                       <form action="">
@@ -2690,7 +2790,7 @@
 
                         <div class="formblock__row">
                           <div class="formblock__input">
-                            <textarea rows='3' type="text" value="" placeholder='Комментарий'>
+                            <textarea rows='3' type="text" value="" placeholder='Комментарий'></textarea>
                           </div>
                           <!-- /.formblock__input -->
                         </div>
