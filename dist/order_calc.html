@@ -289,7 +289,7 @@
               <div class="mobilenav__wrapper">
                 <div class="mobilenav__items">
                   <div class="mobilenav__item">
-                    <a href="#popup_edit2" data-toggle="modal" class="mobilenav__link">
+                    <a class="mobilenav__link">
                       <div class="mobilenav__icon">
                         <img src="img/icnTrack.svg" alt="">
                       </div>
@@ -338,21 +338,22 @@
                       <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_update">
                         <span>Повторить</span>
                       </a>
-                      <a href="#" class="ordertoolbar__item ordertb_docs">
+                      <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_docs">
                         <span>Документы</span>
                       </a>
                       <a href="#" class="ordertoolbar__item ordertb_pause">
                         <span>Приостановить</span>
                       </a>
-                      <a href="#" class="ordertoolbar__item ordertb_warning">
+                      <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_warning">
                         <span>Претензия</span>
                       </a>
-                      <a href="#" class="ordertoolbar__item ordertb_email">
+                      <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_email">
                         <span>Написать нам</span>
                       </a>
                       <a href="#" class="ordertoolbar__item ordertb_disable">
                         <span>Отменить</span>
                       </a>
+                     
 
                     </menu>
                   </div>
@@ -447,7 +448,7 @@
                           <!-- /.orderparams -->
                         </div>
                         <!-- /.orderitem__content -->
-                       
+
                       </div>
                       <!-- /.orderitem__wrapper -->
                     </div>
@@ -458,7 +459,7 @@
                       <div class="orderitem__wrapper orderitem__wrapper_wide">
                         <div class="orderitem__header">
                           <div class="orderitem__title">Документы</div>
-                         
+
                         </div>
                         <!-- /.orderitem__header -->
                         <div class="orderitem__content">
@@ -472,7 +473,7 @@
                             </div>
                             <div class="orderdocs__item"><a href="#" target="blank">Обьединенный счет</a></div>
                             <div class="orderdocs__item"><a href="#" target="blank">ТТН</a></div>
-                            <div class="orderdocs__item disabled" ><a href="#">УПД/Акт</a></div>
+                            <div class="orderdocs__item disabled"><a href="#">УПД/Акт</a></div>
                           </div>
                           <!-- /.orderdocs -->
                         </div>
@@ -483,7 +484,7 @@
                           </a>
                           <a href="#" class="btn btn_border ">
                             <span class='infoicon'>Подробнее</span>
-                            </a>
+                          </a>
                         </div>
                         <!-- /.orderitem__toolbar -->
                       </div>
@@ -609,7 +610,7 @@
                           <div class="stepform__header flex items-center">
                             <div class="stepform__headercontent">
                               <div class="stepform__icon">
-                                <span class='stepform__number '>02</span>
+                                <span class='stepform__number avtive'>02</span>
                               </div>
                               <div class="stepform__title">О грузе</div>
                             </div>
@@ -620,11 +621,12 @@
                           <div class="stepform__main stepform__main_type2">
                             <div class="stepform__content active">
                               <div class="calcobject" data-box='1'>
-                                <div class="calcobject__row">
+                                <div class="calcobject__row ">
                                   <div class="calcobject__number">
-                                    1
+                                    <span>1</span>
+
                                   </div>
-                                  <div class="calcobject__input floating">
+                                  <div class="calcobject__input ">
                                     <div class="floating">
                                       <input type="text" name='boxVolume[]' value=''
                                         onkeyup="this.setAttribute('value', this.value);" data-volume-format=""
@@ -663,58 +665,65 @@
                             <div class="stepform__borderblock">
                               <div class="stepform__row  flex">
                                 <div class="stepform__col w-full">
-                                  <input name='userPrice' type="text" placeholder='Обьявленная стоимость, руб.'
-                                    data-number-format="">
-                                </div>
-                                <div class="stepform__col checkblock_col">
-                                  <div class="borderblock">
-                                    <div class="checkblock">
-                                      <div class="checkblock__content">
-                                        <div class="checkblock__icon">
-                                          <img src="img/warnicon.svg" alt="">
-                                        </div>
-                                        <div class="checkblock__text">
-                                          <div class="checkblock__label">Хрупкий / жидкий груз</div>
-                                          <div class="checkblock__value" data-dependon='liquidCargo'>Отключен</div>
-                                        </div>
-                                      </div>
-                                      <div class="checkblock__checkbox">
-                                        <input type="checkbox" id="fragileCargo" name='fragileCargo' value='Y'>
-                                        <label for="fragileCargo">
-                                          <span></span>
-                                        </label>
-                                      </div>
+                                  <div class="stepform__block">
+                                    <input name='userPrice' type="text" placeholder='Обьявленная стоимость, руб.'
+                                      data-number-format="">
+                                  </div>
+
+                                  <div class="stepform__block">
+
+                                    <input name="CARGO_TYPE" type="text" placeholder='Тип груза'>
+                                    <div class="inputhints">
+                                      <span>Например:</span>
+                                      <a href="#">Запчасти</a>,
+                                      <a href="#">Личные вещи</a>,
+                                      <a href="#">Мебель</a>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="stepform__row  flex" data-wrapper=''>
-                                <div class="stepform__col w-full">
-                                  <input name="CARGO_TYPE" type="text" placeholder='Тип груза'>
-                                  <div class="inputhints">
-                                    <span>Например:</span>
-                                    <a href="#">Запчасти</a>,
-                                    <a href="#">Личные вещи</a>,
-                                    <a href="#">Мебель</a>
-                                  </div>
-                                </div>
+
+
                                 <div class="stepform__col checkblock_col">
-                                  <div class="borderblock" style='background-image: url(img/warmbg.png);'>
-                                    <div class="checkblock checkblock_white">
-                                      <div class="checkblock__content">
-                                        <div class="checkblock__icon">
-                                          <img src="img/warmicon.svg" alt="">
+                                  <div class="stepform__block">
+                                    <div class="borderblock">
+                                      <div class="checkblock">
+                                        <div class="checkblock__content">
+                                          <div class="checkblock__icon">
+                                            <img src="img/warnicon.svg" alt="">
+                                          </div>
+                                          <div class="checkblock__text">
+                                            <div class="checkblock__label">Хрупкий / жидкий груз</div>
+                                            <div class="checkblock__value" data-dependon='liquidCargo'>Отключен</div>
+                                          </div>
                                         </div>
-                                        <div class="checkblock__text">
-                                          <div class="checkblock__label">Теплый режим</div>
-                                          <div class="checkblock__value" data-dependon='teplo'>Отключен</div>
+                                        <div class="checkblock__checkbox">
+                                          <input type="checkbox" id="fragileCargo" name='fragileCargo' value='Y'>
+                                          <label for="fragileCargo">
+                                            <span></span>
+                                          </label>
                                         </div>
                                       </div>
-                                      <div class="checkblock__checkbox">
-                                        <input type="checkbox" id="teplo" name='TEPLO' value='Y'>
-                                        <label for="teplo">
-                                          <span></span>
-                                        </label>
+                                    </div>
+                                  </div>
+                                  <div class="stepform__block">
+
+                                    <div class="borderblock" style='background-image: url(img/warmbg.png);'>
+                                      <div class="checkblock checkblock_white">
+                                        <div class="checkblock__content">
+                                          <div class="checkblock__icon">
+                                            <img src="img/warmicon.svg" alt="">
+                                          </div>
+                                          <div class="checkblock__text">
+                                            <div class="checkblock__label">Теплый режим</div>
+                                            <div class="checkblock__value" data-dependon='teplo'>Отключен</div>
+                                          </div>
+                                        </div>
+                                        <div class="checkblock__checkbox">
+                                          <input type="checkbox" id="teplo" name='TEPLO' value='Y'>
+                                          <label for="teplo">
+                                            <span></span>
+                                          </label>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -722,7 +731,7 @@
                               </div>
                             </div>
                             <!-- /.stepform__borderblock -->
-                            <div class="stepform__borderblock">
+                            <div class="stepform__borderblock mob_noborder">
                               <div class="calcform__cols">
                                 <div class="calcform__col ">
                                   <div class="calcform__title">Упаковка груза</div>
@@ -828,7 +837,7 @@
                           <div class="stepform__header flex items-center">
                             <div class="stepform__headercontent">
                               <div class="stepform__icon">
-                                <span class="stepform__number ">03</span>
+                                <span class="stepform__number avtive">03</span>
                               </div>
                               <div class="stepform__tabs stepform__title">
                                 <div class="calctabs calctabs-js" data-tabs='sendfrom'>
@@ -1022,7 +1031,7 @@
                           <div class="stepform__header flex items-center">
                             <div class="stepform__headercontent">
                               <div class="stepform__icon">
-                                <span class="stepform__number ">04</span>
+                                <span class="active">04</span>
                               </div>
                               <div class="stepform__tabs stepform__title">
                                 <div class="calctabs calctabs-js" data-tabs='receive_terminal'>
@@ -1220,7 +1229,7 @@
                           <div class="stepform__header flex items-center">
                             <div class="stepform__headercontent">
                               <div class="stepform__icon">
-                                <span class="stepform__number ">05</span>
+                                <span class="stepform__number avtive">05</span>
                               </div>
                               <div class="stepform__title">Отправитель</div>
                             </div>
@@ -1531,7 +1540,7 @@
                           <div class="stepform__header flex items-center">
                             <div class="stepform__headercontent">
                               <div class="stepform__icon">
-                                <span class="stepform__number ">06</span>
+                                <span class="stepform__number avtive">06</span>
                               </div>
                               <div class="stepform__title">Получатель</div>
                             </div>
@@ -1868,7 +1877,7 @@
                           <div class="stepform__header flex items-center">
                             <div class="stepform__headercontent">
                               <div class="stepform__icon">
-                                <span class="stepform__number ">07</span>
+                                <span class="stepform__number avtive">07</span>
                               </div>
                               <div class="stepform__title">Плательщик</div>
                             </div>
@@ -2079,32 +2088,38 @@
                           <!-- /.orderitem__wrapper -->
                         </div>
                       </div>
-                      <div class="orderpage__asideblock">
+                      <div class="orderpage__asideblock onlyDesktop">
                         <div class="ordertoolbar">
                           <div class="ordertoolbar__items flex">
                             <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_update">
                               <span>Повторить</span>
                             </a>
-                            <a href="#" class="ordertoolbar__item ordertb_docs">
+                            <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_docs">
                               <span>Документы</span>
                             </a>
                             <a href="#" class="ordertoolbar__item ordertb_pause">
                               <span>Приостановить</span>
                             </a>
-                            <a href="#" class="ordertoolbar__item ordertb_warning">
+                            <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_warning">
                               <span>Претензия</span>
                             </a>
-                            <a href="#" class="ordertoolbar__item ordertb_email">
+                            <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_email">
                               <span>Написать нам</span>
                             </a>
                             <a href="#" class="ordertoolbar__item ordertb_disable">
                               <span>Отменить</span>
                             </a>
+                            <a href="#popup_pickup" data-toggle="modal" class="ordertoolbar__item ordertb_pickup onlyDesktop">
+                              <span>Забор груза</span>
+                            </a>
+                            <a href="#popup_deliver" data-toggle="modal" class="ordertoolbar__item ordertb_deliver onlyDesktop">
+                              <span>Доставка груза</span>
+                            </a>
                           </div>
                           <!-- /.ordertoolbar__items -->
                         </div>
                       </div>
-                      <div class="orderpage__asideblock">
+                      <div class="orderpage__asideblock onlyDesktop">
                         <div class="orderitem">
                           <div class="orderitem__wrapper orderitem__wrapper_wide">
                             <div class="orderitem__header">
@@ -2149,7 +2164,7 @@
                         </div>
                       </div>
                       <!-- /.orderpage__block -->
-                      <div class="orderpage__asideblock">
+                      <div class="orderpage__asideblock onlyDesktop">
                         <div class="orderitem">
                           <div class="orderitem__wrapper orderitem__wrapper_wide">
                             <div class="orderitem__header">
@@ -2216,7 +2231,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="orderpage__asideblock">
+                      <div class="orderpage__asideblock onlyDesktop">
                         <div class="orderitem">
                           <div class="orderitem__wrapper orderitem__wrapper_wide">
                             <div class="orderitem__header">
@@ -2656,8 +2671,8 @@
                                 <!-- /.raginfo -->
                               </div>
                               <!-- /.dragbutton -->
-                              <input type="file" name='formfileloader[]' id="fileInput" multiple class='draginput fileInput'
-                                hidden>
+                              <input type="file" name='formfileloader[]' id="fileInput" multiple
+                                class='draginput fileInput' hidden>
                             </div>
                             <div class="orderfiles">
                               <div class="orderfiles__items fileName" id="fileName">
@@ -2699,50 +2714,58 @@
                         </div>
 
 
-                      
+
 
                         <div class="formblock__row">
                           <div class="formcheckbox formcheckbox_docscheck">
                             <div class="formcheckbox__item formcheckbox__item_col2">
-                              <label for="doc_id1" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_id1"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
-                                  <input type="checkbox" id="doc_id1" name="doc_id1" value="Y"
-                                    data-stepdata="doc_id1" data-steptype="source" checked>
+                                  <input type="checkbox" id="doc_id1" name="doc_id1" value="Y" data-stepdata="doc_id1"
+                                    data-steptype="source" checked>
                                   <span class="formcheckbox__text" data-text="checkboxtext">Счет на забор груза</span>
                                 </span>
                               </label>
-                              <label for="doc_id2" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_id2"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
-                                  <input type="checkbox" id="doc_id2" name="doc_id2" value="Y"
-                                    data-stepdata="doc_id2" data-steptype="source" checked>
-                                  <span class="formcheckbox__text" data-text="checkboxtext">Счет на межтерминальную перевозку</span>
+                                  <input type="checkbox" id="doc_id2" name="doc_id2" value="Y" data-stepdata="doc_id2"
+                                    data-steptype="source" checked>
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Счет на межтерминальную
+                                    перевозку</span>
                                 </span>
                               </label>
-                              <label for="doc_id3" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_id3"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
-                                  <input type="checkbox" id="doc_id3" name="doc_id3" value="Y"
-                                    data-stepdata="doc_id3" data-steptype="source">
-                                  <span class="formcheckbox__text" data-text="checkboxtext">Счет на адресную доставку груза</span>
+                                  <input type="checkbox" id="doc_id3" name="doc_id3" value="Y" data-stepdata="doc_id3"
+                                    data-steptype="source">
+                                  <span class="formcheckbox__text" data-text="checkboxtext">Счет на адресную доставку
+                                    груза</span>
                                 </span>
                               </label>
-                              <label for="doc_id4" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_id4"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
-                                  <input type="checkbox" id="doc_id4" name="doc_id4" value="Y"
-                                    data-stepdata="doc_id4" data-steptype="source" checked>
+                                  <input type="checkbox" id="doc_id4" name="doc_id4" value="Y" data-stepdata="doc_id4"
+                                    data-steptype="source" checked>
                                   <span class="formcheckbox__text" data-text="checkboxtext">Обьединенный счет</span>
                                 </span>
                               </label>
-                              <label for="doc_id5" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_id5"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
-                                  <input type="checkbox" id="doc_id5" name="doc_id5" value="Y"
-                                    data-stepdata="doc_id5" data-steptype="source" checked>
+                                  <input type="checkbox" id="doc_id5" name="doc_id5" value="Y" data-stepdata="doc_id5"
+                                    data-steptype="source" checked>
                                   <span class="formcheckbox__text" data-text="checkboxtext">ТТН</span>
                                 </span>
                               </label>
-                              <label for="doc_id6" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_id6"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
-                                  <input type="checkbox" id="doc_id6" name="doc_id6" value="Y"
-                                    data-stepdata="doc_id6" data-steptype="source">
+                                  <input type="checkbox" id="doc_id6" name="doc_id6" value="Y" data-stepdata="doc_id6"
+                                    data-steptype="source">
                                   <span class="formcheckbox__text" data-text="checkboxtext">УПД/Акт</span>
                                 </span>
                               </label>
@@ -2780,23 +2803,31 @@
 
 
                         <div class="borderblock borderblock__block borderblock_lg">
-                          <p>Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме заполните  бланк заявления и прикрепите файл к данной форме</p>
+                          <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                            данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                            прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                            заявления и прикрепите файл к данной форме заполните бланк заявления и прикрепите файл к
+                            данной форме</p>
                         </div>
 
 
-                      
+
 
                         <div class="stepform__row stepform__row_col2 flex">
                           <div class="stepform__col">
                             <div class="inputlabel inputlabel_date inputlabel_dropdown w-full">
                               <label>Период с</label>
-                              <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text" data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"  placeholder="Период с">
+                              <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
+                                data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
+                                placeholder="Период с">
                             </div>
                           </div>
                           <div class="stepform__col">
                             <div class="inputlabel inputlabel_date inputlabel_dropdown w-full">
                               <label>Период до</label>
-                              <input readonly="" class="lk-datepicker datepicker-act_to" value="" type="text" data-stepdata="act_to" name="act_to" data-steptype="source" data-required="required"  placeholder="Период до">
+                              <input readonly="" class="lk-datepicker datepicker-act_to" value="" type="text"
+                                data-stepdata="act_to" name="act_to" data-steptype="source" data-required="required"
+                                placeholder="Период до">
                             </div>
                           </div>
                         </div>
@@ -2837,47 +2868,53 @@
                         </div>
 
 
-                      
+
 
                         <div class="formblock__row">
                           <div class="formcheckbox formcheckbox_docscheck">
                             <div class="formcheckbox__item formcheckbox__item_col2">
-                              <label for="doc_theme1" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_theme1"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
                                   <input type="checkbox" id="theme_id1" name="doc_theme1" value="Y"
                                     data-stepdata="doc_theme1" data-steptype="source" checked>
                                   <span class="formcheckbox__text" data-text="checkboxtext">Тема 1</span>
                                 </span>
                               </label>
-                              <label for="doc_theme2" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_theme2"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
                                   <input type="checkbox" id="doc_theme2" name="doc_theme2" value="Y"
                                     data-stepdata="doc_theme2" data-steptype="source" checked>
                                   <span class="formcheckbox__text" data-text="checkboxtext">Тема 2</span>
                                 </span>
                               </label>
-                              <label for="doc_theme3" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_theme3"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
                                   <input type="checkbox" id="doc_theme3" name="doc_theme3" value="Y"
                                     data-stepdata="doc_theme3" data-steptype="source">
                                   <span class="formcheckbox__text" data-text="checkboxtext">Тема 3</span>
                                 </span>
                               </label>
-                              <label for="doc_theme4" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_theme4"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
                                   <input type="checkbox" id="doc_theme4" name="doc_theme4" value="Y"
                                     data-stepdata="doc_theme4" data-steptype="source" checked>
                                   <span class="formcheckbox__text" data-text="checkboxtext">Тема 4</span>
                                 </span>
                               </label>
-                              <label for="doc_theme5" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_theme5"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
                                   <input type="checkbox" id="doc_theme5" name="doc_theme5" value="Y"
                                     data-stepdata="doc_theme5" data-steptype="source" checked>
                                   <span class="formcheckbox__text" data-text="checkboxtext">Тема 5</span>
                                 </span>
                               </label>
-                              <label for="doc_theme6" class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <label for="doc_theme6"
+                                class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
                                 <span>
                                   <input type="checkbox" id="doc_theme6" name="doc_theme6" value="Y"
                                     data-stepdata="doc_theme6" data-steptype="source">
@@ -2918,13 +2955,16 @@
 
 
                         <div class="borderblock borderblock__block">
-                          <p>ДДля того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме</p>
+                          <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                            данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                            прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                            заявления и прикрепите файл к данной форме</p>
                         </div>
 
 
                         <div class="orderdocs orderdocs_col2">
                           <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
-                         
+
                         </div>
 
 
@@ -2952,8 +2992,7 @@
                               </div>
                               <!-- /.dragbutton -->
                               <input type="file" name='formfileloader[]' id="fileInput_claim" multiple class='fileInput draginput
-                              '
-                                hidden>
+                              ' hidden>
                             </div>
                             <div class="orderfiles">
                               <div class="orderfiles__items fileName" id="fileName_claim">
@@ -2981,20 +3020,23 @@
                   </div>
                   <div class="formblock" data-modalcontent='tabproblem'>
                     <div class="modal__header">
-                      <div class="modal__title" data-menuback="">Запросить документы</div>
+                      <div class="modal__title" data-menuback="">Сообщить о проблеме</div>
                     </div>
                     <div class="formblock__form">
                       <form action="">
 
 
                         <div class="borderblock borderblock__block">
-                          <p>ДДля того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме</p>
+                          <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                            данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                            прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                            заявления и прикрепите файл к данной форме</p>
                         </div>
 
 
                         <div class="orderdocs orderdocs_col2">
                           <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
-                         
+
                         </div>
 
 
@@ -3022,8 +3064,7 @@
                               </div>
                               <!-- /.dragbutton -->
                               <input type="file" name='formfileloader[]' id="fileName_problem" multiple class='fileInput draginput
-                              '
-                                hidden>
+                              ' hidden>
                             </div>
                             <div class="orderfiles">
                               <div class="orderfiles__items fileName" id="fileName_problem">
@@ -3058,13 +3099,16 @@
 
 
                         <div class="borderblock borderblock__block">
-                          <p>ДДля того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните  бланк заявления и прикрепите файл к данной форме</p>
+                          <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                            данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                            прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                            заявления и прикрепите файл к данной форме</p>
                         </div>
 
 
                         <div class="orderdocs orderdocs_col2">
                           <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
-                         
+
                         </div>
 
 
@@ -3092,6 +3136,1191 @@
         </div>
       </div>
     </div>
+    <div id="popup_pickup" class="modal fade modal_calc modal_xxlarge modal_xlarge">
+      <div class="modal-dialog">
+        <span class="modalclose" data-dismiss="modal" aria-hidden="true">
+          <img src="img/modalclose.svg" alt="" class='onlyDesktop'>
+          <img src="img/closepopup.svg" alt="" class='onlyMobile'>
+        </span>
+        <div class="modal-body" data-tabswrapper=''>
+          <div class="modal__wrapper">
+            <div class="modal-content">
+              <div class="modal__content ">
+                <div class="formblock active">
+                  <div class="modal__header">
+                    <div class="modal__title">
+                      Забор груза по адресу</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div data-tabscontent="sendfrom" class="active">
+                        <div class="stepform__row   w-full">
+                          <div class="stepform__col w-full">
+                            <div class="inputlabel  inputlabel_dropdown inputlabel_lg inputselect"
+                                data-toggleitem='send_terminal_pickup'>
+                              <div class="inputselect__wrapper" data-toggleclick="send_terminal_pickup">
+                                <div class="inputselect__icon">
+                                  <img src="img/locicon.svg" alt="">
+                                </div>
+                                <div class="inputselect__content">
+                                  <div class="inputselect__title" data-value='send_terminal_pickup'>222148481 г. Москва, ул.
+                                    Освобождения Ленинских прос-ктов 49491
+                                  </div>
+                                  <div class="inputselect__info" data-value2='send_terminal_pickup'>10:00 - 19:00 (GMT +2)
+                                  </div>
+                                  <input type="hidden" value="222148481" name="terminal-from-id_pickup"
+                                    data-input="ternimalid" class="terminal-id">
+                                  <input type="hidden" value="г. Москва, ул. Освобождения Ленинских прос-ктов 49491"
+                                    data-input="ternimalname" name="terminal-from-name_pickup" class="terminal-name"
+                                    data-inputvalue='send_terminal'>
+                                </div>
+                                <!-- /.inputselect__content -->
+                              </div>
+                              <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="send_terminal_pickup">
+                                <div class="dropdownblock__wrapper">
+                                  <div class="dropdownblock__links">
+                                    <menu>
+                                      <li><a href="#" data-toggletermid='222148481'
+                                          data-toggletermname='г. Москва, ул. Освобождения Ленинских прос-ктов 49491'
+                                          data-toggletermtime='10:00 - 19:00 (GMT +2)'>222148481 г. Москва, ул.
+                                          Освобождения Ленинских прос-ктов 49491</a>
+                                      </li>
+                                      <li><a href="#" data-toggletermid='33333333' data-toggletermname='г. Москва'
+                                          data-toggletermtime='8:00 - 22:00 (GMT +2)'>33333333 г. Москва</a></li>
+                                    </menu>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.inputlabel -->
+                          </div>
+                          </div>
+                          <div class="stepform__row   w-full">
+                          <div class="stepform__col w-full">
+                            <div class="inputlabel  inputlabel_dropdown  inputselect " data-toggleitem="select-time-day_pickup">
+                              <div class="inputselect__wrapper" data-toggleclick="select-time-day_pickup">
+                                <div class="inputselect__content">
+                                  <div class="inputselect__label">Выберите время</div>
+                                  <div class="inputselect__title" data-value="select-time-day_pickup">с 10:00 до 11:00
+                                  </div>
+                                  <input type="hidden" value="Контейнеры" data-inputvalue="select-time-day_pickup" name="select-time-day_pickup">
+                                </div>
+                                <!-- /.inputselect__content -->
+                              </div>
+                              <!-- /.inputselect__wrapper -->
+                              <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="select-time-day_pickup">
+                                <div class="dropdownblock__wrapper">
+                                  <div class="dropdownblock__links">
+                                    <menu>
+                                      <li><a href="#" data-togglevalue="с 10:00 до 11:00">с 10:00 до 11:00</a>
+                                      </li>
+                                      <li><a href="#" data-togglevalue="с 22:00 до 11:00">с 22:00 до 11:00</a>
+                                      </li>
+                                    </menu>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.inputlabel -->
+                          </div>
+                        </div>
+                        <div class="stepform__row  ">
+                          <div class="stepform__col w-full">
+                            <div class="borderblock">
+                              <div class="checkblock ">
+                                <div class="checkblock__content">
+                                  <div class="checkblock__icon">
+                                    <img src="img/prr.svg" alt="">
+                                  </div>
+                                  <div class="checkblock__text">
+                                    <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                    <div class="checkblock__value" data-dependon="FROM_LOADING_pickup">Отключен</div>
+                                  </div>
+                                </div>
+                                <div class="checkblock__checkbox">
+                                  <input type="checkbox" id="FROM_LOADING_pickup" name="FROM_LOADING_pickup" value="Y">
+                                  <label for="FROM_LOADING_pickup">
+                                    <span></span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.borderblock -->
+                          </div>
+                          </div>
+                          <div class="stepform__row   w-full">
+                          <div class="stepform__col w-full">
+                            <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_md" data-toggleitem="dop">
+                              <div class="inputselect__wrapper" data-toggleclick="dop">
+                                <div class="inputselect__icon">
+                                  <img src="img/dop.svg" alt="">
+                                </div>
+                                <div class="inputselect__content">
+                                  <div class="inputselect__title" data-value="dop">Доп услуги
+                                  </div>
+                                  <input type="hidden" value="" data-inputvalue="dop" name="dop">
+                                </div>
+                                <!-- /.inputselect__content -->
+                              </div>
+                              <!-- /.inputselect__wrapper -->
+                              <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
+                                <div class="dropdownblock__wrapper">
+                                  <div class="dropdownblock__links">
+                                    <menu>
+                                      <li><a href="#" data-togglevalue="Услуга 1">Услуга 1</a></li>
+                                      <li><a href="#" data-togglevalue="Услуга 2">Услуга 2</a></li>
+                                    </menu>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.inputlabel -->
+                          </div>
+                        </div>
+                       
+                       
+                      </div>
+                      
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabdocs'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Запросить документы</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block borderblock_lg">
+                        <p style='text-align: left;'>Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и
+                          заполните бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения,
+                          скачайте и заполните бланк заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+
+
+                      <div class="formblock__row">
+                        <div class="formcheckbox formcheckbox_docscheck">
+                          <div class="formcheckbox__item formcheckbox__item_col2">
+                            <label for="doc_id1"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id1" name="doc_id1" value="Y" data-stepdata="doc_id1"
+                                  data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Счет на забор груза</span>
+                              </span>
+                            </label>
+                            <label for="doc_id2"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id2" name="doc_id2" value="Y" data-stepdata="doc_id2"
+                                  data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Счет на межтерминальную
+                                  перевозку</span>
+                              </span>
+                            </label>
+                            <label for="doc_id3"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id3" name="doc_id3" value="Y" data-stepdata="doc_id3"
+                                  data-steptype="source">
+                                <span class="formcheckbox__text" data-text="checkboxtext">Счет на адресную доставку
+                                  груза</span>
+                              </span>
+                            </label>
+                            <label for="doc_id4"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id4" name="doc_id4" value="Y" data-stepdata="doc_id4"
+                                  data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Обьединенный счет</span>
+                              </span>
+                            </label>
+                            <label for="doc_id5"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id5" name="doc_id5" value="Y" data-stepdata="doc_id5"
+                                  data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">ТТН</span>
+                              </span>
+                            </label>
+                            <label for="doc_id6"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id6" name="doc_id6" value="Y" data-stepdata="doc_id6"
+                                  data-steptype="source">
+                                <span class="formcheckbox__text" data-text="checkboxtext">УПД/Акт</span>
+                              </span>
+                            </label>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.formblock__row -->
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabact'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Акт сверки</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block borderblock_lg">
+                        <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                          прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме заполните бланк заявления и прикрепите файл к
+                          данной форме</p>
+                      </div>
+
+
+
+
+                      <div class="stepform__row stepform__row_col2 flex">
+                        <div class="stepform__col">
+                          <div class="inputlabel inputlabel_date inputlabel_dropdown w-full">
+                            <label>Период с</label>
+                            <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
+                              data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
+                              placeholder="Период с">
+                          </div>
+                        </div>
+                        <div class="stepform__col">
+                          <div class="inputlabel inputlabel_date inputlabel_dropdown w-full">
+                            <label>Период до</label>
+                            <input readonly="" class="lk-datepicker datepicker-act_to" value="" type="text"
+                              data-stepdata="act_to" name="act_to" data-steptype="source" data-required="required"
+                              placeholder="Период до">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.formblock__row -->
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabcomplaint'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Оставить жалобу</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block borderblock_lg">
+                        <p style='text-align: left;'>Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и
+                          заполните бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения,
+                          скачайте и заполните бланк заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+
+
+                      <div class="formblock__row">
+                        <div class="formcheckbox formcheckbox_docscheck">
+                          <div class="formcheckbox__item formcheckbox__item_col2">
+                            <label for="doc_theme1"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="theme_id1" name="doc_theme1" value="Y"
+                                  data-stepdata="doc_theme1" data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 1</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme2"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme2" name="doc_theme2" value="Y"
+                                  data-stepdata="doc_theme2" data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 2</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme3"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme3" name="doc_theme3" value="Y"
+                                  data-stepdata="doc_theme3" data-steptype="source">
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 3</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme4"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme4" name="doc_theme4" value="Y"
+                                  data-stepdata="doc_theme4" data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 4</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme5"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme5" name="doc_theme5" value="Y"
+                                  data-stepdata="doc_theme5" data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 5</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme6"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme6" name="doc_theme6" value="Y"
+                                  data-stepdata="doc_theme6" data-steptype="source">
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 6</span>
+                              </span>
+                            </label>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.formblock__row -->
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabclaim'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Оформить претензию</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block">
+                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                          прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+                      <div class="orderdocs orderdocs_col2">
+                        <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
+
+                      </div>
+
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="formblock__block">
+                        <div class="formfileloader">
+                          <div class="drag-area">
+                            <div class="dragbutton">
+                              <div class="dragtext">Перетащите файлы для загрузки, или <span class='draglink'>выберите
+                                  файл
+                                </span>
+                              </div>
+                              <!-- /.dragtext -->
+                              <div class="draginfo">.pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ</div>
+                              <!-- /.raginfo -->
+                            </div>
+                            <!-- /.dragbutton -->
+                            <input type="file" name='formfileloader[]' id="fileInput_claim" multiple class='fileInput draginput
+                              ' hidden>
+                          </div>
+                          <div class="orderfiles">
+                            <div class="orderfiles__items fileName" id="fileName_claim">
+                              <!--  <div class="orderfiles__item">
+                                  <div class='orderfiles__wrapper'>
+                                    <div class="orderfiles__title">Счет на оплату 8434818414819.pdf <a href='#'
+                                        data-fileremove='fileName_id_1'></a></div>
+                                    <div class="orderfiles__info">78 кБ</div>
+                                  </div>
+                                </div> -->
+                            </div>
+                          </div>
+                          </span>
+                        </div>
+                        <!-- /.formfileloader -->
+                      </div>
+                      <!-- /.formblock__block -->
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabproblem'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Сообщить о проблеме</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block">
+                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                          прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+                      <div class="orderdocs orderdocs_col2">
+                        <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
+
+                      </div>
+
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="formblock__block">
+                        <div class="formfileloader">
+                          <div class="drag-area">
+                            <div class="dragbutton">
+                              <div class="dragtext">Перетащите файлы для загрузки, или <span class='draglink'>выберите
+                                  файл
+                                </span>
+                              </div>
+                              <!-- /.dragtext -->
+                              <div class="draginfo">.pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ</div>
+                              <!-- /.raginfo -->
+                            </div>
+                            <!-- /.dragbutton -->
+                            <input type="file" name='formfileloader[]' id="fileName_problem" multiple class='fileInput draginput
+                              ' hidden>
+                          </div>
+                          <div class="orderfiles">
+                            <div class="orderfiles__items fileName" id="fileName_problem">
+                              <!--  <div class="orderfiles__item">
+                                  <div class='orderfiles__wrapper'>
+                                    <div class="orderfiles__title">Счет на оплату 8434818414819.pdf <a href='#'
+                                        data-fileremove='fileName_id_1'></a></div>
+                                    <div class="orderfiles__info">78 кБ</div>
+                                  </div>
+                                </div> -->
+                            </div>
+                          </div>
+                          </span>
+                        </div>
+                        <!-- /.formfileloader -->
+                      </div>
+                      <!-- /.formblock__block -->
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabother'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Прочее</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block">
+                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                          прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+                      <div class="orderdocs orderdocs_col2">
+                        <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
+
+                      </div>
+
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <textarea rows='3' type="text" value="" placeholder='Комментарий'></textarea>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+              </div>
+            </div><!-- /.modal__main -->
+          </div><!-- /.modal__wrapper -->
+        </div>
+      </div>
+    </div>
+    <div id="popup_deliver" class="modal fade modal_calc modal_xxlarge modal_xlarge">
+      <div class="modal-dialog">
+        <span class="modalclose" data-dismiss="modal" aria-hidden="true">
+          <img src="img/modalclose.svg" alt="" class='onlyDesktop'>
+          <img src="img/closepopup.svg" alt="" class='onlyMobile'>
+        </span>
+        <div class="modal-body" data-tabswrapper=''>
+          <div class="modal__wrapper">
+            <div class="modal-content">
+              <div class="modal__content ">
+                <div class="formblock active">
+                  <div class="modal__header">
+                    <div class="modal__title">
+                      Доставка груза по адресу</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div data-tabscontent="sendfrom" class="active">
+                        <div class="stepform__row   w-full">
+                          <div class="stepform__col w-full">
+                            <div class="inputlabel  inputlabel_dropdown inputlabel_lg inputselect"
+                                data-toggleitem='send_terminal_deliver'>
+                              <div class="inputselect__wrapper" data-toggleclick="send_terminal_deliver">
+                                <div class="inputselect__icon">
+                                  <img src="img/locicon.svg" alt="">
+                                </div>
+                                <div class="inputselect__content">
+                                  <div class="inputselect__title" data-value='send_terminal_deliver'>222148481 г. Москва, ул.
+                                    Освобождения Ленинских прос-ктов 49491
+                                  </div>
+                                  <div class="inputselect__info" data-value2='send_terminal_deliver'>10:00 - 19:00 (GMT +2)
+                                  </div>
+                                  <input type="hidden" value="222148481" name="terminal-from-id_deliver"
+                                    data-input="ternimalid" class="terminal-id">
+                                  <input type="hidden" value="г. Москва, ул. Освобождения Ленинских прос-ктов 49491"
+                                    data-input="ternimalname" name="terminal-from-name_deliver" class="terminal-name"
+                                    data-inputvalue='send_terminal'>
+                                </div>
+                                <!-- /.inputselect__content -->
+                              </div>
+                              <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="send_terminal_deliver">
+                                <div class="dropdownblock__wrapper">
+                                  <div class="dropdownblock__links">
+                                    <menu>
+                                      <li><a href="#" data-toggletermid='222148481'
+                                          data-toggletermname='г. Москва, ул. Освобождения Ленинских прос-ктов 49491'
+                                          data-toggletermtime='10:00 - 19:00 (GMT +2)'>222148481 г. Москва, ул.
+                                          Освобождения Ленинских прос-ктов 49491</a>
+                                      </li>
+                                      <li><a href="#" data-toggletermid='33333333' data-toggletermname='г. Москва'
+                                          data-toggletermtime='8:00 - 22:00 (GMT +2)'>33333333 г. Москва</a></li>
+                                    </menu>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.inputlabel -->
+                          </div>
+                          </div>
+                          <div class="stepform__row   w-full">
+                          <div class="stepform__col w-full">
+                            <div class="inputlabel  inputlabel_dropdown  inputselect " data-toggleitem="select-time-day_deliver">
+                              <div class="inputselect__wrapper" data-toggleclick="select-time-day_deliver">
+                                <div class="inputselect__content">
+                                  <div class="inputselect__label">Выберите время</div>
+                                  <div class="inputselect__title" data-value="select-time-day_deliver">с 10:00 до 11:00
+                                  </div>
+                                  <input type="hidden" value="Контейнеры" data-inputvalue="select-time-day_deliver" name="select-time-day_deliver">
+                                </div>
+                                <!-- /.inputselect__content -->
+                              </div>
+                              <!-- /.inputselect__wrapper -->
+                              <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="select-time-day_deliver">
+                                <div class="dropdownblock__wrapper">
+                                  <div class="dropdownblock__links">
+                                    <menu>
+                                      <li><a href="#" data-togglevalue="с 10:00 до 11:00">с 10:00 до 11:00</a>
+                                      </li>
+                                      <li><a href="#" data-togglevalue="с 22:00 до 11:00">с 22:00 до 11:00</a>
+                                      </li>
+                                    </menu>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.inputlabel -->
+                          </div>
+                        </div>
+                        <div class="stepform__row  ">
+                          <div class="stepform__col w-full">
+                            <div class="borderblock">
+                              <div class="checkblock ">
+                                <div class="checkblock__content">
+                                  <div class="checkblock__icon">
+                                    <img src="img/prr.svg" alt="">
+                                  </div>
+                                  <div class="checkblock__text">
+                                    <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                    <div class="checkblock__value" data-dependon="FROM_LOADING_deliver">Отключен</div>
+                                  </div>
+                                </div>
+                                <div class="checkblock__checkbox">
+                                  <input type="checkbox" id="FROM_LOADING_deliver" name="FROM_LOADING_deliver" value="Y">
+                                  <label for="FROM_LOADING_deliver">
+                                    <span></span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.borderblock -->
+                          </div>
+                          </div>
+                          <div class="stepform__row   w-full">
+                          <div class="stepform__col w-full">
+                            <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_md" data-toggleitem="dop">
+                              <div class="inputselect__wrapper" data-toggleclick="dop">
+                                <div class="inputselect__icon">
+                                  <img src="img/dop.svg" alt="">
+                                </div>
+                                <div class="inputselect__content">
+                                  <div class="inputselect__title" data-value="dop">Доп услуги
+                                  </div>
+                                  <input type="hidden" value="" data-inputvalue="dop" name="dop">
+                                </div>
+                                <!-- /.inputselect__content -->
+                              </div>
+                              <!-- /.inputselect__wrapper -->
+                              <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
+                                <div class="dropdownblock__wrapper">
+                                  <div class="dropdownblock__links">
+                                    <menu>
+                                      <li><a href="#" data-togglevalue="Услуга 1">Услуга 1</a></li>
+                                      <li><a href="#" data-togglevalue="Услуга 2">Услуга 2</a></li>
+                                    </menu>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.inputlabel -->
+                          </div>
+                        </div>
+                       
+                       
+                      </div>
+                      
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabdocs'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Запросить документы</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block borderblock_lg">
+                        <p style='text-align: left;'>Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и
+                          заполните бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения,
+                          скачайте и заполните бланк заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+
+
+                      <div class="formblock__row">
+                        <div class="formcheckbox formcheckbox_docscheck">
+                          <div class="formcheckbox__item formcheckbox__item_col2">
+                            <label for="doc_id1"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id1" name="doc_id1" value="Y" data-stepdata="doc_id1"
+                                  data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Счет на забор груза</span>
+                              </span>
+                            </label>
+                            <label for="doc_id2"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id2" name="doc_id2" value="Y" data-stepdata="doc_id2"
+                                  data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Счет на межтерминальную
+                                  перевозку</span>
+                              </span>
+                            </label>
+                            <label for="doc_id3"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id3" name="doc_id3" value="Y" data-stepdata="doc_id3"
+                                  data-steptype="source">
+                                <span class="formcheckbox__text" data-text="checkboxtext">Счет на адресную доставку
+                                  груза</span>
+                              </span>
+                            </label>
+                            <label for="doc_id4"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id4" name="doc_id4" value="Y" data-stepdata="doc_id4"
+                                  data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Обьединенный счет</span>
+                              </span>
+                            </label>
+                            <label for="doc_id5"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id5" name="doc_id5" value="Y" data-stepdata="doc_id5"
+                                  data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">ТТН</span>
+                              </span>
+                            </label>
+                            <label for="doc_id6"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_id6" name="doc_id6" value="Y" data-stepdata="doc_id6"
+                                  data-steptype="source">
+                                <span class="formcheckbox__text" data-text="checkboxtext">УПД/Акт</span>
+                              </span>
+                            </label>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.formblock__row -->
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabact'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Акт сверки</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block borderblock_lg">
+                        <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                          прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме заполните бланк заявления и прикрепите файл к
+                          данной форме</p>
+                      </div>
+
+
+
+
+                      <div class="stepform__row stepform__row_col2 flex">
+                        <div class="stepform__col">
+                          <div class="inputlabel inputlabel_date inputlabel_dropdown w-full">
+                            <label>Период с</label>
+                            <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
+                              data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
+                              placeholder="Период с">
+                          </div>
+                        </div>
+                        <div class="stepform__col">
+                          <div class="inputlabel inputlabel_date inputlabel_dropdown w-full">
+                            <label>Период до</label>
+                            <input readonly="" class="lk-datepicker datepicker-act_to" value="" type="text"
+                              data-stepdata="act_to" name="act_to" data-steptype="source" data-required="required"
+                              placeholder="Период до">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.formblock__row -->
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabcomplaint'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Оставить жалобу</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block borderblock_lg">
+                        <p style='text-align: left;'>Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и
+                          заполните бланк заявления и прикрепите файл к данной форме Для того, чтобы внести изменения,
+                          скачайте и заполните бланк заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+
+
+                      <div class="formblock__row">
+                        <div class="formcheckbox formcheckbox_docscheck">
+                          <div class="formcheckbox__item formcheckbox__item_col2">
+                            <label for="doc_theme1"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="theme_id1" name="doc_theme1" value="Y"
+                                  data-stepdata="doc_theme1" data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 1</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme2"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme2" name="doc_theme2" value="Y"
+                                  data-stepdata="doc_theme2" data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 2</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme3"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme3" name="doc_theme3" value="Y"
+                                  data-stepdata="doc_theme3" data-steptype="source">
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 3</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme4"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme4" name="doc_theme4" value="Y"
+                                  data-stepdata="doc_theme4" data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 4</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme5"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme5" name="doc_theme5" value="Y"
+                                  data-stepdata="doc_theme5" data-steptype="source" checked>
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 5</span>
+                              </span>
+                            </label>
+                            <label for="doc_theme6"
+                              class="formcheckbox__label formcheckbox__label_type2 formcheckbox__label_type3">
+                              <span>
+                                <input type="checkbox" id="doc_theme6" name="doc_theme6" value="Y"
+                                  data-stepdata="doc_theme6" data-steptype="source">
+                                <span class="formcheckbox__text" data-text="checkboxtext">Тема 6</span>
+                              </span>
+                            </label>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.formblock__row -->
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabclaim'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Оформить претензию</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block">
+                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                          прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+                      <div class="orderdocs orderdocs_col2">
+                        <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
+
+                      </div>
+
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="formblock__block">
+                        <div class="formfileloader">
+                          <div class="drag-area">
+                            <div class="dragbutton">
+                              <div class="dragtext">Перетащите файлы для загрузки, или <span class='draglink'>выберите
+                                  файл
+                                </span>
+                              </div>
+                              <!-- /.dragtext -->
+                              <div class="draginfo">.pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ</div>
+                              <!-- /.raginfo -->
+                            </div>
+                            <!-- /.dragbutton -->
+                            <input type="file" name='formfileloader[]' id="fileInput_claim" multiple class='fileInput draginput
+                              ' hidden>
+                          </div>
+                          <div class="orderfiles">
+                            <div class="orderfiles__items fileName" id="fileName_claim">
+                              <!--  <div class="orderfiles__item">
+                                  <div class='orderfiles__wrapper'>
+                                    <div class="orderfiles__title">Счет на оплату 8434818414819.pdf <a href='#'
+                                        data-fileremove='fileName_id_1'></a></div>
+                                    <div class="orderfiles__info">78 кБ</div>
+                                  </div>
+                                </div> -->
+                            </div>
+                          </div>
+                          </span>
+                        </div>
+                        <!-- /.formfileloader -->
+                      </div>
+                      <!-- /.formblock__block -->
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabproblem'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Сообщить о проблеме</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block">
+                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                          прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+                      <div class="orderdocs orderdocs_col2">
+                        <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
+
+                      </div>
+
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <input type="text" value="" placeholder='Комментарий'>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+
+                      <div class="formblock__block">
+                        <div class="formfileloader">
+                          <div class="drag-area">
+                            <div class="dragbutton">
+                              <div class="dragtext">Перетащите файлы для загрузки, или <span class='draglink'>выберите
+                                  файл
+                                </span>
+                              </div>
+                              <!-- /.dragtext -->
+                              <div class="draginfo">.pdf, .docx, .txt, .png, .jpeg, .tiff до 5 мБ</div>
+                              <!-- /.raginfo -->
+                            </div>
+                            <!-- /.dragbutton -->
+                            <input type="file" name='formfileloader[]' id="fileName_problem" multiple class='fileInput draginput
+                              ' hidden>
+                          </div>
+                          <div class="orderfiles">
+                            <div class="orderfiles__items fileName" id="fileName_problem">
+                              <!--  <div class="orderfiles__item">
+                                  <div class='orderfiles__wrapper'>
+                                    <div class="orderfiles__title">Счет на оплату 8434818414819.pdf <a href='#'
+                                        data-fileremove='fileName_id_1'></a></div>
+                                    <div class="orderfiles__info">78 кБ</div>
+                                  </div>
+                                </div> -->
+                            </div>
+                          </div>
+                          </span>
+                        </div>
+                        <!-- /.formfileloader -->
+                      </div>
+                      <!-- /.formblock__block -->
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+                <div class="formblock" data-modalcontent='tabother'>
+                  <div class="modal__header">
+                    <div class="modal__title" data-menuback="">Прочее</div>
+                  </div>
+                  <div class="formblock__form">
+                    <form action="">
+
+
+                      <div class="borderblock borderblock__block">
+                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
+                          прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
+                          заявления и прикрепите файл к данной форме</p>
+                      </div>
+
+
+                      <div class="orderdocs orderdocs_col2">
+                        <div class="orderdocs__item"><a href="#" target="blank">Счет на забор груза</a></div>
+
+                      </div>
+
+
+                      <div class="formblock__row">
+                        <div class="formblock__input">
+                          <textarea rows='3' type="text" value="" placeholder='Комментарий'></textarea>
+                        </div>
+                        <!-- /.formblock__input -->
+                      </div>
+                      <!-- /.formblock__row -->
+
+
+                      <div class="orderitem__button">
+                        <button type="submit" data-submit="modalform" class="btn_main btn_large">Оформить
+                          заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.formblock__form -->
+                </div>
+              </div>
+            </div><!-- /.modal__main -->
+          </div><!-- /.modal__wrapper -->
+        </div>
+      </div>
+    </div>
+ 
     <script>
       //selecting all required elements
       const dropArea = document.querySelector(".drag-area"),

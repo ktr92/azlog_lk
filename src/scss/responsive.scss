@@ -1,6 +1,36 @@
 @import "./style.scss";
 
 @media (max-width: 1440px) {
+  .orderpage__aside {
+    min-width: 420px;
+  }
+  .calcobject__input {
+    min-width: unset;
+  }
+  .formcheckbox__item {
+    column-count: 1;
+  }
+  .calcobject__row {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .floating input, input {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .floating .floating-label {
+    left: 10px;
+    font-size: 12px;
+  }
+  .orderpage {
+    gap: 20px;
+  }
+  .stepform__main {
+    padding-left: 40px;
+  }
+  .stepform__title {
+    margin-left: 15px;
+  }
   .authpage__form {
     padding-left: 30px;
   }
@@ -16,7 +46,23 @@
 @media (max-width: 1150px) {
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
+  .orderitem__wrapper_wide {
+    width: 100%;
+  }
+  .orderpage__aside {
+    max-width: 100%;
+  }
+  .orderparams__dt {
+    max-width: 80%;
+  }
+  .borderblock {
+      background-size: cover;
+      background-position: center;
+   }
+  .pageheader__title  {
+    width: 100%;
+  }
   .container {
     padding: 0 18px;
   }
@@ -1298,10 +1344,10 @@
   .stepform__row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -5px;
+    /*   margin: 0 -5px; */
 
     .stepform__col {
-      padding: 0 5px;
+      /*   padding: 0 5px; */
 
       &:last-child {
         margin-bottom: 0;
@@ -1313,7 +1359,7 @@
       font-size: 14px;
       margin-bottom: 0;
     }
-    .orderparams__item{
+    .orderparams__item {
       margin-bottom: 14px;
     }
     .orderdocs__item a {
@@ -1373,25 +1419,26 @@
     border: none;
   }
 
-
   .stepform__icon .stepform__number {
     width: 30px;
     height: 30px;
     text-align: center;
     line-height: 30px;
     font-size: 12px;
-
   }
   .stepform__title {
     margin-left: 12px;
   }
   .stepform__row {
-    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
       border-radius: 8px;
       border: none;
       height: 46px;
     }
-  }  
+  }
 
   input.cityInput {
     padding-left: 38px;
@@ -1399,13 +1446,12 @@
   .stepform__col {
     margin-bottom: 10px;
 
-
-
-
-    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus {
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="password"]:focus {
       background: #f5f5f5;
-    
-     }
+    }
   }
   .stepform__row_mob2 {
     .stepform__col {
@@ -1418,16 +1464,239 @@
       width: 100%;
     }
   }
-  .stepform__row  input.lk-datepicker {
+  .stepform__row input.lk-datepicker {
     height: unset;
     padding: 0;
   }
   .stepform__showdata.borderblock {
     display: flex;
-    align-items: center;justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     border: none;
     padding-left: 0;
     padding-right: 0;
     width: 100%;
   }
+  .inputlabel input {
+    width: 100%;
+  }
+  .calcobject__row {
+    flex-wrap: wrap;
+  }
+  .orderpage__step {
+    margin-bottom: 20px;
+  }
+  .calcobject__input.w-full {
+    min-width: 100% !important;
+  }
+  .calcobject__number {
+    width: 100%;
+  }
+  .floating .floating-label {
+    left: 14px;
+  }
+  .floating input {
+    padding: 13px 14px 0 14px;
+  }
+  .floating input:focus + .floating-label,
+  .floating input:not([value=""]) + .floating-label {
+    top: 6px;
+  }
+  .calcobject__number {
+    margin-bottom: 7px;
+    padding: 5px;
+  }
+  .calcobject__number span {
+    border: none;
+    width: unset;
+    padding-left: 0;
+    min-width: unset;
+    justify-content: flex-start;
+    height: unset;
+  }
+  .calcobject {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+
+    .calcobject__row {
+      gap: 0;
+      margin: 0 -6px;
+      .calcobject__input {
+        padding: 0 6px;
+        margin-bottom: 12px;
+        width: calc(100% / 3);
+        max-width: unset;
+        min-width: unset;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .stepform__borderblock {
+    padding: 12px;
+  }
+  .stepform__block {
+    margin-bottom: 9px;
+  }
+
+  .inputhints {
+    margin-top: 9px;
+
+    span,
+    a {
+      font-size: 12px;
+      line-height: 100%;
+    }
+  }
+
+  .mob_noborder {
+    border: none !important;
+    padding: 0;
+  }
+  .orderpage__step .calcform__title {
+    margin: 16px 0;
+  }
+  .dropdownblock_sm .dropdownblock__links menu li,
+  .dropdownblock__links ul li a,
+  .dropdownblock__links menu li a {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .stepform__tabs .calctabs-js label {
+    font-size: 16px;
+    line-height: 100%;
+    margin-right: 18px;
+  }
+  .stepform__row .inputselect {
+    input {
+      height: unset;
+      padding: 0;
+      padding-right: 40px;
+      font-weight: 600 !important;
+    }
+  }
+  .inputlabel_w184 {
+    width: 100%;
+  }
+  .mt-32 {
+    margin-top: 20px !important;
+  }
+  .dropdownblock {
+    top: calc(100% + 5px);
+  }
+  .orderdriver__items {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .orderdriver__item {
+    flex: unset;
+  }
+  .stepform__main .orderdriver {
+    margin-top: 15px;
+  }
+  .stepform__tabs_type2 {
+    margin-bottom: 20px;
+  }
+  .stepform__tabs_type2 .calctabs-js {
+    margin-top: 12px;
+    width: 100%;
+  }
+  .stepform__tabs_type2 .calctabs-js label {
+    margin-bottom: 0;
+    margin-right: 10px;
+    width: 100%;
+    padding: 9px 0;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .stepform__tabs_type2 .calctabs-js ul {
+    width: 100%;
+  }
+  .stepform__row {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .stepform__main {
+    position: relative;
+  }
+  .stepform__settings {
+    position: absolute;
+    right: 0;
+    transform: translateY(-100%);
+    top: -14px;
+  }
+  .stepform__row  {
+    column-gap: 10px;
+  }
+  .stepform__row_mob2 .stepform__col {
+    width: calc(50% - 5px);
+  }
+  .stepform__row3 .stepform__col {
+    width: 100%
+  }
+  .stepform__row .calcform__addTel {
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+  .sgstlist{
+    min-width: 300px;
+  }
+  .sgstlist__items {
+    padding-right: 15px;
+  }
+  .orderpage__step_type2 .calcform__content {
+    margin-bottom: 12px;
+  }
+  .orderpage__aside {
+    .orderparams__item {
+      margin-bottom: 16px;
+    }
+    .orderparams_dd {
+      font-size: 14px;
+    }
+    .orderparams__dt {
+      font-size: 14px;padding-right: 20px;
+    }
+    .btn_main {
+      line-height: 120%;
+      box-shadow: none;
+    }
+    .orderitem__wrapper_wide {
+      padding-top: 14px;
+          border-radius: 24px 24px 0 0;
+          border-top: 1px solid rgba(55, 55, 55, 0.1);
+          box-shadow: none;
+    }
+  }
+  .orderitem__buttons {
+    margin-top: 16px;
+  }
+  .orderitem__info {
+    font-size: 12px;
+  }
+  .wrapper_orderpage {
+    padding-bottom: 0;margin-bottom: 0;
+  }
+  .modal_xlarge .modal-dialog {
+    .modal__content .formblock {
+      padding-bottom: 0;
+    }
+    .orderitem__button {
+      margin-top: 24px;
+    }
+    .modal__content {
+      padding: 28px 18px;
+    }
+  }
+
+ 
 }

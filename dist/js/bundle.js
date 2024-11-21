@@ -380,7 +380,7 @@ $(document).ready(function () {
       <div class="calcobject" data-box='${count}'>
         <div class="calcobject__row">
           <div class="calcobject__number">
-            ${count}
+            <span>${count}</span>
           </div>
           <div class="calcobject__input floating">
             <div class="floating">
@@ -397,7 +397,7 @@ $(document).ready(function () {
           <div class="calcobject__input">
             <div class="floating">
               <input data-inputid="boxcount_${count}" data-new-box=${count} type="text" name='boxCount[]' name='volume_1' value='' onkeyup="this.setAttribute('value', this.value);" data-number-format=""> 
-              <span class="floating-label">Одинаковых мест </span>
+              <span class="floating-label">Количество</span>
             </div>
           </div>
           <div class="calcobject__input w-full">
