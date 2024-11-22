@@ -585,6 +585,14 @@ $(document).ready(function () {
     return false
   })
 
+  $("[data-popup]").on("click", function (e) {
+    e.preventDefault()
+    let id = $(this).data("popup")
+    $(`[data-aside=${id}]`).toggleClass("active")
+    $(this).toggleClass("active")
+    $(".jsbackdrop").toggleClass("active")
+    $("body").toggleClass("expmenu")
+  })
   $("[data-menutoggle]").on("click", function (e) {
     e.preventDefault()
     let menu = $(this).data("menutoggle")
@@ -597,7 +605,8 @@ $(document).ready(function () {
   $(".jsbackdrop").on("click", function (e) {
     $(this).removeClass("active")
     $("[data-menu]").removeClass("active")
-    $("[data-menutoggle]").removeClass("active")
+    $("[data-aside]").removeClass("active")
+    $("[data-popup]").removeClass("active")
   })
 
   $("input[type=tel]").mask("7 (999) 999-99-99")
