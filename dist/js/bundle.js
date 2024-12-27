@@ -45,6 +45,7 @@ function initFE() {
   )
   closeByClickOutside(".popup", '[data-toggle="popup"]')
   dateInit()
+  boxsizesInit()
 }
 
 const dateInit = (disabledDays = []) => {
@@ -140,8 +141,8 @@ function initBoxMask(count = "") {
     rightAlign: false,
   })
   $(`[data-separate-format]${count}`).inputmask({
-    mask: "99 x 99 x 99",
-    alias: "integer",
+    mask: "9{1,5} x 9{1,5} x 9{1,5}",
+/*     alias: "integer", */
     showMaskOnHover: false,
     showMaskOnFocus: true,
     rightAlign: false,
@@ -187,6 +188,67 @@ function validateRequired() {
   } */
 
   return valid
+}
+
+function checkSizes(input, values, warn, err) {
+    let valid = true
+    let count = 0
+    values.forEach(value => {
+      console.log(values)
+      const errtext =  input.closest('div').find('.texterror')
+      if (value !== '_' && value !== ' _ ' && value !== '_ ' && value !== ' _' && value !== '00') {
+        count++
+        const intval = Number(value.trim())
+        console.log(intval)
+        if (intval >= warn && intval < err) {
+          input.closest('div').addClass('validwarn')
+          console.log('length: ', errtext.text().length)
+          if (!errtext.hasClass('iserror')) {
+            errtext.text('Габариты груза будут рассчитаны как “Негабаритный груз” ')
+          }
+          valid = false
+
+        } else {
+          errtext.text()
+        }
+        if (intval >= err) {
+          input.closest('div').removeClass('validwarn')
+          input.closest('div').addClass('validerror')
+          errtext.text('Габариты груза превышают максимальные значения')
+          errtext.addClass('iserror')       
+          valid = false
+   
+        } else {
+          errtext.text()
+          errtext.removeClass('iserror')       
+        }
+      } 
+    })
+
+    if (valid && count === 3) {
+      input.closest('div').addClass('validokay')
+      input.closest('div').removeClass('edited')
+    } else {
+      input.closest('div').removeClass('validokay')
+    }
+ 
+}
+
+function boxsizesInit() {
+  $('[data-validate="boxsizes"]').on("keyup", function (e) {
+    const $wrapper =  $(this).closest('div')
+    $wrapper.addClass('edited')
+    $wrapper.removeClass('validwarn')
+    $wrapper.removeClass('validerror')
+    const val = $(this).val()
+    const warn = Number($(this).data('validwarn'))
+    const err = Number($(this).data('validerror'))
+      const values = val.split('x')
+     
+/*       console.log(values)
+ */      checkSizes($(this), values, warn, err)
+
+  });
 }
 
 $(document).ready(function () {
@@ -369,6 +431,9 @@ $(document).ready(function () {
     }
     
   })
+
+ 
+
   $("[data-action='addbox']").on("click", function (e) {
     e.preventDefault()
 
@@ -424,6 +489,8 @@ $(document).ready(function () {
         $(this).text(index + 1)
       })
     })
+
+    boxsizesInit()
   })
 
   initBoxMask()
@@ -644,6 +711,7 @@ $(document).ready(function () {
     $(target).removeClass("active")
     $(".jsbackdrop").removeClass("active")
   })
+
 
   $('[data-entity="city-autocomplete"]').on("keyup", function () {
     let timeout = 0
