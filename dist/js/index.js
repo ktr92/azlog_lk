@@ -444,8 +444,10 @@ $(document).ready(function () {
           </div>
           <div class="calcobject__input w-full">
             <div class="floating">
-              <input data-inputid="boxsizes_${count}" data-new-box=${count} type="text" name='boxSizes[]' value='' onkeyup="this.setAttribute('value', this.value);" data-separate-format=""> 
+              <input data-inputid="boxsizes_${count}" data-new-box=${count} type="text" name='boxSizes[]' value='' onkeyup="this.setAttribute('value', this.value);" data-separate-format="" data-validate='boxsizes' data-validwarn='200' data-validerror='1000' data-required="required"> 
               <span class="floating-label">Габариты <span class="gray">(Необязательно)</span></span>
+               <span class="texterror"></span>
+                                      <span class="inputvalidicon"></span>
             </div>
           </div>
         </div>
