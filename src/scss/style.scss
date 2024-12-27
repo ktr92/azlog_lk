@@ -4069,26 +4069,29 @@ color: #373737;
   border-radius: 8px;
   padding: 12px 20px;
 
-  input {
-    font-weight: 700 !important;
-    font-size: 14px;
-    line-height: 100%;
-    color: #373737;
-    height: 14px;
-    width: 145px;
-    padding: 0;
-    border-radius: 0;
-    border: none;
-    font-family: var(--font-family);
+  .inputselect__content {
+    input {
+      font-weight: 700 !important;
+      font-size: 14px;
+      line-height: 100%;
+      color: #373737;
+      height: 14px;
+      width: 145px;
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      font-family: var(--font-family);
+    }
+    label {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 100%;
+      color: #373737;
+      opacity: 0.5;
+      margin-bottom: 2px;
+    }
   }
-  label {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 100%;
-    color: #373737;
-    opacity: 0.5;
-    margin-bottom: 2px;
-  }
+
 }
 .inputlabel_date {
   width: 225px;
@@ -4410,21 +4413,41 @@ input[type="password"] {
     vertical-align: bottom;
   }
 }
+.checkblock__text {
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .checkblock__label {
   font-weight: 400;
-  font-size: 10px;
-  line-height: 100%;
-  color: #373737;
-  opacity: 0.5;
-  margin-bottom: 4px;
-}
-.checkblock__value {
-  font-weight: 600;
+
+  line-height: 24px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
 }
+
+.checkblock__value {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  color: #373737;
+  display: none;
+}
+
+.checkactive {
+  .checkblock__label {
+    font-size: 10px;
+    line-height: 1;
+    color: #373737;
+    opacity: 0.5;
+    margin-bottom: 4px;
+  }
+}
+
 .checkblock__checkbox {
 }
 
@@ -5106,8 +5129,8 @@ span.formcheckbox__text {
   }
 }
 
-
-.validwarn, .edited.validwarn {
+.validwarn,
+.edited.validwarn {
   input {
     border-color: #ffc107;
     background: #fff;
@@ -5118,7 +5141,8 @@ span.formcheckbox__text {
     }
   }
 }
-.validerror, .edited {
+.validerror,
+.edited {
   input {
     border-color: #f23f34;
     background: #fff;
@@ -5179,7 +5203,7 @@ span.formcheckbox__text {
     color: #ffc107;
   }
   .inputvalidicon {
-    background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.3335 18.3333H3.66687C3.33825 18.3333 3.03575 18.1577 2.87212 17.8731C2.70896 17.5885 2.70987 17.2383 2.87533 16.9546L10.2087 4.12129C10.3727 3.83988 10.6743 3.66663 11.0002 3.66663C11.3261 3.66663 11.6277 3.83988 11.7922 4.12129L19.1255 16.9546C19.291 17.2383 19.2919 17.5885 19.1287 17.8731C18.9656 18.1577 18.6617 18.3333 18.3335 18.3333Z" fill="%23FFC107"/><path d="M10.0835 15.6484C10.0835 15.5251 10.105 15.4124 10.149 15.3065C10.1921 15.202 10.254 15.1113 10.3337 15.0352C10.4121 14.9582 10.5088 14.8981 10.6197 14.855C10.7316 14.8129 10.8572 14.7904 10.9974 14.7904C11.1377 14.7904 11.2642 14.8129 11.3769 14.855C11.4915 14.8981 11.5882 14.9582 11.6666 15.0352C11.7468 15.1113 11.8087 15.202 11.8513 15.3065C11.8953 15.4124 11.9168 15.5251 11.9168 15.6484C11.9168 15.7722 11.8953 15.8849 11.8513 15.9876C11.8082 16.0907 11.7463 16.1796 11.6666 16.2571C11.5882 16.3332 11.4915 16.3927 11.3769 16.4368C11.2642 16.4789 11.1377 16.5 10.9974 16.5C10.8567 16.5 10.7316 16.4789 10.6197 16.4363C10.5088 16.3923 10.4121 16.3327 10.3337 16.2566C10.2535 16.1792 10.1917 16.0903 10.149 15.9871C10.105 15.8845 10.0835 15.7717 10.0835 15.6484ZM11.6785 13.75H10.3159L10.1229 8.25H11.871L11.6785 13.75Z" fill="%23373737"/></svg>')
+    background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.3335 18.3333H3.66687C3.33825 18.3333 3.03575 18.1577 2.87212 17.8731C2.70896 17.5885 2.70987 17.2383 2.87533 16.9546L10.2087 4.12129C10.3727 3.83988 10.6743 3.66663 11.0002 3.66663C11.3261 3.66663 11.6277 3.83988 11.7922 4.12129L19.1255 16.9546C19.291 17.2383 19.2919 17.5885 19.1287 17.8731C18.9656 18.1577 18.6617 18.3333 18.3335 18.3333Z" fill="%23FFC107"/><path d="M10.0835 15.6484C10.0835 15.5251 10.105 15.4124 10.149 15.3065C10.1921 15.202 10.254 15.1113 10.3337 15.0352C10.4121 14.9582 10.5088 14.8981 10.6197 14.855C10.7316 14.8129 10.8572 14.7904 10.9974 14.7904C11.1377 14.7904 11.2642 14.8129 11.3769 14.855C11.4915 14.8981 11.5882 14.9582 11.6666 15.0352C11.7468 15.1113 11.8087 15.202 11.8513 15.3065C11.8953 15.4124 11.9168 15.5251 11.9168 15.6484C11.9168 15.7722 11.8953 15.8849 11.8513 15.9876C11.8082 16.0907 11.7463 16.1796 11.6666 16.2571C11.5882 16.3332 11.4915 16.3927 11.3769 16.4368C11.2642 16.4789 11.1377 16.5 10.9974 16.5C10.8567 16.5 10.7316 16.4789 10.6197 16.4363C10.5088 16.3923 10.4121 16.3327 10.3337 16.2566C10.2535 16.1792 10.1917 16.0903 10.149 15.9871C10.105 15.8845 10.0835 15.7717 10.0835 15.6484ZM11.6785 13.75H10.3159L10.1229 8.25H11.871L11.6785 13.75Z" fill="%23373737"/></svg>');
   }
 }
 
@@ -5200,9 +5224,88 @@ span.formcheckbox__text {
   }
 }
 
-.edited.validokay, .validokay {
+.edited.validokay,
+.validokay {
   input {
     background-image: none;
     border-color: #ededed;
   }
 }
+
+.afteractive {
+  display: none;
+}
+
+.checkactive {
+  .beforeactive {
+    display: none;
+  }
+  .afteractive {
+    display: block;
+  }
+}
+
+.borderblock_warm.checkactive {
+  background-image: url(../img/warmbg.png);
+
+.checkblock__label, .checkblock__value {
+color: #fff;
+  }
+}
+.inputlabel .dropdownblock__links  label {
+  opacity: 1;
+}
+
+.inputlabel   {
+  .dropdownblock__wrapper {
+    padding: 28px;
+  }
+}
+
+.dropdownblock_sm  .dropdownblock__links ul li a, .dropdownblock_sm  .dropdownblock__links menu li a {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdownblock__links {
+  .calcform__input{
+    position: relative;
+    .checkblock label {
+      margin-left: 14px;
+    }
+  }
+  .checkblock_abs {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    z-index: 1;
+  }
+  .checkblock__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 600;
+font-size: 14px;
+line-height: 100%;
+color: #373737;
+  }
+
+  .floating {
+    margin-top: 26px;
+
+   .floating-label{
+      left: 20px;
+    }
+
+    input {
+      background: #f5f5f5;
+    }
+
+    input:focus + .floating-label {
+      top: 8px;
+      font-size: 10px;
+      transform: translateY(0);
+    }
+  }
+}
+

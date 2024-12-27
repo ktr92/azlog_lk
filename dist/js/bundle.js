@@ -43,6 +43,10 @@ function initFE() {
     '[data-toggle="toolbarmenu"]',
     '[data-toggleclick="toolbarmenu"]'
   )
+  closeByClickOutside(
+    '[data-toggle="dop"]',
+    '[data-toggleclick="dop"]'
+  )
   closeByClickOutside(".popup", '[data-toggle="popup"]')
   dateInit()
   boxsizesInit()
@@ -411,9 +415,12 @@ $(document).ready(function () {
   $(".checkblock input").on("change", function (e) {
     const label = $(this).closest(".checkblock").find("[data-dependon]")
     if ($(this).is(":checked")) {
-      label.text("Активирован")
+      label.text("Активирован").show()
+      label.closest('.borderblock ').addClass('checkactive')
     } else {
-      label.text("Отключен")
+      label.text("Отключен").hide()
+      label.closest('.borderblock ').removeClass('checkactive')
+
     }
     
   })
@@ -543,8 +550,8 @@ $(document).ready(function () {
   $('input[data-stepdata="send_inn"]').mask("999999999")
   $('input[data-stepdata="receive_yurkpp"]').mask("99999999")
   $('input[data-stepdata="receive_yurinn"]').mask("999999999?999")
-  $('input[name="FLOOR"]').mask("9?9")
-  $('input[name="TO_FLOOR"]').mask("9?9")
+/*   $('input[name="FLOOR"]').mask("9?9") */
+ /*  $('input[name="TO_FLOOR"]').mask("9?9") */
 
   const $tabs = document.querySelector("[data-headertabs]")
 

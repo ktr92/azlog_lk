@@ -675,7 +675,8 @@
                                       <div class="checkblock">
                                         <div class="checkblock__content">
                                           <div class="checkblock__icon">
-                                            <img src="img/warnicon.svg" alt="">
+                                            <img src="img/warnicongray.svg" alt="" class='beforeactive'>
+                                            <img src="img/warnicon.svg" alt="" class='afteractive'>
                                           </div>
                                           <div class="checkblock__text">
                                             <div class="checkblock__label">Хрупкий / жидкий груз</div>
@@ -693,11 +694,12 @@
                                   </div>
                                   <div class="stepform__block">
 
-                                    <div class="borderblock" style='background-image: url(img/warmbg.png);'>
-                                      <div class="checkblock checkblock_white">
+                                    <div class="borderblock borderblock_warm">
+                                      <div class="checkblock ">
                                         <div class="checkblock__content">
                                           <div class="checkblock__icon">
-                                            <img src="img/warmicon.svg" alt="">
+                                            <img src="img/warmicongray.svg" alt="" class='beforeactive'>
+                                            <img src="img/warmicon.svg" alt="" class='afteractive'>
                                           </div>
                                           <div class="checkblock__text">
                                             <div class="checkblock__label">Теплый режим</div>
@@ -937,7 +939,8 @@
                                     <div class="checkblock ">
                                       <div class="checkblock__content">
                                         <div class="checkblock__icon">
-                                          <img src="img/prr.svg" alt="">
+                                          <img src="img/prrgray.svg" alt="" class='beforeactive'>
+                                          <img src="img/prr.svg" alt="" class='afteractive'>
                                         </div>
                                         <div class="checkblock__text">
                                           <div class="checkblock__label">Погрузо-разгрузочные работы</div>
@@ -972,10 +975,71 @@
                                     <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
                                       <div class="dropdownblock__wrapper">
                                         <div class="dropdownblock__links">
-                                          <menu>
-                                            <li><a href="#" data-togglevalue='Услуга 1'>Услуга 1</a></li>
-                                            <li><a href="#" data-togglevalue='Услуга 2'>Услуга 2</a></li>
-                                          </menu>
+                                          <div class="formcheckbox">
+                                         
+                                                  <label for="check88-1" class="formcheckbox__label formcheckbox__label_type2">
+                                                    <span>
+                                                      <input type="checkbox" id="check88-1" name="TO_SideTentRemoval" value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
+                                                      <span class="formcheckbox__text" data-text="checkboxtext">Боковая
+                                                        рестентовка</span>
+                                                    </span>
+                  
+                                                  </label>
+                                                  <label for="check88-2" class="formcheckbox__label formcheckbox__label_type2">
+                                                    <span>
+                                                      <input type="checkbox" id="check88-2" name="TO_UpperTentRemoval" value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
+                                                      <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
+                                                        растентовка</span>
+                                                    </span>
+                  
+                                                  </label>
+                                                  <label for="check88-3" class="formcheckbox__label formcheckbox__label_type2">
+                                                    <span>
+                                                      <input type="checkbox" id="check88-3" name="TO_FullTentRemoval" data-stepdata="dop_dost_full" data-steptype="source">
+                                                      <span class="formcheckbox__text" data-text="checkboxtext">Полная
+                                                        рестентовка</span>
+                                                    </span>
+                  
+                                                  </label>
+                                            
+                                                <label for="check88-4" class="formcheckbox__label formcheckbox__label_type2">
+                                                  <span>
+                                                    <input type="checkbox" id="check88-4" data-stepdata="dop_dost_bort" data-steptype="source" name="TO_TailLift" value="Y">
+                                                    <span class="formcheckbox__text" data-text="checkboxtext">Требуется машина с
+                                                      гидробортом</span>
+                  
+                                                  </span>
+                  
+                                                </label>
+                                             
+                                            </div>
+
+                                          <div class="calcform__input">
+                                            <div class="floating">
+                                              <input type="text" name="FLOOR" data-stepdata="dop_floor" data-steptype="source" data-min="1" data-max="300" class="w-full" onkeyup="this.setAttribute('value', this.value);" value="">
+                                              <span class="floating-label">Этаж</span>
+  
+                                             
+                                            </div>
+
+                                            <div class="checkblock checkblock_abs">
+                                              <div class="checkblock__content">                                               
+                                                <div class="checkblock__text">
+                                                  <div class="checkblock__label">Лифт</div>
+                                                </div>
+                                              </div>
+                                              <div class="checkblock__checkbox">
+                                                <input checked type="checkbox" id="NO_LIFT" name="NO_LIFT" value="Y">
+                                                <label for="NO_LIFT">
+                                                  <span></span>
+                                                </label>
+                                              </div>
+                                            </div>
+
+                                           
+                                          </div><!-- /.calcform__input -->
+
+                                          
                                         </div>
                                       </div>
                                     </div>
@@ -1134,7 +1198,8 @@
                                     <div class="checkblock ">
                                       <div class="checkblock__content">
                                         <div class="checkblock__icon">
-                                          <img src="img/prr.svg" alt="">
+                                          <img src="img/prrgray.svg" alt="" class='beforeactive'>
+                                          <img src="img/prr.svg" alt="" class='afteractive'>
                                         </div>
                                         <div class="checkblock__text">
                                           <div class="checkblock__label">Погрузо-разгрузочные работы</div>
@@ -1364,7 +1429,7 @@
                             <div class='' data-tabscontent='sender' data-datatawrapper='sender'>
                               <div class="calcform__content">
 
-                                <div class="stepform__row stepform__row3 w-full flex ">
+                                <div class="stepform__row stepform__row3  flex ">
                                   <div class="stepform__col">
                                     <div class="floating">
                                       <input type="text" name="U_INN" data-stepdata="send_inn" value=''
@@ -1418,7 +1483,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
                                   <div class="stepform__col w-full">
                                     <div class="floating">
                                       <input type="text" name="U_COMPANY" data-stepdata="send_yurname" value=''
@@ -1470,7 +1535,7 @@
                             </div>
                             <div class='' data-tabscontent='sender'>
                               <div class="calcform__content">
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
 
                                   <div class="stepform__col w-full">
                                     <div class="floating">
@@ -1700,7 +1765,7 @@
                             <div class='' data-tabscontent='receiver' data-datatawrapper='receiver'>
                               <div class="calcform__content">
 
-                                <div class="stepform__row stepform__row3 w-full flex ">
+                                <div class="stepform__row stepform__row3  flex ">
                                   <div class="stepform__col">
                                     <div class="floating">
                                       <input type="text" name="R_U_INN" data-stepdata="receive_inn" value=''
@@ -1755,7 +1820,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
                                   <div class="stepform__col w-full">
                                     <div class="floating">
                                       <input type="text" name="R_U_COMPANY" data-stepdata="receive_yurname" value=''
@@ -1807,7 +1872,7 @@
                             </div>
                             <div class='' data-tabscontent='receiver'>
                               <div class="calcform__content">
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
 
                                   <div class="stepform__col w-full">
                                     <div class="floating">
@@ -1904,7 +1969,7 @@
                                   </div>
                                 </div>
 
-                                <div class="stepform__row stepform__row3 w-full flex ">
+                                <div class="stepform__row stepform__row3 flex ">
                                   <div class="stepform__col ">
                                     <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_md"
                                       data-toggleitem='P_FORM'>

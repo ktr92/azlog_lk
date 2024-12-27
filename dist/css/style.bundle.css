@@ -4192,7 +4192,7 @@ color: #373737;
   background: #f5f5f5;
   border-radius: 8px;
   padding: 12px 20px; }
-  .inputlabel input {
+  .inputlabel .inputselect__content input {
     font-weight: 700 !important;
     font-size: 14px;
     line-height: 100%;
@@ -4203,7 +4203,7 @@ color: #373737;
     border-radius: 0;
     border: none;
     font-family: var(--font-family); }
-  .inputlabel label {
+  .inputlabel .inputselect__content label {
     font-weight: 400;
     font-size: 10px;
     line-height: 100%;
@@ -4493,19 +4493,33 @@ input[type="password"] {
   .checkblock__icon img {
     vertical-align: bottom; }
 
+.checkblock__text {
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
 .checkblock__label {
   font-weight: 400;
-  font-size: 10px;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 14px;
   line-height: 100%;
-  color: #373737;
-  opacity: 0.5;
-  margin-bottom: 4px; }
+  color: #373737; }
 
 .checkblock__value {
   font-weight: 600;
   font-size: 14px;
-  line-height: 100%;
-  color: #373737; }
+  line-height: 1;
+  color: #373737;
+  display: none; }
+
+.checkactive .checkblock__label {
+  font-size: 10px;
+  line-height: 1;
+  color: #373737;
+  opacity: 0.5;
+  margin-bottom: 4px; }
 
 .checkblock_col {
   min-width: 308px;
@@ -5086,18 +5100,22 @@ input[type="checkbox"]:checked
 .newcalc_v2 h1 {
   font-size: 36px; }
 
-.validwarn input, .edited.validwarn input {
+.validwarn input,
+.edited.validwarn input {
   border-color: #ffc107;
   background: #fff;
   border-bottom: 2px solid #ffc107; }
-  .validwarn input:focus, .edited.validwarn input:focus {
+  .validwarn input:focus,
+  .edited.validwarn input:focus {
     border-color: #ffc107; }
 
-.validerror input, .edited input {
+.validerror input,
+.edited input {
   border-color: #f23f34;
   background: #fff;
   border-bottom: 2px solid #f23f34; }
-  .validerror input:focus, .edited input:focus {
+  .validerror input:focus,
+  .edited input:focus {
     border-color: #f23f34; }
 
 .validwarn.validerror input {
@@ -5154,9 +5172,65 @@ input[type="checkbox"]:checked
   display: block;
   background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="9" fill="%2346D981"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8.29739 9.73003L12.2226 5L14 6.45258L8.56661 13L5 9.903L6.51622 8.18338L8.29739 9.73003Z" fill="white"/></svg>'); }
 
-.edited.validokay input, .validokay input {
+.edited.validokay input,
+.validokay input {
   background-image: none;
   border-color: #ededed; }
+
+.afteractive {
+  display: none; }
+
+.checkactive .beforeactive {
+  display: none; }
+
+.checkactive .afteractive {
+  display: block; }
+
+.borderblock_warm.checkactive {
+  background-image: url(../img/warmbg.png); }
+  .borderblock_warm.checkactive .checkblock__label, .borderblock_warm.checkactive .checkblock__value {
+    color: #fff; }
+
+.inputlabel .dropdownblock__links label {
+  opacity: 1; }
+
+.inputlabel .dropdownblock__wrapper {
+  padding: 28px; }
+
+.dropdownblock_sm .dropdownblock__links ul li a, .dropdownblock_sm .dropdownblock__links menu li a {
+  font-size: 14px;
+  font-weight: 500; }
+
+.dropdownblock__links .calcform__input {
+  position: relative; }
+  .dropdownblock__links .calcform__input .checkblock label {
+    margin-left: 14px; }
+
+.dropdownblock__links .checkblock_abs {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  z-index: 1; }
+
+.dropdownblock__links .checkblock__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737; }
+
+.dropdownblock__links .floating {
+  margin-top: 26px; }
+  .dropdownblock__links .floating .floating-label {
+    left: 20px; }
+  .dropdownblock__links .floating input {
+    background: #f5f5f5; }
+  .dropdownblock__links .floating input:focus + .floating-label {
+    top: 8px;
+    font-size: 10px;
+    transform: translateY(0); }
 
 @media (max-width: 1440px) {
   .orderpage__aside {
