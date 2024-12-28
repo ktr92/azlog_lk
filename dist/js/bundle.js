@@ -257,6 +257,15 @@ function boxsizesInit() {
 
 $(document).ready(function () {
 
+  $(document).on('change', '.radiotypeblock input[type="radio"]', function(e) {
+    $('.radiotype label').removeClass('active')
+    $('.resultblock__main').removeClass('active')
+    if ($(this).is(":checked")) {
+      $(this).closest('.radiotype').find('label').addClass('active')
+      $(this).closest('.radiotype').find('.resultblock__main').addClass('active')
+    }
+  }) 
+
   $(document).on("click", '.modal-backdrop', function (e) {
     $('.modal').modal('hide')
   })
@@ -554,6 +563,7 @@ $(document).ready(function () {
  /*  $('input[name="TO_FLOOR"]').mask("9?9") */
 
   const $tabs = document.querySelector("[data-headertabs]")
+
 
   if ($tabs) {
     $tabs.addEventListener("click", function (e) {
