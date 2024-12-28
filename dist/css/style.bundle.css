@@ -5463,6 +5463,9 @@ input[type="checkbox"]:checked
 .orderpage__aside .radiotype input[type=radio]:checked + .radiotype__text:after {
   display: none; }
 
+.container .container {
+  padding: 0; }
+
 @media (max-width: 1440px) {
   .orderpage__aside {
     min-width: 420px; }
@@ -5493,6 +5496,14 @@ input[type="checkbox"]:checked
     max-width: 607px; } }
 
 @media (max-width: 1279px) {
+  .maplinkblcok {
+    display: flex;
+    justify-content: flex-end; }
+  .maplink {
+    position: static;
+    margin: 0; }
+  .pageheader__title h1 {
+    margin-top: 13px; }
   .orderitem__wrapper_wide {
     width: 100%; }
   .orderpage__aside {
@@ -5884,7 +5895,7 @@ input[type="checkbox"]:checked
     font-size: 14px;
     margin-left: 16px; }
   .stepform__header {
-    margin-bottom: 9px; }
+    margin-bottom: 20px; }
   .stepform input {
     border: 1px solid #ebebeb;
     background: #f5f5f5; }
@@ -6572,11 +6583,18 @@ input[type="checkbox"]:checked
     font-size: 16px;
     line-height: 100%;
     margin-right: 18px; }
-  .stepform__row .inputselect input {
-    height: unset;
-    padding: 0;
-    padding-right: 40px;
-    font-weight: 600 !important; }
+  /* .stepform__row .inputselect {
+    input {
+      height: unset;
+      padding: 0;
+      padding-right: 40px;
+      font-weight: 600 !important;
+    }
+  } */
+  .dropdownblock__links .checkblock_abs {
+    top: 9px; }
+  .inputlabel .inputselect__content input[type="text"] {
+    height: unset; }
   .inputlabel_w184 {
     width: 100%; }
   .mt-32 {
@@ -6588,6 +6606,10 @@ input[type="checkbox"]:checked
     flex-wrap: wrap; }
   .orderdriver__item {
     flex: unset; }
+  .calcresults__title {
+    padding-top: 10px; }
+  .inputlabel_dropdown .inputselect__title {
+    padding-right: 12px; }
   .stepform__main .orderdriver {
     margin-top: 15px; }
   .stepform__tabs_type2 {
