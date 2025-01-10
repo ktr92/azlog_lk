@@ -1749,7 +1749,7 @@ label {
 
 .stepform__title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   color: #373737;
@@ -5576,4 +5576,12 @@ padding-top: 30px;
 
 .container .container {
   padding: 0;
+}
+
+.stepform__edit {
+  margin-left: 10px;
+  a {
+    display: flex;
+    line-height: 1;
+  }
 }

@@ -2248,7 +2248,7 @@ label {
 
 .stepform__title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   color: #373737;
@@ -5465,6 +5465,12 @@ input[type="checkbox"]:checked
 
 .container .container {
   padding: 0; }
+
+.stepform__edit {
+  margin-left: 10px; }
+  .stepform__edit a {
+    display: flex;
+    line-height: 1; }
 
 @media (max-width: 1440px) {
   .orderpage__aside {

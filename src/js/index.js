@@ -233,6 +233,43 @@ function boxsizesInit() {
 }
 
 $(document).ready(function () {
+  const gldata = {
+    currentStep: 2
+  }
+
+  $("[data-calcstep]").hide()
+  $('[data-calcstep="form-step-' + gldata.currentStep + '"]').show()
+  
+  $('[data-back="stepform"]').on('click', function(e) {
+    e.preventDefault()
+    prevStep()
+  })
+  const changeStep = () => {
+      $("[data-calcstep]").hide()
+       
+        // fillStepData(currentStep)
+        $('[data-calcstep="form-step-' + gldata.currentStep + '"]').show()
+        $([document.documentElement, document.body]).animate(
+          {
+            scrollTop: $(
+              'header'
+            ).offset().top,
+          },
+          1000
+        )
+  }
+  const nextStep = () => {
+       // initData()
+       ++gldata.currentStep
+       changeStep()
+     
+  }
+  const prevStep = () => {
+       // initData()
+        --gldata.currentStep
+       changeStep()
+     
+  }
 
   $(document).on('change', '.radiotypeblock input[type="radio"]', function(e) {
     $('.radiotype label').removeClass('active')
@@ -288,7 +325,9 @@ $(document).ready(function () {
 
     if (validateRequired()) {
      // send form
-     alert('its okay')
+    /*  alert('its okay') */
+
+      nextStep()
     }
   })
 
