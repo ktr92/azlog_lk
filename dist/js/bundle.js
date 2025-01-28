@@ -53,24 +53,6 @@ function initFE() {
 }
 
 const dateInit = (disabledDays = []) => {
-  // 0 = ВС, 1 = ПН, 2 = ВТ, 3 = СР, 4 = ЧТ, 5 = ПТ, 6 = СБ
-  /*  $('.inputlabel_date').on('click', function(e) {
-    e.preventDefault()
-    e.stopPropagation()
-    let dp = $(this).find('.lk-datepicker').datepicker({
-      minDate: new Date(),
-      onRenderCell: function (date, cellType) {
-        if (cellType == "day") {
-          var day = date.getDay(),
-            isDisabled = disabledDays.indexOf(day) != -1
-
-          return {
-            disabled: isDisabled,
-          }
-        }
-      },
-    })
-  }) */
   $(".lk-datepicker").each(function () {
     $(this).datepicker().data("datepicker").destroy()
     let dp = $(this).datepicker({
@@ -257,7 +239,7 @@ function boxsizesInit() {
 
 $(document).ready(function () {
   const gldata = {
-    currentStep: 2
+    currentStep: 3
   }
 
   $("[data-calcstep]").hide()

@@ -4132,10 +4132,10 @@ color: #373737;
   color: #373737;
   opacity: 0.5;
 }
-.inputselect {
+/* .inputselect {
   padding-left: 14px;
   padding-right: 14px;
-}
+} */
 
 .dropdownblock_sm {
   min-width: 100%;
@@ -5585,3 +5585,16 @@ padding-top: 30px;
     line-height: 1;
   }
 }
+
+input.lk-datepicker.datepicker-send {
+  height: unset;
+  padding: 0;
+}
+/* .orderpage {
+  display: block
+} */
+.orderpage__wrapper {
+  display: flex;
+  gap: 60px;
+}
+.orderpage {}

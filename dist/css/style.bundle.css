@@ -4247,10 +4247,10 @@ color: #373737;
   color: #373737;
   opacity: 0.5; }
 
-.inputselect {
+/* .inputselect {
   padding-left: 14px;
-  padding-right: 14px; }
-
+  padding-right: 14px;
+} */
 .dropdownblock_sm {
   min-width: 100%;
   max-width: 100%;
@@ -5471,6 +5471,17 @@ input[type="checkbox"]:checked
   .stepform__edit a {
     display: flex;
     line-height: 1; }
+
+input.lk-datepicker.datepicker-send {
+  height: unset;
+  padding: 0; }
+
+/* .orderpage {
+  display: block
+} */
+.orderpage__wrapper {
+  display: flex;
+  gap: 60px; }
 
 @media (max-width: 1440px) {
   .orderpage__aside {
