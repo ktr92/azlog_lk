@@ -285,109 +285,7 @@
       <main>
         <div class="wrapper wrapper_orderpage">
   
-          <div class="mobilenav fixed" id="mobilenav">
-            <div class="mobilenav__wrapper">
-              <div class="mobilenav__items">
-                <div class="mobilenav__item">
-                  <a href='#' data-popup='tracking' class="mobilenav__link">
-                    <div class="mobilenav__icon">
-                      <img src="img/icnTrack.svg" alt="">
-                    </div>
-                    <div class="mobilenav__name">Следить</div>
-                  </a><!-- /.mobilenav__link -->
-                </div>
-                <div class="mobilenav__item">
-                  <a href="#" data-popup='history' class="mobilenav__link">
-                    <div class="mobilenav__icon">
-                      <img src="img/icnHistory.svg" alt="">
-                    </div>
-                    <div class="mobilenav__name">История</div>
-                  </a><!-- /.mobilenav__link -->
-                </div>
-                <div class="mobilenav__item mobilenav__item_center">
-                  <a href="#" class="mobilenav__link mobileorderbutton" data-toggleclick="mobileorder">
-                    <div class="mobilenav__icon mobilenav__icon_catalog">
-                      <img src="img/icnCatalog.svg" alt="">
-                    </div>
-                    <div class="mobilenav__name">Добавить</div>
-                  </a><!-- /.mobilenav__link -->
-                </div>
-                <div class="mobilenav__item">
-                  <a href="#" class="mobilenav__link">
-                    <div class="mobilenav__icon">
-                      <img src="img/icnSupport.svg" alt="">
-                    </div>
-                    <div class="mobilenav__name">Поддержка</div>
-                  </a><!-- /.mobilenav__link -->
-                </div>
-                <div class="mobilenav__item">
-                  <a href="#" class="mobilenav__link" data-toggleclick="mobtoolbarmenu">
-                    <div class="mobilenav__icon">
-                      <img src="img/icnmore.svg" alt="">
-                    </div>
-                    <div class="mobilenav__name">Еще...</div>
-                  </a><!-- /.mobilenav__link -->
-                </div>
-              </div><!-- /.mobilenav__items -->
-            </div><!-- /.mobilenav__wrapper -->
-  
-            <div class="mobileorder" data-toggle="mobileorder">
-              <div class="mobileorder__items">
-                <div class="mobileorder__item">
-                  <a href="#popup_pickup" data-toggle="modal">
-                    <div class="mobileorder__contetn">
-                      <div class="mobileorder__icon">
-                        <img src="img/ordertb_pickup.svg" alt="">
-                      </div>
-                      <div class="mobileorder__text">Забор груза</div>
-                    </div><!-- /.mobileorder__contetn -->
-                  </a>
-                </div>
-                <div class="mobileorder__item">
-                  <a href="#popup_deliver" data-toggle="modal">
-                    <div class="mobileorder__contetn">
-                      <div class="mobileorder__icon">
-                        <img src="img/ordertb_deliver.svg" alt="">
-                      </div>
-                      <div class="mobileorder__text">Доставка груза</div>
-                    </div><!-- /.mobileorder__contetn -->
-                  </a>
-                </div>
-              </div><!-- /.mobileorder__items -->
-            </div>
-  
-            <div class="dropdownblock toolbarmenu mobtoolbarmenu" data-toggle="mobtoolbarmenu">
-              <div class="dropdownblock__wrapper">
-                <div class="dropdownblock__links">
-                  <menu>
-                    <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_update">
-                      <span>Повторить</span>
-                    </a>
-                    <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_docs">
-                      <span>Документы</span>
-                    </a>
-                    <a href="#" class="ordertoolbar__item ordertb_pause">
-                      <span>Приостановить</span>
-                    </a>
-                    <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_warning">
-                      <span>Претензия</span>
-                    </a>
-                    <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_email">
-                      <span>Написать нам</span>
-                    </a>
-                    <a href="#" class="ordertoolbar__item ordertb_disable">
-                      <span>Отменить</span>
-                    </a>
-  
-  
-                  </menu>
-                </div>
-              </div>
-  
-  
-            </div>
-          </div>
-  
+        
   
           <div class="container newcalc_v2">
             <div class="pageheader">
@@ -2310,7 +2208,7 @@
                   </div>
 
                   <div class="orderpage__formblock calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                    <div class="calctotal calctotal__">
+                    <div class="calctotal calctotal__header">
                       <div class="calctotal__title">Я являюсь:</div>
                       <div class="calctotal__value">
                         <div class="calcform__radiobuttons  ">
@@ -2341,31 +2239,45 @@
                       </div>
                     </div><!-- /.calctotal -->
 
+                    <div class="calctotal">
+                      <div class="calctotal__title">
+                        <img src="img/HotPrice.svg" alt="">
+                        <span>Промокод</span>
+                      </div>
+                      <div class="calctotal__value">
+                          <div class="floating">
+                            <input type="text" name="NOTIFY_PROMO" value="" onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_promo" data-steptype="source">
+                            <span class="floating-label">Промокод</span>
+                          </div>
+                      </div>
+                    </div><!-- /.calctotal -->
 
                     <div class="calctotal">
-                      <div class="calctotal__title"><b>E-mail для связи <br> и отправки
-                          уведомлений</b></div>
+                      
+                      <div class="calctotal__title">
+                        <img src="img/Email.svg" alt="">
+                        <span>Email для связи и отправки уведомлений</span>
+                      </div>
                       <div class="calctotal__value">
-                        <input type="text" name="NOTIFY_EMAIL" placeholder="E-mail" data-stepdata="contact_phone" data-steptype="source">
+                        <div class="floating">
+                          <input type="text" name="NOTIFY_EMAIL" value="" onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_phone" data-steptype="source">
+                          <span class="floating-label">Email</span>
+                        </div>
                       </div>
                     </div><!-- /.calctotal -->
   
                     <div class="calctotal">
-                      <div class="calctotal__title"><b>Телефон для связи <br> и уведомления по SMS</b>
+                      <div class="calctotal__title">
+                        <img src="img/NOTIFY_PHONE.svg" alt="">
+                        <span>Телефон для связи и уведомления по SMS:</span>
                       </div>
                       <div class="calctotal__value">
-                        <input type="tel" name="NOTIFY_PHONE" placeholder="Телефон" data-stepdata="contact_phone" data-steptype="source" data-required="required">
+                        <div class="floating">
+                          <input type="tel" name="NOTIFY_PHONE" value="" onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_phone" data-steptype="source" data-required="required">
+                          <span class="floating-label">Телефон</span>
+                        </div>
                       </div>
                     </div><!-- /.calctotal -->
-                    <div class="calctotal">
-                      <div class="calctotal__title"><b>Промокод</b>
-                      </div>
-                      <div class="calctotal__value">
-                        <input type="text" name="NOTIFY_PROMO" placeholder="Промокод" data-stepdata="contact_promo" data-steptype="source">
-                      </div>
-                    </div><!-- /.calctotal -->
-                    
-  
                   </div>
                 </div>
   

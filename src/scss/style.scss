@@ -4241,6 +4241,7 @@ input[type="password"] {
   top: 8px;
   font-size: 10px;
   transform: translateY(0);
+  opacity: 0.5;
 }
 
 .stepform__block {
@@ -5754,7 +5755,7 @@ input.lk-datepicker.datepicker-send {
 .orderpage__formblock {
   margin-top: 36px;
 
-  .calctotal {
+  .calctotal__header {
     display: flex;
     gap: 21px;
     align-items: center;
@@ -5813,3 +5814,22 @@ input.lk-datepicker.datepicker-send {
   }
 }
 
+.orderpage__formblock {
+  border: none;
+
+  .calctotal__title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    span {
+      font-family: var(--font-family);
+font-weight: 600;
+font-size: 14px;
+line-height: 100%;
+color: #373737;
+    }
+  }
+  .calcform__radiobuttons {
+    margin-bottom: 0;
+  }
+}

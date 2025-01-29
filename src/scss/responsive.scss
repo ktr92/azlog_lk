@@ -14,7 +14,8 @@
     gap: 10px;
     margin-bottom: 10px;
   }
-  .floating input, input {
+  .floating input,
+  input {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -54,7 +55,6 @@
   .maplink {
     position: static;
     margin: 0;
-    
   }
   .pageheader__title h1 {
     margin-top: 13px;
@@ -69,10 +69,10 @@
     max-width: 80%;
   }
   .borderblock {
-      background-size: cover;
-      background-position: center;
-   }
-  .pageheader__title  {
+    background-size: cover;
+    background-position: center;
+  }
+  .pageheader__title {
     width: 100%;
   }
   .container {
@@ -626,7 +626,6 @@
   .stepform__header {
     margin-bottom: 20px;
   }
-  
 
   .stepform {
     input {
@@ -1212,13 +1211,11 @@
     .mobilenav__icon_catalog {
       background: #8235ff;
     }
-  
 
     img {
       transform: rotate(45deg);
     }
   }
-  
 
   .mobilenav {
     display: none;
@@ -1648,7 +1645,7 @@
   .calcresults__title {
     padding-top: 10px;
   }
-  .inputlabel_dropdown  {
+  .inputlabel_dropdown {
     .inputselect__title {
       padding-right: 12px;
     }
@@ -1690,20 +1687,20 @@
     transform: translateY(-100%);
     top: -14px;
   }
-  .stepform__row  {
+  .stepform__row {
     column-gap: 10px;
   }
   .stepform__row_mob2 .stepform__col {
     width: calc(50% - 5px);
   }
   .stepform__row3 .stepform__col {
-    width: 100%
+    width: 100%;
   }
   .stepform__row .calcform__addTel {
     margin-top: 12px;
     margin-bottom: 5px;
   }
-  .sgstlist{
+  .sgstlist {
     min-width: 300px;
   }
   .sgstlist__items {
@@ -1712,7 +1709,7 @@
   .orderpage__step_type2 .calcform__content {
     margin-bottom: 12px;
   }
-  .orderpage__aside  .orderpage__asideblock:not(.popupstyle) {
+  .orderpage__aside .orderpage__asideblock:not(.popupstyle) {
     .orderparams__item {
       margin-bottom: 16px;
     }
@@ -1720,7 +1717,8 @@
       font-size: 14px;
     }
     .orderparams__dt {
-      font-size: 14px;padding-right: 20px;
+      font-size: 14px;
+      padding-right: 20px;
     }
     .btn_main {
       line-height: 120%;
@@ -1728,9 +1726,9 @@
     }
     .orderitem__wrapper_wide {
       padding-top: 14px;
-          border-radius: 24px 24px 0 0;
-          border-top: 1px solid rgba(55, 55, 55, 0.1);
-          box-shadow: none;
+      border-radius: 24px 24px 0 0;
+      border-top: 1px solid rgba(55, 55, 55, 0.1);
+      box-shadow: none;
     }
   }
   .orderitem__buttons {
@@ -1740,7 +1738,8 @@
     font-size: 12px;
   }
   .wrapper_orderpage {
-    padding-bottom: 0;margin-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   .modal_xlarge .modal-dialog {
     .modal__content .formblock {
@@ -1760,14 +1759,13 @@
     width: 100%;
     z-index: 999999;
     margin-bottom: 0;
-  
-   
+
     overflow: hidden;
-    
+
     .orderhistory__items {
       width: 100%;
     }
-    .orderitem__toolbar  {
+    .orderitem__toolbar {
       display: none;
     }
     .orderhistory__items {
@@ -1782,9 +1780,8 @@
     }
     .orderitem__title {
       font-weight: 700;
-font-size: 20px;
-line-height: 100%;
-
+      font-size: 20px;
+      line-height: 100%;
     }
     .ordertrack {
       order: -1;
@@ -1809,15 +1806,11 @@ line-height: 100%;
       border-radius: 24px 24px 0 0;
       margin: 0;
       width: 100%;
-
     }
-
   }
   [data-aside].active {
     display: block !important;
     position: fixed;
-   
-
   }
 
   .mobileorder {
@@ -1828,50 +1821,127 @@ line-height: 100%;
     width: calc(100% - 36px);
     z-index: 9999999;
   }
- 
-.mobileorder.active {
-  display: block;
-}
-  
-.mobileorder__items {
-  display: flex;
-  margin: 0 -4px;
 
-  .mobileorder__item {
-    flex: 1;
+  .mobileorder.active {
+    display: block;
+  }
+
+  .mobileorder__items {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 72px;
-    padding: 0 4px;
+    margin: 0 -4px;
 
-    a {
-      box-shadow: 5px 5px 15px 0 rgba(55, 55, 55, 0.15);
-background: #fff;
-border-radius: 12px;
-display: block;
-height: 100%;
-width: 100%;
-overflow: hidden;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-    }
+    .mobileorder__item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 72px;
+      padding: 0 4px;
 
-    .mobileorder__contetn {
-      text-align: center;
-      
-    }
-    .mobileorder__text {
-      width: 100%;
-      font-weight: 500;
-font-size: 12px;
-line-height: 100%;
-text-align: center;
-color: #373737;
-margin-top: 3px;
+      a {
+        box-shadow: 5px 5px 15px 0 rgba(55, 55, 55, 0.15);
+        background: #fff;
+        border-radius: 12px;
+        display: block;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mobileorder__contetn {
+        text-align: center;
+      }
+      .mobileorder__text {
+        width: 100%;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        color: #373737;
+        margin-top: 3px;
+      }
     }
   }
-}
+  .orderpage__block {
+    width: 100%;
+  }
+  .ordepageblock__row {
+    flex-wrap: wrap;
+  }
+  .ordepageblock__col {
+    width: 100%;
+  }
+  .ordepageblock {
+    padding: 20px 18px;
+  }
+  .stepform__edit a {
+    display: block;
+    min-width: 16px;
+  }
+  .ordepageblock__title,
+  .ordepageblock__title .fromto__descr p,
+  .ordepageblock__title .fromto__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .ordepageblock__subheader {
+    margin: 17px 0;
+  }
+  .ordepageblock__params {
+    gap: 12px;
+  }
+
+  .ordepageblock__paramvalue span {
+    line-height: 1;
+  }
+  .ordepageblock__paramvalue,
+  .ordepageblock__paramvalue li {
+    white-space: unset;
+  }
+  .ordepageblock__service {
+    margin: 16px -20px 0 -20px;
+    padding: 16px 20px 0 20px;
+  }
+  .ordepageblock {
+    .orderparams__item {
+      display: flex;
+    }
+    .orderparams__dt {
+      margin-bottom: 0;
+      min-width: 152px;
+    }
+    .orderparams__item {
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+    .ordepageblock__header {
+      .ordepageblock__title {
+        min-width: 152px;
+      }
+      .ordepageblock__titleinfo {
+        margin-left: 0;
+      }
+    }
+   
+  }
+  .orderpage__formblock .calctotal__header {
+    gap: 0; 
+  }
+  .orderpage__formblock .calctotal {
+    justify-content: flex-start;
+  }
+  .orderpage__formblock  {
+    .floating input {
+      height: 50px;
+    }
+  }
+  .orderpage__wrapper {
+    flex-wrap: wrap;
+    gap:23px;
+  }
 }

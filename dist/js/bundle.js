@@ -239,7 +239,8 @@ function boxsizesInit() {
 
 $(document).ready(function () {
   const gldata = {
-    currentStep: 3
+    currentStep: 3,
+    totalSteps: 3
   }
 
   $("[data-calcstep]").hide()
@@ -265,14 +266,21 @@ $(document).ready(function () {
   }
   const nextStep = () => {
        // initData()
-       ++gldata.currentStep
-       changeStep()
-     
+       if (nextStep < gldata.totalSteps) {
+        ++gldata.currentStep
+        changeStep()
+       } else {
+        submitForm()
+       }
+
   }
   const prevStep = () => {
        // initData()
+       if (nextStep > 0) {
         --gldata.currentStep
-       changeStep()
+        changeStep()
+       }
+ 
      
   }
 
@@ -335,6 +343,10 @@ $(document).ready(function () {
       nextStep()
     }
   })
+
+  function submitForm() {
+    console.log('submitForm')
+  }
 
   jQuery
   ;(function ($) {

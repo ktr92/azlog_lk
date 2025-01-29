@@ -4344,7 +4344,8 @@ input[type="password"] {
 .floating input:not([value=""]) + .floating-label {
   top: 8px;
   font-size: 10px;
-  transform: translateY(0); }
+  transform: translateY(0);
+  opacity: 0.5; }
 
 .stepform__block {
   margin-bottom: 24px; }
@@ -5626,7 +5627,7 @@ input.lk-datepicker.datepicker-send {
 
 .orderpage__formblock {
   margin-top: 36px; }
-  .orderpage__formblock .calctotal {
+  .orderpage__formblock .calctotal__header {
     display: flex;
     gap: 21px;
     align-items: center;
@@ -5666,6 +5667,21 @@ input.lk-datepicker.datepicker-send {
       .orderpage__formblock .radiotypeblock label.active span {
         color: #fff; }
 
+.orderpage__formblock {
+  border: none; }
+  .orderpage__formblock .calctotal__title {
+    display: flex;
+    align-items: center;
+    gap: 15px; }
+    .orderpage__formblock .calctotal__title span {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: #373737; }
+  .orderpage__formblock .calcform__radiobuttons {
+    margin-bottom: 0; }
+
 @media (max-width: 1440px) {
   .orderpage__aside {
     min-width: 420px; }
@@ -5676,7 +5692,8 @@ input.lk-datepicker.datepicker-send {
   .calcobject__row {
     gap: 10px;
     margin-bottom: 10px; }
-  .floating input, input {
+  .floating input,
+  input {
     padding-left: 10px;
     padding-right: 10px; }
   .floating .floating-label {
@@ -6965,7 +6982,57 @@ input.lk-datepicker.datepicker-send {
         line-height: 100%;
         text-align: center;
         color: #373737;
-        margin-top: 3px; } }
+        margin-top: 3px; }
+  .orderpage__block {
+    width: 100%; }
+  .ordepageblock__row {
+    flex-wrap: wrap; }
+  .ordepageblock__col {
+    width: 100%; }
+  .ordepageblock {
+    padding: 20px 18px; }
+  .stepform__edit a {
+    display: block;
+    min-width: 16px; }
+  .ordepageblock__title,
+  .ordepageblock__title .fromto__descr p,
+  .ordepageblock__title .fromto__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%; }
+  .ordepageblock__subheader {
+    margin: 17px 0; }
+  .ordepageblock__params {
+    gap: 12px; }
+  .ordepageblock__paramvalue span {
+    line-height: 1; }
+  .ordepageblock__paramvalue,
+  .ordepageblock__paramvalue li {
+    white-space: unset; }
+  .ordepageblock__service {
+    margin: 16px -20px 0 -20px;
+    padding: 16px 20px 0 20px; }
+  .ordepageblock .orderparams__item {
+    display: flex; }
+  .ordepageblock .orderparams__dt {
+    margin-bottom: 0;
+    min-width: 152px; }
+  .ordepageblock .orderparams__item {
+    margin-bottom: 14px;
+    line-height: 1; }
+  .ordepageblock .ordepageblock__header .ordepageblock__title {
+    min-width: 152px; }
+  .ordepageblock .ordepageblock__header .ordepageblock__titleinfo {
+    margin-left: 0; }
+  .orderpage__formblock .calctotal__header {
+    gap: 0; }
+  .orderpage__formblock .calctotal {
+    justify-content: flex-start; }
+  .orderpage__formblock .floating input {
+    height: 50px; }
+  .orderpage__wrapper {
+    flex-wrap: wrap;
+    gap: 23px; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/
