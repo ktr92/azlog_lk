@@ -18,6 +18,12 @@ const appv2 = (function () {
   const submitForm = () => {
     console.log("Если форма валидна, отправляем заявку ")
   }
+ /**
+   * перерасчет формы здесь
+   */
+  const calcDelivery = () => {
+    console.log("Перерасчет формы ")
+  }
 
   /**
    * добавление нового места в блоке с габаритами груза
@@ -201,6 +207,7 @@ const appv2 = (function () {
 
   /**
    * инициализация всех календарей-инпутов у которых указан класс "lk-datepicker"
+   * // = dateInit([0]) = ВС; dateInit([0, 6]) = ВС и СБ
    * @param {Array} disabledDays - массив дат, которые будут недоступны для выбора
    */
   const dateInit = (disabledDays = []) => {
@@ -234,7 +241,7 @@ const appv2 = (function () {
    */
   const initListeners = () => {
     /**
-     * кастомные select - выбор элемента из выпадающего списка, установка значения в связанный с ним инпут
+     * кастомные select - выбор элемента из выпадающего списка, вывод значения в связанный с ним инпут
      */
     $("[data-togglevalue]").on("click", function (e) {
       e.preventDefault()
@@ -256,6 +263,7 @@ const appv2 = (function () {
         let val2 = $(this).data("togglevalue2")
         $(`[data-value2=${id}]`).text(val2)
       }
+
     })
     /**
      * нажатие на стрелку "назад"
@@ -378,8 +386,10 @@ const appv2 = (function () {
       // set value
       $wrapper.find(`[data-value=${id}]`).text(terminalid + " " + terminalname)
       $wrapper.find(`[data-value2=${id}]`).text(terminaltime)
-      $wrapper.find(`[data-input="ternimalid"]`).val(terminalid)
+      $wrapper.find(`[data-input="ternimalid"]`).val(terminalid).trigger('change')
       $wrapper.find(`[data-input="ternimalname"]`).val(terminalname)
+      $wrapper.find('.dateblock__menu').removeClass('active')
+      
     })
   }
 
@@ -390,7 +400,6 @@ const appv2 = (function () {
     $("[data-calcstep]").hide()
     $('[data-calcstep="form-step-' + state.currentStep + '"]').show()
     dateInit()
-    initListeners()
   }
 
   /**
@@ -413,7 +422,7 @@ const appv2 = (function () {
    * шаг вперед, либо отправка формы если это последний шаг
    */
   const nextStep = () => {
-    if (nextStep < state.totalSteps) {
+    if (state.currentStep < state.totalSteps) {
       ++state.currentStep
       changeStep()
     } else {
@@ -676,9 +685,9 @@ const appv2 = (function () {
 
               let list = ""
               let showdata = ""
+              let cityid = ""
 
               items.forEach((item) => {
-                showinfo = ""
                 showdata = item.value.replace(/"/g, "").replace(/'/g, "")
                 cityid = item.data.city_kladr_id
 
@@ -720,6 +729,13 @@ const appv2 = (function () {
       $idinput.val(value)
       $input.val(name)
       $(".sgstlist").remove()
+    })
+
+    /**
+     * при изменении любого инпута перерасчитываем форму - отправляем запрос
+     */
+    $(document).on('change', 'input', function(e) {
+      calcDelivery()
     })
   }
 

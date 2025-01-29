@@ -43,6 +43,18 @@ function initFE() {
     '[data-toggle="toolbarmenu"]',
     '[data-toggleclick="toolbarmenu"]'
   )
+  closeByClickOutside(
+    '[data-toggle="select-time-day1"]',
+    '[data-toggleclick="select-time-day1"]'
+  )
+  closeByClickOutside(
+    '[data-toggle="send_terminal"]',
+    '[data-toggleclick="send_terminal"]'
+  )
+  closeByClickOutside(
+    '[data-toggle="receive_terminal"]',
+    '[data-toggleclick="receive_terminal"]'
+  )
   closeByClickOutside('[data-toggle="dop"]', '[data-toggleclick="dop"]')
   closeByClickOutside(".popup", '[data-toggle="popup"]')
 }
