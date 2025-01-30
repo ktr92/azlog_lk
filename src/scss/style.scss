@@ -5715,9 +5715,9 @@ input.lk-datepicker.datepicker-send {
   justify-content: flex-start;
 }
 
-.ordepageblock__paramvalue li {
+/* .ordepageblock__paramvalue li {
   display: none;
-}
+} */
 .ordepageblock__paramvalue li span {
   line-height: 1;
 }
@@ -5837,4 +5837,11 @@ color: #373737;
   .calcform__radiobuttons {
     margin-bottom: 0;
   }
+}
+
+[data-steptype="result"].hidden {
+  display: none !important;
+}
+[data-steptype="hasparam"].hidden {
+  display: none !important;
 }

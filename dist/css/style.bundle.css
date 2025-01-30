@@ -5592,9 +5592,9 @@ input.lk-datepicker.datepicker-send {
   align-items: flex-start;
   justify-content: flex-start; }
 
-.ordepageblock__paramvalue li {
-  display: none; }
-
+/* .ordepageblock__paramvalue li {
+  display: none;
+} */
 .ordepageblock__paramvalue li span {
   line-height: 1; }
 
@@ -5684,6 +5684,12 @@ input.lk-datepicker.datepicker-send {
       color: #373737; }
   .orderpage__formblock .calcform__radiobuttons {
     margin-bottom: 0; }
+
+[data-steptype="result"].hidden {
+  display: none !important; }
+
+[data-steptype="hasparam"].hidden {
+  display: none !important; }
 
 @media (max-width: 1440px) {
   .orderpage__aside {

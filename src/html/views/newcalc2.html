@@ -153,7 +153,7 @@
                                     </div>
                                     <div class="calcobject__input">
                                       <div class="floating">
-                                        <input type="text" name='boxCount[]' name='volume_1' value='1' min='1'
+                                        <input type="text" name='boxCount[]' name='volume_1' value='1'
                                           onkeyup="this.setAttribute('value', this.value);" data-number-format="">
                                         <span class="floating-label">Количество </span>
                                       </div>
@@ -162,8 +162,7 @@
                                       <div class="floating">
                                         <input type="text" name='boxSizes[]' value='22 22 22'
                                           onkeyup="this.setAttribute('value', this.value);" data-separate-format=""
-                                          data-validate='boxsizes' data-validwarn='200' data-validerror='1000'
-                                          data-required="required">
+                                          data-validate='boxsizes' data-validwarn='200' data-validerror='1000'>
                                         <span class="floating-label">Габариты <span
                                             class="gray">(Необязательно)</span></span>
                                         <span class="texterror"></span>
@@ -185,7 +184,8 @@
 
                                     <div class="stepform__block" data-wrapper='CARGO_TYPE'>
 
-                                      <input name="CARGO_TYPE" type="text" placeholder='Тип груза' data-stepdata="tip_gruza" data-steptype="source">
+                                      <input name="CARGO_TYPE" type="text" placeholder='Тип груза'
+                                        data-stepdata="tip_gruza" data-steptype="source">
                                       <div class="inputhints">
                                         <span>Например:</span>
                                         <a href="#">Запчасти</a>,
@@ -211,7 +211,8 @@
                                             </div>
                                           </div>
                                           <div class="checkblock__checkbox">
-                                            <input type="checkbox" id="fragileCargo" name='fragileCargo' value='Y'>
+                                            <input type="checkbox" id="fragileCargo" name='fragileCargo' value='Y'
+                                              data-steptype="source" data-stepdata="fragileCargo">
                                             <label for="fragileCargo">
                                               <span></span>
                                             </label>
@@ -234,7 +235,8 @@
                                             </div>
                                           </div>
                                           <div class="checkblock__checkbox">
-                                            <input type="checkbox" id="teplo" name='TEPLO' value='Y'>
+                                            <input type="checkbox" id="teplo" name='TEPLO' value='Y'
+                                              data-steptype="source" data-stepdata="teplo">
                                             <label for="teplo">
                                               <span></span>
                                             </label>
@@ -1084,8 +1086,9 @@
                                         <div class="stepform__col ">
                                           <div class="floating">
                                             <input type="tel" name="F_PHONE[]" data-stepdata="send_tel"
-                                              data-steptype="source" value='7 (222) 222-22-22' data-required="required" data-min="18"
-                                              data-max="18" onkeyup="this.setAttribute('value', this.value);">
+                                              data-steptype="source" value='7 (222) 222-22-22' data-required="required"
+                                              data-min="18" data-max="18"
+                                              onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Телефон</span></span>
                                           </div>
                                           <div class="newtel"></div>
@@ -1132,7 +1135,7 @@
                                           <div class="inputselect__wrapper" data-toggleclick="U_FORM">
                                             <div class="inputselect__content floating">
                                               <input type="hidden" value='' data-inputvalue='U_FORM' name='U_FORM'
-                                                data-dadata='short'>
+                                                data-dadata='short' data-steptype="source" data-stepdata="send_yurform">
 
                                               <div class="floating-label">
                                                 Правовая форма
@@ -1426,8 +1429,9 @@
                                         <div class="stepform__col ">
                                           <div class="floating">
                                             <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel"
-                                              data-steptype="source" value='7 (333) 333-33-33' data-required="required" data-min="18"
-                                              data-max="18" onkeyup="this.setAttribute('value', this.value);">
+                                              data-steptype="source" value='7 (333) 333-33-33' data-required="required"
+                                              data-min="18" data-max="18"
+                                              onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Телефон</span></span>
                                           </div>
                                           <div class="newtel"></div>
@@ -1630,13 +1634,13 @@
                                 <div class="stepform__tabs stepform__tabs_type2 ">
                                   <div class="calctabs calctabs-js" data-tabs='payer'>
                                     <ul>
-                                      <label class="active" for="payer_yur">Отправитель<input data-radiotab="tab"
+                                      <label class="active" for="payer_yur">Отправитель<input data-steptype="source" data-stepdata="payer_yur" data-radiotab="tab"
                                           type="radio" data-isrequired="delivery-address" value="1" id="payer_yur"
                                           checked="" name="PAYER"></label>
-                                      <label class="" for="payer_fiz">Получатель<input data-radiotab="tab" type="radio"
+                                      <label class="" for="payer_fiz">Получатель<input data-steptype="source" data-stepdata="payer_fiz"  data-radiotab="tab" type="radio"
                                           value="2" id="payer_fiz" name="PAYER">
                                       </label>
-                                      <label class="" for="payer_third">Третье лицо <input data-radiotab="tab"
+                                      <label class="" for="payer_third">Третье лицо <input data-steptype="source" data-stepdata="payer_third"  data-radiotab="tab"
                                           type="radio" value="3" id="payer_third" name="PAYER">
                                       </label>
                                     </ul>
@@ -1671,7 +1675,7 @@
 
                                               <div class="inputselect__title" data-value="P_FORM">Правовая форма
                                               </div>
-                                              <input type="hidden" value='' data-inputvalue='P_FORM' name='P_FORM'>
+                                              <input type="hidden" value='' data-inputvalue='P_FORM' name='P_FORM' data-steptype="source" data-stepdata="payer_yurform">
                                             </div>
                                             <!-- /.inputselect__content -->
                                           </div>
@@ -1781,9 +1785,9 @@
                               </div><!-- /.ordepageblock__button -->
                             </div><!-- /.ordepageblock__header -->
                             <div class="ordepageblock__subheader">
-                              Мест <span data-steptype="result" data-stepdata="ob_count">1</span>,
-                              Общий вес <span data-steptype="result" data-stepdata="ob_w">1 кг</span>
-                              Общий обьем <span data-steptype="result" data-stepdata="ob_vol">0.01 м³</span>
+                              Мест <span data-steptype="result" data-stepdata="ob_count"></span>,
+                              Общий вес <span data-steptype="result" data-stepdata="ob_weight"></span> кг
+                              Общий обьем <span data-steptype="result" data-stepdata="ob_volume"></span> м<sup>3</sup>
 
                             </div><!-- /.ordepageblock__subheader -->
                             <div class="ordepageblock__row">
@@ -1795,7 +1799,7 @@
                                 </div><!-- /.ordepageblock__border -->
                               </div><!-- /.ordepageblock__col -->
                               <div class="ordepageblock__col">
-                                <div class="ordepageblock__border">
+                                <div class="ordepageblock__border" data-hasparam='date_otpravki2'>
                                   <div class="ordepageblock__label">Дата доставки</div>
                                   <div class="ordepageblock__value"><span data-steptype="result"
                                       data-stepdata="date_otpravki2">28.01.2025</span></div>
@@ -1803,13 +1807,13 @@
                               </div><!-- /.ordepageblock__col -->
                             </div><!-- /.ordepageblock__row -->
                             <div class="ordepageblock__params">
-                              <div class="ordepageblock__param">
+                              <div class="ordepageblock__param" data-hasparam='tip_gruza'>
                                 <div class="ordepageblock__paramtitle">Тип груза:</div>
                                 <div class="ordepageblock__paramvalue">
                                   <span data-steptype="result" data-stepdata="tip_gruza">Автохимия</span>
                                 </div>
                               </div><!-- /.ordepageblock__param -->
-                              <div class="ordepageblock__param">
+                              <div class="ordepageblock__param" data-hasparam='cost'>
                                 <div class="ordepageblock__paramtitle">Обьявленная стоимость:</div>
                                 <div class="ordepageblock__paramvalue">
                                   <span data-steptype="result" data-stepdata="cost">100000</span> ₽
@@ -1823,32 +1827,33 @@
                                   <div class="ordepageblock__paramvalue">
                                     <ul>
 
-                                      <li><span data-steptype="result" data-stepdata="teplo"></span></li>
-                                      <li><span data-steptype="result" data-stepdata="fragileCargo"></span>
-                                      </li>
-                                      <li><span data-steptype="result" data-stepdata="liquidCargo"></span>
-                                      </li>
-
-                                      <li><span data-steptype="result" data-stepdata="pack_nopack"></span>
-                                      </li>
-                                      <li><span data-steptype="result" data-stepdata="pack_wooden"></span>
-                                      </li>
-                                      <li><span data-steptype="result" data-stepdata="pack_bubble"></span>
-                                      </li>
-                                      <li class='isset'><span data-steptype="result" data-stepdata="pack_stretch">Стретч
-                                          пленка,</span>
-                                      </li>
-                                      <li><span data-steptype="result" data-stepdata="pack_gofro"></span></li>
-                                      <li><span data-steptype="result" data-stepdata="pack_meshkotara"></span>
-                                      </li>
-                                      <li><span data-steptype="result" data-stepdata="pack_recalc"></span>
-                                      </li>
-                                      <li class='isset'><span data-steptype="result"
+                                      <li data-hasparam='teplo'><span data-steptype="result"
+                                          data-stepdata="teplo">Теплый режим,</span></li>
+                                      <li data-hasparam='fragileCargo'><span data-steptype="result"
+                                          data-stepdata="fragileCargo">Хрупкий / жидкий груз,</span></li>
+                                      <!--                                       <li data-hasparam='liquidCargo'><span data-steptype="result" data-stepdata="liquidCargo"></span></li>
+ -->
+                                      <li data-hasparam='pack_nopack'><span data-steptype="result"
+                                          data-stepdata="pack_nopack">Паллетный борт,</span></li>
+                                      <li data-hasparam='pack_wooden'><span data-steptype="result"
+                                          data-stepdata="pack_wooden">Деревянная обрешетка,</span></li>
+                                      <li data-hasparam='pack_bubble'><span data-steptype="result"
+                                          data-stepdata="pack_bubble">Пузырчатая пленка,</span></li>
+                                      <li data-hasparam='pack_stretch'><span data-steptype="result"
+                                          data-stepdata="pack_stretch">Стретч пленка,</span></li>
+                                      <li data-hasparam='pack_gofro'><span data-steptype="result"
+                                          data-stepdata="pack_gofro">Гофрокартон,</span></li>
+                                      <li data-hasparam='pack_meshkotara'><span data-steptype="result"
+                                          data-stepdata="pack_meshkotara">Мешкотара,</span></li>
+                                      <li data-hasparam='pack_recalc'><span data-steptype="result"
+                                          data-stepdata="pack_recalc">Пересчет внутренних вложений,</span></li>
+                                      <li data-hasparam='pack_mark'><span data-steptype="result"
                                           data-stepdata="pack_mark">Маркировка,</span></li>
 
-                                      <li class='isset'><span data-steptype="result" data-stepdata="dop_doc">Перевозка
-                                          сопроводительных документов,</span></li>
-                                      <li><span data-steptype="result" data-stepdata="dop_return"></span></li>
+                                      <li data-hasparam='dop_doc'><span data-steptype="result"
+                                          data-stepdata="dop_doc">Перевозка сопроводительных документов,</span></li>
+                                      <li data-hasparam='dop_return'><span data-steptype="result"
+                                          data-stepdata="dop_return">Возврат документов</span></li>
                                     </ul>
                                   </div>
                                 </div><!-- /.ordepageblock__param -->
@@ -1865,518 +1870,640 @@
 
                             </div><!-- /.ordepageblock__header -->
                             <div class="orderparams orderparams_full">
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Название компании:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_yurform">ООО</span> <span data-steptype="result"
-                                    data-stepdata="send_yurname">СТРОЙ</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">ИНН:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_inn">223333333333</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">КПП:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_kpp">4599</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Контактное лицо</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_yurfio">ВВП</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Телефон:</div>
-                                <div class="orderparams_dd"><span data-steptype="result" data-stepdata="send_yurtel">+7
-                                    (333) 333-33-33</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Email:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_email">test@test.test</span></div>
-                              </div><!-- /.orderparams__item -->
-                            </div>
-                          </div><!-- /.ordepageblock -->
-                        </div>
-                        <div class="orderpage__block ">
-                          <div class="ordepageblock">
-                            <div class="ordepageblock__header">
-                              <div class="ordepageblock__title">Получатель</div>
-
-                            </div><!-- /.ordepageblock__header -->
-                            <div class="orderparams orderparams_full">
-
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Название компании:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_yurform">ООО</span> <span data-steptype="result"
-                                    data-stepdata="send_yurname">СТРОЙ</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">ИНН:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_inn">223333333333</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">КПП:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_kpp">4599</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Контактное лицо</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_yurfio">ВВП</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Телефон:</div>
-                                <div class="orderparams_dd"><span data-steptype="result" data-stepdata="send_yurtel">+7
-                                    (333) 333-33-33</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Email:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_email">test@test.test</span></div>
-                              </div><!-- /.orderparams__item -->
-                            </div>
-                          </div><!-- /.ordepageblock -->
-                        </div>
-                        <div class="orderpage__block ">
-                          <div class="ordepageblock">
-                            <div class="ordepageblock__header">
-                              <div class="ordepageblock__title">Плательщик</div>
-                              <div class="ordepageblock__titleinfo">Третье лицо</div>
-                            </div><!-- /.ordepageblock__header -->
-                            <div class="orderparams orderparams_full">
-
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Название компании:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_yurform">ООО</span> <span data-steptype="result"
-                                    data-stepdata="send_yurname">СТРОЙ</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">ИНН:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_inn">223333333333</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">КПП:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_kpp">4599</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Контактное лицо</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_yurfio">ВВП</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Телефон:</div>
-                                <div class="orderparams_dd"><span data-steptype="result" data-stepdata="send_yurtel">+7
-                                    (333) 333-33-33</span></div>
-                              </div><!-- /.orderparams__item -->
-                              <div class="orderparams__item">
-                                <div class="orderparams__dt">Email:</div>
-                                <div class="orderparams_dd"><span data-steptype="result"
-                                    data-stepdata="send_email">test@test.test</span></div>
-                              </div><!-- /.orderparams__item -->
-                            </div>
-                          </div><!-- /.ordepageblock -->
-                        </div>
-                      </div><!-- /.orderpage__blocks -->
-
-
-
-                      <div
-                        class="orderpage__formblock calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                        <div class="calctotal calctotal__header">
-                          <div class="calctotal__title">Я являюсь:</div>
-                          <div class="calctotal__value">
-                            <div class="calcform__radiobuttons  ">
-                              <div class="radiobuttons">
-                                <div class=" radiotypeblock">
-                                  <div class="radiotype radiotype__item">
-                                    <label for="radio2-1" class="radiotype__label active">
-                                      <input type="radio" name="NOTIFY_TYPE" checked="checked" value="Отправитель"
-                                        id="radio2-1" data-stepdata="contact_type1" data-steptype="source">
-                                      <span class="radiotype__text" data-text="checkboxtext">Отправитель</span>
-                                    </label>
-                                  </div>
-                                  <div class="radiotype radiotype__item">
-                                    <label for="radio2-2" class="radiotype__label">
-                                      <input type="radio" name="NOTIFY_TYPE" value="Получатель" id="radio2-2"
-                                        data-stepdata="contact_type2" data-steptype="source">
-                                      <span class="radiotype__text" data-text="checkboxtext">Получатель</span>
-                                    </label>
-                                  </div>
-                                  <div class="radiotype radiotype__item">
-                                    <label for="radio2-3" class="radiotype__label">
-                                      <input type="radio" name="NOTIFY_TYPE" value="Третье лицо" id="radio2-3"
-                                        data-stepdata="contact_type3" data-steptype="source">
-                                      <span class="radiotype__text" data-text="checkboxtext">Третье лицо</span>
-                                    </label>
-                                  </div>
-
+                              <div class="orderparams__item" data-hasparam='send_fio'>
+                                <div class="orderparams__dt">ФИО</div>
+                                <div class="orderparams_dd">
+                                  <span data-steptype="result" data-stepdata="send_fio"></span>
                                 </div>
+                              </div><!-- /.orderparams__item -->
+                              <div class="orderparams__item" data-hasparam='send_pasp1'>
+                                <div class="orderparams__dt">Документ</div>
+                                <div class="orderparams_dd">
+                                  <span data-steptype="result" data-stepdata="send_pasp1"></span>
+                                  <span data-steptype="result" data-stepdata="send_pasp2"></span>
+                                </div>
+                              </div><!-- /.orderparams__item -->
+                              <div class="orderparams__item" data-hasparam='send_tel'>
+                                <div class="orderparams__dt">Телефон</div>
+                                <div class="orderparams_dd">
+                                  <span data-steptype="result" data-stepdata="send_tel"></span>
+                                </div>
+                              </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_email'>
+                                  <div class="orderparams__dt">Email</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_email"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_yurform'>
+                                  <div class="orderparams__dt">Название компании:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_yurform"></span>
+                                    <span data-steptype="result" data-stepdata="send_yurname"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_inn'>
+                                  <div class="orderparams__dt">ИНН:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_inn"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_kpp'>
+                                  <div class="orderparams__dt">КПП:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_kpp"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_yurfio'>
+                                  <div class="orderparams__dt">Контактное лицо</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_yurfio"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_inn'>
+                                  <div class="orderparams__dt">Телефон:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_yurtel"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_yuremail'>
+                                  <div class="orderparams__dt">Email:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_yuremail"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_innip'>
+                                  <div class="orderparams__dt">ИНН:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_innip"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_fioip'>
+                                  <div class="orderparams__dt">ФИО:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_fioip"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_yurtelip'>
+                                  <div class="orderparams__dt">Телефон:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_yurtelip"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='send_emailip'>
+                                  <div class="orderparams__dt">Email:</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="send_emailip"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
                               </div>
-                            </div>
+                            </div><!-- /.ordepageblock -->
                           </div>
-                        </div><!-- /.calctotal -->
+                          <div class="orderpage__block ">
+                            <div class="ordepageblock">
+                              <div class="ordepageblock__header">
+                                <div class="ordepageblock__title">Получатель</div>
 
-                        <div class="calctotal">
-                          <div class="calctotal__title">
-                            <img src="img/HotPrice.svg" alt="">
-                            <span>Промокод</span>
-                          </div>
-                          <div class="calctotal__value">
-                            <div class="floating">
-                              <input type="text" name="NOTIFY_PROMO" value=""
-                                onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_promo"
-                                data-steptype="source">
-                              <span class="floating-label">Промокод</span>
-                            </div>
-                          </div>
-                        </div><!-- /.calctotal -->
-
-                        <div class="calctotal">
-
-                          <div class="calctotal__title">
-                            <img src="img/Email.svg" alt="">
-                            <span>Email для связи и отправки уведомлений</span>
-                          </div>
-                          <div class="calctotal__value">
-                            <div class="floating">
-                              <input type="text" name="NOTIFY_EMAIL" value=""
-                                onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_phone"
-                                data-steptype="source">
-                              <span class="floating-label">Email</span>
-                            </div>
-                          </div>
-                        </div><!-- /.calctotal -->
-
-                        <div class="calctotal">
-                          <div class="calctotal__title">
-                            <img src="img/NOTIFY_PHONE.svg" alt="">
-                            <span>Телефон для связи и уведомления по SMS:</span>
-                          </div>
-                          <div class="calctotal__value">
-                            <div class="floating">
-                              <input type="tel" name="NOTIFY_PHONE" value=""
-                                onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_phone"
-                                data-steptype="source" data-required="required">
-                              <span class="floating-label">Телефон</span>
-                            </div>
-                          </div>
-                        </div><!-- /.calctotal -->
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="orderpage__aside">
-                    <div class="orderpage__asideblocks">
-                      <div class="orderpage__asideblock">
-                        <div class="orderitem">
-                          <div class="orderitem__wrapper orderitem__wrapper_wide">
-
-                            <div class="calcresults">
-                              <div class="calcresults__title active">
-                                Ваш расчет
-                              </div>
-                              <!-- /.calcresults__title -->
-                              <div class="calcresults__items radiotypeblock">
-                                <div class="calcresults__item">
-                                  <div class="resultblock">
-                                    <div class="resultblock__wrapper radiotype  ">
-                                      <label for="auto-delivery" class="resultblock__header active "
-                                        data-toggler="accordion1">
-                                        <div class='resultblock__headermain'>
-                                          <div class="resultblock__icon">
-                                            <div class="resultblock__img"><img src="img/auto.svg" alt=""></div>
-                                            <!-- /.resultblock__img -->
-                                          </div>
-                                          <!-- /.resultblock__icon -->
-                                          <div class="resultblock__title">
-                                            <div class="resultblock__name">Авто</div>
-                                            <!-- /.resultblock__name -->
-                                            <div class="resultblock__info">10-14 дней</div>
-                                            <!-- /.resultblock__info -->
-                                          </div>
-                                        </div>
-
-                                        <div class='resultblock__headerinput'>
-                                          <input type="radio" checked="checked" id="auto-delivery" name="delivery-type"
-                                            value="auto">
-                                          <span class="radiotype__text"></span>
-                                        </div>
-                                        <!-- /.resultblock__title -->
-                                      </label>
-                                      <!-- /.resultblock__header -->
-                                      <div class="resultblock__main active" data-toggle="accordion1">
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Cтоимость:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">19 364 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Страховка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">322.95 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                        <div class="resultblock__subtitle">Доп услуги</div>
-                                        <!-- /.resultblock__subtitle -->
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Обрешетка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">0 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Маркировка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">6.5 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                      </div>
-                                      <!-- /.resultblock__main -->
-                                      <div class="resultblock__delimeter"></div>
-                                      <div class="resultblock__footer">
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">
-                                              <div class="resultblock__footertitle">Всего:</div>
-                                            </div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">
-                                              <div class="resultblock__total">19 809 Р</div>
-                                            </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                      </div>
-                                      <!-- /.resultblock__footer -->
+                              </div><!-- /.ordepageblock__header -->
+                              <div class="orderparams orderparams_full">
+                                <div class="orderparams__item" data-hasparam='receive_fio'>
+                                  <div class="orderparams__dt">ФИО</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="receive_fio"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                             
+                                <div class="orderparams__item" data-hasparam='receive_yurname'>
+                                  <div class="orderparams__dt">Название компании</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="receive_yurname"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='receive_pasp1'>
+                                  <div class="orderparams__dt">Документ</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="receive_pasp1"></span>
+                                    <span data-steptype="result" data-stepdata="receive_pasp2"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='receive_tel'>
+                                  <div class="orderparams__dt">Телефон</div>
+                                  <div class="orderparams_dd">
+                                    <span data-steptype="result" data-stepdata="receive_tel"></span>
+                                  </div>
+                                </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_email'>
+                                    <div class="orderparams__dt">Email</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_email"></span>
                                     </div>
-                                    <!-- /.resultblock__wrapper -->
-                                  </div>
-                                  <!-- /.resultblock -->
-                                </div>
-                                <!-- /.calcresults__item -->
-                                <div class="calcresults__item">
-                                  <div class="resultblock">
-                                    <div class="resultblock__wrapper radiotype">
-                                      <label for="avia-delivery" class="resultblock__header  "
-                                        data-toggler="accordion2">
-                                        <div class='resultblock__headermain'>
-                                          <div class="resultblock__icon">
-
-                                            <div class="resultblock__img"><img src="img/airport.svg" alt=""></div>
-                                            <!-- /.resultblock__img -->
-                                          </div>
-                                          <!-- /.resultblock__icon -->
-                                          <div class="resultblock__title">
-                                            <div class="resultblock__name">Авиа</div>
-                                            <!-- /.resultblock__name -->
-                                            <div class="resultblock__info">10-14 дней</div>
-                                            <!-- /.resultblock__info -->
-                                          </div>
-                                          <!-- /.resultblock__title -->
-                                        </div>
-
-
-                                        <div class='resultblock__headerinput'>
-                                          <input type="radio" id="avia-delivery" name="delivery-type" value="avia">
-                                          <span class="radiotype__text"></span>
-                                        </div>
-                                      </label>
-                                      <!-- /.resultblock__header -->
-                                      <div class="resultblock__main" data-toggle="accordion2">
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Cтоимость:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">19 364 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Страховка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">322.95 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                        <div class="resultblock__subtitle">Доп услуги</div>
-                                        <!-- /.resultblock__subtitle -->
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Обрешетка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">0 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Маркировка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">6.5 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                      </div>
-                                      <!-- /.resultblock__main -->
-                                      <div class="resultblock__delimeter"></div>
-                                      <div class="resultblock__footer">
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">
-                                              <div class="resultblock__footertitle">Всего:</div>
-                                            </div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">
-                                              <div class="resultblock__total">19 809 Р</div>
-                                            </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                      </div>
-                                      <!-- /.resultblock__footer -->
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_yurform'>
+                                    <div class="orderparams__dt">Название компании:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_yurform"></span>
+                                      <span data-steptype="result" data-stepdata="receive_yurname"></span>
                                     </div>
-                                    <!-- /.resultblock__wrapper -->
-                                  </div>
-                                  <!-- /.resultblock -->
-                                </div>
-                                <!-- /.calcresults__item -->
-                                <div class="calcresults__item">
-                                  <div class="resultblock">
-                                    <div class="resultblock__wrapper radiotype">
-                                      <label for="container-delivery" class="resultblock__header"
-                                        data-toggler="accordion3">
-                                        <div class='resultblock__headermain'>
-
-                                          <div class="resultblock__icon">
-                                            <div class="resultblock__img"><img src="img/conteiner2.svg" alt=""></div>
-                                            <!-- /.resultblock__img -->
-                                          </div>
-                                          <!-- /.resultblock__icon -->
-                                          <div class="resultblock__title">
-                                            <div class="resultblock__name">Контейнеры</div>
-                                            <!-- /.resultblock__name -->
-                                            <div class="resultblock__info">10-14 дней</div>
-                                            <!-- /.resultblock__info -->
-                                          </div>
-
-                                          <!-- /.resultblock__title -->
-                                        </div>
-                                        <div class='resultblock__headerinput'>
-                                          <input type="radio" id="container-delivery" name="delivery-type"
-                                            value="container">
-                                          <span class="radiotype__text"></span>
-                                        </div>
-                                      </label>
-                                      <!-- /.resultblock__header -->
-                                      <div class="resultblock__main" data-toggle="accordion3">
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Cтоимость:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">19 364 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Страховка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">322.95 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                        <div class="resultblock__subtitle">Доп услуги</div>
-                                        <!-- /.resultblock__subtitle -->
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Обрешетка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">0 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">Маркировка:</div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">6.5 Р </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                      </div>
-                                      <!-- /.resultblock__main -->
-                                      <div class="resultblock__delimeter"></div>
-                                      <div class="resultblock__footer">
-                                        <div class="resultblock__params">
-                                          <div class="resultblock__param">
-                                            <div class="resultblock__dt">
-                                              <div class="resultblock__footertitle">Всего:</div>
-                                            </div>
-                                            <!-- /.resultblock__dt -->
-                                            <div class="resultblock__dd">
-                                              <div class="resultblock__total">19 809 Р</div>
-                                            </div>
-                                            <!-- /.resultblock__dd -->
-                                          </div>
-                                          <!-- /.resultblock__param -->
-                                        </div>
-                                        <!-- /.resultblock__params -->
-                                      </div>
-                                      <!-- /.resultblock__footer -->
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_inn'>
+                                    <div class="orderparams__dt">ИНН:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_inn"></span>
                                     </div>
-                                    <!-- /.resultblock__wrapper -->
-                                  </div>
-                                  <!-- /.resultblock -->
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_kpp'>
+                                    <div class="orderparams__dt">КПП:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_kpp"></span>
+                                    </div>
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_yurfio'>
+                                    <div class="orderparams__dt">Контактное лицо</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_yurfio"></span>
+                                    </div>
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_inn'>
+                                    <div class="orderparams__dt">Телефон:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_yurtel"></span>
+                                    </div>
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_email'>
+                                    <div class="orderparams__dt">Email:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_email"></span>
+                                    </div>
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_innip'>
+                                    <div class="orderparams__dt">ИНН:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_innip"></span>
+                                    </div>
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_fioip'>
+                                    <div class="orderparams__dt">ФИО:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_fioip"></span>
+                                    </div>
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_yurtelip'>
+                                    <div class="orderparams__dt">Телефон:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_yurtelip"></span>
+                                    </div>
+                                  </div><!-- /.orderparams__item -->
+                                  <div class="orderparams__item" data-hasparam='receive_emailip'>
+                                    <div class="orderparams__dt">Email:</div>
+                                    <div class="orderparams_dd">
+                                      <span data-steptype="result" data-stepdata="receive_emailip"></span>
+                                    </div>
+                                  </div><!-- /.orderparams__item -->
                                 </div>
-                                <!-- /.calcresults__item -->
+                            </div><!-- /.ordepageblock -->
+                          </div>
+                          <div class="orderpage__block ">
+                            <div class="ordepageblock">
+                              <div class="ordepageblock__header">
+                                <div class="ordepageblock__title">Плательщик</div>
+                                <div class="ordepageblock__titleinfo" data-steptype="result" data-stepdata="payer_third">Третье лицо</div>
+                              </div><!-- /.ordepageblock__header -->
+                              <div class="orderparams orderparams_full">
+
+                                <div class="orderparams__item" data-hasparam='payer_yurform'>
+                                  <div class="orderparams_dd"><span data-steptype="result" data-stepdata="payer_yur">Отправитель</span></div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='payer_fiz'>
+                                  <div class="orderparams_dd"><span data-steptype="result" data-stepdata="payer_fiz">Отправитель</span></div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='payer_yurform'>
+                                  <div class="orderparams__dt">Название компании:</div>
+                                  <div class="orderparams_dd"><span data-steptype="result"
+                                      data-stepdata="payer_yurform"></span> <span data-steptype="result"
+                                      data-stepdata="payer_yurname"></span></div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='payer_inn'>
+                                  <div class="orderparams__dt">ИНН:</div>
+                                  <div class="orderparams_dd"><span data-steptype="result"
+                                      data-stepdata="payer_inn"></span></div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='payer_kpp'>
+                                  <div class="orderparams__dt">КПП:</div>
+                                  <div class="orderparams_dd"><span data-steptype="result"
+                                      data-stepdata="payer_kpp"></span></div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='payer_yurfio'>
+                                  <div class="orderparams__dt">Контактное лицо</div>
+                                  <div class="orderparams_dd"><span data-steptype="result"
+                                      data-stepdata="payer_yurfio"></span></div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='payer_yurtelip'>
+                                  <div class="orderparams__dt">Телефон:</div>
+                                  <div class="orderparams_dd"><span data-steptype="result"
+                                      data-stepdata="payer_yurtelip"></span></div>
+                                </div><!-- /.orderparams__item -->
+                                <div class="orderparams__item" data-hasparam='payer_emailip'>
+                                  <div class="orderparams__dt">Email:</div>
+                                  <div class="orderparams_dd"><span data-steptype="result"
+                                      data-stepdata="payer_emailip"></span></div>
+                                </div><!-- /.orderparams__item -->
                               </div>
-                              <!-- /.calcresults__items -->
-                              <div class="orderitem__buttons">
+                            </div><!-- /.ordepageblock -->
+                          </div>
+                        </div><!-- /.orderpage__blocks -->
 
-                                <div class="orderitem__button"><button data-submit="stepform" class="btn_main btn_large"
-                                    data-entity="step-next">Оформить
-                                    заявку<!--и-->
-                                  </button></div>
-                                <div class="orderitem__info">
-                                  <span class="red">*</span> Указана ориентировочная стоимость
+
+
+                        <div
+                          class="orderpage__formblock calcitem__totals calcitem__totals_multiple calcitem__totals_large">
+                          <div class="calctotal calctotal__header">
+                            <div class="calctotal__title">Я являюсь:</div>
+                            <div class="calctotal__value">
+                              <div class="calcform__radiobuttons  ">
+                                <div class="radiobuttons">
+                                  <div class=" radiotypeblock">
+                                    <div class="radiotype radiotype__item">
+                                      <label for="radio2-1" class="radiotype__label active">
+                                        <input type="radio" name="NOTIFY_TYPE" checked="checked" value="Отправитель"
+                                          id="radio2-1" data-stepdata="contact_type1" data-steptype="source">
+                                        <span class="radiotype__text" data-text="checkboxtext">Отправитель</span>
+                                      </label>
+                                    </div>
+                                    <div class="radiotype radiotype__item">
+                                      <label for="radio2-2" class="radiotype__label">
+                                        <input type="radio" name="NOTIFY_TYPE" value="Получатель" id="radio2-2"
+                                          data-stepdata="contact_type2" data-steptype="source">
+                                        <span class="radiotype__text" data-text="checkboxtext">Получатель</span>
+                                      </label>
+                                    </div>
+                                    <div class="radiotype radiotype__item">
+                                      <label for="radio2-3" class="radiotype__label">
+                                        <input type="radio" name="NOTIFY_TYPE" value="Третье лицо" id="radio2-3"
+                                          data-stepdata="contact_type3" data-steptype="source">
+                                        <span class="radiotype__text" data-text="checkboxtext">Третье лицо</span>
+                                      </label>
+                                    </div>
+
+                                  </div>
                                 </div>
-                                <!-- /.orderitem__info -->
                               </div>
                             </div>
-                          </div>
-                          <!-- /.orderitem__wrapper -->
+                          </div><!-- /.calctotal -->
+
+                          <div class="calctotal">
+                            <div class="calctotal__title">
+                              <img src="img/HotPrice.svg" alt="">
+                              <span>Промокод</span>
+                            </div>
+                            <div class="calctotal__value">
+                              <div class="floating">
+                                <input type="text" name="NOTIFY_PROMO" value=""
+                                  onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_promo"
+                                  data-steptype="source">
+                                <span class="floating-label">Промокод</span>
+                              </div>
+                            </div>
+                          </div><!-- /.calctotal -->
+
+                          <div class="calctotal">
+
+                            <div class="calctotal__title">
+                              <img src="img/Email.svg" alt="">
+                              <span>Email для связи и отправки уведомлений</span>
+                            </div>
+                            <div class="calctotal__value">
+                              <div class="floating">
+                                <input type="text" name="NOTIFY_EMAIL" value=""
+                                  onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_phone"
+                                  data-steptype="source">
+                                <span class="floating-label">Email</span>
+                              </div>
+                            </div>
+                          </div><!-- /.calctotal -->
+
+                          <div class="calctotal">
+                            <div class="calctotal__title">
+                              <img src="img/NOTIFY_PHONE.svg" alt="">
+                              <span>Телефон для связи и уведомления по SMS:</span>
+                            </div>
+                            <div class="calctotal__value">
+                              <div class="floating">
+                                <input type="tel" name="NOTIFY_PHONE" value=""
+                                  onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_phone"
+                                  data-steptype="source" data-required="required">
+                                <span class="floating-label">Телефон</span>
+                              </div>
+                            </div>
+                          </div><!-- /.calctotal -->
                         </div>
                       </div>
                     </div>
+
+                    <div class="orderpage__aside">
+                      <div class="orderpage__asideblocks">
+                        <div class="orderpage__asideblock">
+                          <div class="orderitem">
+                            <div class="orderitem__wrapper orderitem__wrapper_wide">
+
+                              <div class="calcresults">
+                                <div class="calcresults__title active">
+                                  Ваш расчет
+                                </div>
+                                <!-- /.calcresults__title -->
+                                <div class="calcresults__items radiotypeblock">
+                                  <div class="calcresults__item">
+                                    <div class="resultblock">
+                                      <div class="resultblock__wrapper radiotype  ">
+                                        <label for="auto-delivery" class="resultblock__header active "
+                                          data-toggler="accordion1">
+                                          <div class='resultblock__headermain'>
+                                            <div class="resultblock__icon">
+                                              <div class="resultblock__img"><img src="img/auto.svg" alt=""></div>
+                                              <!-- /.resultblock__img -->
+                                            </div>
+                                            <!-- /.resultblock__icon -->
+                                            <div class="resultblock__title">
+                                              <div class="resultblock__name">Авто</div>
+                                              <!-- /.resultblock__name -->
+                                              <div class="resultblock__info">10-14 дней</div>
+                                              <!-- /.resultblock__info -->
+                                            </div>
+                                          </div>
+
+                                          <div class='resultblock__headerinput'>
+                                            <input type="radio" checked="checked" id="auto-delivery"
+                                              name="delivery-type" value="auto">
+                                            <span class="radiotype__text"></span>
+                                          </div>
+                                          <!-- /.resultblock__title -->
+                                        </label>
+                                        <!-- /.resultblock__header -->
+                                        <div class="resultblock__main active" data-toggle="accordion1">
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Cтоимость:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">19 364 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Страховка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">322.95 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                          <div class="resultblock__subtitle">Доп услуги</div>
+                                          <!-- /.resultblock__subtitle -->
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Обрешетка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">0 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Маркировка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">6.5 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                        </div>
+                                        <!-- /.resultblock__main -->
+                                        <div class="resultblock__delimeter"></div>
+                                        <div class="resultblock__footer">
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">
+                                                <div class="resultblock__footertitle">Всего:</div>
+                                              </div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">
+                                                <div class="resultblock__total">19 809 Р</div>
+                                              </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                        </div>
+                                        <!-- /.resultblock__footer -->
+                                      </div>
+                                      <!-- /.resultblock__wrapper -->
+                                    </div>
+                                    <!-- /.resultblock -->
+                                  </div>
+                                  <!-- /.calcresults__item -->
+                                  <div class="calcresults__item">
+                                    <div class="resultblock">
+                                      <div class="resultblock__wrapper radiotype">
+                                        <label for="avia-delivery" class="resultblock__header  "
+                                          data-toggler="accordion2">
+                                          <div class='resultblock__headermain'>
+                                            <div class="resultblock__icon">
+
+                                              <div class="resultblock__img"><img src="img/airport.svg" alt=""></div>
+                                              <!-- /.resultblock__img -->
+                                            </div>
+                                            <!-- /.resultblock__icon -->
+                                            <div class="resultblock__title">
+                                              <div class="resultblock__name">Авиа</div>
+                                              <!-- /.resultblock__name -->
+                                              <div class="resultblock__info">10-14 дней</div>
+                                              <!-- /.resultblock__info -->
+                                            </div>
+                                            <!-- /.resultblock__title -->
+                                          </div>
+
+
+                                          <div class='resultblock__headerinput'>
+                                            <input type="radio" id="avia-delivery" name="delivery-type" value="avia">
+                                            <span class="radiotype__text"></span>
+                                          </div>
+                                        </label>
+                                        <!-- /.resultblock__header -->
+                                        <div class="resultblock__main" data-toggle="accordion2">
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Cтоимость:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">19 364 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Страховка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">322.95 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                          <div class="resultblock__subtitle">Доп услуги</div>
+                                          <!-- /.resultblock__subtitle -->
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Обрешетка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">0 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Маркировка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">6.5 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                        </div>
+                                        <!-- /.resultblock__main -->
+                                        <div class="resultblock__delimeter"></div>
+                                        <div class="resultblock__footer">
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">
+                                                <div class="resultblock__footertitle">Всего:</div>
+                                              </div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">
+                                                <div class="resultblock__total">19 809 Р</div>
+                                              </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                        </div>
+                                        <!-- /.resultblock__footer -->
+                                      </div>
+                                      <!-- /.resultblock__wrapper -->
+                                    </div>
+                                    <!-- /.resultblock -->
+                                  </div>
+                                  <!-- /.calcresults__item -->
+                                  <div class="calcresults__item">
+                                    <div class="resultblock">
+                                      <div class="resultblock__wrapper radiotype">
+                                        <label for="container-delivery" class="resultblock__header"
+                                          data-toggler="accordion3">
+                                          <div class='resultblock__headermain'>
+
+                                            <div class="resultblock__icon">
+                                              <div class="resultblock__img"><img src="img/conteiner2.svg" alt=""></div>
+                                              <!-- /.resultblock__img -->
+                                            </div>
+                                            <!-- /.resultblock__icon -->
+                                            <div class="resultblock__title">
+                                              <div class="resultblock__name">Контейнеры</div>
+                                              <!-- /.resultblock__name -->
+                                              <div class="resultblock__info">10-14 дней</div>
+                                              <!-- /.resultblock__info -->
+                                            </div>
+
+                                            <!-- /.resultblock__title -->
+                                          </div>
+                                          <div class='resultblock__headerinput'>
+                                            <input type="radio" id="container-delivery" name="delivery-type"
+                                              value="container">
+                                            <span class="radiotype__text"></span>
+                                          </div>
+                                        </label>
+                                        <!-- /.resultblock__header -->
+                                        <div class="resultblock__main" data-toggle="accordion3">
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Cтоимость:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">19 364 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Страховка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">322.95 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                          <div class="resultblock__subtitle">Доп услуги</div>
+                                          <!-- /.resultblock__subtitle -->
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Обрешетка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">0 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">Маркировка:</div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">6.5 Р </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                        </div>
+                                        <!-- /.resultblock__main -->
+                                        <div class="resultblock__delimeter"></div>
+                                        <div class="resultblock__footer">
+                                          <div class="resultblock__params">
+                                            <div class="resultblock__param">
+                                              <div class="resultblock__dt">
+                                                <div class="resultblock__footertitle">Всего:</div>
+                                              </div>
+                                              <!-- /.resultblock__dt -->
+                                              <div class="resultblock__dd">
+                                                <div class="resultblock__total">19 809 Р</div>
+                                              </div>
+                                              <!-- /.resultblock__dd -->
+                                            </div>
+                                            <!-- /.resultblock__param -->
+                                          </div>
+                                          <!-- /.resultblock__params -->
+                                        </div>
+                                        <!-- /.resultblock__footer -->
+                                      </div>
+                                      <!-- /.resultblock__wrapper -->
+                                    </div>
+                                    <!-- /.resultblock -->
+                                  </div>
+                                  <!-- /.calcresults__item -->
+                                </div>
+                                <!-- /.calcresults__items -->
+                                <div class="orderitem__buttons">
+
+                                  <div class="orderitem__button"><button data-submit="stepform"
+                                      class="btn_main btn_large" data-entity="step-next">Оформить
+                                      заявку<!--и-->
+                                    </button></div>
+                                  <div class="orderitem__info">
+                                    <span class="red">*</span> Указана ориентировочная стоимость
+                                  </div>
+                                  <!-- /.orderitem__info -->
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.orderitem__wrapper -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
               </form>
 
             </div><!-- /.container -->

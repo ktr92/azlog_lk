@@ -10,11 +10,7 @@ const appv2 = (function () {
   const state = {
     currentStep: 1,
     totalSteps: 3,
-    stepitems: {
-      properties: [],
-      radio: [],
-      set: [],
-    },
+    stepitems: [],
   }
 
   /**
@@ -33,10 +29,44 @@ const appv2 = (function () {
   /**
    * заполнение значений из формы на шаге 3
    */
-  function setData() {
-    const values = []
-    const $inputs = document.querySelectorAll('[data-steptype="source"]')
+  function fillData() {
+    const showblock = (result, wrapper) => {
+      result.classList.remove("hidden")
+      if (wrapper) {
+        wrapper.classList.remove("hidden")
+      }
+    }
 
+    // берем все блоки с выводом данных
+    const $results = document.querySelectorAll('[data-steptype="result"]')
+    $results.forEach(($result) => {
+      $result.classList.add("hidden")
+      const $wrapper = $result.closest("[data-hasparam]")
+      if ($wrapper) {
+        $wrapper.classList.add("hidden")
+      }
+      const id = $result.getAttribute("data-stepdata")
+      // находим соотвествующий каждому блоку инпут
+      const stepitem = state.stepitems.filter((item) => item.id === id)[0]
+      if (stepitem) {
+        // если инпут был раскрыт, то показываем блок с данными
+        if (stepitem.visible) {
+          // если инпут был текстовый, то выводим значение
+          if ((stepitem.type === "text" || stepitem.type === "hidden") && stepitem.value.length) {
+            showblock($result, $wrapper)
+            $result.innerHTML = stepitem.value
+          }
+          // если инпут был чекбокс, то просто показываем этот блок
+          if ((stepitem.type === "checkbox" || stepitem.type === "radio") && stepitem.ischecked) {
+            showblock($result, $wrapper)
+          }
+        }
+      }
+    })
+  }
+  function setData() {
+    const $inputs = document.querySelectorAll('[data-steptype="source"]')
+    state.stepitems = []
     $inputs.forEach((item) => {
       const property = item.getAttribute("data-stepdata")
       const val = item.value
@@ -50,9 +80,9 @@ const appv2 = (function () {
       if (obj.type === "checkbox") {
         obj.ischecked = item.checked
       }
-      values.push(obj)
+      state.stepitems.push(obj)
     })
-    console.log(values)
+
     console.log(state.stepitems)
   }
 
@@ -86,13 +116,13 @@ const appv2 = (function () {
           </div>
           <div class="calcobject__input">
             <div class="floating">
-              <input data-inputid="boxcount_${count}" data-new-box=${count} type="number" name='boxCount[]' name='volume_1' value='1' min='1' onkeyup="this.setAttribute('value', this.value);" data-number-format=""> 
+              <input data-inputid="boxcount_${count}" data-new-box=${count} type="text" name='boxCount[]' name='volume_1' value='1' min='1' onkeyup="this.setAttribute('value', this.value);" data-number-format=""> 
               <span class="floating-label">Количество</span>
             </div>
           </div>
           <div class="calcobject__input w-full">
             <div class="floating">
-              <input data-inputid="boxsizes_${count}" data-new-box=${count} type="text" name='boxSizes[]' value='' onkeyup="this.setAttribute('value', this.value);" data-separate-format="" data-validate='boxsizes' data-validwarn='200' data-validerror='1000' data-required="required"> 
+              <input data-inputid="boxsizes_${count}" data-new-box=${count} type="text" name='boxSizes[]' value='' onkeyup="this.setAttribute('value', this.value);" data-separate-format="" data-validate='boxsizes' data-validwarn='200' data-validerror='1000' > 
               <span class="floating-label">Габариты <span class="gray">(Необязательно)</span></span>
                <span class="texterror"></span>
                                       <span class="inputvalidicon"></span>
@@ -491,6 +521,7 @@ const appv2 = (function () {
       changeStep()
       if (state.currentStep === state.totalSteps) {
         setData()
+        fillData()
       }
     } else {
       submitForm()
@@ -611,6 +642,7 @@ const appv2 = (function () {
               let compname = ""
               let kpp = ""
               let compform = ""
+              let inn = ""
 
               items.forEach((item) => {
                 showinfo = ""
@@ -619,6 +651,7 @@ const appv2 = (function () {
 
                 if (item.data.inn) {
                   showinfo += item.data.inn.replace(/"/g, "").replace(/'/g, "")
+                  inn = item.data.inn
                 }
                 if (item.data.address) {
                   showinfo +=
@@ -643,7 +676,7 @@ const appv2 = (function () {
                 }
                 list += `<div 
                     class="sgstlist__item" 
-                    data-suggvalue="${showdata}" data-suggrelated="${related}" data-suggkpp="${kpp}" data-suggform="${compform}" data-compname="${compname}">
+                    data-suggvalue="${showdata}" data-suggrelated="${related}" data-suggkpp="${kpp}" data-suggform="${compform}" data-compname="${compname}" data-sugginn="${inn}">
                       <span class="sgstlist__name">${compname}</span>
                       <span class="sgstlist__info">${showinfo}</span>
                       
@@ -670,6 +703,9 @@ const appv2 = (function () {
 
     $(document).on("click", "[data-suggvalue]", function (e) {
       const source = $(this)
+      const $inn = source
+        .closest(".stepform__col")
+        .find("[data-stepdata]")
       const $name = source
         .closest("[data-datatawrapper]")
         .find("[data-dadata='name']")
@@ -683,11 +719,13 @@ const appv2 = (function () {
         .closest(".relative")
         .find("[data-dadata]")
         .not(this) */
+      const inn = source.attr("data-sugginn").replace(/"/g, "")
       const name = source.attr("data-compname").replace(/"/g, "")
       const kpp = source.attr("data-suggkpp").replace(/"/g, "")
       const short = source.attr("data-suggform").replace(/"/g, "")
       $(".sgstlist").remove()
 
+      $inn.val(inn).attr("value", inn)
       $name.val(name).attr("value", name)
       $kpp.val(kpp).attr("value", kpp)
       $short.text(short).attr("value", short)
@@ -817,6 +855,9 @@ const appv2 = (function () {
       initListeners()
       fndadata()
       initBoxMask()
+      calcBoxes("boxVolume[]", "ob_volume")
+      calcBoxes("boxWeight[]", "ob_weight")
+      calcBoxes("boxCount[]", "ob_count")
       boxsizesInit()
     },
   }
