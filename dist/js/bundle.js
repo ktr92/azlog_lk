@@ -127,11 +127,7 @@ $(document).ready(function () {
     })
   })(jQuery)
 
-  $(".inputhints a").on("click", function (e) {
-    e.preventDefault()
-    const val = $(this).text()
-    $(this).closest("[data-wrapper]").find("input").val(val)
-  })
+  
 
   $('[data-action="newtel"]').on("click", function (e) {
     e.preventDefault()

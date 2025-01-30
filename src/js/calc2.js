@@ -10,6 +10,11 @@ const appv2 = (function () {
   const state = {
     currentStep: 1,
     totalSteps: 3,
+    stepitems: {
+      properties: [],
+      radio: [],
+      set: [],
+    },
   }
 
   /**
@@ -18,11 +23,37 @@ const appv2 = (function () {
   const submitForm = () => {
     console.log("Если форма валидна, отправляем заявку ")
   }
- /**
+  /**
    * перерасчет формы здесь
    */
   const calcDelivery = () => {
     console.log("Перерасчет формы ")
+  }
+
+  /**
+   * заполнение значений из формы на шаге 3
+   */
+  function setData() {
+    const values = []
+    const $inputs = document.querySelectorAll('[data-steptype="source"]')
+
+    $inputs.forEach((item) => {
+      const property = item.getAttribute("data-stepdata")
+      const val = item.value
+      const obj = Object.create(null)
+      obj.id = property
+      obj.value = val
+      obj.type = item.getAttribute("type")
+      obj.visible = item.closest("[data-tabscontent]")
+        ? item.closest("[data-tabscontent]").classList.contains("active")
+        : true
+      if (obj.type === "checkbox") {
+        obj.ischecked = item.checked
+      }
+      values.push(obj)
+    })
+    console.log(values)
+    console.log(state.stepitems)
   }
 
   /**
@@ -55,7 +86,7 @@ const appv2 = (function () {
           </div>
           <div class="calcobject__input">
             <div class="floating">
-              <input data-inputid="boxcount_${count}" data-new-box=${count} type="text" name='boxCount[]' name='volume_1' value='' onkeyup="this.setAttribute('value', this.value);" data-number-format=""> 
+              <input data-inputid="boxcount_${count}" data-new-box=${count} type="number" name='boxCount[]' name='volume_1' value='1' min='1' onkeyup="this.setAttribute('value', this.value);" data-number-format=""> 
               <span class="floating-label">Количество</span>
             </div>
           </div>
@@ -84,10 +115,28 @@ const appv2 = (function () {
       $(".calcobject__number").each(function (index) {
         $(this).text(index + 1)
       })
+
+      calcBoxes("boxVolume[]", "ob_volume")
+      calcBoxes("boxWeight[]", "ob_weight")
+      calcBoxes("boxCount[]", "ob_count")
     })
 
     boxsizesInit()
   })
+
+  /**
+   * расчет общего веса, объема и кол-ва мест
+   */
+  const calcBoxes = (sourceSelector, resultSelector) => {
+    let total = 0
+    const $boxVolume = document.querySelectorAll(`[name="${sourceSelector}"]`)
+    $boxVolume.forEach((item) => {
+      if (item.value) {
+        total += parseFloat(item.value)
+      }
+    })
+    document.querySelector(`[name="${resultSelector}"]`).value = total
+  }
 
   /**
    * добавление обраочика событий при вооде размера (валидация при вводе)
@@ -240,6 +289,11 @@ const appv2 = (function () {
    * инициализация событий
    */
   const initListeners = () => {
+    $(document).on("change", ".calcobject input", function () {
+      calcBoxes("boxVolume[]", "ob_volume")
+      calcBoxes("boxWeight[]", "ob_weight")
+      calcBoxes("boxCount[]", "ob_count")
+    })
     /**
      * кастомные select - выбор элемента из выпадающего списка, вывод значения в связанный с ним инпут
      */
@@ -263,7 +317,6 @@ const appv2 = (function () {
         let val2 = $(this).data("togglevalue2")
         $(`[data-value2=${id}]`).text(val2)
       }
-
     })
     /**
      * нажатие на стрелку "назад"
@@ -291,6 +344,15 @@ const appv2 = (function () {
         }
       }
     )
+
+    /**
+     * инпут с вариантами по клику
+     */
+    $(".inputhints a").on("click", function (e) {
+      e.preventDefault()
+      const val = $(this).text()
+      $(this).closest("[data-wrapper]").find("input").val(val).trigger("change")
+    })
 
     /**
      * обработчик нажатия кнопки "далее" в сайдбаре. вызывает @see validateRequired
@@ -386,10 +448,12 @@ const appv2 = (function () {
       // set value
       $wrapper.find(`[data-value=${id}]`).text(terminalid + " " + terminalname)
       $wrapper.find(`[data-value2=${id}]`).text(terminaltime)
-      $wrapper.find(`[data-input="ternimalid"]`).val(terminalid).trigger('change')
+      $wrapper
+        .find(`[data-input="ternimalid"]`)
+        .val(terminalid)
+        .trigger("change")
       $wrapper.find(`[data-input="ternimalname"]`).val(terminalname)
-      $wrapper.find('.dateblock__menu').removeClass('active')
-      
+      $wrapper.find(".dateblock__menu").removeClass("active")
     })
   }
 
@@ -425,6 +489,9 @@ const appv2 = (function () {
     if (state.currentStep < state.totalSteps) {
       ++state.currentStep
       changeStep()
+      if (state.currentStep === state.totalSteps) {
+        setData()
+      }
     } else {
       submitForm()
     }
@@ -434,7 +501,7 @@ const appv2 = (function () {
    * шаг назад
    */
   const prevStep = () => {
-    if (nextStep > 0) {
+    if (state.currentStep > 0) {
       --state.currentStep
       changeStep()
     }
@@ -734,9 +801,14 @@ const appv2 = (function () {
     /**
      * при изменении любого инпута перерасчитываем форму - отправляем запрос
      */
-    $(document).on('change', 'input', function(e) {
-      calcDelivery()
-    })
+    $(document).on(
+      "change",
+      '.orderpage:not([data-calcstep="form-step-3"]) input',
+      function (e) {
+        validateRequired()
+        calcDelivery()
+      }
+    )
   }
 
   return {

@@ -3982,7 +3982,7 @@ color: #373737;
   display: flex; }
 
 .orderpage {
-  display: flex;
+  /*   display: flex; */
   gap: 60px; }
 
 .orderpage__main {
@@ -5572,6 +5572,9 @@ input.lk-datepicker.datepicker-send {
   color: #373737;
   white-space: nowrap;
   opacity: 0.7; }
+
+.ordepageblock__paramvalue span {
+  line-height: 1; }
 
 .ordepageblock__paramvalue,
 .ordepageblock__paramvalue li {
