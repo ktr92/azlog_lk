@@ -1207,9 +1207,9 @@
                                       </div>
                                       <div class="stepform__col w-full ">
                                         <div class="floating">
-                                          <input type="text" name="U_EMAIL" data-stepdata="send_email" value=''
+                                          <input type="text" name="U_EMAIL" data-stepdata="send_yuremail" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                            data-required="required" data-min="3" data-max="300">
+                                           data-min="3" data-max="300">
                                           <span class="floating-label">Email</span></span>
                                         </div>
                                       </div>
@@ -1258,7 +1258,7 @@
                                         <div class="floating">
                                           <input type="text" name="IP_EMAIL" data-stepdata="send_emailip" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                            data-required="required" data-min="3" data-max="300">
+                                            data-min="3" data-max="300">
                                           <span class="floating-label">Email <span
                                               class='gray'>необязательно</span></span></span>
                                         </div>
@@ -1552,7 +1552,7 @@
                                         <div class="floating">
                                           <input type="text" name="R_U_EMAIL" data-stepdata="receive_email" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                            data-required="required" data-min="3" data-max="300">
+                                             data-min="3" data-max="300">
                                           <span class="floating-label">Email</span></span>
                                         </div>
                                       </div>
@@ -1602,7 +1602,7 @@
                                         <div class="floating">
                                           <input type="text" name="R_IP_EMAIL" data-stepdata="receive_emailip" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                            data-required="required" data-min="3" data-max="300">
+                                             data-min="3" data-max="300">
                                           <span class="floating-label">Email <span
                                               class='gray'>необязательно</span></span></span>
                                         </div>
@@ -1634,13 +1634,16 @@
                                 <div class="stepform__tabs stepform__tabs_type2 ">
                                   <div class="calctabs calctabs-js" data-tabs='payer'>
                                     <ul>
-                                      <label class="active" for="payer_yur">Отправитель<input data-steptype="source" data-stepdata="payer_yur" data-radiotab="tab"
-                                          type="radio" data-isrequired="delivery-address" value="1" id="payer_yur"
+                                      <label class="active" for="payer_sender">Отправитель
+                                        <input data-steptype="source" data-stepdata="payer_sender" data-radiotab="tab"
+                                          type="radio" data-isrequired="delivery-address" value="1" id="payer_sender"
                                           checked="" name="PAYER"></label>
-                                      <label class="" for="payer_fiz">Получатель<input data-steptype="source" data-stepdata="payer_fiz"  data-radiotab="tab" type="radio"
-                                          value="2" id="payer_fiz" name="PAYER">
+                                      <label class="" for="payer_receiver">Получатель
+                                        <input data-steptype="source" data-stepdata="payer_receiver"  data-radiotab="tab" type="radio"
+                                          value="2" id="payer_receiver" name="PAYER">
                                       </label>
-                                      <label class="" for="payer_third">Третье лицо <input data-steptype="source" data-stepdata="payer_third"  data-radiotab="tab"
+                                      <label class="" for="payer_third">Третье лицо 
+                                        <input data-steptype="source" data-stepdata="payer_third"  data-radiotab="tab"
                                           type="radio" value="3" id="payer_third" name="PAYER">
                                       </label>
                                     </ul>
@@ -1719,7 +1722,7 @@
                                     <div class="stepform__row  flex ">
                                       <div class="stepform__col w-full">
                                         <div class="floating">
-                                          <input type="text" name="R_U_FIO" data-stepdata="receive_yurfio" value=''
+                                          <input type="text" name="P_FIO" data-stepdata="payer_yurfio" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                             data-required="required" data-min="2" data-max="300">
                                           <span class="floating-label">ФИО</span></span>
@@ -1740,7 +1743,7 @@
                                         <div class="floating">
                                           <input type="text" name="P_IP_EMAIL" data-stepdata="payer_emailip" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                            data-required="required" data-min="3" data-max="300">
+                                             data-min="3" data-max="300">
                                           <span class="floating-label">Email <span
                                               class='gray'>необязательно</span></span></span>
                                         </div>
@@ -2066,16 +2069,13 @@
                             <div class="ordepageblock">
                               <div class="ordepageblock__header">
                                 <div class="ordepageblock__title">Плательщик</div>
+                                <div class="ordepageblock__titleinfo" data-steptype="result" data-stepdata="payer_sender">Отправитель</div>
+                                <div class="ordepageblock__titleinfo" data-steptype="result" data-stepdata="payer_receiver">Получатель</div>
                                 <div class="ordepageblock__titleinfo" data-steptype="result" data-stepdata="payer_third">Третье лицо</div>
                               </div><!-- /.ordepageblock__header -->
                               <div class="orderparams orderparams_full">
 
-                                <div class="orderparams__item" data-hasparam='payer_yurform'>
-                                  <div class="orderparams_dd"><span data-steptype="result" data-stepdata="payer_yur">Отправитель</span></div>
-                                </div><!-- /.orderparams__item -->
-                                <div class="orderparams__item" data-hasparam='payer_fiz'>
-                                  <div class="orderparams_dd"><span data-steptype="result" data-stepdata="payer_fiz">Отправитель</span></div>
-                                </div><!-- /.orderparams__item -->
+                                
                                 <div class="orderparams__item" data-hasparam='payer_yurform'>
                                   <div class="orderparams__dt">Название компании:</div>
                                   <div class="orderparams_dd"><span data-steptype="result"

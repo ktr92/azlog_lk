@@ -36,28 +36,35 @@ const appv2 = (function () {
         wrapper.classList.remove("hidden")
       }
     }
+    const hideblock = (result, wrapper) => {
+      result.classList.add("hidden")
+      if (wrapper) {
+        wrapper.classList.add("hidden")
+      }
+    }
 
     // берем все блоки с выводом данных
     const $results = document.querySelectorAll('[data-steptype="result"]')
     $results.forEach(($result) => {
-      $result.classList.add("hidden")
       const $wrapper = $result.closest("[data-hasparam]")
-      if ($wrapper) {
-        $wrapper.classList.add("hidden")
-      }
+      hideblock($result, $wrapper )
       const id = $result.getAttribute("data-stepdata")
       // находим соотвествующий каждому блоку инпут
       const stepitem = state.stepitems.filter((item) => item.id === id)[0]
+
+      const textInput = ["text", "hidden", "tel", "email", "date"]
+      const checkInput = ["checkbox", "radio"]
       if (stepitem) {
         // если инпут был раскрыт, то показываем блок с данными
         if (stepitem.visible) {
+          console.log(stepitem.type, " : ", textInput.indexOf(stepitem.type))
           // если инпут был текстовый, то выводим значение
-          if ((stepitem.type === "text" || stepitem.type === "hidden") && stepitem.value.length) {
+          if (textInput.includes(stepitem.type) && stepitem.value.length) {
             showblock($result, $wrapper)
             $result.innerHTML = stepitem.value
           }
           // если инпут был чекбокс, то просто показываем этот блок
-          if ((stepitem.type === "checkbox" || stepitem.type === "radio") && stepitem.ischecked) {
+          if (checkInput.includes(stepitem.type) && stepitem.ischecked) {
             showblock($result, $wrapper)
           }
         }
@@ -77,7 +84,7 @@ const appv2 = (function () {
       obj.visible = item.closest("[data-tabscontent]")
         ? item.closest("[data-tabscontent]").classList.contains("active")
         : true
-      if (obj.type === "checkbox") {
+      if (obj.type === "checkbox" || obj.type === "radio") {
         obj.ischecked = item.checked
       }
       state.stepitems.push(obj)
