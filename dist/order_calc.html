@@ -516,6 +516,7 @@
                       <!-- /.orderitem__wrapper -->
                     </div>
                   </div>
+                  <div class="orderpage__wrapper">
 
                   <div class="orderpage__main">
                     <div class="orderpage__steps">
@@ -579,7 +580,7 @@
                               <div class="stepform__row stepform__row_mob2 flex">
                                 <div class="stepform__col  ">
                                   <div class="inputlabel inputlabel_date inputlabel_dropdown ">
-                                    <label>Дата отправки</label><!-- /.placeholder -->
+                                    <label class='inputdata__label'>Дата отправки</label><!-- /.placeholder -->
                                     <input readonly='' class="lk-datepicker datepicker-send" value="" type="text"
                                       data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"
                                       data-required="required" data-min="10" data-max="10" placeholder="Выбрать дату">
@@ -645,6 +646,9 @@
                           </div>
                           <div class="stepform__main stepform__main_type2">
                             <div class="stepform__content active">
+                              <input type="hidden" data-steptype="source" data-stepdata="ob_count" name='ob_count'>
+                              <input type="hidden" data-steptype="source" data-stepdata="ob_weight" name='ob_weight'>
+                              <input type="hidden" data-steptype="source" data-stepdata="ob_volume" name='ob_volume'>
                               <div class="calcobject" data-box='1'>
                                 <div class="calcobject__row ">
                                   <div class="calcobject__number">
@@ -2293,6 +2297,7 @@
                     <!-- /.orderpage__blocks -->
                   </div>
                   <!-- /.orderpage__aside -->
+                </div>
                 </div>
                 <!-- /.orderpage -->
               </form>

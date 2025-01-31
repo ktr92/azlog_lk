@@ -57,7 +57,6 @@ const appv2 = (function () {
       if (stepitem) {
         // если инпут был раскрыт, то показываем блок с данными
         if (stepitem.visible) {
-          console.log(stepitem.type, " : ", textInput.indexOf(stepitem.type))
           // если инпут был текстовый, то выводим значение
           if (textInput.includes(stepitem.type) && stepitem.value.length) {
             showblock($result, $wrapper)
@@ -153,13 +152,19 @@ const appv2 = (function () {
         $(this).text(index + 1)
       })
 
-      calcBoxes("boxVolume[]", "ob_volume")
-      calcBoxes("boxWeight[]", "ob_weight")
-      calcBoxes("boxCount[]", "ob_count")
+      recalcBoxes()
     })
 
     boxsizesInit()
   })
+
+  const recalcBoxes = () => {
+    if ($('.calcobject').length) {
+      calcBoxes("boxVolume[]", "ob_volume")
+      calcBoxes("boxWeight[]", "ob_weight")
+      calcBoxes("boxCount[]", "ob_count")
+    }
+  }
 
   /**
    * расчет общего веса, объема и кол-ва мест
@@ -327,9 +332,7 @@ const appv2 = (function () {
    */
   const initListeners = () => {
     $(document).on("change", ".calcobject input", function () {
-      calcBoxes("boxVolume[]", "ob_volume")
-      calcBoxes("boxWeight[]", "ob_weight")
-      calcBoxes("boxCount[]", "ob_count")
+      recalcBoxes()
     })
     /**
      * кастомные select - выбор элемента из выпадающего списка, вывод значения в связанный с ним инпут
@@ -862,9 +865,8 @@ const appv2 = (function () {
       initListeners()
       fndadata()
       initBoxMask()
-      calcBoxes("boxVolume[]", "ob_volume")
-      calcBoxes("boxWeight[]", "ob_weight")
-      calcBoxes("boxCount[]", "ob_count")
+     
+      
       boxsizesInit()
     },
   }
