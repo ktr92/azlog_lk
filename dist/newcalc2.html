@@ -762,7 +762,7 @@
                                           </div>
                                         </div>
                                         <div class="checkblock__checkbox">
-                                          <input type="checkbox" id="FROM_LOADING" name='FROM_LOADING' value='Y'>
+                                          <input type="checkbox" id="FROM_LOADING" name='FROM_LOADING' value='Y'  data-stepdata="dop_dost_bok" data-steptype="source">
                                           <label for="FROM_LOADING">
                                             <span></span>
                                           </label>
@@ -791,41 +791,41 @@
                                           <div class="dropdownblock__links">
                                             <div class="formcheckbox">
 
-                                              <label for="check88-1"
+                                              <label for="check77-1"
                                                 class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-1" name="TO_SideTentRemoval"
-                                                    value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
+                                                  <input type="checkbox" id="check77-1" name="TO_SideTentRemoval"
+                                                    value="Y" data-stepdata="dop_bok" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Боковая
                                                     рестентовка</span>
                                                 </span>
 
                                               </label>
-                                              <label for="check88-2"
+                                              <label for="check77-2"
                                                 class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-2" name="TO_UpperTentRemoval"
-                                                    value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
+                                                  <input type="checkbox" id="check77-2" name="TO_UpperTentRemoval"
+                                                    value="Y" data-stepdata="dop_verh" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
                                                     растентовка</span>
                                                 </span>
 
                                               </label>
-                                              <label for="check88-3"
+                                              <label for="check77-3"
                                                 class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-3" name="TO_FullTentRemoval"
-                                                    data-stepdata="dop_dost_full" data-steptype="source">
+                                                  <input type="checkbox" id="check77-3" name="TO_FullTentRemoval"
+                                                    data-stepdata="dop_full" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Полная
                                                     рестентовка</span>
                                                 </span>
 
                                               </label>
 
-                                              <label for="check88-4"
+                                              <label for="check77-4"
                                                 class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-4" data-stepdata="dop_dost_bort"
+                                                  <input type="checkbox" id="check77-4" data-stepdata="dop_bort"
                                                     data-steptype="source" name="TO_TailLift" value="Y">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Требуется
                                                     машина
@@ -855,7 +855,8 @@
                                                   </div>
                                                 </div>
                                                 <div class="checkblock__checkbox">
-                                                  <input checked type="checkbox" id="NO_LIFT" name="NO_LIFT" value="Y">
+                                                  <input checked type="checkbox" id="NO_LIFT" name="NO_LIFT" value="Y" data-stepdata="NO_LIFT"
+                                                  data-steptype="source">
                                                   <label for="NO_LIFT">
                                                     <span></span>
                                                   </label>
@@ -1038,7 +1039,7 @@
                                           </div>
                                         </div>
                                         <div class="checkblock__checkbox">
-                                          <input type="checkbox" id="TO_LOADING" name='TO_LOADING' value='Y'>
+                                          <input type="checkbox" id="TO_LOADING" name='TO_LOADING' value='Y' data-stepdata="dop_bok" data-steptype="source" >
                                           <label for="TO_LOADING">
                                             <span></span>
                                           </label>
@@ -1062,7 +1063,7 @@
                                         <!-- /.inputselect__content -->
                                       </div>
                                       <!-- /.inputselect__wrapper -->
-                                      <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
+                                      <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop2">
                                         <div class="dropdownblock__wrapper">
                                           <div class="dropdownblock__links">
                                             <div class="formcheckbox">
@@ -2137,6 +2138,7 @@
                                           data-stepdata="dop_doc">Перевозка сопроводительных документов,</span></li>
                                       <li data-hasparam='dop_return'><span data-steptype="result"
                                           data-stepdata="dop_return">Возврат документов</span></li>
+                               
                                     </ul>
                                   </div>
                                 </div><!-- /.ordepageblock__param -->
@@ -2240,6 +2242,17 @@
                                   </div>
                                 </div><!-- /.orderparams__item -->
                               </div>
+                                     <li data-hasparam='dop_full'><span data-steptype="result"
+                                          data-stepdata="dop_full">Полная рестентовка</span></li>
+                                      <li data-hasparam='dop_verh'><span data-steptype="result"
+                                          data-stepdata="dop_verh">Верхняя растентовка</span></li>
+                                      <li data-hasparam='dop_bok'><span data-steptype="result"
+                                          data-stepdata="dop_bok">Боковая рестентовка</span></li>
+                                      <li data-hasparam='dop_bort'><span data-steptype="result"
+                                          data-stepdata="dop_bort">Требуется машина с гидробортом</span></li>
+                                      <li data-hasparam='TO_LOADING'>                                       
+                                          <span data-steptype="result"
+                                          data-stepdata="TO_LOADING"></span> Погрузо-разгрузочные работы</li>
                             </div><!-- /.ordepageblock -->
                           </div>
                           <div class="orderpage__block ">
@@ -2343,6 +2356,17 @@
                                     </div>
                                   </div><!-- /.orderparams__item -->
                                 </div>
+                                <li data-hasparam='dop_dost_full'><span data-steptype="result"
+                                  data-stepdata="dop_dost_full">Полная рестентовка</span></li>
+                              <li data-hasparam='dop_dost_verh'><span data-steptype="result"
+                                  data-stepdata="dop_dost_verh">Верхняя растентовка</span></li>
+                              <li data-hasparam='dop_dost_bok'><span data-steptype="result"
+                                  data-stepdata="dop_dost_bok">Боковая рестентовка</span></li>
+                              <li data-hasparam='dop_dost_bort'><span data-steptype="result"
+                                  data-stepdata="dop_dost_bort">Требуется машина с гидробортом</span></li>
+                              <li data-hasparam='dop_floor'>                                       
+                                  <span data-steptype="result"
+                                  data-stepdata="FROM_LOADING"></span> Погрузо-разгрузочные работы</li>
                             </div><!-- /.ordepageblock -->
                           </div>
                           <div class="orderpage__block ">
@@ -3756,12 +3780,12 @@
                                   </div>
                                   <div class="checkblock__text">
                                     <div class="checkblock__label">Погрузо-разгрузочные работы</div>
-                                    <div class="checkblock__value" data-dependon="FROM_LOADING_pickup">Отключен</div>
+                                    <div class="checkblock__value" data-dependon="FROM_LOADING_pickup" >Отключен</div>
                                   </div>
                                 </div>
                                 <div class="checkblock__checkbox">
                                   <input type="checkbox" id="FROM_LOADING_pickup" name="FROM_LOADING_pickup" value="Y">
-                                  <label for="FROM_LOADING_pickup">
+                                  <label for="FROM_LOADING_pickup" data-steptype="source" data-stepdata="FROM_LOADING_pickup">
                                     <span></span>
                                   </label>
                                 </div>
