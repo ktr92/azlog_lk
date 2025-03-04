@@ -1433,11 +1433,12 @@ textarea {
 .formblock__text {
   text-align: center;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
   line-height: 100%;
   text-align: center;
-  color: #373737; }
+  color: #373737;
+  padding: 0 20px; }
 
 .formblock__content {
   margin-bottom: 41px; }
