@@ -1,164 +1,165 @@
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Bold.woff2") format("woff2"),
-    url("../fonts/Jost-Bold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Black.woff2") format("woff2"),
-    url("../fonts/Jost-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-ExtraBoldItalic.woff2") format("woff2"),
-    url("../fonts/Jost-ExtraBoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-ExtraLight.woff2") format("woff2"),
-    url("../fonts/Jost-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Jost-ExtraBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-BlackItalic.woff2") format("woff2"),
-    url("../fonts/Jost-BlackItalic.woff") format("woff");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-BoldItalic.woff2") format("woff2"),
-    url("../fonts/Jost-BoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Light.woff2") format("woff2"),
-    url("../fonts/Jost-Light.woff") format("woff");
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Light.woff2') format('woff2'),
+      url('../fonts/Jost-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Medium.woff2") format("woff2"),
-    url("../fonts/Jost-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Thin.woff2") format("woff2"),
-    url("../fonts/Jost-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-SemiBold.woff2") format("woff2"),
-    url("../fonts/Jost-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-MediumItalic.woff2") format("woff2"),
-    url("../fonts/Jost-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Regular.woff2") format("woff2"),
-    url("../fonts/Jost-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-LightItalic.woff2") format("woff2"),
-    url("../fonts/Jost-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-SemiBoldItalic.woff2") format("woff2"),
-    url("../fonts/Jost-SemiBoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-ExtraLightItalic.woff2") format("woff2"),
-    url("../fonts/Jost-ExtraLightItalic.woff") format("woff");
+  font-family: 'Jost';
+  src: url('../fonts/Jost-ExtraLightItalic.woff2') format('woff2'),
+      url('../fonts/Jost-ExtraLightItalic.woff') format('woff');
   font-weight: 200;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-ThinItalic.woff2") format("woff2"),
-    url("../fonts/Jost-ThinItalic.woff") format("woff");
+  font-family: 'Jost';
+  src: url('../fonts/Jost-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Jost-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-BlackItalic.woff2') format('woff2'),
+      url('../fonts/Jost-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Italic.woff2') format('woff2'),
+      url('../fonts/Jost-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Black.woff2') format('woff2'),
+      url('../fonts/Jost-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-BoldItalic.woff2') format('woff2'),
+      url('../fonts/Jost-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Bold.woff2') format('woff2'),
+      url('../fonts/Jost-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Medium.woff2') format('woff2'),
+      url('../fonts/Jost-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-LightItalic.woff2') format('woff2'),
+      url('../fonts/Jost-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-ExtraBoldItalic.woff2') format('woff2'),
+      url('../fonts/Jost-ExtraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-ExtraLight.woff2') format('woff2'),
+      url('../fonts/Jost-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-SemiBold.woff2') format('woff2'),
+      url('../fonts/Jost-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Thin.woff2') format('woff2'),
+      url('../fonts/Jost-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-MediumItalic.woff2') format('woff2'),
+      url('../fonts/Jost-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-ThinItalic.woff2') format('woff2'),
+      url('../fonts/Jost-ThinItalic.woff') format('woff');
   font-weight: 100;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Italic.woff2") format("woff2"),
-    url("../fonts/Jost-Italic.woff") format("woff");
-  font-weight: normal;
+  font-family: 'Jost';
+  src: url('../fonts/Jost-SemiBoldItalic.woff2') format('woff2'),
+      url('../fonts/Jost-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Regular.woff2') format('woff2'),
+      url('../fonts/Jost-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @import "./partials/params.scss";
 @import "./partials/mixins.scss";
@@ -430,7 +431,7 @@ textarea {
 
 .passwordforgot a {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
@@ -439,7 +440,7 @@ textarea {
 
 .passwordforgot .check label {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
@@ -461,7 +462,7 @@ textarea {
 
 .textlogin__link a {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
@@ -525,7 +526,7 @@ textarea {
 
 .authpage__title {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 58px;
   line-height: 100%;
   color: #373737;
@@ -559,7 +560,7 @@ textarea {
 
 .check_rememb {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #2079ff;
@@ -608,7 +609,7 @@ textarea {
   padding: 0 20px;
   height: 60px;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   line-height: 100%;
   text-align: center;
@@ -663,7 +664,7 @@ textarea {
   a {
     display: block;
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 26px;
     line-height: 100%;
     color: #373737;
@@ -715,7 +716,7 @@ textarea {
   margin-right: 19px;
   a {
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
     line-height: 100%;
     color: #373737;
@@ -747,7 +748,7 @@ textarea {
 .formblock__text {
   text-align: center;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 26px;
   line-height: 100%;
   text-align: center;
@@ -884,7 +885,7 @@ textarea {
 .iconlink__text {
   margin-left: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 21px;
   /* identical to box height */
@@ -946,7 +947,7 @@ $dropdownblock_top: 20px;
       }
       a {
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 16px;
         line-height: 21px;
         /* identical to box height */
@@ -1008,7 +1009,7 @@ $dropdownblock_top: 20px;
 }
 .messageblock__text {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 120%;
   color: #373737;
@@ -1139,7 +1140,7 @@ body {
 .welcome_placeholder {
   background: rgba(242, 63, 52, 0.15);
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
   line-height: 100%;
   color: #f23f34;
@@ -1164,7 +1165,7 @@ body {
 }
 .welcome__title {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 26px;
   line-height: 100%;
   color: #373737;
@@ -1205,7 +1206,7 @@ body {
 .newslist__title {
   margin-bottom: 36px;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 22px;
   line-height: 100%;
   text-transform: uppercase;
@@ -1232,14 +1233,14 @@ body {
   padding-left: 24px;
   border-left: 4px solid $red;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 120%;
   color: #373737;
 }
 .newslist__name {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 120%;
   color: #373737;
@@ -1259,7 +1260,7 @@ body {
 }
 .btn_link {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   text-align: center;
@@ -1331,7 +1332,7 @@ body {
   padding-bottom: 24px;
   border-bottom: 3px solid #fff;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 22px;
   text-transform: uppercase;
   color: #f23f34;
@@ -1353,7 +1354,7 @@ body {
   h1 {
     margin: 0 0 21px 0;
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 26px;
     line-height: 100%;
     color: #373737;
@@ -1373,7 +1374,7 @@ body {
   background: #f4f4f4;
   padding: 17px 27px;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   line-height: 100%;
   color: #373737;
@@ -1548,7 +1549,7 @@ body {
   background-position: left center;
   background-repeat: no-repeat;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 100%;
   color: #373737;
@@ -1561,7 +1562,7 @@ body {
 
 .tableid {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -1577,7 +1578,7 @@ body {
 
 .tablestatus {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -1601,7 +1602,7 @@ a.btn_white,
 .lkpagetable a.btn_white {
   display: inline-block;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -1651,7 +1652,7 @@ a.btn_white,
 
 .popup__title {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 26px;
   line-height: 100%;
   color: #373737;
@@ -1687,7 +1688,7 @@ a.btn_white,
 }
 .popupdata__value {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -1695,7 +1696,7 @@ a.btn_white,
 .popupdata__value {
   a {
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     line-height: 100%;
     text-decoration: underline;
@@ -1710,7 +1711,7 @@ a.btn_white,
 .thereno__text {
   margin-left: 23px;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   line-height: 100%;
   color: #373737;
@@ -1794,7 +1795,7 @@ button {
   background-repeat: no-repeat;
 
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 100%;
   text-align: center;
@@ -1811,7 +1812,7 @@ button {
   background-repeat: no-repeat;
 
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 100%;
   text-align: center;
@@ -2054,7 +2055,7 @@ button {
 
 .pagefilterbtn__text {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -2113,7 +2114,7 @@ button {
 
     a {
       font-family: var(--font-family);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 14px;
       color: #373737;
       display: block;
@@ -2225,7 +2226,7 @@ button {
 
 .lkpagetable__ttn {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -2485,7 +2486,7 @@ button {
 }
 .orderitem__title {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   line-height: 100%;
   color: #373737;
@@ -2629,7 +2630,7 @@ a:hover .infoicon,
 
 .btn_redd {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #f23f34;
@@ -2660,7 +2661,7 @@ a:hover .infoicon,
 
 .orderparams_dd {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -2672,7 +2673,7 @@ a:hover .infoicon,
   display: inline-block;
   width: fit-content;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   padding-right: 4px;
@@ -2957,7 +2958,7 @@ span.formcheckbox__text:before {
 
   height: 36px;
   padding: 7px 10px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -3037,13 +3038,13 @@ span.light {
 }
 .orderdriver__name {
   margin-bottom: 6px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 120%;
   color: #373737;
 }
 .orderdriver__info {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 120%;
   color: #373737;
@@ -3064,7 +3065,7 @@ span.light {
   cursor: pointer;
 }
 .orderadd__button {
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -3108,7 +3109,7 @@ span.light {
 }
 
 .modal__title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   line-height: 100%;
   color: #373737;
@@ -3181,7 +3182,7 @@ span.light {
 }
 
 .redlabel {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   line-height: 100%;
   color: #fff;
@@ -3840,7 +3841,7 @@ color: #373737;
 
 .btn_green {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #49b48d;
@@ -3903,7 +3904,7 @@ color: #373737;
   text-align: center;
   border-radius: 8px;
 
-  font-weight: 600;
+  font-weight: 700;
 }
 .btn_blue {
   background: rgba(32, 121, 255, 0.15);
@@ -3946,7 +3947,7 @@ color: #373737;
 
 .newslistaside {
   .newslist__title {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
     line-height: 100%;
     color: #373737;
@@ -3988,7 +3989,7 @@ color: #373737;
   line-height: 46px;
   border-radius: 50%;
   color: #373737;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   background: #f5f5f5;
 }
@@ -4504,7 +4505,7 @@ span.formcheckbox__text {
   width: 0;
 }
 .stepform__tabs .calctabs-js label {
-  font-weight: 600;
+  font-weight: 700;
   margin-right: 29px;
   cursor: pointer;
   font-size: 20px;
@@ -4727,7 +4728,7 @@ span.formcheckbox__text {
 
 .orderpage__step .calcform__title {
   margin: 24px 0;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -4918,7 +4919,7 @@ span.formcheckbox__text {
   overflow: hidden;
 
   .modal__title {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 20px;
     line-height: 100%;
     color: #373737;
@@ -5023,7 +5024,7 @@ span.formcheckbox__text {
   height: 30px;
 }
 .modalmenu__label {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   color: #0b111a;
@@ -5429,7 +5430,7 @@ span.formcheckbox__text {
 .resultblock__footer {
 }
 .resultblock__footertitle {
-  font-weight: 600;
+  font-weight: 700;
 }
 .resultblock__total {
 }
