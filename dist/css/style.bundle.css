@@ -1178,7 +1178,7 @@ textarea {
 
 .passwordforgot a {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
@@ -1186,7 +1186,7 @@ textarea {
 
 .passwordforgot .check label {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
@@ -1205,7 +1205,7 @@ textarea {
 
 .textlogin__link a {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */ }
@@ -1255,7 +1255,7 @@ textarea {
 
 .authpage__title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 58px;
   line-height: 100%;
   color: #373737;
@@ -1285,7 +1285,7 @@ textarea {
 
 .check_rememb {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 18px;
   color: #2079ff;
@@ -1302,7 +1302,7 @@ textarea {
   text-decoration: none; }
 
 .check label:before {
-  background-color: #F23F34;
+  border: 1px solid #ccc;
   border-radius: 4px;
   content: "";
   height: 18px;
@@ -1315,7 +1315,9 @@ textarea {
 .check input[type="checkbox"]:checked + label:before {
   background-image: url(../img/checkbox_checked.svg);
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  background-color: #F23F34;
+  border-color: #F23F34; }
 
 .btn_main {
   transition: all 0.3s ease;
@@ -1326,7 +1328,7 @@ textarea {
   padding: 0 20px;
   height: 60px;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   text-align: center;
@@ -1366,7 +1368,7 @@ textarea {
   .formblock__link a {
     display: block;
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 26px;
     line-height: 100%;
     color: #373737;
@@ -1405,7 +1407,7 @@ textarea {
   margin-right: 19px; }
   .footermain__phone a {
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     line-height: 100%;
     color: #373737; }
@@ -1431,7 +1433,7 @@ textarea {
 .formblock__text {
   text-align: center;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
   line-height: 100%;
   text-align: center;
@@ -1515,7 +1517,7 @@ textarea {
 .iconlink__text {
   margin-left: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 21px;
   /* identical to box height */
@@ -1574,7 +1576,7 @@ textarea {
     .dropdownblock__links ul li a,
     .dropdownblock__links menu li a {
       font-style: normal;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 16px;
       line-height: 21px;
       /* identical to box height */
@@ -1629,7 +1631,7 @@ textarea {
 
 .messageblock__text {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 120%;
   color: #373737;
@@ -1744,7 +1746,7 @@ body {
 .welcome_placeholder {
   background: rgba(242, 63, 52, 0.15);
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   line-height: 100%;
   color: #f23f34;
@@ -1767,7 +1769,7 @@ body {
 
 .welcome__title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
   line-height: 100%;
   color: #373737;
@@ -1804,7 +1806,7 @@ body {
 .newslist__title {
   margin-bottom: 36px;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 22px;
   line-height: 100%;
   text-transform: uppercase;
@@ -1828,14 +1830,14 @@ body {
   padding-left: 24px;
   border-left: 4px solid #F23F34;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 120%;
   color: #373737; }
 
 .newslist__name {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 120%;
   color: #373737;
@@ -1854,7 +1856,7 @@ body {
 
 .btn_link {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   text-align: center;
@@ -1909,7 +1911,7 @@ body {
   padding-bottom: 24px;
   border-bottom: 3px solid #fff;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 22px;
   text-transform: uppercase;
   color: #f23f34;
@@ -1927,7 +1929,7 @@ body {
 .pageheader__title h1 {
   margin: 0 0 21px 0;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
   line-height: 100%;
   color: #373737; }
@@ -1942,7 +1944,7 @@ body {
   background: #f4f4f4;
   padding: 17px 27px;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   color: #373737;
@@ -2072,7 +2074,7 @@ body {
   background-position: left center;
   background-repeat: no-repeat;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   color: #373737;
@@ -2082,7 +2084,7 @@ body {
 
 .tableid {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737; }
@@ -2097,7 +2099,7 @@ body {
 
 .tablestatus {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -2119,7 +2121,7 @@ a.btn_white,
 .lkpagetable a.btn_white {
   display: inline-block;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -2164,7 +2166,7 @@ a.btn_white,
 
 .popup__title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
   line-height: 100%;
   color: #373737;
@@ -2194,14 +2196,14 @@ a.btn_white,
 
 .popupdata__value {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737; }
 
 .popupdata__value a {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   text-decoration: underline;
@@ -2214,7 +2216,7 @@ a.btn_white,
 .thereno__text {
   margin-left: 23px;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   color: #373737; }
@@ -2280,7 +2282,7 @@ button {
   padding-left: 24px;
   background-repeat: no-repeat;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   text-align: center;
@@ -2294,7 +2296,7 @@ button {
   padding-left: 24px;
   background-repeat: no-repeat;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   text-align: center;
@@ -2475,7 +2477,7 @@ button {
 
 .pagefilterbtn__text {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -2524,7 +2526,7 @@ button {
     margin-bottom: 14px; }
     .toolbarmenu .dropdownblock__wrapper li a {
       font-family: var(--font-family);
-      font-weight: 700;
+      font-weight: 600;
       font-size: 14px;
       color: #373737;
       display: block;
@@ -2608,7 +2610,7 @@ button {
 
 .lkpagetable__ttn {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -2816,7 +2818,7 @@ button {
 
 .orderitem__title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   color: #373737; }
@@ -2939,7 +2941,7 @@ a:hover .infoicon,
 
 .btn_redd {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #f23f34;
@@ -2965,7 +2967,7 @@ a:hover .infoicon,
 
 .orderparams_dd {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -2976,7 +2978,7 @@ a:hover .infoicon,
   display: inline-block;
   width: fit-content;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   padding-right: 4px;
@@ -3225,7 +3227,7 @@ input[type="checkbox"]:checked
   border-radius: 6px;
   height: 36px;
   padding: 7px 10px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737;
@@ -3296,13 +3298,13 @@ span.light {
 
 .orderdriver__name {
   margin-bottom: 6px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 120%;
   color: #373737; }
 
 .orderdriver__info {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 120%;
   color: #373737;
@@ -3321,7 +3323,7 @@ span.light {
   cursor: pointer; }
 
 .orderadd__button {
-  font-weight: 700;
+  font-weight: 600;
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -3356,7 +3358,7 @@ span.light {
   margin-bottom: 27px; }
 
 .modal__title {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   color: #373737; }
@@ -3418,7 +3420,7 @@ span.light {
   opacity: 1; }
 
 .redlabel {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   color: #fff;
@@ -3997,7 +3999,7 @@ color: #373737;
 
 .btn_green {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #49b48d;
@@ -4053,7 +4055,7 @@ color: #373737;
   line-height: 1;
   text-align: center;
   border-radius: 8px;
-  font-weight: 700; }
+  font-weight: 600; }
 
 .btn_blue {
   background: rgba(32, 121, 255, 0.15);
@@ -4085,7 +4087,7 @@ color: #373737;
   color: #f23f34 !important; }
 
 .newslistaside .newslist__title {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   color: #373737; }
@@ -4124,7 +4126,7 @@ color: #373737;
   line-height: 46px;
   border-radius: 50%;
   color: #373737;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   background: #f5f5f5; }
 
@@ -4565,7 +4567,7 @@ span.formcheckbox__text {
   width: 0; }
 
 .stepform__tabs .calctabs-js label {
-  font-weight: 700;
+  font-weight: 600;
   margin-right: 29px;
   cursor: pointer;
   font-size: 20px;
@@ -4754,7 +4756,7 @@ span.formcheckbox__text {
 
 .orderpage__step .calcform__title {
   margin: 24px 0;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #373737; }
@@ -4918,7 +4920,7 @@ span:last-child {
   background: #fff;
   overflow: hidden; }
   .modal_xxlarge .modal-dialog .modal__title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 100%;
     color: #373737; }
@@ -5010,7 +5012,7 @@ span:last-child {
   height: 30px; }
 
 .modalmenu__label {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   color: #0b111a; }
@@ -5340,7 +5342,7 @@ input[type="checkbox"]:checked
   top: 9px; }
 
 .resultblock__footertitle {
-  font-weight: 700; }
+  font-weight: 600; }
 
 .resultblock__delimeter {
   background: url('data:image/svg+xml,<svg width="260" height="4" viewBox="0 0 236 4" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="white"/><circle cx="10" cy="2" r="2" fill="white"/><circle cx="18" cy="2" r="2" fill="white"/><circle cx="26" cy="2" r="2" fill="white"/><circle cx="34" cy="2" r="2" fill="white"/><circle cx="42" cy="2" r="2" fill="white"/><circle cx="50" cy="2" r="2" fill="white"/><circle cx="58" cy="2" r="2" fill="white"/><circle cx="66" cy="2" r="2" fill="white"/><circle cx="74" cy="2" r="2" fill="white"/><circle cx="82" cy="2" r="2" fill="white"/><circle cx="90" cy="2" r="2" fill="white"/><circle cx="98" cy="2" r="2" fill="white"/><circle cx="106" cy="2" r="2" fill="white"/><circle cx="114" cy="2" r="2" fill="white"/><circle cx="122" cy="2" r="2" fill="white"/><circle cx="130" cy="2" r="2" fill="white"/><circle cx="138" cy="2" r="2" fill="white"/><circle cx="146" cy="2" r="2" fill="white"/><circle cx="154" cy="2" r="2" fill="white"/><circle cx="162" cy="2" r="2" fill="white"/><circle cx="170" cy="2" r="2" fill="white"/><circle cx="178" cy="2" r="2" fill="white"/><circle cx="186" cy="2" r="2" fill="white"/><circle cx="194" cy="2" r="2" fill="white"/><circle cx="202" cy="2" r="2" fill="white"/><circle cx="210" cy="2" r="2" fill="white"/><circle cx="218" cy="2" r="2" fill="white"/><circle cx="226" cy="2" r="2" fill="white"/><circle cx="234" cy="2" r="2" fill="white"/></svg>');
@@ -5691,6 +5693,9 @@ input.lk-datepicker.datepicker-send {
 [data-steptype="hasparam"].hidden {
   display: none !important; }
 
+.authpage__form .socials a {
+  border: none; }
+
 @media (max-width: 1440px) {
   .orderpage__aside {
     min-width: 420px; }
@@ -5832,7 +5837,7 @@ input.lk-datepicker.datepicker-send {
     min-height: calc(100vh - 142px);
     display: block; }
   .formblock__link a {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 100%;
     color: #373737;
@@ -6055,7 +6060,7 @@ input.lk-datepicker.datepicker-send {
     width: 50%; }
   .pageheader__title h1 {
     margin-bottom: 18px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 100%; }
   .pageheader {
@@ -6264,7 +6269,7 @@ input.lk-datepicker.datepicker-send {
   .lkpagetable__from,
   .lkpagetable__to {
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     line-height: 100%;
     color: #373737;
@@ -6283,7 +6288,7 @@ input.lk-datepicker.datepicker-send {
     background-repeat: no-repeat; }
   .xstable__summ {
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 13px;
     line-height: 100%;
     color: #373737; }
@@ -6594,7 +6599,7 @@ input.lk-datepicker.datepicker-send {
   .orderpage {
     flex-wrap: wrap; }
   .modalmenu__title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 100%;
     color: #373737;
@@ -6612,7 +6617,7 @@ input.lk-datepicker.datepicker-send {
     .modalmenu__link:last-child {
       margin-bottom: 0; }
   .modalmenu__label {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     line-height: 100%;
     color: #0b111a; }
@@ -6926,7 +6931,7 @@ input.lk-datepicker.datepicker-send {
     .popupstyle .orderitem__header {
       margin-bottom: 27px; }
     .popupstyle .orderitem__title {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 20px;
       line-height: 100%; }
     .popupstyle .ordertrack {
@@ -7041,7 +7046,20 @@ input.lk-datepicker.datepicker-send {
     height: 50px; }
   .orderpage__wrapper {
     flex-wrap: wrap;
-    gap: 23px; } }
+    gap: 23px; }
+  .authpage__title {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 100%;
+    margin-bottom: 14px; }
+  .authpage__image {
+    margin-top: 29px;
+    max-width: 108px; }
+  .authpage__text {
+    font-size: 14px;
+    line-height: 100%; }
+  .container {
+    padding: 0 17px; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/

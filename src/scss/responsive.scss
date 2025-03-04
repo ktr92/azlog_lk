@@ -204,7 +204,7 @@
     display: block;
   }
   .formblock__link a {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 100%;
     color: #373737;
@@ -526,7 +526,7 @@
   }
   .pageheader__title h1 {
     margin-bottom: 18px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 100%;
   }
@@ -851,7 +851,7 @@
   .lkpagetable__from,
   .lkpagetable__to {
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     line-height: 100%;
     color: #373737;
@@ -876,7 +876,7 @@
   }
   .xstable__summ {
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 13px;
     line-height: 100%;
     color: #373737;
@@ -1301,7 +1301,7 @@
   .orderpage__aside {
   }
   .modalmenu__title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 100%;
     color: #373737;
@@ -1326,7 +1326,7 @@
     }
   }
   .modalmenu__label {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     line-height: 100%;
     color: #0b111a;
@@ -1779,7 +1779,7 @@
       margin-bottom: 27px;
     }
     .orderitem__title {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 20px;
       line-height: 100%;
     }
@@ -1943,5 +1943,22 @@
   .orderpage__wrapper {
     flex-wrap: wrap;
     gap:23px;
+  }
+  .authpage__title {
+    font-weight: 600;
+font-size: 26px;
+line-height: 100%;
+margin-bottom: 14px;
+  }
+  .authpage__image {
+    margin-top: 29px;
+    max-width: 108px;
+  }
+  .authpage__text {
+    font-size: 14px;
+line-height: 100%;
+  }
+  .container {
+    padding: 0 17px;
   }
 }
