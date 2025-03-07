@@ -393,7 +393,7 @@
     height: unset;
     padding: 24px 16px 24px 16px;
     position: relative;
-
+    
     border-radius: 8px;
 
     &:after {
@@ -795,6 +795,9 @@
   }
   .filterbutton::after {
     right: 0;
+  }
+  .filterbutton {
+    width: fit-content;
   }
   .pagefilter {
     margin-bottom: 21px;
@@ -1741,6 +1744,10 @@
     padding-bottom: 0;
     margin-bottom: 0;
   }
+  .wrapper {
+    padding-bottom: 0;
+    margin-bottom: 18px;
+  }
   .modal_xlarge .modal-dialog {
     .modal__content .formblock {
       padding-bottom: 0;
@@ -1961,4 +1968,11 @@ line-height: 100%;
   .container {
     padding: 0 17px;
   }
+  .maincontent__block .newslist {
+    margin-bottom: 0;
+  }
+  .stepform__form {
+    margin-bottom: 0;
+  }
+
 }

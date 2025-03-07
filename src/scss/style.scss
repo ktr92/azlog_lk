@@ -1278,7 +1278,7 @@ body {
 }
 
 .newslist__name {
-  height: 34px;
+  min-height: 34px;
   display: block;
 }
 
@@ -1374,6 +1374,7 @@ body {
   border-radius: 6px;
   background: #f4f4f4;
   padding: 17px 27px;
+  height: unset;
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
@@ -1822,6 +1823,12 @@ button {
   &:hover {
     color: #00b468;
   }
+}
+.stepform__button .btn_submit {
+  margin-bottom: 0;
+}
+.stepform__buttons {
+  align-items: center;  
 }
 .stepform__icon {
   min-width: 48px;
@@ -2292,6 +2299,8 @@ button {
   display: inline-block;
   width: min-content;
   text-align: right;
+
+  background-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3C4.3458 3 3 4.3458 3 6C3 7.6542 4.3458 9 6 9C7.6542 9 9 7.6542 9 6C9 4.3458 7.6542 3 6 3Z" fill="%23ff0000" /><path d="M6 1.5C3.51737 1.5 1.5 3.51737 1.5 6C1.5 8.48263 3.51737 10.5 6 10.5C8.48263 10.5 10.5 8.48263 10.5 6C10.5 3.51737 8.48263 1.5 6 1.5Z" stroke="%23ff0000" stroke-opacity="0.3" stroke-width="3" /></svg>');
 }
 
 .lkpagetable__ttnstatvalue_in {
@@ -4157,7 +4166,7 @@ color: #373737;
   }
 }
 
-.stepform__header {
+.orderpage .stepform__header {
   justify-content: space-between;
 }
 .stepform__headercontent {
@@ -4698,7 +4707,8 @@ span.formcheckbox__text {
   }
 }
 
-.stepform__row .calcform__addTel {
+.stepform__row .calcform__addTel,
+.modal .calcform__addTel {
   position: static;
   margin: 0;
   display: block;
@@ -5853,4 +5863,12 @@ color: #373737;
 
 .authpage__form .socials a {
   border: none;
+}
+
+.pagefilter__search input,
+.pagefilterbtn__hidden input {
+  background: #fff;
+}
+.green {
+  color: #00b468 !important;
 }

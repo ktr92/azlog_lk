@@ -1871,7 +1871,7 @@ body {
     color: #fff; }
 
 .newslist__name {
-  height: 34px;
+  min-height: 34px;
   display: block; }
 
 .newslist_gray {
@@ -1944,6 +1944,7 @@ body {
   border-radius: 6px;
   background: #f4f4f4;
   padding: 17px 27px;
+  height: unset;
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
@@ -2305,6 +2306,12 @@ button {
   .btn_submit:hover {
     color: #00b468; }
 
+.stepform__button .btn_submit {
+  margin-bottom: 0; }
+
+.stepform__buttons {
+  align-items: center; }
+
 .stepform__icon {
   min-width: 48px;
   max-width: 48px; }
@@ -2661,7 +2668,8 @@ button {
   padding-left: 21px;
   display: inline-block;
   width: min-content;
-  text-align: right; }
+  text-align: right;
+  background-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3C4.3458 3 3 4.3458 3 6C3 7.6542 4.3458 9 6 9C7.6542 9 9 7.6542 9 6C9 4.3458 7.6542 3 6 3Z" fill="%23ff0000" /><path d="M6 1.5C3.51737 1.5 1.5 3.51737 1.5 6C1.5 8.48263 3.51737 10.5 6 10.5C8.48263 10.5 10.5 8.48263 10.5 6C10.5 3.51737 8.48263 1.5 6 1.5Z" stroke="%23ff0000" stroke-opacity="0.3" stroke-width="3" /></svg>'); }
 
 .lkpagetable__ttnstatvalue_in {
   padding-left: 21px;
@@ -4264,7 +4272,7 @@ color: #373737;
     .dropdownblock_sm .dropdownblock__links menu li:last-child {
       margin-bottom: 0; }
 
-.stepform__header {
+.orderpage .stepform__header {
   justify-content: space-between; }
 
 .stepform__headercontent {
@@ -4731,14 +4739,16 @@ span.formcheckbox__text {
   .newtel .floating {
     margin: 20px 0; }
 
-.stepform__row .calcform__addTel {
+.stepform__row .calcform__addTel,
+.modal .calcform__addTel {
   position: static;
   margin: 0;
   display: block;
   margin-top: 30px;
   /*   display: flex;
   align-items: center; */ }
-  .stepform__row .calcform__addTel .newtel_img {
+  .stepform__row .calcform__addTel .newtel_img,
+  .modal .calcform__addTel .newtel_img {
     width: 22px;
     height: 22px;
     border-radius: 50%;
@@ -4748,7 +4758,8 @@ span.formcheckbox__text {
     margin-right: 9px;
     line-height: 22px;
     text-align: center; }
-  .stepform__row .calcform__addTel span {
+  .stepform__row .calcform__addTel span,
+  .modal .calcform__addTel span {
     display: inline-block;
     margin-left: 0; }
 
@@ -5697,6 +5708,13 @@ input.lk-datepicker.datepicker-send {
 .authpage__form .socials a {
   border: none; }
 
+.pagefilter__search input,
+.pagefilterbtn__hidden input {
+  background: #fff; }
+
+.green {
+  color: #00b468 !important; }
+
 @media (max-width: 1440px) {
   .orderpage__aside {
     min-width: 420px; }
@@ -6230,6 +6248,8 @@ input.lk-datepicker.datepicker-send {
     padding-right: 18px; }
   .filterbutton::after {
     right: 0; }
+  .filterbutton {
+    width: fit-content; }
   .pagefilter {
     margin-bottom: 21px; }
   .pagefilter__item .dropdownblock {
@@ -6906,6 +6926,9 @@ input.lk-datepicker.datepicker-send {
   .wrapper_orderpage {
     padding-bottom: 0;
     margin-bottom: 0; }
+  .wrapper {
+    padding-bottom: 0;
+    margin-bottom: 18px; }
   .modal_xlarge .modal-dialog .modal__content .formblock {
     padding-bottom: 0; }
   .modal_xlarge .modal-dialog .orderitem__button {
@@ -7060,7 +7083,11 @@ input.lk-datepicker.datepicker-send {
     font-size: 14px;
     line-height: 100%; }
   .container {
-    padding: 0 17px; } }
+    padding: 0 17px; }
+  .maincontent__block .newslist {
+    margin-bottom: 0; }
+  .stepform__form {
+    margin-bottom: 0; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/
