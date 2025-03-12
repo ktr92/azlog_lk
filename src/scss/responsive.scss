@@ -1975,4 +1975,35 @@ line-height: 100%;
     margin-bottom: 0;
   }
 
+  .pagefilter__cols {
+display: block;
+}
+.pagefilter__col {
+ width: 100%;
+  margin-bottom: 8px;
+}
+.pagefilter__col input {
+  background: #fff;
+}
+
+.pagefilter__col input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  
+  color: #373737;
+}
+.pagefilter__col input::-moz-placeholder {
+  /* Firefox 19+ */
+
+  color: #373737;
+}
+.pagefilter__col input:-ms-input-placeholder {
+  /* IE 10+ */
+
+  color: #373737;
+}
+.pagefilter__col input:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: #373737;
+}
 }

@@ -520,6 +520,17 @@ const appv2 = (function () {
       },
       1000
     )
+
+    const $button = $('[data-submit="stepform"]')
+    let text = "Оформить заявку"
+   
+    if (state.currentStep === 2) {
+      text = "Продолжить"
+    }
+    if (state.currentStep === 3) {
+      text = "Создать заказ"
+    }
+    $button.text(text)
   }
 
   /**

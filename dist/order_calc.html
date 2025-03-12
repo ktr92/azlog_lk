@@ -263,7 +263,7 @@
               <div class="dropdownblock__wrapper">
                 <div class="dropdownblock__links">
                   <menu>
-                    <li class="signout"><a href="#">Выход</a></li>
+                    <li class="signout"><a href="#" onclick="event.preventDefault();">Выход</a></li>
                   </menu>
                 </div>
               </div>
@@ -1015,10 +1015,73 @@
                                     <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
                                       <div class="dropdownblock__wrapper">
                                         <div class="dropdownblock__links">
-                                          <menu>
-                                            <li><a href="#" data-togglevalue='Услуга 1'>Услуга 1</a></li>
-                                            <li><a href="#" data-togglevalue='Услуга 2'>Услуга 2</a></li>
-                                          </menu>
+                                          <div class="formcheckbox">
+
+                                            <label for="check77-1" class="formcheckbox__label formcheckbox__label_type2">
+                                              <span>
+                                                <input type="checkbox" id="check77-1" name="FROM_SideTentRemoval" value="Y" data-stepdata="dop_bok" data-steptype="source">
+                                                <span class="formcheckbox__text" data-text="checkboxtext">Боковая
+                                                  рестентовка</span>
+                                              </span>
+
+                                            </label>
+                                            <label for="check77-2" class="formcheckbox__label formcheckbox__label_type2">
+                                              <span>
+                                                <input type="checkbox" id="check77-2" name="FROM_UpperTentRemoval" value="Y" data-stepdata="dop_verh" data-steptype="source">
+                                                <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
+                                                  растентовка</span>
+                                              </span>
+
+                                            </label>
+                                            <label for="check77-3" class="formcheckbox__label formcheckbox__label_type2">
+                                              <span>
+                                                <input type="checkbox" id="check77-3" name="FROM_FullTentRemoval" data-stepdata="dop_full" data-steptype="source">
+                                                <span class="formcheckbox__text" data-text="checkboxtext">Полная
+                                                  рестентовка</span>
+                                              </span>
+
+                                            </label>
+
+                                            <label for="check77-4" class="formcheckbox__label formcheckbox__label_type2">
+                                              <span>
+                                                <input type="checkbox" id="check77-4" data-stepdata="dop_bort" data-steptype="source" name="FROM_TailLift" value="Y">
+                                                <span class="formcheckbox__text" data-text="checkboxtext">Требуется
+                                                  машина
+                                                  с
+                                                  гидробортом</span>
+
+                                              </span>
+
+                                            </label>
+
+                                          </div>
+
+                                          <div class="calcform__input">
+                                            <div class="floating">
+                                              <input type="text" name="FLOOR" data-stepdata="dop_floor" data-steptype="source" data-min="1" data-max="300" class="w-full" onkeyup="this.setAttribute('value', this.value);" value="">
+                                              <span class="floating-label">Этаж</span>
+
+
+                                            </div>
+
+                                            <div class="checkblock checkblock_abs">
+                                              <div class="checkblock__content">
+                                                <div class="checkblock__text">
+                                                  <div class="checkblock__label">Лифт</div>
+                                                </div>
+                                              </div>
+                                              <div class="checkblock__checkbox">
+                                                <input checked="" type="checkbox" id="NO_LIFT" name="NO_LIFT" value="Y" data-stepdata="NO_LIFT" data-steptype="source">
+                                                <label for="NO_LIFT">
+                                                  <span></span>
+                                                </label>
+                                              </div>
+                                            </div>
+
+
+                                          </div><!-- /.calcform__input -->
+
+
                                         </div>
                                       </div>
                                     </div>
@@ -1212,10 +1275,73 @@
                                     <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop2">
                                       <div class="dropdownblock__wrapper">
                                         <div class="dropdownblock__links">
-                                          <menu>
-                                            <li><a href="#" data-togglevalue='Услуга 1'>Услуга 1</a></li>
-                                            <li><a href="#" data-togglevalue='Услуга 2'>Услуга 2</a></li>
-                                          </menu>
+                                          <div class="formcheckbox">
+
+                                            <label for="check88-1" class="formcheckbox__label formcheckbox__label_type2">
+                                              <span>
+                                                <input type="checkbox" id="check88-1" name="TO_SideTentRemoval" value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
+                                                <span class="formcheckbox__text" data-text="checkboxtext">Боковая
+                                                  рестентовка</span>
+                                              </span>
+
+                                            </label>
+                                            <label for="check88-2" class="formcheckbox__label formcheckbox__label_type2">
+                                              <span>
+                                                <input type="checkbox" id="check88-2" name="TO_UpperTentRemoval" value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
+                                                <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
+                                                  растентовка</span>
+                                              </span>
+
+                                            </label>
+                                            <label for="check88-3" class="formcheckbox__label formcheckbox__label_type2">
+                                              <span>
+                                                <input type="checkbox" id="check88-3" name="TO_FullTentRemoval" data-stepdata="dop_dost_full" data-steptype="source">
+                                                <span class="formcheckbox__text" data-text="checkboxtext">Полная
+                                                  рестентовка</span>
+                                              </span>
+
+                                            </label>
+
+                                            <label for="check88-4" class="formcheckbox__label formcheckbox__label_type2">
+                                              <span>
+                                                <input type="checkbox" id="check88-4" data-stepdata="dop_dost_bort" data-steptype="source" name="TO_TailLift" value="Y">
+                                                <span class="formcheckbox__text" data-text="checkboxtext">Требуется
+                                                  машина
+                                                  с
+                                                  гидробортом</span>
+
+                                              </span>
+
+                                            </label>
+
+                                          </div>
+
+                                          <div class="calcform__input">
+                                            <div class="floating">
+                                              <input type="text" name="TO_FLOOR" data-stepdata="dop_dost_floor" data-steptype="source" data-min="1" data-max="300" class="w-full" onkeyup="this.setAttribute('value', this.value);" value="">
+                                              <span class="floating-label">Этаж</span>
+
+
+                                            </div>
+
+                                            <div class="checkblock checkblock_abs">
+                                              <div class="checkblock__content">
+                                                <div class="checkblock__text">
+                                                  <div class="checkblock__label">Лифт</div>
+                                                </div>
+                                              </div>
+                                              <div class="checkblock__checkbox">
+                                                <input checked="" type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT" value="Y">
+                                                <label for="TO_NO_LIFT">
+                                                  <span></span>
+                                                </label>
+                                              </div>
+                                            </div>
+
+
+                                          </div><!-- /.calcform__input -->
+
+
                                         </div>
                                       </div>
                                     </div>
@@ -2985,7 +3111,7 @@
 
 
                         <div class="borderblock borderblock__block">
-                          <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                             данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                             прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                             заявления и прикрепите файл к данной форме</p>
@@ -3057,7 +3183,7 @@
 
 
                         <div class="borderblock borderblock__block">
-                          <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                             данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                             прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                             заявления и прикрепите файл к данной форме</p>
@@ -3129,7 +3255,7 @@
 
 
                         <div class="borderblock borderblock__block">
-                          <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                          <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                             данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                             прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                             заявления и прикрепите файл к данной форме</p>
@@ -3298,10 +3424,73 @@
                               <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
                                 <div class="dropdownblock__wrapper">
                                   <div class="dropdownblock__links">
-                                    <menu>
-                                      <li><a href="#" data-togglevalue="Услуга 1">Услуга 1</a></li>
-                                      <li><a href="#" data-togglevalue="Услуга 2">Услуга 2</a></li>
-                                    </menu>
+                                    <div class="formcheckbox">
+
+                                      <label for="check88-1" class="formcheckbox__label formcheckbox__label_type2">
+                                        <span>
+                                          <input type="checkbox" id="check88-1" name="TO_SideTentRemoval" value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Боковая
+                                            рестентовка</span>
+                                        </span>
+
+                                      </label>
+                                      <label for="check88-2" class="formcheckbox__label formcheckbox__label_type2">
+                                        <span>
+                                          <input type="checkbox" id="check88-2" name="TO_UpperTentRemoval" value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
+                                            растентовка</span>
+                                        </span>
+
+                                      </label>
+                                      <label for="check88-3" class="formcheckbox__label formcheckbox__label_type2">
+                                        <span>
+                                          <input type="checkbox" id="check88-3" name="TO_FullTentRemoval" data-stepdata="dop_dost_full" data-steptype="source">
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Полная
+                                            рестентовка</span>
+                                        </span>
+
+                                      </label>
+
+                                      <label for="check88-4" class="formcheckbox__label formcheckbox__label_type2">
+                                        <span>
+                                          <input type="checkbox" id="check88-4" data-stepdata="dop_dost_bort" data-steptype="source" name="TO_TailLift" value="Y">
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Требуется
+                                            машина
+                                            с
+                                            гидробортом</span>
+
+                                        </span>
+
+                                      </label>
+
+                                    </div>
+
+                                    <div class="calcform__input">
+                                      <div class="floating">
+                                        <input type="text" name="TO_FLOOR" data-stepdata="dop_dost_floor" data-steptype="source" data-min="1" data-max="300" class="w-full" onkeyup="this.setAttribute('value', this.value);" value="">
+                                        <span class="floating-label">Этаж</span>
+
+
+                                      </div>
+
+                                      <div class="checkblock checkblock_abs">
+                                        <div class="checkblock__content">
+                                          <div class="checkblock__text">
+                                            <div class="checkblock__label">Лифт</div>
+                                          </div>
+                                        </div>
+                                        <div class="checkblock__checkbox">
+                                          <input checked="" type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT" value="Y">
+                                          <label for="TO_NO_LIFT">
+                                            <span></span>
+                                          </label>
+                                        </div>
+                                      </div>
+
+
+                                    </div><!-- /.calcform__input -->
+
+
                                   </div>
                                 </div>
                               </div>
@@ -3578,7 +3767,7 @@
 
 
                       <div class="borderblock borderblock__block">
-                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                        <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                           данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                           прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                           заявления и прикрепите файл к данной форме</p>
@@ -3650,7 +3839,7 @@
 
 
                       <div class="borderblock borderblock__block">
-                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                        <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                           данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                           прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                           заявления и прикрепите файл к данной форме</p>
@@ -3722,7 +3911,7 @@
 
 
                       <div class="borderblock borderblock__block">
-                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                        <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                           данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                           прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                           заявления и прикрепите файл к данной форме</p>
@@ -4170,7 +4359,7 @@
 
 
                       <div class="borderblock borderblock__block">
-                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                        <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                           данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                           прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                           заявления и прикрепите файл к данной форме</p>
@@ -4242,7 +4431,7 @@
 
 
                       <div class="borderblock borderblock__block">
-                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                        <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                           данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                           прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                           заявления и прикрепите файл к данной форме</p>
@@ -4314,7 +4503,7 @@
 
 
                       <div class="borderblock borderblock__block">
-                        <p>ДДля того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
+                        <p>Для того, чтобы внести изменения, скачайте и заполните бланк заявления и прикрепите файл к
                           данной форме Для того, чтобы внести изменения, скачайте и заполните бланк заявления и
                           прикрепите файл к данной форме Для того, чтобы внести изменения, скачайте и заполните бланк
                           заявления и прикрепите файл к данной форме</p>

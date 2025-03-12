@@ -80,6 +80,17 @@ $(document).ready(function () {
     $wrapper.find(`.mobactive`).removeClass("mobactive")
     $wrapper.find(`.menuactive`).removeClass("menuactive")
   })
+  $("[data-actionid][data-toggle='modal']").on("click", function (e) {
+    const tab = $(this).attr("data-actionid")
+    $(`[data-modalcontent].mobactive`).removeClass("mobactive")
+    $(`[data-modalcontent=${tab}]`).addClass("mobactive")
+    $(`[data-modalcontent].active`).removeClass("active")
+    $(`[data-modalcontent=${tab}]`).addClass("active")
+    $(`[data-modaltab].mobactive`).removeClass("mobactive")
+    $(`[data-modaltab=${tab}]`).addClass("mobactive")
+    $(`[data-modaltab].active`).removeClass("active")
+    $(`[data-modaltab=${tab}]`).addClass("active")
+  })
 
   jQuery
   ;(function ($) {
@@ -110,11 +121,16 @@ $(document).ready(function () {
     e.preventDefault()
     $(this).siblings(".newtel").append(`
       <div class="floating">
+        <span class="removetel"><img src="img/modalclose.svg" alt="" class="onlyDesktop"></span>
         <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel"
           data-steptype="source" data-required="required" data-min="18" data-max="18" onkeyup="this.setAttribute('value', this.value);" value="">
         <span class="floating-label">Телефон</span></span>
       </div>
       `)
+
+    $('.removetel').on('click', function(e) {
+      $(e.target).closest('.floating').remove()
+    })
 
     $('input[type="tel"]')
       .focus(function () {

@@ -2306,6 +2306,10 @@ button {
   .btn_submit:hover {
     color: #00b468; }
 
+button span.btn_submit {
+  width: unset;
+  margin-bottom: 0; }
+
 .stepform__button .btn_submit {
   margin-bottom: 0; }
 
@@ -3929,7 +3933,27 @@ color: #373737;
   flex-wrap: wrap; }
 
 .pagefilter__col {
-  width: calc(50% - 7px); }
+  width: calc(50% - 7px);
+  /*  margin-bottom: 8px; */ }
+
+.pagefilter__col input {
+  background: #fff; }
+
+.pagefilter__col input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #373737; }
+
+.pagefilter__col input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #373737; }
+
+.pagefilter__col input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #373737; }
+
+.pagefilter__col input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #373737; }
 
 .pagefilterbtn__hidden {
   display: none;
@@ -4235,9 +4259,17 @@ color: #373737;
 .inputlabel_date {
   cursor: pointer; }
 
+.removetel {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer; }
+
 .inputselect__wrapper {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .inputselect__icon {
   margin-right: 5px;
@@ -7087,7 +7119,26 @@ input.lk-datepicker.datepicker-send {
   .maincontent__block .newslist {
     margin-bottom: 0; }
   .stepform__form {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .pagefilter__cols {
+    display: block; }
+  .pagefilter__col {
+    width: 100%;
+    margin-bottom: 8px; }
+  .pagefilter__col input {
+    background: #fff; }
+  .pagefilter__col input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #373737; }
+  .pagefilter__col input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #373737; }
+  .pagefilter__col input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #373737; }
+  .pagefilter__col input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #373737; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/
