@@ -263,7 +263,16 @@
               <div class="dropdownblock__wrapper">
                 <div class="dropdownblock__links">
                   <menu>
-                    <li class="signout"><a href="#" onclick="event.preventDefault();">Выход</a></li>
+                    <li class="signout" >
+                      <span class="signout_close">
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.3">
+                        <path d="M6.82546 21.2334L4.82129 19.175L10.9692 13L4.82129 6.77086L6.82546 4.71252L13.0275 10.9417L19.1755 4.71252L21.1796 6.77086L15.0317 13L21.1796 19.175L19.1755 21.2334L13.0275 15.0042L6.82546 21.2334Z" fill="#5F6368"/>
+                        </g>
+                        </svg></span>
+                      <a href="#" onclick="event.preventDefault();">
+                    
+                        <span>Выход</span></a></li>
                   </menu>
                 </div>
               </div>
@@ -466,7 +475,7 @@
                             <!-- /.orderparams__item -->
                             <div class="orderparams__item">
                               <div class="orderparams__dt">Статус</div>
-                              <div class="orderparams_dd red">Не оплачено</div>
+                              <div class="orderparams_dd green">Оплачено</div>
                             </div>
                             <!-- /.orderparams__item -->
                           </div>
@@ -2249,7 +2258,7 @@
                                   <!-- /.orderparams__item -->
                                   <div class="orderparams__item">
                                     <div class="orderparams__dt">Статус</div>
-                                    <div class="orderparams_dd red">Не оплачено</div>
+                                    <div class="orderparams_dd green">Оплачено</div>
                                   </div>
                                   <!-- /.orderparams__item -->
                                 </div>
@@ -2345,7 +2354,7 @@
                                 <div class="orderitem__content">
                                   <div class="ordermap">
                                     <div id="ordermap">
-                                      <img src="img/ordermap.jpg" alt="">
+                                      <!--<img src="img/ordermap.jpg" alt="">-->
                                     </div>
                                     <!-- /#ordermap -->
                                   </div>
@@ -4728,6 +4737,44 @@
       }
 
     </script>
+
+<script
+src="https://api-maps.yandex.ru/2.1/?apikey=476f37bb-9e8a-40f0-a8db-cb7cebca3c25&lang=ru_RU"
+type="text/javascript"></script>
+<script>
+  const marks = [{'coords':['55.700081194264','37.858514204023']}];
+    ymaps.ready(function(){
+        var moscow_map = new ymaps.Map("ordermap", {
+            center: marks[0].coords,
+            zoom: 9
+        });
+
+       
+
+        marks.forEach(element => {
+
+            var myPlacemark = new ymaps.Placemark(element.coords, {
+                title: element.title,
+                city: element.city,
+                tel: element.tel,
+                address: element.address,
+                link: element.link,
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'images/mapmark.svg',
+                iconImageSize: [34, 58],
+                iconImageOffset: [-10, -20],
+                balloonPanelMaxMapArea: 0,
+                hideIconOnBalloonOpen: false,
+            });
+
+           
+            moscow_map.geoObjects.add(myPlacemark);
+
+        })
+    });
+
+</script>
     <footer id="footer">
   <div class="footermain w-full">
     <div class="container">

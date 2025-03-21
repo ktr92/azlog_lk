@@ -263,7 +263,16 @@
               <div class="dropdownblock__wrapper">
                 <div class="dropdownblock__links">
                   <menu>
-                    <li class="signout"><a href="#" onclick="event.preventDefault();">Выход</a></li>
+                    <li class="signout" >
+                      <span class="signout_close">
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.3">
+                        <path d="M6.82546 21.2334L4.82129 19.175L10.9692 13L4.82129 6.77086L6.82546 4.71252L13.0275 10.9417L19.1755 4.71252L21.1796 6.77086L15.0317 13L21.1796 19.175L19.1755 21.2334L13.0275 15.0042L6.82546 21.2334Z" fill="#5F6368"/>
+                        </g>
+                        </svg></span>
+                      <a href="#" onclick="event.preventDefault();">
+                    
+                        <span>Выход</span></a></li>
                   </menu>
                 </div>
               </div>
@@ -1587,7 +1596,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
                                   <div class="stepform__col w-full">
                                     <div class="floating">
                                       <input type="text" name="U_COMPANY" data-stepdata="send_yurname" value=''
@@ -1639,7 +1648,7 @@
                             </div>
                             <div class='' data-tabscontent='sender'>
                               <div class="calcform__content">
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
 
                                   <div class="stepform__col w-full">
                                     <div class="floating">
@@ -1924,7 +1933,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
                                   <div class="stepform__col w-full">
                                     <div class="floating">
                                       <input type="text" name="R_U_COMPANY" data-stepdata="receive_yurname" value=''
@@ -1976,7 +1985,7 @@
                             </div>
                             <div class='' data-tabscontent='receiver'>
                               <div class="calcform__content">
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
 
                                   <div class="stepform__col w-full">
                                     <div class="floating">
@@ -2216,16 +2225,15 @@
                                   </div>
                                 </div>
                                 <!-- /.orderparams__item -->
-                                <div class="orderparams__item">
+                                <!-- <div class="orderparams__item">
                                   <div class="orderparams__dt">Статус</div>
                                   <div class="orderparams_dd green">Оплачено</div>
-                                </div>
-                                <!-- /.orderparams__item -->
+                                </div> -->
                               </div>
                               <!-- /.orderparams -->
                             </div>
                             <!-- /.orderitem__content -->
-                           <!--  <div class="orderitem__buttons">
+                            <div class="orderitem__buttons">
                               <div class="orderitem__button"><a href="" class="btn_blue btn_large">Сохранить
                                   черновик</a>
                               </div>
@@ -2235,7 +2243,7 @@
                               <div class="orderitem__info">
                                 <span class='red'>*</span> Указана ориентировочная стоимость
                               </div>
-                            </div> -->
+                            </div>
                             <!-- /.orderitem__buttons -->
                           </div>
                           <!-- /.orderitem__wrapper -->
@@ -4472,6 +4480,7 @@
       }
 
     </script>
+    
     <footer id="footer">
   <div class="footermain w-full">
     <div class="container">

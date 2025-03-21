@@ -1307,7 +1307,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
                                   <div class="stepform__col w-full">
                                     <div class="floating">
                                       <input type="text" name="U_COMPANY" data-stepdata="send_yurname" value=''
@@ -1359,7 +1359,7 @@
                             </div>
                             <div class='' data-tabscontent='sender'>
                               <div class="calcform__content">
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
 
                                   <div class="stepform__col w-full">
                                     <div class="floating">
@@ -1644,7 +1644,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
                                   <div class="stepform__col w-full">
                                     <div class="floating">
                                       <input type="text" name="R_U_COMPANY" data-stepdata="receive_yurname" value=''
@@ -1696,7 +1696,7 @@
                             </div>
                             <div class='' data-tabscontent='receiver'>
                               <div class="calcform__content">
-                                <div class="stepform__row  flex w-full">
+                                <div class="stepform__row  flex ">
 
                                   <div class="stepform__col w-full">
                                     <div class="floating">
@@ -1936,16 +1936,15 @@
                                   </div>
                                 </div>
                                 <!-- /.orderparams__item -->
-                                <div class="orderparams__item">
+                                <!-- <div class="orderparams__item">
                                   <div class="orderparams__dt">Статус</div>
                                   <div class="orderparams_dd green">Оплачено</div>
-                                </div>
-                                <!-- /.orderparams__item -->
+                                </div> -->
                               </div>
                               <!-- /.orderparams -->
                             </div>
                             <!-- /.orderitem__content -->
-                           <!--  <div class="orderitem__buttons">
+                            <div class="orderitem__buttons">
                               <div class="orderitem__button"><a href="" class="btn_blue btn_large">Сохранить
                                   черновик</a>
                               </div>
@@ -1955,7 +1954,7 @@
                               <div class="orderitem__info">
                                 <span class='red'>*</span> Указана ориентировочная стоимость
                               </div>
-                            </div> -->
+                            </div>
                             <!-- /.orderitem__buttons -->
                           </div>
                           <!-- /.orderitem__wrapper -->
@@ -4192,4 +4191,5 @@
       }
 
     </script>
+    
     <%= _.template(require('../includes/footer.html').default)(data) %>

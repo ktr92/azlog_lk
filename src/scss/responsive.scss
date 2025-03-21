@@ -1455,7 +1455,7 @@
     line-height: 100%;
     color: #373737;
   }
-  .stepform__main {
+  .stepform:not(.stepform_profile) .stepform__main {
     padding-left: 0;
     margin-left: 0;
     border: none;

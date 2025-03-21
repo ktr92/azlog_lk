@@ -54,7 +54,7 @@
                             <div class="stepform__header flex items-center">
                               <div class="stepform__headercontent">
                                 <div class="stepform__icon">
-                                  <span class='stepform__number avtive'>01</span>
+                                  <span class='stepform__number '>01</span>
                                 </div>
                                 <div class="stepform__title">Направление</div>
                               </div>
@@ -68,7 +68,7 @@
                                         <input data-stepdata="f_otpravki" data-steptype="source" type="text"
                                           autocomplete="off" id="cityInput1" class="cityInput"
                                           data-entity="city-autocomplete" placeholder="Откуда" name="from_text"
-                                          value="" data-required="required">
+                                          value="Москва" data-required="required">
                                         <input type="hidden" name="from" value="" data-entity="city-kladr-id">
                                         <!--  <ul id="cityList1" class="cityList" style="display: none;">
                                         <div class="cityListContainer">
@@ -88,7 +88,7 @@
                                       <div class="inputLocation">
                                         <input data-stepdata="f_dostavki" data-steptype="source" type="text"
                                           autocomplete="off" name="to_text" id="cityInput2" class="cityInput"
-                                          placeholder="Куда" data-entity="city-autocomplete" value=""
+                                          placeholder="Куда" data-entity="city-autocomplete" value="Казань"
                                           data-required="required">
                                         <input type="hidden" name="to" value="" data-entity="city-kladr-id">
                                         <!--  <ul id="cityList2" class="cityList" style="display: none;">
@@ -111,7 +111,7 @@
                                   <div class="stepform__col  ">
                                     <div class="inputlabel inputlabel_date inputlabel_dropdown ">
                                       <label class="inputdata__label">Дата отправки</label><!-- /.placeholder -->
-                                      <input readonly="" class="lk-datepicker datepicker-send" value="" type="text" data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"  placeholder="Выбрать дату">
+                                      <input data-required="required" readonly="" class="lk-datepicker datepicker-send" value="22.02.2022" type="text" data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"  placeholder="Выбрать дату">
                                     </div>
                                     <!-- /.inputlabel -->
                                   </div>
@@ -162,7 +162,7 @@
                             <div class="stepform__header flex items-center">
                               <div class="stepform__headercontent">
                                 <div class="stepform__icon">
-                                  <span class='stepform__number avtive'>02</span>
+                                  <span class='stepform__number '>02</span>
                                 </div>
                                 <div class="stepform__title">О грузе</div>
                               </div>
@@ -183,7 +183,7 @@
                                     </div>
                                     <div class="calcobject__input ">
                                       <div class="floating">
-                                        <input type="text" name='boxVolume[]' value=''
+                                        <input type="text" name='boxVolume[]' value='22'
                                           onkeyup="this.setAttribute('value', this.value);" data-volume-format=""
                                           data-required="required">
                                         <span class="floating-label">Обьем<span class="red">*</span></span>
@@ -191,7 +191,7 @@
                                     </div>
                                     <div class="calcobject__input">
                                       <div class="floating">
-                                        <input type="text" name='boxWeight[]' value=''
+                                        <input type="text" name='boxWeight[]' value='22'
                                           onkeyup="this.setAttribute('value', this.value);" data-weight-format=""
                                           data-required="required">
                                         <span class="floating-label">Вес места<span class="red">*</span></span>
@@ -276,7 +276,7 @@
                                               <img src="img/warmicon.svg" alt="" class='afteractive'>
                                             </div>
                                             <div class="checkblock__text">
-                                              <div class="checkblock__label">Теплый режим</div>
+                                              <div class="checkblock__label">Тепловой режим</div>
                                               <div class="checkblock__value" data-dependon='teplo'>Отключен</div>
                                             </div>
                                           </div>
@@ -400,7 +400,7 @@
                             <div class="stepform__header flex items-center">
                               <div class="stepform__headercontent">
                                 <div class="stepform__icon">
-                                  <span class="stepform__number avtive">03</span>
+                                  <span class="stepform__number ">03</span>
                                 </div>
                                 <div class="stepform__tabs stepform__title">
                                   <div class="calctabs calctabs-js" data-tabs='sendfrom'>
@@ -627,7 +627,7 @@
                                                   </div>
                                                 </div>
                                                 <div class="checkblock__checkbox">
-                                                  <input checked type="checkbox" id="NO_LIFT" name="NO_LIFT" value="Y" data-stepdata="NO_LIFT"
+                                                  <input  type="checkbox" id="NO_LIFT" name="NO_LIFT" value="Y" data-stepdata="NO_LIFT"
                                                   data-steptype="source">
                                                   <label for="NO_LIFT">
                                                     <span></span>
@@ -680,7 +680,7 @@
                             <div class="stepform__header flex items-center">
                               <div class="stepform__headercontent">
                                 <div class="stepform__icon">
-                                  <span class="stepform__number avtive">04</span>
+                                  <span class="stepform__number ">04</span>
                                 </div>
                                 <div class="stepform__tabs stepform__title">
                                   <div class="calctabs calctabs-js" data-tabs='receive_terminal'>
@@ -907,7 +907,7 @@
                                                   </div>
                                                 </div>
                                                 <div class="checkblock__checkbox">
-                                                  <input checked type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT"
+                                                  <input  type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT"
                                                     value="Y">
                                                   <label for="TO_NO_LIFT">
                                                     <span></span>
@@ -975,7 +975,7 @@
                               <div class="stepform__header flex items-center">
                                 <div class="stepform__headercontent">
                                   <div class="stepform__icon">
-                                    <span class='stepform__number avtive'>01</span>
+                                    <span class='stepform__number '>01</span>
                                   </div>
                                   <div class="stepform__title">Доставка Москва - Оренбург</div>
                                   <div class="stepform__edit">
@@ -1018,7 +1018,7 @@
                               <div class="stepform__header flex items-center">
                                 <div class="stepform__headercontent">
                                   <div class="stepform__icon">
-                                    <span class='stepform__number avtive'>02</span>
+                                    <span class='stepform__number '>02</span>
                                   </div>
                                   <div class="stepform__title">Отправитель</div>
                                 </div>
@@ -1285,7 +1285,14 @@
 
                                       <div class="stepform__col w-full">
                                         <div class="floating">
-                                          <input type="text" name="IP_INN" data-stepdata="send_innip" value=''
+                                          <input type="text" value="" name="U_COMPANY" placeholder="" data-stepdata="send_yurname" data-steptype="source" data-required="required" data-min="2" data-max="300"  onkeyup="this.setAttribute('value', this.value);">
+                              
+                                          <span class="floating-label">Название компании</span></span>
+                                        </div>
+                                      </div>
+                                      <div class="stepform__col w-full">
+                                        <div class="floating">
+                                          <input type="text" name="IP_INN" data-stepdata="send_yurname" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                             data-required="required" data-min="13" data-max="13">
                                           <span class="floating-label">ИНН</span></span>
@@ -1337,7 +1344,7 @@
                               <div class="stepform__header flex items-center">
                                 <div class="stepform__headercontent">
                                   <div class="stepform__icon">
-                                    <span class="stepform__number avtive">03</span>
+                                    <span class="stepform__number ">03</span>
                                   </div>
                                   <div class="stepform__title">Получатель</div>
                                 </div>
@@ -1431,7 +1438,7 @@
                                               <div class="dropdownblock__wrapper">
                                                 <div class="dropdownblock__links">
                                                   <menu>
-                                                    <li><a href="#" data-togglevalue='>Паспорт РФ'>Паспорт РФ</a></li>
+                                                    <li><a href="#" data-togglevalue='Паспорт РФ'>Паспорт РФ</a></li>
                                                     <li><a href="#"
                                                         data-togglevalue='Водительское удостоверение'>Водительское
                                                         удостоверение</a>
@@ -1628,6 +1635,13 @@
 
                                       <div class="stepform__col w-full">
                                         <div class="floating">
+                                          <input type="text" value="" name="R_U_COMPANY" placeholder="" data-stepdata="receive_innip" data-steptype="source" data-required="required" data-min="2" data-max="300"  onkeyup="this.setAttribute('value', this.value);">
+                              
+                                          <span class="floating-label">Название компании</span></span>
+                                        </div>
+                                      </div>
+                                      <div class="stepform__col w-full">
+                                        <div class="floating">
                                           <input type="text" name="R_IP_INN" data-stepdata="receive_innip" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                             data-required="required" data-min="13" data-max="13">
@@ -1681,7 +1695,7 @@
                               <div class="stepform__header flex items-center">
                                 <div class="stepform__headercontent">
                                   <div class="stepform__icon">
-                                    <span class="stepform__number avtive">04</span>
+                                    <span class="stepform__number ">04</span>
                                   </div>
                                   <div class="stepform__title">Плательщик</div>
                                 </div>

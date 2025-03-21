@@ -560,11 +560,14 @@ textarea {
 
 .check_rememb {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 18px;
-  color: #2079ff;
+
   display: block;
+}
+.check_rememb:hover{
+  color: #2079ff;
 }
 
 .check input[type="checkbox"] {
@@ -2482,6 +2485,19 @@ button span.btn_submit {
   margin-left: 37px;
 }
 
+.pageheader__status_noicon {
+  background-image: none;
+  padding-left: 0;
+}
+.pageheader__status_noicon a {
+  opacity: 0.7;
+  color: #373737;
+}
+.pageheader__status_noicon a:hover {
+  opacity: 1;
+  color: #ff4d42;
+}
+
 .orderblocks {
 }
 .orderblocks__row {
@@ -2867,11 +2883,22 @@ span.formcheckbox__text {
   line-height: 22px;
   color: #373737;
 }
-.signout a {
-  background-image: url('data:image/svg+xml,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.3"><path d="M6.82546 21.2334L4.82129 19.175L10.9692 13L4.82129 6.77086L6.82546 4.71252L13.0275 10.9417L19.1755 4.71252L21.1796 6.77086L15.0317 13L21.1796 19.175L19.1755 21.2334L13.0275 15.0042L6.82546 21.2334Z" fill="%235F6368"/></g></svg>');
+.signout svg {
+  cursor: pointer;
+}
+.signout_close {
+  display: block;
+  line-height: 1;
+  height: 26px;
+}
+.signout  {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ /*  background-image: url('data:image/svg+xml,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.3"><path d="M6.82546 21.2334L4.82129 19.175L10.9692 13L4.82129 6.77086L6.82546 4.71252L13.0275 10.9417L19.1755 4.71252L21.1796 6.77086L15.0317 13L21.1796 19.175L19.1755 21.2334L13.0275 15.0042L6.82546 21.2334Z" fill="%235F6368"/></g></svg>');
   background-position: left center;
   padding-left: 34px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .formcheckbox input[type="checkbox"] {
@@ -4043,6 +4070,10 @@ color: #373737;
   background: #ff4d42;
   color: #fff;
 }
+.avtive .stepform__number {
+  background: #ff4d42;
+  color: #fff;
+}
 
 .orderpage {
   .stepform__row {
@@ -4143,7 +4174,7 @@ color: #373737;
 .inputlabel_date {
   width: 225px;
 }
-.inputlabel_dropdown::after {
+.inputlabel_dropdown .inputselect__wrapper::after {
   content: url('data:image/svg+xml,<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M7.72581 5.32211L12.981 -7.8575e-08L14.7969 1.83894L7.72581 9L0.654742 1.83894L2.47058 -5.33384e-07L7.72581 5.32211Z" fill="%23373737" /></svg>');
   position: absolute;
   right: 20px;
@@ -4152,6 +4183,9 @@ color: #373737;
 }
 .inputlabel_date {
   cursor: pointer;
+}
+.tel2   {
+  position: relative;
 }
 .removetel {
   position: absolute;
@@ -4359,6 +4393,9 @@ input[type="password"] {
 
 .lk-datepicker {
   border: none !important;
+  text-transform: lowercase;
+  font-size: 14px;
+  font-family: 'Jost';
 }
 
 .bluelink {
@@ -4522,6 +4559,7 @@ input[type="password"] {
   margin-top: 15px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   span {
     font-weight: 500;
@@ -4536,6 +4574,7 @@ input[type="password"] {
     line-height: 100%;
     color: #2079ff;
     margin-left: 9px;
+    white-space: nowrap;
   }
 }
 span.formcheckbox__text {
@@ -5913,4 +5952,17 @@ color: #373737;
 }
 .green {
   color: #00b468 !important;
+}
+.inputlabel_date {
+  border: 1px solid transparent;
+}
+.inputlabel_date.error {
+  border-color: #f23f34;
+}
+.inputlabel.inputlabel_dropdown {
+  border: 1px solid transparent;
+}
+
+.inputlabel.inputlabel_dropdown.inputselect.inputlabel_md.active {
+  border-color: #8235FF;
 }

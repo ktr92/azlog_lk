@@ -33,6 +33,7 @@ function initFE() {
     '[data-toggleclick="receive_terminal"]'
   )
   closeByClickOutside('[data-toggle="dop"]', '[data-toggleclick="dop"]')
+  closeByClickOutside('[data-toggle="dop2"]', '[data-toggleclick="dop2"]')
   closeByClickOutside(".popup", '[data-toggle="popup"]')
 }
 
@@ -41,6 +42,7 @@ function closeByClickOutside(element, button) {
     if (!$(event.target).closest(`${element},${button}`).length) {
       $(button).removeClass("active")
       $(element).removeClass("active")
+      $(element).closest("[data-toggleitem]").removeClass("active")
     }
   })
 
@@ -49,11 +51,18 @@ function closeByClickOutside(element, button) {
       // escape key maps to keycode `27`
       $(button).removeClass("active")
       $(element).removeClass("active")
+      $(element).closest("[data-toggleitem]").removeClass("active")
+
     }
   })
 }
 
 $(document).ready(function () {
+
+  $('.signout_close').on('click', function(e) {
+    $('[data-toggle="accountmenu"]').removeClass('active')
+  })
+
   $(document).on("click", ".modal-backdrop", function (e) {
     $(".modal").modal("hide")
   })
@@ -131,6 +140,7 @@ $(document).ready(function () {
     $('.removetel').on('click', function(e) {
       $(e.target).closest('.floating').remove()
     })
+ 
 
     $('input[type="tel"]')
       .focus(function () {
@@ -167,13 +177,30 @@ $(document).ready(function () {
   $('[data-click="newtel"]').on("click", function (e) {
     $(this).hide()
     $(this).siblings(".tel2").addClass("active")
+    $('.removetel').on('click', function(e) {
+      $(e.target).closest('.tel2').remove()
+    })
   })
 
-  $("[name=F_DOCTYPE]").on("change", function () {
+  $(".modal [name=F_DOCTYPE]").on("change", function () {
     if ($(this).val() !== "Паспорт РФ") {
       $("[name=F_PASS_1]").hide()
     } else {
       $("[name=F_PASS_1]").show()
+    }
+  })
+  $(".calcform__inputs [name=R_F_DOCTYPE]").on("change", function () {
+    if ($(this).val() !== "Паспорт РФ") {
+      $(this).closest('.stepform__row').find("[name=R_F_PASS_1]").closest('.floating').hide()
+    } else {
+      $(this).closest('.stepform__row').find("[name=R_F_PASS_1]").closest('.floating').show()
+    }
+  })
+  $(".calcform__inputs [name=F_DOCTYPE]").on("change", function () {
+    if ($(this).val() !== "Паспорт РФ") {
+      $(this).closest('.stepform__row').find("[name=F_PASS_1]").closest('.floating').hide()
+    } else {
+      $(this).closest('.stepform__row').find("[name=F_PASS_1]").closest('.floating').show()
     }
   })
 
@@ -210,6 +237,7 @@ $(document).ready(function () {
   $('input[data-stepdata="send_inn"]').mask("999999999")
   $('input[data-stepdata="receive_yurkpp"]').mask("99999999")
   $('input[data-stepdata="receive_yurinn"]').mask("999999999?999")
+  $('input[data-stepdata="dop_floor"]').mask("9?9")
   /*   $('input[name="FLOOR"]').mask("9?9") */
   /*  $('input[name="TO_FLOOR"]').mask("9?9") */
 
@@ -249,6 +277,7 @@ $(document).ready(function () {
 
   $("[data-toggleclick]").on("click", function (e) {
     $(this).toggleClass("active")
+    $(this).closest("[data-toggleitem]").addClass('active')
     e.preventDefault()
     let dropdown = $(this).data("toggleclick")
     $("[data-toggle].active")
@@ -256,6 +285,9 @@ $(document).ready(function () {
       .removeClass("active")
     $("[data-toggleclick].active")
       .not($(`[data-toggleclick=${dropdown}]`))
+      .removeClass("active")
+    $("[data-toggleitem].active")
+      .not($(`[data-toggleitem=${dropdown}]`))
       .removeClass("active")
     $(`[data-toggle=${dropdown}]`).toggleClass("active")
     $(`[data-toggleactive=${dropdown}]`).toggleClass("active")

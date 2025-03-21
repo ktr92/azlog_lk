@@ -148,7 +148,7 @@ const appv2 = (function () {
       const $boxid = $(this).closest("[data-box]")
       $boxid.remove()
 
-      $(".calcobject__number").each(function (index) {
+      $(".calcobject__number span").each(function (index) {
         $(this).text(index + 1)
       })
 
@@ -307,6 +307,12 @@ const appv2 = (function () {
       let dp = $(this).datepicker({
         startDate: new Date(),
         minDate: new Date(),
+        language: 'ru', //add this line
+        dateFormat: "dd MM yyyy",
+
+        onSelect: function (formattedDate, date, inst) {
+            self.currentDate = date;
+        },
         onRenderCell: function (date, cellType) {
           if (cellType == "day") {
             var day = date.getDay(),
@@ -351,7 +357,7 @@ const appv2 = (function () {
       $(`[data-toggle=${id}]`).toggleClass("active")
       // set value
       $(`[data-value=${id}]`).text(val)
-      $(`[data-inputvalue=${id}]`).val(val)
+      $(`[data-inputvalue=${id}]`).val(val).trigger('change')
 
       if ($(this).data("togglevalue2")) {
         let val2 = $(this).data("togglevalue2")
@@ -492,7 +498,7 @@ const appv2 = (function () {
         .find(`[data-input="ternimalid"]`)
         .val(terminalid)
         .trigger("change")
-      $wrapper.find(`[data-input="ternimalname"]`).val(terminalname)
+      $wrapper.find(`[data-input="ternimalname"]`).val(terminalname).trigger('change')
       $wrapper.find(".dateblock__menu").removeClass("active")
     })
   }
@@ -584,12 +590,24 @@ const appv2 = (function () {
       if (item.val.length < 1) {
         valid = false
         item.input.addClass("error")
+        item.input.closest('.inputlabel_date').addClass("error")
       }
     })
 
     if ($(".checkbox_required:visible").length) {
       return false
     }
+
+    $('.orderpage__step:visible').each(function() {
+      const step = $(this)
+      const steprequired = step.find('input.error')
+      if (!steprequired.length) {
+        step.addClass('avtive')
+      } else {
+        step.removeClass('avtive')
+      }
+
+    })
 
     return valid
   }
@@ -746,9 +764,9 @@ const appv2 = (function () {
       const short = source.attr("data-suggform").replace(/"/g, "")
       $(".sgstlist").remove()
 
-      $inn.val(inn).attr("value", inn)
-      $name.val(name).attr("value", name)
-      $kpp.val(kpp).attr("value", kpp)
+      $inn.val(inn).attr("value", inn).trigger('change')
+      $name.val(name).attr("value", name).trigger('change')
+      $kpp.val(kpp).attr("value", kpp).trigger('change')
       $short.text(short).attr("value", short)
 
       console.log($name)
@@ -852,8 +870,8 @@ const appv2 = (function () {
       const value = source.attr("data-suggcityId")
       const name = source.attr("data-suggcity").replace(/"/g, "")
 
-      $idinput.val(value)
-      $input.val(name)
+      $idinput.val(value).trigger('change')
+      $input.val(name).trigger('change')
       $(".sgstlist").remove()
     })
 
