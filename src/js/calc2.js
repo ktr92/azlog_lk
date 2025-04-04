@@ -11,6 +11,7 @@ const appv2 = (function () {
     currentStep: 1,
     totalSteps: 3,
     stepitems: [],
+    inndadata: []
   }
 
   /**
@@ -32,14 +33,18 @@ const appv2 = (function () {
   function fillData() {
     const showblock = (result, wrapper) => {
       result.classList.remove("hidden")
+      result.classList.add("active")
       if (wrapper) {
         wrapper.classList.remove("hidden")
+        wrapper.classList.add("active")
       }
     }
     const hideblock = (result, wrapper) => {
       result.classList.add("hidden")
+      result.classList.remove("active")
       if (wrapper) {
         wrapper.classList.add("hidden")
+        wrapper.classList.remove("active")
       }
     }
 
@@ -456,7 +461,7 @@ const appv2 = (function () {
     /**
      * при выборе упрощенной выдачи заказа по СМС убираем ненужные поля
      */
-    $("input#R_SIMPLIFY").on("change", function (e) {
+ /*    $("input#R_SIMPLIFY").on("change", function (e) {
       const $wrapper = $(this).closest(".calcform__inputs")
       if ($(this).is(":checked")) {
         $wrapper.find("[data-dependselect]").attr("data-blocked", "blocked")
@@ -472,7 +477,7 @@ const appv2 = (function () {
         $wrapper.find("[data-depend]").attr("data-required", "required")
         $wrapper.find("[data-depend]").removeAttr("disabled")
       }
-    })
+    }) */
 
     /**
      * выбор терминала в выпадающем списке терминалов
@@ -534,6 +539,7 @@ const appv2 = (function () {
       text = "Продолжить"
     }
     if (state.currentStep === 3) {
+     // $('.ordepageblock__paramvalue li.active').addClass('last')
       text = "Создать заказ"
     }
     $button.text(text)
@@ -559,7 +565,7 @@ const appv2 = (function () {
    * шаг назад
    */
   const prevStep = () => {
-    if (state.currentStep > 0) {
+    if (state.currentStep > 1) {
       --state.currentStep
       changeStep()
     }
@@ -620,6 +626,33 @@ const appv2 = (function () {
     fndadataCompany()
   }
 
+  function offDadata(selector) {
+    if ($(selector).attr("data-dadatatype")) {
+      $(selector).removeAttr("data-dadata")
+    } else {
+      $(selector).removeAttr("data-blocked").removeAttr("disabled")
+    }
+  }
+
+  function onDadata(selector) {
+    if ($(selector).attr("data-dadatatype")) {
+      $(selector).attr("data-dadata", "org")
+    } else {
+      $(selector).attr("data-blocked", selector).attr("disabled", "disabled")
+    }
+  }
+
+  $("[data-ondadata]").on("change", function (e) {
+    const selector = $(this).attr("data-ondadata")
+    if ($(this).is(":checked")) {
+      offDadata($(`[data-offdadata=${selector}]`))
+      state.inndadata.push(selector)
+    } else {
+      onDadata($(`[data-offdadata=${selector}]`))
+      state.inndadata.finter(item => item !== selector)
+    }
+  })
+
   /**
    * обработка событий dadata для организаций
    */
@@ -628,6 +661,9 @@ const appv2 = (function () {
      * ввод данных об организации, отправка запроса dadata, формироване списка
      */
     $("[data-dadata='org']").on("keyup", function () {
+      if (state.inndadata.filter(item => item === $(this).attr('data-dependset')).length) {
+        return
+      }
       let timeout = 0
       let val = $(this).val()
       /*   val = val.replace(/\D/g, ""); */

@@ -1,0 +1,33 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<%= _.template(require('../includes/header.html').default)(data) %>
+
+
+<div class="container">
+    <a href="#popup_status" class="brn_main" data-toggle="modal">Ваш расчет еще не готов :’(</a>
+</div><!-- /.container -->
+
+<div id="popup_status" class="modal fade modal_status">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <span class="modalclose" data-dismiss="modal" aria-hidden="true">
+        <img src="img/modalclose.svg" alt="">
+      </span>
+      <div class="modal-body">
+        <div class="modal__img">
+          <img src="img/Illustration.png" alt="">
+        </div><!-- /.modal__img -->
+        <div class="modal__header">
+          <div class="modal__title">Ваш расчет еще не готов :’(</div>
+        </div>
+        <div class="modal__content ">
+         <div class="modal__text">
+          Для расчета стоимости укажите пункты отправления и прибытия, а так же параметры груза. Обратите внимание, чем больше данных вы уточните, тем более точный будет расчет
+         </div><!-- /.modal__text -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('../includes/footer.html').default)(data) %>

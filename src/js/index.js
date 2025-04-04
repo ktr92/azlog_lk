@@ -98,7 +98,7 @@ $(document).ready(function () {
     $(`[data-modaltab].mobactive`).removeClass("mobactive")
     $(`[data-modaltab=${tab}]`).addClass("mobactive")
     $(`[data-modaltab].active`).removeClass("active")
-    $(`[data-modaltab=${tab}]`).addClass("active")
+    $(`[data-modaltab=${tab}]`).addClass("active").trigger('click')
   })
 
   jQuery
@@ -130,7 +130,7 @@ $(document).ready(function () {
     e.preventDefault()
     $(this).siblings(".newtel").append(`
       <div class="floating">
-        <span class="removetel"><img src="img/modalclose.svg" alt="" class="onlyDesktop"></span>
+        <span class="removetel"><img src="img/modalclose.svg" alt="" ></span>
         <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel"
           data-steptype="source" data-required="required" data-min="18" data-max="18" onkeyup="this.setAttribute('value', this.value);" value="">
         <span class="floating-label">Телефон</span></span>
@@ -149,30 +149,7 @@ $(document).ready(function () {
       .mask("+7 (999) 999-99-99")
   })
 
-  function offDadata(selector) {
-    if ($(selector).attr("data-dadatatype")) {
-      $(selector).removeAttr("data-dadata")
-    } else {
-      $(selector).removeAttr("data-blocked").removeAttr("disabled")
-    }
-  }
 
-  function onDadata(selector) {
-    if ($(selector).attr("data-dadatatype")) {
-      $(selector).attr("data-dadata", "org")
-    } else {
-      $(selector).attr("data-blocked", selector).attr("disabled", "disabled")
-    }
-  }
-
-  $("[data-ondadata]").on("change", function (e) {
-    const selector = $(this).attr("data-ondadata")
-    if ($(this).is(":checked")) {
-      offDadata($(`[data-offdadata=${selector}]`))
-    } else {
-      onDadata($(`[data-offdadata=${selector}]`))
-    }
-  })
 
   $('[data-click="newtel"]').on("click", function (e) {
     $(this).hide()

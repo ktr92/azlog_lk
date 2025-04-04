@@ -1,0 +1,17 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+<%= _.template(require('../includes/header.html').default)(data) %>
+<div class="authpage">
+  <div class="container">
+      <div class="authpage__hero ">
+        <div class="authpage__image">
+          <img src="img/heroblock.svg" alt="">
+        </div><!-- /.authpage__image -->
+        <div class="authpage__title">Спасибо!</div><!-- /.authpage__title -->
+        <div class="authpage__text">Номер заказа: ТТН012345678</div>
+        <div class="authpage__text">Пин-код: 3456</div><!-- /.authpage__text -->
+      </div><!-- /.authpage__hero -->
+     
+  </div><!-- /.container -->
+</div><!-- /.authpage -->
+<%= _.template(require('../includes/footer.html').default)(data) %>

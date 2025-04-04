@@ -5802,6 +5802,67 @@ input.lk-datepicker.datepicker-send {
 .inputlabel.inputlabel_dropdown.inputselect.inputlabel_md.active {
   border-color: #8235FF; }
 
+.modal_status .modal__title {
+  margin: 26px 0 19px 0;
+  text-align: center;
+  justify-content: center;
+  font-size: 22px; }
+
+.modal_status .modal__text {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #373737;
+  opacity: 0.6; }
+
+.modal_status .modal-dialog {
+  width: 442px;
+  max-width: 100%; }
+
+.modal_status .modal-content {
+  padding: 39px 58px 39px 58px; }
+
+.ordepageblock__paramvalue li {
+  position: relative; }
+
+span.calcheader__help {
+  vertical-align: bottom; }
+
+.help-call {
+  line-height: 14px; }
+
+.checkblock__label {
+  display: flex;
+  align-items: center; }
+
+span.formcheckbox__text {
+  display: flex;
+  align-items: center; }
+
+.help-tooltip__text, .help-tooltip__content {
+  white-space: initial; }
+
+.formcheckbox label {
+  column-count: 1; }
+
+.help-tooltip__text a {
+  color: #f23f34; }
+
+.calcheader__help_xl p {
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  line-height: 1.2; }
+
+.calcheader__help_xl .help-tooltip {
+  width: 600px; }
+
+/* .ordepageblock__paramvalue li:after {
+  content: ",";
+}
+
+.ordepageblock__paramvalue li.last:after {
+  content: "";
+} */
 @media (max-width: 1440px) {
   .orderpage__aside {
     min-width: 420px; }
@@ -7193,7 +7254,30 @@ input.lk-datepicker.datepicker-send {
     color: #373737; }
   .pagefilter__col input:-moz-placeholder {
     /* Firefox 18- */
-    color: #373737; } }
+    color: #373737; }
+  .calcobject__remove {
+    right: 12px;
+    top: 6px;
+    transform: none; }
+  .orderpage__aside > .orderpage__asideblock.onlyDesktop {
+    display: block !important; }
+  .ordertoolbar {
+    display: none; }
+  .modal_status .modal-content {
+    padding: 18px 18px; }
+  .calcheader__help_xl .help-tooltip {
+    width: 100%; }
+  span.calcheader__help {
+    position: initial; }
+  .orderpage .stepform__header {
+    position: relative; }
+  .help-tooltip {
+    left: 0;
+    right: 0;
+    bottom: unset;
+    top: 100%; }
+  .help-call {
+    margin-left: 3px; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/

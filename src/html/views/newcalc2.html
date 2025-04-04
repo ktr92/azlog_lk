@@ -56,7 +56,19 @@
                                 <div class="stepform__icon">
                                   <span class='stepform__number '>01</span>
                                 </div>
-                                <div class="stepform__title">Направление</div>
+                                <div class="stepform__title">Направление
+                                  <span class="calcheader__help">
+                                    <span class="help-call">?</span>
+                                    <span class="help-tooltip">
+                                      <span class="help-tooltip__content">
+                                        <span class="help-tooltip__text"> Для более точного поиска укажите
+                                          название населенного пункта: <br>
+                                          Например: Нефтегорск, Самарская область</span>
+                                        <!-- 	<span class="help-tooltip__info">+8 к защите груза</span> -->
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                             <div class="stepform__main stepform__main_type2">
@@ -134,8 +146,11 @@
                                         <div class="dropdownblock__wrapper">
                                           <div class="dropdownblock__links">
                                             <menu>
+                                          
+                                              <li><a href="#" data-togglevalue="Стандарт" data-togglevalue2="2-3 дня">Стандарт</a></li>
+                                              <li><a href="#" data-togglevalue="Авиа" data-togglevalue2="2-3 дня">Авиа</a></li>
                                               <li><a href="#" data-togglevalue="Контейнеры" data-togglevalue2="10-14 дней">Контейнеры</a></li>
-                                              <li><a href="#" data-togglevalue="Коробки" data-togglevalue2="2-3 дня">Коробки</a></li>
+                                              <li><a href="#" data-togglevalue="Льготный" data-togglevalue2="2-3 дня">Льготный  </a></li>
                                             </menu>
                                           </div>
                                         </div>
@@ -164,10 +179,51 @@
                                 <div class="stepform__icon">
                                   <span class='stepform__number '>02</span>
                                 </div>
-                                <div class="stepform__title">О грузе</div>
+                                <div class="stepform__title">О грузе <span class="calcheader__help">
+                                  <span class="help-call">?</span>
+                                  <span class="help-tooltip">
+                                    <span class="help-tooltip__content">
+                                      <span class="help-tooltip__text">Для точного расчета стоимости перевозки
+                                        и дополнительных услуг заполните габариты каждого грузового места,
+                                        или введите общий вес и объем для быстрого предварительного расчета.
+                                      </span>
+                                      <!-- 												<span class="help-tooltip__info">+8 к защите груза</span>
+               -->                                            </span>
+                                  </span></span></div>
                               </div>
                               <div class="stepform__headerlink">
-                                <a href="">Как это работает?</a>
+                                <a href="#">
+                                  <span class="calcheader__help calcheader__help_xl">
+                                    <span class="">Как это работает?</span>
+                                    <span class="help-tooltip">
+                                      <span class="help-tooltip__content">
+                                        <span class="help-tooltip__text">
+                                         <p><b>Базовый расчет (без габаритов):</b></p> 
+                                         <p>Если вы не указываете габариты груза, стоимость рассчитывается на основе объема и веса.</p>
+
+<p><b>Формула:</b></p> 
+<p>Стоимость = (Объем × Количество мест) или (Вес × Количество мест) (в зависимости от того, что больше).</p>
+<p>Поля "Объем" и "Вес места" остаются активными для ввода.</p>
+
+<p><b>Расчет с габаритами:</b></p> 
+<p>Если вы вводите габариты груза (длина, ширина, высота), поле "Объем" автоматически блокируется.</p>
+<p>Объем пересчитывается на основе введенных габаритов по формуле:</p>
+<p>Объем = Длина × Ширина × Высота.</p>
+<p>Стоимость затем рассчитывается на основе нового объема и веса.</p>
+
+<p><b>Негабаритные грузы:</b></p> 
+<p>Если габариты груза превышают стандартные параметры (для каждого направления они свои), применяется повышающий коэффициент.</p>
+<p>Если габариты груза превышают максимальные значения, система уведомит вас, что такой груз не может быть принят к перевозке.</p>
+
+<p><b>Добавление нескольких мест:</b></p> 
+<p>Вы можете добавить несколько мест с разными параметрами, нажав кнопку "+ Добавить".</p>
+<p>Для каждого места можно указать свои габариты, вес и количество.</p>
+                                        </span>
+                                        <!-- 												<span class="help-tooltip__info">+8 к защите груза</span>
+                 -->                                            </span>
+                                    </span></span>
+
+                                </a>
                               </div>
                             </div>
                             <div class="stepform__main stepform__main_type2">
@@ -225,19 +281,21 @@
                                   <div class="stepform__col w-full">
                                     <div class="stepform__block">
                                       <input name='userPrice' type="text" placeholder='Обьявленная стоимость, руб.'
-                                        data-number-format="">
+                                        data-number-format="" data-steptype="source" data-stepdata="cost">
                                     </div>
 
                                     <div class="stepform__block" data-wrapper='CARGO_TYPE'>
 
                                       <input name="CARGO_TYPE" type="text" placeholder='Тип груза'
                                         data-stepdata="tip_gruza" data-steptype="source">
+                                        
                                       <div class="inputhints">
                                         <span>Например:</span>
                                         <a href="#">Запчасти</a>,
                                         <a href="#">Личные вещи</a>,
                                         <a href="#">Мебель</a>
                                       </div>
+                                     
                                     </div>
                                   </div>
 
@@ -252,7 +310,19 @@
                                               <img src="img/warnicon.svg" alt="" class='afteractive'>
                                             </div>
                                             <div class="checkblock__text">
-                                              <div class="checkblock__label">Хрупкий / жидкий груз</div>
+                                              <div class="checkblock__label">Хрупкий / жидкий груз <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text"> В случае отсутствия
+                                                      надлежащей упаковки, в целях сохранности груза в
+                                                      процессе перевозки мы вправе самостоятельно
+                                                      доупаковать груз, а плательщик обязан оплатить
+                                                      стоимость доп. упаковки.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></div>
                                               <div class="checkblock__value" data-dependon='liquidCargo'>Отключен</div>
                                             </div>
                                           </div>
@@ -276,7 +346,20 @@
                                               <img src="img/warmicon.svg" alt="" class='afteractive'>
                                             </div>
                                             <div class="checkblock__text">
-                                              <div class="checkblock__label">Тепловой режим</div>
+                                              <div class="checkblock__label">Тепловой режим  <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Доставку груза при
+                                                      температуре не ниже +2 оС.
+                                                      Важно! Мы не занимаемся доставкой товаров, требующих
+                                                      поддержания низких температур. Например,
+                                                      замороженных продуктов питания, охлаждённого мяса и
+                                                      прочих товаров.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></div>
                                               <div class="checkblock__value" data-dependon='teplo'>Отключен</div>
                                             </div>
                                           </div>
@@ -305,7 +388,20 @@
                                             <input type="checkbox" id="check10-1" name="CRATE" value="Y"
                                               data-stepdata="pack_wooden" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Деревянная
-                                              обрешетка</span>
+                                              обрешетка <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Изготовление жесткой
+                                                      упаковки индивидуально по размеру груза.
+                                                      Ознакомьтесь с <a href="/trebovanie-k-upakovke/" target="_blank"> Перечнем грузов,
+                                                        подлежащих обязательной упаковке в обрешетку
+                                                        (жесткая упаковка)</a> <br>
+                                                        +30% к стоимости межтерминальной перевозки
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-012" class="formcheckbox__label formcheckbox__label_type2">
@@ -313,7 +409,21 @@
                                             <input type="checkbox" id="check10-012" name="PALET" value="Y"
                                               data-stepdata="pack_palet" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Паллетный
-                                              борт</span>
+                                              борт <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Изготовление жесткой
+                                                      упаковки индивидуально по размеру груза.
+                                                      Ознакомьтесь с <a href="/trebovanie-k-upakovke/" target="_blank"> Перечнем грузов,
+                                                        подлежащих обязательной упаковке в паллетный
+                                                        борт
+                                                        (жесткая упаковка)</a>  <br>
+                                                        +30% к стоимости межтерминальной перевозки
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-2" class="formcheckbox__label formcheckbox__label_type2">
@@ -321,7 +431,21 @@
                                             <input type="checkbox" id="check10-2" name="BUBBLE" value="Y"
                                               data-stepdata="pack_bubble" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Пузырчатая
-                                              пленка</span>
+                                              пленка <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Обеспечивает
+                                                      дополнительную защиту груза от царапин и
+                                                      потертостей. Расход и определение стоимости упаковки
+                                                      возможно только по фактически определяемым
+                                                      параметрам груза при его сдаче.
+                    
+                    
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-3" class="formcheckbox__label formcheckbox__label_type2">
@@ -329,21 +453,58 @@
                                             <input type="checkbox" id="check10-3" name="STRETCHFILM"
                                               data-stepdata="pack_stretch" data-steptype="source" value="Y">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Стретч
-                                              пленка</span>
+                                              пленка <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Обеспечивает
+                                                      дополнительную защиту груза от вмятин и сколов.
+                                                      Расход и определение стоимости упаковки возможно
+                                                      только по фактически определяемым параметрам груза
+                                                      при его сдаче.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-4" class="formcheckbox__label formcheckbox__label_type2">
                                           <span>
                                             <input type="checkbox" id="check10-4" name="CORRUGATEDBOARD" value="Y"
                                               data-stepdata="pack_gofro" data-steptype="source">
-                                            <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон</span>
+                                            <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Обеспечивает
+                                                    дополнительную защиту груза от царапин и
+                                                    потертостей. Расход и определение стоимости упаковки
+                                                    возможно только по фактически определяемым
+                                                    параметрам груза при его сдаче.
+                  
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-5" class="formcheckbox__label formcheckbox__label_type2">
                                           <span>
                                             <input type="checkbox" id="check10-5" name="BAG" value="Y"
                                               data-stepdata="pack_meshkotara" data-steptype="source">
-                                            <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара</span>
+                                            <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Используется для
+                                                    упаковки небольших, ценных грузов, партий мелких
+                                                    грузов. Расход и определение стоимости упаковки
+                                                    возможно только по фактически определяемым
+                                                    параметрам груза при его сдаче.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-8" class="formcheckbox__label formcheckbox__label_type2">
@@ -351,14 +512,42 @@
                                             <input type="checkbox" id="check10-8" name="InternalRecalculate"
                                               data-stepdata="pack_recalc" data-steptype="source" value="Y">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Пересчет
-                                              внутренних вложений</span>
+                                              внутренних вложений <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">Данная услуга
+                                                    подразумевает пересчет внутреннего содержимого грузовых
+                                                    мест представителем компании — водителем службы
+                                                    доставки, оператором склада или кладовщиком. Пересчет
+                                                    проводится в присутствии клиента (грузоотправителя или
+                                                    грузополучателя) для того, чтобы принять груз по
+                                                    количеству грузовых и внутритарных мест. После процедуры
+                                                    грузовые места опечатываются номерными пломбами. При
+                                                    заборе груза общее количество внутритарных мест не
+                                                    должно превышать 1600 штук. При заборе груза к
+                                                    внутритарному пересчету НЕ принимаются стеклянные и
+                                                    легкобьющиеся грузы.</span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-9" class="formcheckbox__label formcheckbox__label_type2">
                                           <span>
                                             <input type="checkbox" id="check10-9" name="MARKING" value="Y"
                                               data-stepdata="pack_mark" data-steptype="source" checked="">
-                                            <span class="formcheckbox__text" data-text="checkboxtext">Маркировка</span>
+                                            <span class="formcheckbox__text" data-text="checkboxtext">Маркировка <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Маркировка грузов, в
+                                                    соответствии с действующими стандартами компании,
+                                                    является обязательной услугой, важной с точки зрения
+                                                    идентификации и сохранности содержимого при
+                                                    перевозке сборного груза.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                           </span>
                                         </label>
                                       </div>
@@ -373,7 +562,17 @@
                                             <input type="checkbox" id="check11-1" name="SendingAccompanyingDocuments"
                                               value="Y" data-stepdata="dop_doc" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Перевозка
-                                              сопроводительных документов</span>
+                                              сопроводительных документов <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Упаковка комплекта
+                                                      сопроводительных документов в отдельный конверт и
+                                                      передача их получателю груза.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check11-2" data-entity="doc-checkbox"
@@ -382,7 +581,18 @@
                                             <input type="checkbox" id="check11-2" name="ReturnOfAccompanyingDocuments"
                                               value="Y" data-stepdata="dop_return" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Возврат
-                                              документов</span>
+                                              документов <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Возврат оригиналов
+                                                      документов с отметками получателя,
+                                                      подтверждающими
+                                                      выдачу груза.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                       </div>
@@ -414,7 +624,20 @@
                                           id="send_address" name="sendpointtab" value="Y"></label>
                                     </ul>
                                   </div>
+                                  
                                 </div>
+                                <span class="calcheader__help">
+                                  <span class="help-call">?</span>
+                                  <span class="help-tooltip">
+                                    <span class="help-tooltip__content">
+                                      <span class="help-tooltip__text"> Самостоятельно приехать на терминал
+                                        компании, либо заказать машину до адреса. Стоимость перевозки по городу
+                                        между терминалами по требованию грузополучателя составляет 50% от прайса
+                                        автоэкспедирования.
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
                               </div>
                             </div>
                             <div class="stepform__main stepform__main_type2">
@@ -695,6 +918,18 @@
                                     </ul>
                                   </div>
                                 </div>
+                                <span class="calcheader__help">
+                                  <span class="help-call">?</span>
+                                  <span class="help-tooltip">
+                                    <span class="help-tooltip__content">
+                                      <span class="help-tooltip__text">Самостоятельно приехать на терминал
+                                        компании, либо заказать машину до адреса. Стоимость перевозки по
+                                        городу между терминалами по требованию грузополучателя составляет
+                                        50% от прайса автоэкспедирования.
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
                               </div>
                             </div>
                             <div class="stepform__main stepform__main_type2">
@@ -992,7 +1227,7 @@
                                       <div class="inputlabel inputlabel_date inputlabel_dropdown w-full">
                                         <div class="inputdata__label">Дата отправки</div>
                                         <input class="lk-datepicker datepicker-send" value="28.01.2025" type="text"
-                                          data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"
+                                          data-stepdata="date_otpravki2" name="date_otpravki2" data-steptype="source"
                                           data-required="required" data-min="10" data-max="10"
                                           placeholder="Выбрать дату">
                                       </div>
@@ -1063,7 +1298,7 @@
                                             <input type="text" name="F_FIO" data-stepdata="send_fio"
                                               data-steptype="source" data-required="required" data-min="3"
                                               data-max="300" class='w-full'
-                                              onkeyup="this.setAttribute('value', this.value);" value=''>
+                                              onkeyup="this.setAttribute('value', this.value);" value='test'>
                                             <span class="floating-label">ФИО</span></span>
                                           </div>
                                         </div>
@@ -1123,14 +1358,14 @@
                                                 <input type="text" placeholder="" name="F_PASS_1" class="inputPassport1"
                                                   data-stepdata="send_pasp1" data-steptype="source"
                                                   data-required="required" data-min="4" data-max="4"
-                                                  onkeyup="this.setAttribute('value', this.value);" value=''>
+                                                  onkeyup="this.setAttribute('value', this.value);" value='2222'>
                                                 <span class="floating-label">Серия</span></span>
                                               </div>
                                               <div class="floating w-full">
                                                 <input type="text" placeholder="" name="F_PASS_2" class="inputPassport2"
                                                   data-stepdata="send_pasp2" data-steptype="source"
                                                   data-required="required" data-min="6" data-max="6"
-                                                  onkeyup="this.setAttribute('value', this.value);" value=''>
+                                                  onkeyup="this.setAttribute('value', this.value);" value='222222'>
                                                 <span class="floating-label">Номер документа</span></span>
                                               </div>
                                             </div>
@@ -1142,7 +1377,7 @@
                                         <div class="stepform__col ">
                                           <div class="floating">
                                             <input type="tel" name="F_PHONE[]" data-stepdata="send_tel"
-                                              data-steptype="source" value='' data-required="required"
+                                              data-steptype="source" value='7 (733) 333-33-33' data-required="required"
                                               data-min="18" data-max="18"
                                               onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Телефон</span></span>
@@ -1180,7 +1415,7 @@
                                           <input type="text" name="U_INN" data-stepdata="send_inn" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                             data-required="required" data-min="13" data-max="13" data-dadatatype="inn"
-                                            data-dadata="org">
+                                            data-dadata="org" data-dependset="S_DADATA">
                                           <span class="floating-label">ИНН</span></span>
                                         </div>
                                       </div>
@@ -1388,7 +1623,7 @@
                                             <input type="text" name="R_F_FIO" data-stepdata="receive_fio"
                                               data-steptype="source" data-required="required" data-min="3"
                                               data-max="300" class='w-full'
-                                              onkeyup="this.setAttribute('value', this.value);" value=''>
+                                              onkeyup="this.setAttribute('value', this.value);" value='tester'>
                                             <span class="floating-label">ФИО</span></span>
                                           </div>
                                         </div>
@@ -1530,7 +1765,7 @@
                                           <input type="text" name="R_U_INN" data-stepdata="receive_inn" value=''
                                             data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                             data-required="required" data-min="13" data-max="13" data-dadatatype="inn"
-                                            data-dadata="org">
+                                            data-dadata="org"  data-dependset="R_DADATA">
                                           <span class="floating-label">ИНН</span></span>
                                         </div>
                                       </div>
@@ -1881,7 +2116,7 @@
                             </div><!-- /.ordepageblock__row -->
                             <div class="ordepageblock__params">
                               <div class="ordepageblock__param" data-hasparam='tip_gruza'>
-                                <div class="ordepageblock__paramtitle">Тип груза:</div>
+                                <div class="ordepageblock__paramtitle">Тип груза: </div>
                                 <div class="ordepageblock__paramvalue">
                                   <span data-steptype="result" data-stepdata="tip_gruza">Автохимия</span>
                                 </div>
@@ -1901,30 +2136,30 @@
                                     <ul>
 
                                       <li data-hasparam='teplo'><span data-steptype="result"
-                                          data-stepdata="teplo">Теплый режим,</span></li>
+                                          data-stepdata="teplo">Теплый режим</span></li>
                                       <li data-hasparam='fragileCargo'><span data-steptype="result"
-                                          data-stepdata="fragileCargo">Хрупкий / жидкий груз,</span></li>
+                                          data-stepdata="fragileCargo">Хрупкий / жидкий груз</span></li>
                                       <!--                                       <li data-hasparam='liquidCargo'><span data-steptype="result" data-stepdata="liquidCargo"></span></li>
  -->
                                       <li data-hasparam='pack_nopack'><span data-steptype="result"
-                                          data-stepdata="pack_nopack">Паллетный борт,</span></li>
+                                          data-stepdata="pack_nopack">Паллетный борт</span></li>
                                       <li data-hasparam='pack_wooden'><span data-steptype="result"
-                                          data-stepdata="pack_wooden">Деревянная обрешетка,</span></li>
+                                          data-stepdata="pack_wooden">Деревянная обрешетка</span></li>
                                       <li data-hasparam='pack_bubble'><span data-steptype="result"
-                                          data-stepdata="pack_bubble">Пузырчатая пленка,</span></li>
+                                          data-stepdata="pack_bubble">Пузырчатая пленка</span></li>
                                       <li data-hasparam='pack_stretch'><span data-steptype="result"
-                                          data-stepdata="pack_stretch">Стретч пленка,</span></li>
+                                          data-stepdata="pack_stretch">Стретч пленка</span></li>
                                       <li data-hasparam='pack_gofro'><span data-steptype="result"
-                                          data-stepdata="pack_gofro">Гофрокартон,</span></li>
+                                          data-stepdata="pack_gofro">Гофрокартон</span></li>
                                       <li data-hasparam='pack_meshkotara'><span data-steptype="result"
-                                          data-stepdata="pack_meshkotara">Мешкотара,</span></li>
+                                          data-stepdata="pack_meshkotara">Мешкотара</span></li>
                                       <li data-hasparam='pack_recalc'><span data-steptype="result"
-                                          data-stepdata="pack_recalc">Пересчет внутренних вложений,</span></li>
+                                          data-stepdata="pack_recalc">Пересчет внутренних вложений</span></li>
                                       <li data-hasparam='pack_mark'><span data-steptype="result"
-                                          data-stepdata="pack_mark">Маркировка,</span></li>
+                                          data-stepdata="pack_mark">Маркировка</span></li>
 
                                       <li data-hasparam='dop_doc'><span data-steptype="result"
-                                          data-stepdata="dop_doc">Перевозка сопроводительных документов,</span></li>
+                                          data-stepdata="dop_doc">Перевозка сопроводительных документов</span></li>
                                       <li data-hasparam='dop_return'><span data-steptype="result"
                                           data-stepdata="dop_return">Возврат документов</span></li>
                                
@@ -2584,6 +2819,9 @@
                                       class="btn_main btn_large" data-entity="step-next">Оформить
                                       заявку<!--и-->
                                     </button></div>
+                                  <div class="orderitem__button"><a href="#" data-back="stepform" class="btn_main btn_large">
+                                   Назад
+                                  </a></div>
                                   <div class="orderitem__info">
                                     <span class="red">*</span> Указана ориентировочная стоимость
                                   </div>

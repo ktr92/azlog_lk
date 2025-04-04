@@ -2006,4 +2006,37 @@ display: block;
 
   color: #373737;
 }
+.calcobject__remove {
+  right: 12px;
+  top: 6px;
+  transform: none;
+}
+.orderpage__aside > .orderpage__asideblock.onlyDesktop {
+  display: block !important;
+}
+.ordertoolbar {
+  display: none;
+}
+.modal_status .modal-content{
+  padding: 18px 18px;
+  }
+  .calcheader__help_xl .help-tooltip{
+    width: 100%;
+    
+    }
+    span.calcheader__help {
+      position: initial;
+    }
+    .orderpage .stepform__header {
+      position: relative;
+    }
+    .help-tooltip {
+      left: 0;
+      right: 0;
+      bottom: unset;
+      top: 100%;
+    }
+    .help-call {
+      margin-left: 3px;
+    }
 }
