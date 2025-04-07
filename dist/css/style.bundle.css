@@ -1265,7 +1265,7 @@ textarea {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 20px;
-  line-height: 100%;
+  line-height: 120%;
   color: rgba(55, 55, 55, 0.6); }
 
 .check label {
@@ -4603,7 +4603,7 @@ input[type="password"] {
   font-size: 10px;
   line-height: 1;
   color: #373737;
-  opacity: 0.5;
+  /*     opacity: 0.5; */
   margin-bottom: 4px; }
 
 .checkblock_col {
@@ -5829,7 +5829,8 @@ span.calcheader__help {
   vertical-align: bottom; }
 
 .help-call {
-  line-height: 14px; }
+  line-height: 14px;
+  color: #000; }
 
 .checkblock__label {
   display: flex;

@@ -363,7 +363,7 @@ const appv2 = (function () {
       // set value
       $(`[data-value=${id}]`).text(val)
       $(`[data-inputvalue=${id}]`).val(val).trigger('change')
-
+      $(`[data-inputfor=${id}]`).val('')
       if ($(this).data("togglevalue2")) {
         let val2 = $(this).data("togglevalue2")
         $(`[data-value2=${id}]`).text(val2)
@@ -444,6 +444,15 @@ const appv2 = (function () {
       }
     })
 
+    $("[data-inputfor]").on("change", function (e) {
+      const id = $(this).attr("data-inputfor")
+      if ($(this).val() && $(this).val().length > 0) {
+        $(`[name=${id}]`).val($(this).val()).trigger('change')
+        $(`[data-toggleitem=${id}] [data-value]`).text($(this).val())
+      }
+   
+    })
+
     /**
      * обработчик смены кастомного чекбокса у опций в форме калькулятора (Тепловой режим и т.п.)
      */
@@ -457,6 +466,7 @@ const appv2 = (function () {
         label.closest(".borderblock ").removeClass("checkactive")
       }
     })
+   
 
     /**
      * при выборе упрощенной выдачи заказа по СМС убираем ненужные поля
