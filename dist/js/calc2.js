@@ -313,7 +313,7 @@ const appv2 = (function () {
         startDate: new Date(),
         minDate: new Date(),
         language: 'ru', //add this line
-        dateFormat: "dd MM yyyy",
+        dateFormat: "dd.mm.yyyy",
 
         onSelect: function (formattedDate, date, inst) {
             self.currentDate = date;
@@ -367,6 +367,10 @@ const appv2 = (function () {
       if ($(this).data("togglevalue2")) {
         let val2 = $(this).data("togglevalue2")
         $(`[data-value2=${id}]`).text(val2)
+      }
+      if ($(this).data("icon")) {
+        let icon = $(this).data("icon")
+        $(this).closest('[data-toggleitem]').find(`[data-toggleicon]`).attr('src', icon)
       }
     })
     /**
@@ -552,6 +556,13 @@ const appv2 = (function () {
      // $('.ordepageblock__paramvalue li.active').addClass('last')
       text = "Создать заказ"
     }
+    if (state.currentStep > 1) {
+      $('[data-back]').show()
+
+    } else {
+      $('[data-back]').hide()
+
+    }
     $button.text(text)
   }
 
@@ -578,7 +589,7 @@ const appv2 = (function () {
     if (state.currentStep > 1) {
       --state.currentStep
       changeStep()
-    }
+    } 
   }
 
   /**

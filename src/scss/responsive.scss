@@ -602,9 +602,9 @@
   }
 
   .stepform__main {
-    padding-left: 31px;
-    border-left: 2px solid $red;
-    margin-left: 16px;
+    padding-left: 0;
+    border-left: none;
+    margin-left: 0;
   }
 
   .stepform__content {
@@ -2038,5 +2038,32 @@ display: block;
     }
     .help-call {
       margin-left: 3px;
+    }
+    .stepform__tabs_type2 .calctabs-js label {
+      font-size: 12px;
+    }
+    .texterror {
+     bottom: -24px;
+    }
+    .inputlabel {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    input.cityInput {
+      padding-left: 28px;
+    }
+    .inputLocation svg {
+      left: 9px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+      padding-left: 12px;padding-right: 12px;
+    }
+    .modal .dateblock__menu.dropdownblock.dropdownblock_sm.active {
+      top: 0;
+      transform: translateY(-100%);
+    }
+    .modal .dropdownblock__links {
+      max-height: unset;
+      overflow: initial;
     }
 }

@@ -138,6 +138,8 @@ $(document).ready(function () {
       `)
 
     $('.removetel').on('click', function(e) {
+      $('.removetel').closest('.formblock__col').find('[data-click="newtel"]').show()
+
       $(e.target).closest('.floating').remove()
     })
  
@@ -153,9 +155,11 @@ $(document).ready(function () {
 
   $('[data-click="newtel"]').on("click", function (e) {
     $(this).hide()
-    $(this).siblings(".tel2").addClass("active")
+    $(this).siblings(".tel2").addClass("active").show()
     $('.removetel').on('click', function(e) {
-      $(e.target).closest('.tel2').remove()
+      $('.removetel').closest('.formblock__col').find('[data-click="newtel"]').show()
+
+      $(e.target).closest('.tel2').hide()
     })
   })
 
@@ -215,6 +219,7 @@ $(document).ready(function () {
   $('input[data-stepdata="receive_yurkpp"]').mask("99999999")
   $('input[data-stepdata="receive_yurinn"]').mask("999999999?999")
   $('input[data-stepdata="dop_floor"]').mask("9?9")
+  $('input[data-stepdata="dop_dost_floor"]').mask("9?9")
   /*   $('input[name="FLOOR"]').mask("9?9") */
   /*  $('input[name="TO_FLOOR"]').mask("9?9") */
 

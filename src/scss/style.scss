@@ -557,13 +557,16 @@ textarea {
 .formblock__input:last-child {
   margin-bottom: 0;
 }
-
+.inputlabel.inputlabel_date.inputlabel_dropdown.error {
+  border-color: red !important;
+}
 .check_rememb {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 500;
+  margin-bottom: 0;
   font-size: 16px;
-  line-height: 18px;
-
+  line-height: 24px;
+  color: #373737 !important;
   display: block;
 }
 .check_rememb:hover{
@@ -4968,10 +4971,10 @@ span.formcheckbox__text {
   .floating-label {
     left: 0;
   }
-  input:focus + .floating-label,
+ /*  input:focus + .floating-label,
   input:not([value=""]) + .floating-label {
     top: 0;
-  }
+  } */
 }
 .inputselect__wrapper {
   height: 100%;
@@ -5681,9 +5684,10 @@ span.formcheckbox__text {
   }
 }
 
-input.lk-datepicker.datepicker-send {
+input.lk-datepicker {
   height: unset;
   padding: 0;
+  font-size: 14px;
 }
 /* .orderpage {
   display: block
@@ -5966,6 +5970,9 @@ color: #373737;
 .inputlabel.inputlabel_dropdown.inputselect.inputlabel_md.active {
   border-color: #8235FF;
 }
+.inputselect__content.floating input:focus + .floating-label, .inputselect__content.floating input:not([value=""]) + .floating-label  {
+  top: -4px !important;
+}
 
 .modal_status .modal__title {
   margin:  26px 0 19px 0;
@@ -6013,11 +6020,13 @@ span.formcheckbox__text {
 }
 .help-tooltip__text a {
   color: #f23f34;
+  transition: none;
 }
 .calcheader__help_xl p {
-  font-size: 14px;
-  margin: 0 0 10px 0;
-  line-height: 1.2;
+  font-size: 13px;
+  margin: 0 0 2px 0;
+  line-height: 1;
+  color: #373737;
 }
 .calcheader__help_xl .help-tooltip{
 width: 600px;
@@ -6030,3 +6039,80 @@ width: 600px;
 .ordepageblock__paramvalue li.last:after {
   content: "";
 } */
+
+.ordepageblock__service .ordepageblock__paramvalue {
+  margin-left: 0;
+}
+
+span.calcprice-params_left > span > span {
+  background: none;
+  bottom: 0;
+  font-size: 12px;
+  color: rgba(55, 55, 55, 0.45);
+}
+span.calcprice-params_right {
+  padding: 0;
+  bottom: 0;
+  font-size: 12px;
+width: 30%;
+text-align: right;
+  
+}
+span.calcprice-params_left > span {
+ border: none;
+}
+span.calcprice-params_left {
+  width: 70%;
+  display: block;
+  padding: 0;
+}
+
+.calcheader__help_outside {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.stepform__block {
+  position: relative;
+}
+
+.checkblock label span:last-child::before {
+  width: 6px;
+  border-radius: 50%;
+  height: 6px;
+  background: none;
+  border: 1px solid #bebebe;
+  display: block;
+  transform: translateY(-50%) translateX(19px);
+  position: absolute;
+
+  top: 50%;
+  content: "";
+
+
+}
+.checkblock [type="checkbox"]:checked + label span:last-child::before {
+  border: none;
+  content: "";
+  left: 10px;
+  border-radius: 0;
+  background: #fff;
+  display: block;
+  transform: translateY(-50%) translateX(0);
+  width: 2px;
+  height: 12px;
+}
+
+.formblock input:focus {
+  background: #f5f5f5;
+}
+.inputlabel.inputlabel_date.inputlabel_dropdown.w-full label {
+  display: none;
+}
+.inputlabel.inputlabel_date.inputlabel_dropdown.w-full input {
+  text-transform: initial;
+}
+.stepform__row.stepform__row_col2.flex {
+  gap: 20px;
+}

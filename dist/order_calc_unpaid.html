@@ -1093,7 +1093,7 @@
                                                   </div>
                                                 </div>
                                                 <div class="checkblock__checkbox">
-                                                  <input checked="" type="checkbox" id="NO_LIFT" name="NO_LIFT"
+                                                  <input type="checkbox" id="NO_LIFT" name="NO_LIFT"
                                                     value="Y" data-stepdata="NO_LIFT" data-steptype="source">
                                                   <label for="NO_LIFT">
                                                     <span></span>
@@ -1146,7 +1146,7 @@
                             <div class="stepform__header flex items-center">
                               <div class="stepform__headercontent">
                                 <div class="stepform__icon">
-                                  <span class="active">04</span>
+                                  <span class="stepform__number avtive">04</span>
                                 </div>
                                 <div class="stepform__tabs stepform__title">
                                   <div class="calctabs calctabs-js" data-tabs='receive_terminal'>
@@ -2267,7 +2267,7 @@
                               <!-- /.orderitem__content -->
                               <div class="orderitem__buttons">
                                 <div class="orderitem__button"><button type='submit' data-submit='stepform'
-                                  class="btn_main btn_large">Оплатить заказ</button>
+                                  class="btn_main btn_large">Оплатить</button>
                               </div>
                              <!--    <div class="orderitem__button"><a href="" class="btn_blue btn_large">Сохранить
                                     черновик</a>
@@ -2285,7 +2285,7 @@
                             <!-- /.orderitem__wrapper -->
                           </div>
                         </div>
-                        <div class="orderpage__asideblock onlyDesktop" style="display: none;">
+                        <div class="orderpage__asideblock " >
                           <div class="ordertoolbar">
                             <div class="ordertoolbar__items flex">
                               <a href="#" class="ordertoolbar__item ordertb_update">
@@ -2343,7 +2343,7 @@
                               <!-- /.ordertoolbar__items -->
                             </div>
                           </div>
-                          <div class="orderpage__asideblock onlyDesktop popupstyle" data-aside='tracking'>
+                          <div class="orderpage__asideblock  popupstyle" data-aside='tracking'>
                             <div class="orderitem">
                               <div class="orderitem__wrapper orderitem__wrapper_wide">
                                 <div class="orderitem__header onlyDesktop">
@@ -2388,7 +2388,7 @@
                             </div>
                           </div>
                           <!-- /.orderpage__block -->
-                          <div class="orderpage__asideblock onlyDesktop popupstyle" data-aside='history'>
+                          <div class="orderpage__asideblock  popupstyle" data-aside='history'>
                             <div class="orderitem">
                               <div class="orderitem__wrapper orderitem__wrapper_wide">
                                 <div class="orderitem__header">
@@ -2455,15 +2455,15 @@
                               </div>
                             </div>
                           </div>
-                          <div class="orderpage__asideblock onlyDesktop">
+                          <div class="orderpage__asideblock ">
                             <div class="orderitem">
                               <div class="orderitem__wrapper orderitem__wrapper_wide">
                                 <div class="orderitem__header">
                                   <div class="orderitem__title">Документы</div>
                                   <div class="orderitem__toolbar flex items-center">
                                     <a href="#" class="icondefault downloadicon2"></a>
-                                    <a href="#" class='icondefault infoicon'></a>
-                                  </div>
+<!--                                     <a href="#" class='icondefault infoicon'></a>
+ -->                                  </div>
                                   <!-- /.orderitem__toolbar -->
                                 </div>
                                 <!-- /.orderitem__header -->
@@ -3045,7 +3045,7 @@
                               <label>Период с</label>
                               <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
                                 data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
-                                placeholder="Период с">
+                                placeholder="Период от">
                             </div>
                           </div>
                           <div class="stepform__col">
@@ -3714,7 +3714,7 @@
                             <label>Период с</label>
                             <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
                               data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
-                              placeholder="Период с">
+                              placeholder="">
                           </div>
                         </div>
                         <div class="stepform__col">
@@ -3722,7 +3722,7 @@
                             <label>Период до</label>
                             <input readonly="" class="lk-datepicker datepicker-act_to" value="" type="text"
                               data-stepdata="act_to" name="act_to" data-steptype="source" data-required="required"
-                              placeholder="Период до">
+                              placeholder="">
                           </div>
                         </div>
                       </div>
@@ -4314,7 +4314,7 @@
                             <label>Период с</label>
                             <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
                               data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
-                              placeholder="Период с">
+                              placeholder="">
                           </div>
                         </div>
                         <div class="stepform__col">
@@ -4322,7 +4322,7 @@
                             <label>Период до</label>
                             <input readonly="" class="lk-datepicker datepicker-act_to" value="" type="text"
                               data-stepdata="act_to" name="act_to" data-steptype="source" data-required="required"
-                              placeholder="Период до">
+                              placeholder="">
                           </div>
                         </div>
                       </div>
@@ -4737,6 +4737,44 @@
       }
 
     </script>
+
+<script
+src="https://api-maps.yandex.ru/2.1/?apikey=476f37bb-9e8a-40f0-a8db-cb7cebca3c25&lang=ru_RU"
+type="text/javascript"></script>
+<script>
+  const marks = [{'coords':['55.700081194264','37.858514204023']}];
+    ymaps.ready(function(){
+        var moscow_map = new ymaps.Map("ordermap", {
+            center: marks[0].coords,
+            zoom: 9
+        });
+
+       
+
+        marks.forEach(element => {
+
+            var myPlacemark = new ymaps.Placemark(element.coords, {
+                title: element.title,
+                city: element.city,
+                tel: element.tel,
+                address: element.address,
+                link: element.link,
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'images/mapmark.svg',
+                iconImageSize: [34, 58],
+                iconImageOffset: [-10, -20],
+                balloonPanelMaxMapArea: 0,
+                hideIconOnBalloonOpen: false,
+            });
+
+           
+            moscow_map.geoObjects.add(myPlacemark);
+
+        })
+    });
+
+</script>
     <footer id="footer">
   <div class="footermain w-full">
     <div class="container">

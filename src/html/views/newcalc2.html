@@ -124,8 +124,20 @@
                                     <div class="inputlabel inputlabel_date inputlabel_dropdown ">
                                       <label class="inputdata__label">Дата отправки</label><!-- /.placeholder -->
                                       <input data-required="required" readonly="" class="lk-datepicker datepicker-send"
-                                        value="22.02.2022" type="text" data-stepdata="date_otpravki"
+                                        value="" type="text" data-stepdata="date_otpravki"
                                         name="date_otpravki" data-steptype="source" placeholder="Выбрать дату">
+
+                                        <span class="calcheader__help calcheader__help_outside">
+                                          <span class="help-call">?</span>
+                                          <span class="help-tooltip">
+                                            <span class="help-tooltip__content">
+                                              <span class="help-tooltip__text"> Заявки на перевозки принимаются до 16:00 часов с датой выполнения на следующий день. В случае изменения параметров груза при заборе (в сторону уменьшения) стоимость перевозки рассчитывается как стоимость забора груза для диапазона, указанного в первоначальной заявке. Применяются повышающие коэффициенты, если нужно подать машину в нерабочее время или точно ко времени.
+
+                                              </span>
+                                            </span>
+                                          </span>
+                                        </span>
+  
                                     </div>
                                     <!-- /.inputlabel -->
                                   </div>
@@ -135,7 +147,7 @@
                                       data-toggleitem="sendtype">
                                       <div class="inputselect__wrapper" data-toggleclick="sendtype">
                                         <div class="inputselect__icon">
-                                          <img src="img/conteiner.svg" alt="">
+                                          <img src="img/conteiner.svg" alt="" data-toggleicon="">
                                         </div>
                                         <div class="inputselect__content">
                                           <div class="inputselect__title" data-value="sendtype">Контейнеры</div>
@@ -152,13 +164,15 @@
                                             <menu>
 
                                               <li><a href="#" data-togglevalue="Стандарт"
-                                                  data-togglevalue2="2-3 дня">Стандарт</a></li>
+                                                  data-togglevalue2="2-3 дня" data-icon="img/auto.svg">Стандарт</a></li>
                                               <li><a href="#" data-togglevalue="Авиа"
-                                                  data-togglevalue2="2-3 дня">Авиа</a></li>
+                                                  data-togglevalue2="2-3 дня" data-icon="img/airport.svg">Авиа</a></li>
                                               <li><a href="#" data-togglevalue="Контейнеры"
-                                                  data-togglevalue2="10-14 дней">Контейнеры</a></li>
+                                                  data-togglevalue2="10-14 дней" data-icon="img/conteiner.svg">Контейнеры</a></li>
                                               <li><a href="#" data-togglevalue="Льготный"
-                                                  data-togglevalue2="2-3 дня">Льготный </a></li>
+                                                  data-togglevalue2="2-3 дня" data-icon="img/Ruble.svg">Льготный </a></li>
+                                              <li><a href="#" data-togglevalue="Паром"
+                                                  data-togglevalue2="2-3 дня" data-icon="img/cargo.svg">Паром </a></li>
                                             </menu>
                                           </div>
                                         </div>
@@ -296,13 +310,33 @@
                                     <div class="stepform__block">
                                       <input name='userPrice' type="text" placeholder='Обьявленная стоимость, руб.'
                                         data-number-format="" data-steptype="source" data-stepdata="cost">
+                                        <span class="calcheader__help calcheader__help_outside">
+                                          <span class="help-call">?</span>
+                                          <span class="help-tooltip">
+                                            <span class="help-tooltip__content">
+                                              <span class="help-tooltip__text">Документально подтвержденная стоимость груза.
+
+                                              </span>
+                                            </span>
+                                          </span>
+                                        </span>
                                     </div>
 
                                     <div class="stepform__block" data-wrapper='CARGO_TYPE'>
 
                                       <input name="CARGO_TYPE" type="text" placeholder='Тип груза'
                                         data-stepdata="tip_gruza" data-steptype="source">
-
+                                        <span class="calcheader__help calcheader__help_outside">
+                                          <span class="help-call">?</span>
+                                          <span class="help-tooltip">
+                                            <span class="help-tooltip__content">
+                                              <span class="help-tooltip__text">Некоторые типы грузов мы не
+                                                принимаем к перевозке, подробней в разделе <a href="/gruzy-ne-prinimaemye-k-perevozke/" target="_blank">“Грузы, не принимаемые к
+                                                  перевозке”</a>
+                                              </span>
+                                            </span>
+                                          </span>
+                                        </span>
                                       <div class="inputhints">
                                         <span>Например:</span>
                                         <a href="#">Запчасти</a>,
@@ -324,7 +358,8 @@
                                               <img src="img/warnicon.svg" alt="" class='afteractive'>
                                             </div>
                                             <div class="checkblock__text">
-                                              <div class="checkblock__label">Хрупкий / жидкий груз <span
+                                              <div class="checkblock__label">Хрупкий / жидкий груз 
+                                                <span
                                                   class="calcheader__help">
                                                   <span class="help-call">?</span>
                                                   <span class="help-tooltip">
@@ -334,6 +369,7 @@
                                                         процессе перевозки мы вправе самостоятельно
                                                         доупаковать груз, а плательщик обязан оплатить
                                                         стоимость доп. упаковки.
+                                                        
                                                       </span>
                                                     </span>
                                                   </span>
@@ -737,8 +773,12 @@
                                     <!-- /.inputlabel -->
                                   </div>
                                   <div class="stepform__col">
+
                                     <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_w184"
                                       data-toggleitem='select-time-day1'>
+
+                                     
+
                                       <div class="inputselect__wrapper" data-toggleclick="select-time-day1">
                                         <div class="inputselect__content">
                                           <div class="inputselect__label">Выберите время</div>
@@ -1253,11 +1293,11 @@
                                     <span class='stepform__number '>01</span>
                                   </div>
                                   <div class="stepform__title">Доставка Москва - Оренбург</div>
-                                  <div class="stepform__edit">
+                                  <!-- <div class="stepform__edit">
                                     <a href="#" data-back="stepform">
                                       <img src="img/stepform__edit.svg" alt="">
                                     </a>
-                                  </div><!-- /.stepform__edit -->
+                                  </div> -->
                                 </div>
                               </div>
                               <div class="stepform__main stepform__main_type2">
@@ -1270,6 +1310,8 @@
                                           data-stepdata="date_otpravki2" name="date_otpravki2" data-steptype="source"
                                           data-required="required" data-min="10" data-max="10"
                                           placeholder="Выбрать дату">
+
+                                         
                                       </div>
                                     </div>
                                     <div class="stepform__col">
@@ -2132,11 +2174,11 @@
                                   class="fromto__title" data-stepdata="f_dostavki" data-steptype="result">г
                                   Санкт-Петербург</span></div>
                               <div class="ordepageblock__button">
-                                <div class="stepform__edit">
+                               <!--  <div class="stepform__edit">
                                   <a href="#" data-back="stepform">
                                     <img src="img/stepform__edit.svg" alt="">
                                   </a>
-                                </div>
+                                </div> -->
                               </div><!-- /.ordepageblock__button -->
                             </div><!-- /.ordepageblock__header -->
                             <div class="ordepageblock__subheader">
@@ -2634,17 +2676,17 @@
                                         <div class="resultblock__subtitle">Доп услуги</div>
                                         <ul class="resultblock__params" data-entity="more-service">
 
-                                          <li id="crate-wrapper" hidden class="resultblock__param">
+                                          <li id="crate-wrapper"  class="resultblock__param">
                                             <span class="calcprice-params_left resultblock__dt">
                                               <span><span>Деревянная обрешетка</span></span>
                                             </span>
-                                            <span class="calcprice-params_right resultblock__dd" id="crate-price">-</span>
+                                            <span class="calcprice-params_right resultblock__dd" id="crate-price">19 364 Р </span>
                                           </li>
-                                          <li id="palet-wrapper" hidden>
+                                          <li id="palet-wrapper" >
                                             <span class="calcprice-params_left">
                                               <span><span>Паллетный борт</span></span>
                                             </span>
-                                            <span class="calcprice-params_right" id="palet-price">-</span>
+                                            <span class="calcprice-params_right" id="palet-price">322.95 Р </span>
                                           </li>
                                         </ul>
                                         
@@ -2861,7 +2903,7 @@
                                     заявку<!--и-->
                                   </button></div>
                                 <div class="orderitem__button"><a href="#" data-back="stepform"
-                                    class="btn_main btn_large">
+                                    class="btn_main btn_large" style="display: none;">
                                     Назад
                                   </a></div>
                                 <div class="orderitem__info">
@@ -3426,7 +3468,7 @@
                               <label>Период с</label>
                               <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
                                 data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
-                                placeholder="Период с">
+                                placeholder="Период от">
                             </div>
                           </div>
                           <div class="stepform__col">
@@ -4032,7 +4074,7 @@
                             <label>Период с</label>
                             <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
                               data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
-                              placeholder="Период с">
+                              placeholder="">
                           </div>
                         </div>
                         <div class="stepform__col">
@@ -4040,7 +4082,7 @@
                             <label>Период до</label>
                             <input readonly="" class="lk-datepicker datepicker-act_to" value="" type="text"
                               data-stepdata="act_to" name="act_to" data-steptype="source" data-required="required"
-                              placeholder="Период до">
+                              placeholder="">
                           </div>
                         </div>
                       </div>
@@ -4637,7 +4679,7 @@
                             <label>Период с</label>
                             <input readonly="" class="lk-datepicker datepicker-act_from" value="" type="text"
                               data-stepdata="act_from" name="act_from" data-steptype="source" data-required="required"
-                              placeholder="Период с">
+                              placeholder="">
                           </div>
                         </div>
                         <div class="stepform__col">
@@ -4645,7 +4687,7 @@
                             <label>Период до</label>
                             <input readonly="" class="lk-datepicker datepicker-act_to" value="" type="text"
                               data-stepdata="act_to" name="act_to" data-steptype="source" data-required="required"
-                              placeholder="Период до">
+                              placeholder="">
                           </div>
                         </div>
                       </div>
