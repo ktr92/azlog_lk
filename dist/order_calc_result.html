@@ -1461,8 +1461,9 @@
                                       <div class="stepform__col w-full">
                                         <div class="floating">
                                           <input type="text" name="F_FIO" data-stepdata="send_fio"
-                                            data-steptype="source" data-required="required" data-min="3" data-max="300"
-                                            class='w-full' onkeyup="this.setAttribute('value', this.value);" value=''>
+                                            data-steptype="source" data-required="required" data-min="3"
+                                            data-max="300" class='w-full'
+                                            onkeyup="this.setAttribute('value', this.value);" value='test'>
                                           <span class="floating-label">ФИО</span></span>
                                         </div>
                                       </div>
@@ -1489,7 +1490,7 @@
                                             <div class="dropdownblock__wrapper">
                                               <div class="dropdownblock__links">
                                                 <menu>
-                                                  <li><a href="#" data-togglevalue='>Паспорт РФ'>Паспорт РФ</a></li>
+                                                  <li><a href="#" data-togglevalue='Паспорт РФ'>Паспорт РФ</a></li>
                                                   <li><a href="#"
                                                       data-togglevalue='Водительское удостоверение'>Водительское
                                                       удостоверение</a>
@@ -1503,7 +1504,8 @@
                                                   </li>
                                                   <li><a href="#" data-togglevalue='Паспорт моряка'>Паспорт моряка</a>
                                                   </li>
-                                                  <li><a href="#" data-togglevalue='Загран. паспорт'>Загран. паспорт</a>
+                                                  <li><a href="#" data-togglevalue='Загран. паспорт'>Загран.
+                                                      паспорт</a>
                                                   </li>
                                                   <li><a href="#" data-togglevalue='Военный билет'>Военный билет</a>
                                                   </li>
@@ -1521,14 +1523,14 @@
                                               <input type="text" placeholder="" name="F_PASS_1" class="inputPassport1"
                                                 data-stepdata="send_pasp1" data-steptype="source"
                                                 data-required="required" data-min="4" data-max="4"
-                                                onkeyup="this.setAttribute('value', this.value);" value=''>
+                                                onkeyup="this.setAttribute('value', this.value);" value='2222'>
                                               <span class="floating-label">Серия</span></span>
                                             </div>
                                             <div class="floating w-full">
                                               <input type="text" placeholder="" name="F_PASS_2" class="inputPassport2"
                                                 data-stepdata="send_pasp2" data-steptype="source"
                                                 data-required="required" data-min="6" data-max="6"
-                                                onkeyup="this.setAttribute('value', this.value);" value=''>
+                                                onkeyup="this.setAttribute('value', this.value);" value='222222'>
                                               <span class="floating-label">Номер документа</span></span>
                                             </div>
                                           </div>
@@ -1540,8 +1542,9 @@
                                       <div class="stepform__col ">
                                         <div class="floating">
                                           <input type="tel" name="F_PHONE[]" data-stepdata="send_tel"
-                                            data-steptype="source" value='' data-required="required" data-min="18"
-                                            data-max="18" onkeyup="this.setAttribute('value', this.value);">
+                                            data-steptype="source" value='7 (733) 333-33-33' data-required="required"
+                                            data-min="18" data-max="18"
+                                            onkeyup="this.setAttribute('value', this.value);">
                                           <span class="floating-label">Телефон</span></span>
                                         </div>
                                         <div class="newtel"></div>
@@ -1556,8 +1559,9 @@
                                       <div class="stepform__col">
                                         <div class="calcform__multipleInput">
                                           <div class="floating">
-                                            <input type="text" name="F_EMAIL" data-stepdata="send_fio" value=''
-                                              data-steptype="source" onkeyup="this.setAttribute('value', this.value);">
+                                            <input type="email" name="F_EMAIL" data-stepdata="send_email" value=''
+                                              data-steptype="source"
+                                              onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Email <span
                                                 class='gray'>(необязательно)</span></span>
                                           </div>
@@ -1570,13 +1574,13 @@
                               <div class='' data-tabscontent='sender' data-datatawrapper='sender'>
                                 <div class="calcform__content">
 
-                                  <div class="stepform__row stepform__row3 w-full flex ">
-                                    <div class="stepform__col">
+                                  <div class="stepform__row stepform__row3 flex">
+                                    <div class="stepform__col ">
                                       <div class="floating">
                                         <input type="text" name="U_INN" data-stepdata="send_inn" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                           data-required="required" data-min="13" data-max="13" data-dadatatype="inn"
-                                          data-dadata="org">
+                                          data-dadata="org" data-dependset="S_DADATA">
                                         <span class="floating-label">ИНН</span></span>
                                       </div>
                                     </div>
@@ -1587,7 +1591,7 @@
                                         <div class="inputselect__wrapper" data-toggleclick="U_FORM">
                                           <div class="inputselect__content floating">
                                             <input type="hidden" value='' data-inputvalue='U_FORM' name='U_FORM'
-                                              data-dadata='short'>
+                                              data-dadata='short' data-steptype="source" data-stepdata="send_yurform">
 
                                             <div class="floating-label">
                                               Правовая форма
@@ -1603,7 +1607,7 @@
                                           <div class="dropdownblock__wrapper">
                                             <div class="dropdownblock__links">
                                               <menu>
-                                                <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
+                                                <li><a href="#" data-togglevalue='ООО'>ООО</a></li>
                                                 <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
                                                 <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
                                                 <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
@@ -1625,7 +1629,7 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="stepform__row  flex w-full">
+                                  <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
                                         <input type="text" name="U_COMPANY" data-stepdata="send_yurname" value=''
@@ -1659,9 +1663,9 @@
                                     </div>
                                     <div class="stepform__col w-full ">
                                       <div class="floating">
-                                        <input type="text" name="U_EMAIL" data-stepdata="send_email" value=''
+                                        <input type="text" name="U_EMAIL" data-stepdata="send_yuremail" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-required="required" data-min="3" data-max="300">
+                                          data-min="3" data-max="300">
                                         <span class="floating-label">Email</span></span>
                                       </div>
                                     </div>
@@ -1677,11 +1681,21 @@
                               </div>
                               <div class='' data-tabscontent='sender'>
                                 <div class="calcform__content">
-                                  <div class="stepform__row  flex w-full">
+                                  <div class="stepform__row  flex ">
 
                                     <div class="stepform__col w-full">
                                       <div class="floating">
-                                        <input type="text" name="IP_INN" data-stepdata="send_innip" value=''
+                                        <input type="text" value="" name="U_COMPANY" placeholder=""
+                                          data-stepdata="send_yurname" data-steptype="source" data-required="required"
+                                          data-min="2" data-max="300"
+                                          onkeyup="this.setAttribute('value', this.value);">
+
+                                        <span class="floating-label">Название компании</span></span>
+                                      </div>
+                                    </div>
+                                    <div class="stepform__col w-full">
+                                      <div class="floating">
+                                        <input type="text" name="IP_INN" data-stepdata="send_yurname" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                           data-required="required" data-min="13" data-max="13">
                                         <span class="floating-label">ИНН</span></span>
@@ -1710,7 +1724,7 @@
                                       <div class="floating">
                                         <input type="text" name="IP_EMAIL" data-stepdata="send_emailip" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-required="required" data-min="3" data-max="300">
+                                          data-min="3" data-max="300">
                                         <span class="floating-label">Email <span
                                             class='gray'>необязательно</span></span></span>
                                       </div>
@@ -1775,8 +1789,9 @@
                                       <div class="stepform__col ">
                                         <div class="floating">
                                           <input type="text" name="R_F_FIO" data-stepdata="receive_fio"
-                                            data-steptype="source" data-required="required" data-min="3" data-max="300"
-                                            class='w-full' onkeyup="this.setAttribute('value', this.value);" value=''>
+                                            data-steptype="source" data-required="required" data-min="3"
+                                            data-max="300" class='w-full'
+                                            onkeyup="this.setAttribute('value', this.value);" value='tester'>
                                           <span class="floating-label">ФИО</span></span>
                                         </div>
                                       </div>
@@ -1789,7 +1804,8 @@
                                               </div>
                                               <div class="checkblock__text">
                                                 <div class="checkblock__label">Упрощенная выдача по смс</div>
-                                                <div class="checkblock__value" data-dependon="R_SIMPLIFY">Отключен</div>
+                                                <div class="checkblock__value" data-dependon="R_SIMPLIFY">Отключен
+                                                </div>
                                               </div>
                                             </div>
                                             <div class="checkblock__checkbox">
@@ -1825,7 +1841,7 @@
                                             <div class="dropdownblock__wrapper">
                                               <div class="dropdownblock__links">
                                                 <menu>
-                                                  <li><a href="#" data-togglevalue='>Паспорт РФ'>Паспорт РФ</a></li>
+                                                  <li><a href="#" data-togglevalue='Паспорт РФ'>Паспорт РФ</a></li>
                                                   <li><a href="#"
                                                       data-togglevalue='Водительское удостоверение'>Водительское
                                                       удостоверение</a>
@@ -1839,7 +1855,8 @@
                                                   </li>
                                                   <li><a href="#" data-togglevalue='Паспорт моряка'>Паспорт моряка</a>
                                                   </li>
-                                                  <li><a href="#" data-togglevalue='Загран. паспорт'>Загран. паспорт</a>
+                                                  <li><a href="#" data-togglevalue='Загран. паспорт'>Загран.
+                                                      паспорт</a>
                                                   </li>
                                                   <li><a href="#" data-togglevalue='Военный билет'>Военный билет</a>
                                                   </li>
@@ -1854,19 +1871,19 @@
                                         <div class="calcform__multipleInput" data-select="input_doc">
                                           <div class="inputDoc calcform__multipleInput w-full" data-select="passport">
                                             <div class="floating">
-                                              <input type="text" placeholder="" name="R_F_PASS_1" class="inputPassport1"
-                                                data-stepdata="receive_pasp1" data-steptype="source"
-                                                data-required="required" data-min="4" data-max="4"
-                                                onkeyup="this.setAttribute('value', this.value);" value=''
-                                                data-depend='R_SIMPLIFY'>
+                                              <input type="text" placeholder="" name="R_F_PASS_1"
+                                                class="inputPassport1" data-stepdata="receive_pasp1"
+                                                data-steptype="source" data-required="required" data-min="4"
+                                                data-max="4" onkeyup="this.setAttribute('value', this.value);"
+                                                value='3333' data-depend='R_SIMPLIFY'>
                                               <span class="floating-label">Серия</span></span>
                                             </div>
-                                            <div class="floating w-full">
-                                              <input type="text" placeholder="" name="R_F_PASS_2" class="inputPassport2"
-                                                data-stepdata="receive_pasp2" data-steptype="source"
-                                                data-required="required" data-min="6" data-max="6"
-                                                onkeyup="this.setAttribute('value', this.value);" value=''
-                                                data-depend='R_SIMPLIFY'>
+                                            <div class="floating ">
+                                              <input type="text" placeholder="" name="R_F_PASS_2"
+                                                class="inputPassport2" data-stepdata="receive_pasp2"
+                                                data-steptype="source" data-required="required" data-min="6"
+                                                data-max="6" onkeyup="this.setAttribute('value', this.value);"
+                                                value='333333' data-depend='R_SIMPLIFY'>
                                               <span class="floating-label">Номер документа</span></span>
                                             </div>
                                           </div>
@@ -1878,8 +1895,9 @@
                                       <div class="stepform__col ">
                                         <div class="floating">
                                           <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel"
-                                            data-steptype="source" value='' data-required="required" data-min="18"
-                                            data-max="18" onkeyup="this.setAttribute('value', this.value);">
+                                            data-steptype="source" value='7 (333) 333-33-33' data-required="required"
+                                            data-min="18" data-max="18"
+                                            onkeyup="this.setAttribute('value', this.value);">
                                           <span class="floating-label">Телефон</span></span>
                                         </div>
                                         <div class="newtel"></div>
@@ -1894,8 +1912,9 @@
                                       <div class="stepform__col">
                                         <div class="calcform__multipleInput">
                                           <div class="floating">
-                                            <input type="text" name="R_F_EMAIL" data-stepdata="receive_fio" value=''
-                                              data-steptype="source" onkeyup="this.setAttribute('value', this.value);">
+                                            <input type="email" name="R_F_EMAIL" data-stepdata="receive_fio" value=''
+                                              data-steptype="source"
+                                              onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Email <span
                                                 class='gray'>(необязательно)</span></span>
                                           </div>
@@ -1908,13 +1927,13 @@
                               <div class='' data-tabscontent='receiver' data-datatawrapper='receiver'>
                                 <div class="calcform__content">
 
-                                  <div class="stepform__row stepform__row3 w-full flex ">
+                                  <div class="stepform__row stepform__row3  flex ">
                                     <div class="stepform__col">
                                       <div class="floating">
                                         <input type="text" name="R_U_INN" data-stepdata="receive_inn" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                           data-required="required" data-min="13" data-max="13" data-dadatatype="inn"
-                                          data-dadata="org">
+                                          data-dadata="org" data-dependset="R_DADATA">
                                         <span class="floating-label">ИНН</span></span>
                                       </div>
                                     </div>
@@ -1963,7 +1982,7 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="stepform__row  flex w-full">
+                                  <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
                                         <input type="text" name="R_U_COMPANY" data-stepdata="receive_yurname" value=''
@@ -1999,7 +2018,7 @@
                                       <div class="floating">
                                         <input type="text" name="R_U_EMAIL" data-stepdata="receive_email" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-required="required" data-min="3" data-max="300">
+                                          data-min="3" data-max="300">
                                         <span class="floating-label">Email</span></span>
                                       </div>
                                     </div>
@@ -2015,8 +2034,18 @@
                               </div>
                               <div class='' data-tabscontent='receiver'>
                                 <div class="calcform__content">
-                                  <div class="stepform__row  flex w-full">
+                                  <div class="stepform__row  flex">
 
+                                    <div class="stepform__col w-full">
+                                      <div class="floating">
+                                        <input type="text" value="" name="R_U_COMPANY" placeholder=""
+                                          data-stepdata="receive_innip" data-steptype="source"
+                                          data-required="required" data-min="2" data-max="300"
+                                          onkeyup="this.setAttribute('value', this.value);">
+
+                                        <span class="floating-label">Название компании</span></span>
+                                      </div>
+                                    </div>
                                     <div class="stepform__col w-full">
                                       <div class="floating">
                                         <input type="text" name="R_IP_INN" data-stepdata="receive_innip" value=''
@@ -2038,9 +2067,10 @@
                                   <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
-                                        <input type="tel" name="R_IP_PHONE[]" data-stepdata="receive_yurtelip" value=''
-                                          data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-required="required" data-min="18" data-max="18">
+                                        <input type="tel" name="R_IP_PHONE[]" data-stepdata="receive_yurtelip"
+                                          value='' data-steptype="source"
+                                          onkeyup="this.setAttribute('value', this.value);" data-required="required"
+                                          data-min="18" data-max="18">
                                         <span class="floating-label">Телефон</span></span>
                                       </div>
                                     </div>
@@ -2048,7 +2078,7 @@
                                       <div class="floating">
                                         <input type="text" name="R_IP_EMAIL" data-stepdata="receive_emailip" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-required="required" data-min="3" data-max="300">
+                                          data-min="3" data-max="300">
                                         <span class="floating-label">Email <span
                                             class='gray'>необязательно</span></span></span>
                                       </div>

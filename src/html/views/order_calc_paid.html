@@ -33,7 +33,7 @@
                     </a><!-- /.mobilenav__link -->
                   </div>
                   <div class="mobilenav__item">
-                    <a href="#popup_edit2" data-toggle="modal" data-actionid="tabproblem" class="mobilenav__link">
+                    <a href="#popup_edit2" data-toggle="modal" class="mobilenav__link">
                       <div class="mobilenav__icon">
                         <img src="img/icnSupport.svg" alt="">
                       </div>
@@ -83,7 +83,7 @@
                       <a href="#" class="ordertoolbar__item ordertb_update">
                         <span>Повторить</span>
                       </a>
-                      <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_docs" data-actionid="tabdocs">
+                      <a href="#docsblock" class="ordertoolbar__item ordertb_docs" data-actionid="tabdocs">
                         <span>Документы</span>
                       </a>
                       <a href="#" class="ordertoolbar__item ordertb_pause">
@@ -199,7 +199,7 @@
                     </div>
                   </div>
 
-                  <div class="orderpage__asideblock notasideblock onlyMobile">
+                  <div class="orderpage__asideblock notasideblock onlyMobile" id="docsblock">
                     <div class="orderitem">
                       <div class="orderitem__wrapper orderitem__wrapper_wide">
                         <div class="orderitem__header">
@@ -227,9 +227,9 @@
                           <a href="#" class="btn btn_border ">
                             <span class='downloadicon2'>Скачать</span>
                           </a>
-                          <a href="#" class="btn btn_border ">
+                         <!--  <a href="#" class="btn btn_border ">
                             <span class='infoicon'>Подробнее</span>
-                          </a>
+                          </a> -->
                         </div>
                         <!-- /.orderitem__toolbar -->
                       </div>
@@ -310,34 +310,40 @@
                                   <!-- /.stepform__col -->
                                   <div class="stepform__col  ">
                                     <div class="inputlabel inputlabel_date inputlabel_dropdown inputselect"
-                                      data-toggleitem='sendtype'>
-                                      <div class="inputselect__wrapper" data-toggleclick="sendtype">
-                                        <div class="inputselect__icon">
-                                          <img src="img/conteiner.svg" alt="">
-                                        </div>
-                                        <div class="inputselect__content">
-                                          <div class="inputselect__title" data-value='sendtype'>Контейнеры</div>
-                                          <div class="inputselect__info" data-value2="sendtype">10-14 дней</div>
-                                          <input type="hidden" value='Контейнеры' data-inputvalue='sendtype'>
-                                        </div>
-                                        <!-- /.inputselect__content -->
+                                    data-toggleitem="sendtype">
+                                    <div class="inputselect__wrapper" data-toggleclick="sendtype">
+                                      <div class="inputselect__icon">
+                                        <img src="img/conteiner.svg" alt="" data-toggleicon="">
                                       </div>
-                                      <!-- /.inputselect__wrapper -->
-                                      <div class="dateblock__menu dropdownblock dropdownblock_sm"
-                                        data-toggle="sendtype">
-                                        <div class="dropdownblock__wrapper">
-                                          <div class="dropdownblock__links">
-                                            <menu>
-                                              <li><a href="#" data-togglevalue='Контейнеры'
-                                                  data-togglevalue2="10-14 дней">Контейнеры</a></li>
-                                              <li><a href="#" data-togglevalue='Коробки'
-                                                  data-togglevalue2="2-3 дня">Коробки</a></li>
-                                            </menu>
-                                          </div>
+                                      <div class="inputselect__content">
+                                        <div class="inputselect__title" data-value="sendtype">Контейнеры</div>
+                                        <div class="inputselect__info" data-value2="sendtype">10-14 дней</div>
+                                        <input type="hidden" value="Контейнеры" data-inputvalue="sendtype">
+                                      </div>
+                                      <!-- /.inputselect__content -->
+                                    </div>
+                                    <!-- /.inputselect__wrapper -->
+                                    <div class="dateblock__menu dropdownblock dropdownblock_sm"
+                                      data-toggle="sendtype">
+                                      <div class="dropdownblock__wrapper">
+                                        <div class="dropdownblock__links">
+                                          <menu>
+
+                                            <li><a href="#" data-togglevalue="Стандарт"
+                                                data-togglevalue2="2-3 дня" data-icon="img/auto.svg">Стандарт</a></li>
+                                            <li><a href="#" data-togglevalue="Авиа"
+                                                data-togglevalue2="2-3 дня" data-icon="img/airport.svg">Авиа</a></li>
+                                            <li><a href="#" data-togglevalue="Контейнеры"
+                                                data-togglevalue2="10-14 дней" data-icon="img/conteiner.svg">Контейнеры</a></li>
+                                            <li><a href="#" data-togglevalue="Льготный"
+                                                data-togglevalue2="2-3 дня" data-icon="img/Ruble.svg">Льготный </a></li>
+                                            <li><a href="#" data-togglevalue="Паром"
+                                                data-togglevalue2="2-3 дня" data-icon="img/cargo.svg">Паром </a></li>
+                                          </menu>
                                         </div>
                                       </div>
                                     </div>
-                                    <!-- /.inputlabel -->
+                                  </div>
                                   </div>
                                   <!-- /.stepform__col -->
                                   <div class="stepform__col  w_full">
@@ -1267,7 +1273,7 @@
                                       <div class="stepform__col">
                                         <div class="calcform__multipleInput">
                                           <div class="floating">
-                                            <input type="text" name="F_EMAIL" data-stepdata="send_fio" value=''
+                                            <input type="email" name="F_EMAIL" data-stepdata="send_fio" value=''
                                               data-steptype="source" onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Email <span
                                                 class='gray'>(необязательно)</span></span>
@@ -1388,11 +1394,21 @@
                               </div>
                               <div class='' data-tabscontent='sender'>
                                 <div class="calcform__content">
-                                  <div class="stepform__row  flex w-full">
+                                  <div class="stepform__row  flex ">
 
                                     <div class="stepform__col w-full">
                                       <div class="floating">
-                                        <input type="text" name="IP_INN" data-stepdata="send_innip" value=''
+                                        <input type="text" value="" name="U_COMPANY" placeholder=""
+                                          data-stepdata="send_yurname" data-steptype="source" data-required="required"
+                                          data-min="2" data-max="300"
+                                          onkeyup="this.setAttribute('value', this.value);">
+
+                                        <span class="floating-label">Название компании</span></span>
+                                      </div>
+                                    </div>
+                                    <div class="stepform__col w-full">
+                                      <div class="floating">
+                                        <input type="text" name="IP_INN" data-stepdata="send_yurname" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                           data-required="required" data-min="13" data-max="13">
                                         <span class="floating-label">ИНН</span></span>
@@ -1605,7 +1621,7 @@
                                       <div class="stepform__col">
                                         <div class="calcform__multipleInput">
                                           <div class="floating">
-                                            <input type="text" name="R_F_EMAIL" data-stepdata="receive_fio" value=''
+                                            <input type="email" name="R_F_EMAIL" data-stepdata="receive_fio" value=''
                                               data-steptype="source" onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Email <span
                                                 class='gray'>(необязательно)</span></span>
@@ -1726,8 +1742,18 @@
                               </div>
                               <div class='' data-tabscontent='receiver'>
                                 <div class="calcform__content">
-                                  <div class="stepform__row  flex w-full">
+                                  <div class="stepform__row  flex">
 
+                                    <div class="stepform__col w-full">
+                                      <div class="floating">
+                                        <input type="text" value="" name="R_U_COMPANY" placeholder=""
+                                          data-stepdata="receive_innip" data-steptype="source"
+                                          data-required="required" data-min="2" data-max="300"
+                                          onkeyup="this.setAttribute('value', this.value);">
+
+                                        <span class="floating-label">Название компании</span></span>
+                                      </div>
+                                    </div>
                                     <div class="stepform__col w-full">
                                       <div class="floating">
                                         <input type="text" name="R_IP_INN" data-stepdata="receive_innip" value=''
@@ -2173,8 +2199,8 @@
                                   <div class="orderitem__title">Документы</div>
                                   <div class="orderitem__toolbar flex items-center">
                                     <a href="#" class="icondefault downloadicon2"></a>
-                                    <a href="#" class='icondefault infoicon'></a>
-                                  </div>
+<!--                                     <a href="#" class='icondefault infoicon'></a>
+ -->                                  </div>
                                   <!-- /.orderitem__toolbar -->
                                 </div>
                                 <!-- /.orderitem__header -->

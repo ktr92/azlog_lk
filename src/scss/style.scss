@@ -4436,7 +4436,7 @@ input[type="password"] {
   position: relative;
   width: 38px;
   height: 23px;
-  background: rgba(233, 233, 233, 0.5);
+  background: rgba(233, 233, 233, 1);
   border-radius: 555px;
   transition: all 0.3s;
   cursor: pointer;
@@ -5492,6 +5492,17 @@ span.formcheckbox__text {
 .resultblock__params {
   margin-bottom: 12px;
 }
+.resultblock__params li span {
+  display: block;
+}
+.resultblock__item {
+  clear: both;
+  margin-top: 12px;
+  display: grid;
+}
+.resultblock__subtitle {
+  margin-bottom: 0;
+}
 .resultblock__param {
   display: flex;
   align-items: center;
@@ -5511,7 +5522,7 @@ span.formcheckbox__text {
   position: relative;
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .resultblock__subtitle:before {
   position: absolute;
@@ -6008,6 +6019,12 @@ span.calcheader__help {
   display: flex;
   align-items: center;
 }
+.help-tooltip {
+  transition: all 0.5s ease;
+}
+.help-tooltip__text {
+  font-weight: 400;
+}
 span.formcheckbox__text {
   display: flex;
   align-items: center;
@@ -6030,7 +6047,8 @@ span.formcheckbox__text {
 }
 .calcheader__help_xl .help-tooltip{
 width: 600px;
-
+bottom: unset;
+top: calc(100% + 22px);
 }
 /* .ordepageblock__paramvalue li:after {
   content: ",";
@@ -6082,7 +6100,7 @@ span.calcprice-params_left {
   border-radius: 50%;
   height: 6px;
   background: none;
-  border: 1px solid #bebebe;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   display: block;
   transform: translateY(-50%) translateX(19px);
   position: absolute;
@@ -6115,4 +6133,33 @@ span.calcprice-params_left {
 }
 .stepform__row.stepform__row_col2.flex {
   gap: 20px;
+}
+
+.checkactive [id="teplo"]:checked + label span:last-child {
+  background: rgba(255, 115, 105, 1);
+} 
+
+.help-tooltip__content:after{
+  display: none;
+}
+
+.modal__wrapper textarea {
+  background: #f5f5f5;
+}
+.modal__wrapper textarea:focus {
+  background: #f5f5f5;
+}
+
+.dropdownblock__links menu li a {
+  display: block;
+}
+
+.promobutton {
+  color: rgba(32, 121, 255, 1);
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: block;
 }

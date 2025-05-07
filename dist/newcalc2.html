@@ -413,20 +413,25 @@
                                     <div class="inputlabel inputlabel_date inputlabel_dropdown ">
                                       <label class="inputdata__label">Дата отправки</label><!-- /.placeholder -->
                                       <input data-required="required" readonly="" class="lk-datepicker datepicker-send"
-                                        value="" type="text" data-stepdata="date_otpravki"
-                                        name="date_otpravki" data-steptype="source" placeholder="Выбрать дату">
+                                        value="" type="text" data-stepdata="date_otpravki" name="date_otpravki"
+                                        data-steptype="source" placeholder="Выбрать дату">
 
-                                        <span class="calcheader__help calcheader__help_outside">
-                                          <span class="help-call">?</span>
-                                          <span class="help-tooltip">
-                                            <span class="help-tooltip__content">
-                                              <span class="help-tooltip__text"> Заявки на перевозки принимаются до 16:00 часов с датой выполнения на следующий день. В случае изменения параметров груза при заборе (в сторону уменьшения) стоимость перевозки рассчитывается как стоимость забора груза для диапазона, указанного в первоначальной заявке. Применяются повышающие коэффициенты, если нужно подать машину в нерабочее время или точно ко времени.
+                                      <span class="calcheader__help calcheader__help_outside">
+                                        <span class="help-call">?</span>
+                                        <span class="help-tooltip">
+                                          <span class="help-tooltip__content">
+                                            <span class="help-tooltip__text"> Заявки на перевозки принимаются до 16:00
+                                              часов с датой выполнения на следующий день. В случае изменения параметров
+                                              груза при заборе (в сторону уменьшения) стоимость перевозки рассчитывается
+                                              как стоимость забора груза для диапазона, указанного в первоначальной
+                                              заявке. Применяются повышающие коэффициенты, если нужно подать машину в
+                                              нерабочее время или точно ко времени.
 
-                                              </span>
                                             </span>
                                           </span>
                                         </span>
-  
+                                      </span>
+
                                     </div>
                                     <!-- /.inputlabel -->
                                   </div>
@@ -452,16 +457,17 @@
                                           <div class="dropdownblock__links">
                                             <menu>
 
-                                              <li><a href="#" data-togglevalue="Стандарт"
-                                                  data-togglevalue2="2-3 дня" data-icon="img/auto.svg">Стандарт</a></li>
-                                              <li><a href="#" data-togglevalue="Авиа"
-                                                  data-togglevalue2="2-3 дня" data-icon="img/airport.svg">Авиа</a></li>
+                                              <li><a href="#" data-togglevalue="Стандарт" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/auto.svg">Стандарт</a></li>
+                                              <li><a href="#" data-togglevalue="Авиа" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/airport.svg">Авиа</a></li>
                                               <li><a href="#" data-togglevalue="Контейнеры"
-                                                  data-togglevalue2="10-14 дней" data-icon="img/conteiner.svg">Контейнеры</a></li>
-                                              <li><a href="#" data-togglevalue="Льготный"
-                                                  data-togglevalue2="2-3 дня" data-icon="img/Ruble.svg">Льготный </a></li>
-                                              <li><a href="#" data-togglevalue="Паром"
-                                                  data-togglevalue2="2-3 дня" data-icon="img/cargo.svg">Паром </a></li>
+                                                  data-togglevalue2="10-14 дней"
+                                                  data-icon="img/conteiner.svg">Контейнеры</a></li>
+                                              <li><a href="#" data-togglevalue="Льготный" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/Ruble.svg">Льготный </a></li>
+                                              <li><a href="#" data-togglevalue="Паром" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/cargo.svg">Паром </a></li>
                                             </menu>
                                           </div>
                                         </div>
@@ -599,33 +605,36 @@
                                     <div class="stepform__block">
                                       <input name='userPrice' type="text" placeholder='Обьявленная стоимость, руб.'
                                         data-number-format="" data-steptype="source" data-stepdata="cost">
-                                        <span class="calcheader__help calcheader__help_outside">
-                                          <span class="help-call">?</span>
-                                          <span class="help-tooltip">
-                                            <span class="help-tooltip__content">
-                                              <span class="help-tooltip__text">Документально подтвержденная стоимость груза.
+                                      <span class="calcheader__help calcheader__help_outside">
+                                        <span class="help-call">?</span>
+                                        <span class="help-tooltip">
+                                          <span class="help-tooltip__content">
+                                            <span class="help-tooltip__text">Документально подтвержденная стоимость
+                                              груза.
 
-                                              </span>
                                             </span>
                                           </span>
                                         </span>
+                                      </span>
                                     </div>
 
                                     <div class="stepform__block" data-wrapper='CARGO_TYPE'>
 
                                       <input name="CARGO_TYPE" type="text" placeholder='Тип груза'
                                         data-stepdata="tip_gruza" data-steptype="source">
-                                        <span class="calcheader__help calcheader__help_outside">
-                                          <span class="help-call">?</span>
-                                          <span class="help-tooltip">
-                                            <span class="help-tooltip__content">
-                                              <span class="help-tooltip__text">Некоторые типы грузов мы не
-                                                принимаем к перевозке, подробней в разделе <a href="/gruzy-ne-prinimaemye-k-perevozke/" target="_blank">“Грузы, не принимаемые к
-                                                  перевозке”</a>
-                                              </span>
+                                      <span class="calcheader__help calcheader__help_outside">
+                                        <span class="help-call">?</span>
+                                        <span class="help-tooltip">
+                                          <span class="help-tooltip__content">
+                                            <span class="help-tooltip__text">Некоторые типы грузов мы не
+                                              принимаем к перевозке, подробней в разделе <a
+                                                href="/gruzy-ne-prinimaemye-k-perevozke/" target="_blank">“Грузы, не
+                                                принимаемые к
+                                                перевозке”</a>
                                             </span>
                                           </span>
                                         </span>
+                                      </span>
                                       <div class="inputhints">
                                         <span>Например:</span>
                                         <a href="#">Запчасти</a>,
@@ -647,9 +656,8 @@
                                               <img src="img/warnicon.svg" alt="" class='afteractive'>
                                             </div>
                                             <div class="checkblock__text">
-                                              <div class="checkblock__label">Хрупкий / жидкий груз 
-                                                <span
-                                                  class="calcheader__help">
+                                              <div class="checkblock__label">Хрупкий / жидкий груз
+                                                <span class="calcheader__help">
                                                   <span class="help-call">?</span>
                                                   <span class="help-tooltip">
                                                     <span class="help-tooltip__content">
@@ -658,11 +666,12 @@
                                                         процессе перевозки мы вправе самостоятельно
                                                         доупаковать груз, а плательщик обязан оплатить
                                                         стоимость доп. упаковки.
-                                                        
+
                                                       </span>
                                                     </span>
                                                   </span>
-                                                </span></div>
+                                                </span>
+                                              </div>
                                               <div class="checkblock__value" data-dependon='liquidCargo'>Отключен</div>
                                             </div>
                                           </div>
@@ -1066,7 +1075,7 @@
                                     <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_w184"
                                       data-toggleitem='select-time-day1'>
 
-                                     
+
 
                                       <div class="inputselect__wrapper" data-toggleclick="select-time-day1">
                                         <div class="inputselect__content">
@@ -1086,12 +1095,13 @@
                                             <menu>
                                               <li><a href="#" data-togglevalue='с 9:00 до 18:00'>с 9:00 до 18:00</a>
                                               </li>
-                                              <li><a href="#" data-togglevalue='с 7:00 до  9:00'>с 7:00 до  9:00</a>
+                                              <li><a href="#" data-togglevalue='с 7:00 до  9:00'>с 7:00 до 9:00</a>
                                               </li>
                                               <li><a href="#" data-togglevalue='с 18:00 до 23:00'>с 18:00 до 23:00</a>
                                               </li>
                                               <li>
-                                                <input type="text" placeholder="Указать свое" data-inputfor="select-time-day1">
+                                                <input type="text" placeholder="Указать свое"
+                                                  data-inputfor="select-time-day1">
                                               </li>
                                             </menu>
                                           </div>
@@ -1111,7 +1121,20 @@
                                             <img src="img/prr.svg" alt="" class='afteractive'>
                                           </div>
                                           <div class="checkblock__text">
-                                            <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                            <div class="checkblock__label">Погрузо-разгрузочные работы <span
+                                                class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Погрузо-разгрузочные работы
+                                                      рассчитываются для грузов с весом 1 места не более 20 кг, объемом
+                                                      не более 0,2 м3. Если вес отдельного грузового места превышает 20
+                                                      кг, стоимость ПРР определяется по согласованию, исходя из времени
+                                                      выполнения работ и количества привлекаемых грузчиков.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></div>
                                             <div class="checkblock__value" data-dependon='FROM_LOADING'>Отключен</div>
                                           </div>
                                         </div>
@@ -1388,12 +1411,13 @@
                                             <menu>
                                               <li><a href="#" data-togglevalue='с 9:00 до 18:00'>с 9:00 до 18:00</a>
                                               </li>
-                                              <li><a href="#" data-togglevalue='с 7:00 до  9:00'>с 7:00 до  9:00</a>
+                                              <li><a href="#" data-togglevalue='с 7:00 до  9:00'>с 7:00 до 9:00</a>
                                               </li>
                                               <li><a href="#" data-togglevalue='с 18:00 до 23:00'>с 18:00 до 23:00</a>
                                               </li>
                                               <li>
-                                                <input type="text" placeholder="Указать свое" data-inputfor="select-time-day">
+                                                <input type="text" placeholder="Указать свое"
+                                                  data-inputfor="select-time-day">
                                               </li>
                                             </menu>
                                           </div>
@@ -1413,7 +1437,20 @@
                                             <img src="img/prr.svg" alt="" class='afteractive'>
                                           </div>
                                           <div class="checkblock__text">
-                                            <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                            <div class="checkblock__label">Погрузо-разгрузочные работы <span
+                                                class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Погрузо-разгрузочные работы
+                                                      рассчитываются для грузов с весом 1 места не более 20 кг, объемом
+                                                      не более 0,2 м3. Если вес отдельного грузового места превышает 20
+                                                      кг, стоимость ПРР определяется по согласованию, исходя из времени
+                                                      выполнения работ и количества привлекаемых грузчиков.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></div>
                                             <div class="checkblock__value" data-dependon='TO_LOADING'>Отключен</div>
                                           </div>
                                         </div>
@@ -1600,7 +1637,7 @@
                                           data-required="required" data-min="10" data-max="10"
                                           placeholder="Выбрать дату">
 
-                                         
+
                                       </div>
                                     </div>
                                     <div class="stepform__col">
@@ -1765,7 +1802,7 @@
                                         <div class="stepform__col">
                                           <div class="calcform__multipleInput">
                                             <div class="floating">
-                                              <input type="text" name="F_EMAIL" data-stepdata="send_email" value=''
+                                              <input type="email" name="F_EMAIL" data-stepdata="send_email" value=''
                                                 data-steptype="source"
                                                 onkeyup="this.setAttribute('value', this.value);">
                                               <span class="floating-label">Email <span
@@ -1813,7 +1850,7 @@
                                             <div class="dropdownblock__wrapper">
                                               <div class="dropdownblock__links">
                                                 <menu>
-                                                  <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
+                                                  <li><a href="#" data-togglevalue='ООО'>ООО</a></li>
                                                   <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
                                                   <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
                                                   <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
@@ -2118,7 +2155,7 @@
                                         <div class="stepform__col">
                                           <div class="calcform__multipleInput">
                                             <div class="floating">
-                                              <input type="text" name="R_F_EMAIL" data-stepdata="receive_fio" value=''
+                                              <input type="email" name="R_F_EMAIL" data-stepdata="receive_fio" value=''
                                                 data-steptype="source"
                                                 onkeyup="this.setAttribute('value', this.value);">
                                               <span class="floating-label">Email <span
@@ -2463,7 +2500,7 @@
                                   class="fromto__title" data-stepdata="f_dostavki" data-steptype="result">г
                                   Санкт-Петербург</span></div>
                               <div class="ordepageblock__button">
-                               <!--  <div class="stepform__edit">
+                                <!--  <div class="stepform__edit">
                                   <a href="#" data-back="stepform">
                                     <img src="img/stepform__edit.svg" alt="">
                                   </a>
@@ -2872,6 +2909,7 @@
                                 onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_promo"
                                 data-steptype="source">
                               <span class="floating-label">Промокод</span>
+                              <a href="#" class="promobutton">Применить</a>
                             </div>
                           </div>
                         </div><!-- /.calctotal -->
@@ -2884,9 +2922,9 @@
                           </div>
                           <div class="calctotal__value">
                             <div class="floating">
-                              <input type="text" name="NOTIFY_EMAIL" value=""
-                                onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_phone"
-                                data-steptype="source">
+                              <input type="email" name="NOTIFY_EMAIL" value=""
+                                onkeyup="this.setAttribute('value', this.value);" data-stepdata="contact_email"
+                                data-steptype="source" data-required="required">
                               <span class="floating-label">Email</span>
                             </div>
                           </div>
@@ -2962,23 +3000,64 @@
                                           <!-- /.resultblock__param -->
                                         </div>
                                         <!-- /.resultblock__params -->
-                                        <div class="resultblock__subtitle">Доп услуги</div>
-                                        <ul class="resultblock__params" data-entity="more-service">
+                                        <div class="resultblock__item">
 
-                                          <li id="crate-wrapper"  class="resultblock__param">
-                                            <span class="calcprice-params_left resultblock__dt">
-                                              <span><span>Деревянная обрешетка</span></span>
-                                            </span>
-                                            <span class="calcprice-params_right resultblock__dd" id="crate-price">19 364 Р </span>
-                                          </li>
-                                          <li id="palet-wrapper" >
-                                            <span class="calcprice-params_left">
-                                              <span><span>Паллетный борт</span></span>
-                                            </span>
-                                            <span class="calcprice-params_right" id="palet-price">322.95 Р </span>
-                                          </li>
-                                        </ul>
-                                        
+                                          <div class="resultblock__subtitle">Доп услуги</div>
+                                          <ul class="resultblock__params" data-entity="more-service">
+                                            <li id="pack_mark" class="resultblock__param">
+                                              <span class="calcprice-params_left resultblock__dt">
+                                                <span><span>Маркировка</span></span>
+                                              </span>
+                                              <span class="calcprice-params_right resultblock__dd" id="crate-price">6.50
+                                                Р </span>
+                                            </li>
+                                            <li id="crate-wrapper" class="resultblock__param">
+                                              <span class="calcprice-params_left resultblock__dt">
+                                                <span><span>Деревянная обрешетка</span></span>
+                                              </span>
+                                              <span class="calcprice-params_right resultblock__dd" id="crate-price">19
+                                                364 Р </span>
+                                            </li>
+                                            <li id="palet-wrapper">
+                                              <span class="calcprice-params_left">
+                                                <span><span>Паллетный борт</span></span>
+                                              </span>
+                                              <span class="calcprice-params_right" id="palet-price">322.95 Р </span>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="resultblock__item">
+
+                                          <div class="resultblock__subtitle">Услуги терминала-отправителя</div>
+                                          <ul class="resultblock__params" data-entity="from-service">
+                                            <li id="from-service" class="resultblock__param">
+                                              <span class="calcprice-params_left resultblock__dt">
+                                                <span><span>Забор от адреса
+                                                  </span></span>
+                                              </span>
+                                              <span class="calcprice-params_right resultblock__dd" id="pickup-price">700
+                                                Р </span>
+                                            </li>
+
+                                          </ul>
+                                        </div>
+                                        <div class="resultblock__item">
+
+                                          <div class="resultblock__subtitle">Услуги терминала-получателя
+                                          </div>
+                                          <ul class="resultblock__params" data-entity="to-service">
+                                            <li id="to-service" class="resultblock__param">
+                                              <span class="calcprice-params_left resultblock__dt">
+                                                <span><span>Доставка до адреса
+                                                  </span></span>
+                                              </span>
+                                              <span class="calcprice-params_right resultblock__dd"
+                                                id="delivery-price">700 Р </span>
+                                            </li>
+
+                                          </ul>
+
+                                        </div>
                                       </div>
                                       <!-- /.resultblock__main -->
                                       <div class="resultblock__delimeter"></div>
@@ -3059,7 +3138,8 @@
                                             <span class="calcprice-params_left resultblock__dt">
                                               <span><span>Деревянная обрешетка</span></span>
                                             </span>
-                                            <span class="calcprice-params_right resultblock__dd" id="crate-price">-</span>
+                                            <span class="calcprice-params_right resultblock__dd"
+                                              id="crate-price">-</span>
                                           </li>
                                           <li id="palet-wrapper" hidden>
                                             <span class="calcprice-params_left">
@@ -3148,7 +3228,8 @@
                                             <span class="calcprice-params_left resultblock__dt">
                                               <span><span>Деревянная обрешетка</span></span>
                                             </span>
-                                            <span class="calcprice-params_right resultblock__dd" id="crate-price">-</span>
+                                            <span class="calcprice-params_right resultblock__dd"
+                                              id="crate-price">-</span>
                                           </li>
                                           <li id="palet-wrapper" hidden>
                                             <span class="calcprice-params_left">
@@ -4158,15 +4239,16 @@
                                 <div class="dropdownblock__wrapper">
                                   <div class="dropdownblock__links">
                                     <menu>
-                                        <li><a href="#" data-togglevalue='с 9:00 до 18:00'>с 9:00 до 18:00</a>
-                                        </li>
-                                        <li><a href="#" data-togglevalue='с 7:00 до  9:00'>с 7:00 до  9:00</a>
-                                        </li>
-                                        <li><a href="#" data-togglevalue='с 18:00 до 23:00'>с 18:00 до 23:00</a>
-                                        </li>
-                                        <li>
-                                          <input type="text" placeholder="Указать свое" data-inputfor="select-time-day_pickup">
-                                        </li>
+                                      <li><a href="#" data-togglevalue='с 9:00 до 18:00'>с 9:00 до 18:00</a>
+                                      </li>
+                                      <li><a href="#" data-togglevalue='с 7:00 до  9:00'>с 7:00 до 9:00</a>
+                                      </li>
+                                      <li><a href="#" data-togglevalue='с 18:00 до 23:00'>с 18:00 до 23:00</a>
+                                      </li>
+                                      <li>
+                                        <input type="text" placeholder="Указать свое"
+                                          data-inputfor="select-time-day_pickup">
+                                      </li>
                                     </menu>
                                   </div>
                                 </div>
@@ -4184,7 +4266,20 @@
                                     <img src="img/prr.svg" alt="">
                                   </div>
                                   <div class="checkblock__text">
-                                    <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                    <div class="checkblock__label">Погрузо-разгрузочные работы <span
+                                        class="calcheader__help">
+                                        <span class="help-call">?</span>
+                                        <span class="help-tooltip">
+                                          <span class="help-tooltip__content">
+                                            <span class="help-tooltip__text">Погрузо-разгрузочные работы рассчитываются
+                                              для грузов с весом 1 места не более 20 кг, объемом не более 0,2 м3. Если
+                                              вес отдельного грузового места превышает 20 кг, стоимость ПРР определяется
+                                              по согласованию, исходя из времени выполнения работ и количества
+                                              привлекаемых грузчиков.
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </span></div>
                                     <div class="checkblock__value" data-dependon="FROM_LOADING_pickup">Отключен</div>
                                   </div>
                                 </div>
@@ -4765,14 +4860,15 @@
                                     <menu>
                                       <li><a href="#" data-togglevalue='с 9:00 до 18:00'>с 9:00 до 18:00</a>
                                       </li>
-                                      <li><a href="#" data-togglevalue='с 7:00 до  9:00'>с 7:00 до  9:00</a>
+                                      <li><a href="#" data-togglevalue='с 7:00 до  9:00'>с 7:00 до 9:00</a>
                                       </li>
                                       <li><a href="#" data-togglevalue='с 18:00 до 23:00'>с 18:00 до 23:00</a>
                                       </li>
                                       <li>
-                                        <input type="text" placeholder="Указать свое" data-inputfor="select-time-day_deliver">
+                                        <input type="text" placeholder="Указать свое"
+                                          data-inputfor="select-time-day_deliver">
                                       </li>
-                                  </menu>
+                                    </menu>
                                   </div>
                                 </div>
                               </div>
@@ -4789,7 +4885,20 @@
                                     <img src="img/prr.svg" alt="">
                                   </div>
                                   <div class="checkblock__text">
-                                    <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                    <div class="checkblock__label">Погрузо-разгрузочные работы <span
+                                        class="calcheader__help">
+                                        <span class="help-call">?</span>
+                                        <span class="help-tooltip">
+                                          <span class="help-tooltip__content">
+                                            <span class="help-tooltip__text">Погрузо-разгрузочные работы рассчитываются
+                                              для грузов с весом 1 места не более 20 кг, объемом не более 0,2 м3. Если
+                                              вес отдельного грузового места превышает 20 кг, стоимость ПРР определяется
+                                              по согласованию, исходя из времени выполнения работ и количества
+                                              привлекаемых грузчиков.
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </span></div>
                                     <div class="checkblock__value" data-dependon="FROM_LOADING_deliver">Отключен</div>
                                   </div>
                                 </div>

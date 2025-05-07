@@ -4520,7 +4520,7 @@ input[type="password"] {
   position: relative;
   width: 38px;
   height: 23px;
-  background: rgba(233, 233, 233, 0.5);
+  background: #e9e9e9;
   border-radius: 555px;
   transition: all 0.3s;
   cursor: pointer;
@@ -5404,6 +5404,17 @@ input[type="checkbox"]:checked
 .resultblock__params {
   margin-bottom: 12px; }
 
+.resultblock__params li span {
+  display: block; }
+
+.resultblock__item {
+  clear: both;
+  margin-top: 12px;
+  display: grid; }
+
+.resultblock__subtitle {
+  margin-bottom: 0; }
+
 .resultblock__param {
   display: flex;
   align-items: center;
@@ -5423,7 +5434,7 @@ input[type="checkbox"]:checked
   position: relative;
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 10px; }
+  margin-bottom: 5px; }
 
 .resultblock__subtitle:before {
   position: absolute;
@@ -5846,6 +5857,12 @@ span.calcheader__help {
   display: flex;
   align-items: center; }
 
+.help-tooltip {
+  transition: all 0.5s ease; }
+
+.help-tooltip__text {
+  font-weight: 400; }
+
 span.formcheckbox__text {
   display: flex;
   align-items: center; }
@@ -5867,7 +5884,9 @@ span.formcheckbox__text {
   color: #373737; }
 
 .calcheader__help_xl .help-tooltip {
-  width: 600px; }
+  width: 600px;
+  bottom: unset;
+  top: calc(100% + 22px); }
 
 /* .ordepageblock__paramvalue li:after {
   content: ",";
@@ -5913,7 +5932,7 @@ span.calcprice-params_left {
   border-radius: 50%;
   height: 6px;
   background: none;
-  border: 1px solid #bebebe;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   display: block;
   transform: translateY(-50%) translateX(19px);
   position: absolute;
@@ -5943,6 +5962,30 @@ span.calcprice-params_left {
 .stepform__row.stepform__row_col2.flex {
   gap: 20px; }
 
+.checkactive [id="teplo"]:checked + label span:last-child {
+  background: #ff7369; }
+
+.help-tooltip__content:after {
+  display: none; }
+
+.modal__wrapper textarea {
+  background: #f5f5f5; }
+
+.modal__wrapper textarea:focus {
+  background: #f5f5f5; }
+
+.dropdownblock__links menu li a {
+  display: block; }
+
+.promobutton {
+  color: #2079ff;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: block; }
+
 @media (max-width: 1440px) {
   .orderpage__aside {
     min-width: 420px; }
@@ -5950,16 +5993,18 @@ span.calcprice-params_left {
     min-width: unset; }
   .formcheckbox__item {
     column-count: 1; }
-  .calcobject__row {
-    gap: 10px;
-    margin-bottom: 10px; }
   .floating input,
   input {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .inputlabel {
     padding-left: 10px;
     padding-right: 10px; }
   .floating .floating-label {
     left: 10px;
     font-size: 12px; }
+  .dropdownblock__links .floating .floating-label {
+    left: 10px; }
   .orderpage {
     gap: 20px; }
   .stepform__main {
@@ -6625,7 +6670,7 @@ span.calcprice-params_left {
     padding-bottom: 22px;
     border-bottom: 3px solid #f8f8f8; }
   .formcheckbox__item {
-    column-count: 1; }
+    column-count: unset; }
   .orderblocks__row {
     margin-bottom: 3px; }
   span.btn_gray {
@@ -7348,11 +7393,11 @@ span.calcprice-params_left {
   .calcheader__help_xl .help-tooltip {
     width: 100%; }
   span.calcheader__help {
-    position: initial; }
+    position: absolute; }
   .orderpage .stepform__header {
     position: relative; }
   .help-tooltip {
-    left: 0;
+    left: unset;
     right: 0;
     bottom: unset;
     top: 100%; }
@@ -7377,7 +7422,23 @@ span.calcprice-params_left {
     transform: translateY(-100%); }
   .modal .dropdownblock__links {
     max-height: unset;
-    overflow: initial; } }
+    overflow: initial; }
+  .calcobject__row {
+    gap: 10px;
+    margin-bottom: 10px; }
+  .stepform__row input.cityInput {
+    padding-left: 30px; }
+  .checkblock__text span.calcheader__help {
+    position: static; }
+  span.calcheader__help.calcheader__help_xl {
+    position: static; }
+  .stepform__headercontent .calcheader__help {
+    position: static; }
+  .inputlabel_date .help-tooltip {
+    left: 0; }
+  .formcheckbox .calcheader__help {
+    position: static;
+    margin-left: 10px; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/

@@ -10,18 +10,23 @@
   .formcheckbox__item {
     column-count: 1;
   }
-  .calcobject__row {
-    gap: 10px;
-    margin-bottom: 10px;
-  }
+
   .floating input,
   input {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .inputlabel {
     padding-left: 10px;
     padding-right: 10px;
   }
   .floating .floating-label {
     left: 10px;
     font-size: 12px;
+  }
+  .dropdownblock__links .floating .floating-label {
+    left: 10px;
   }
   .orderpage {
     gap: 20px;
@@ -997,7 +1002,7 @@
     border-bottom: 3px solid #f8f8f8;
   }
   .formcheckbox__item {
-    column-count: 1;
+    column-count: unset;
   }
   .orderblocks__row {
     margin-bottom: 3px;
@@ -2025,13 +2030,13 @@ display: block;
     
     }
     span.calcheader__help {
-      position: initial;
+      position: absolute;
     }
     .orderpage .stepform__header {
       position: relative;
     }
     .help-tooltip {
-      left: 0;
+      left: unset;
       right: 0;
       bottom: unset;
       top: 100%;
@@ -2066,4 +2071,28 @@ display: block;
       max-height: unset;
       overflow: initial;
     }
-}
+    .calcobject__row {
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .stepform__row  input.cityInput {
+      padding-left: 30px;
+    }
+
+    .checkblock__text span.calcheader__help {
+      position: static;
+    }
+    span.calcheader__help.calcheader__help_xl {
+      position: static;
+    }
+    .stepform__headercontent .calcheader__help {
+      position: static;
+    }
+    .inputlabel_date  .help-tooltip {
+     left: 0;
+    }
+    .formcheckbox .calcheader__help {
+      position: static;
+      margin-left: 10px;
+    }
+  }

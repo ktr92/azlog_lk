@@ -113,7 +113,7 @@ const appv2 = (function () {
           <div class="calcobject__number">
             <span>${count}</span>
           </div>
-          <div class="calcobject__input floating">
+          <div class="calcobject__input ">
             <div class="floating">
               <input data-inputid="boxvolume_${count}" data-new-box=${count} type="text" name='boxVolume[]' value='' onkeyup="this.setAttribute('value', this.value);" data-volume-format=""  data-required="required"> 
               <span class="floating-label">Обьем<span class="red">*</span></span>
@@ -426,6 +426,13 @@ const appv2 = (function () {
 
       if (validateRequired()) {
         nextStep()
+      } else {
+        $([document.documentElement, document.body]).animate(
+          {
+            scrollTop: $(".error").offset().top - 20,
+          },
+          400
+        )
       }
     })
 
@@ -592,14 +599,50 @@ const appv2 = (function () {
     } 
   }
 
+  function validateEmail() {
+    let valid = true
+    const email = []
+    const $email = $("input[type='email']:visible")
+    console.log("$email: ", $email)
+
+    $email.each(function () {
+      const obj = {
+        input: $(this),
+        val: $(this).val().toString(),
+      }
+      if ($(this).val().length) {
+        email.push(obj)
+
+      }
+    })
+
+    email.forEach(function (item) {
+      console.log("item: ", item)
+
+      var emailReg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i
+
+      if (!emailReg.test(item.val)) {
+        valid = false
+        item.input.addClass("error")
+      } else {
+        valid = true
+        item.input.removeClass("error")
+      }
+    })
+
+    return valid
+  }
+
   /**
    * валидация текущего шага. находим только видимые инпуты c атрибутом required и вычисляем флаг valid
    * @returns {boolean} - валидна форма или нет
    */
   const validateRequired = () => {
     let valid = true
-
     $(".error").removeClass("error")
+
+    valid = validateEmail()
+
     const required = []
     const $required = $('input[data-required="required"]:visible')
 

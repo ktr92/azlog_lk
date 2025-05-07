@@ -427,6 +427,7 @@ const app = (function () {
 
       function validateRequired() {
         let valid = true
+        valid = validateEmail()
         const required = []
         const $required = $form.find("input[required]")
         $required.each(function () {
@@ -1696,8 +1697,7 @@ const app = (function () {
   function validateEmail() {
     let valid = true
     const email = []
-    const $email = $("input[type=email]:visible")
-    console.log("$email: ", $email)
+    const $email = $("input[type='email'][data-required='required']:visible")
 
     $email.each(function () {
       const obj = {
@@ -1720,6 +1720,8 @@ const app = (function () {
         item.input.removeClass("error")
       }
     })
+    console.log("$email: ", valid)
+
     return valid
   }
 
