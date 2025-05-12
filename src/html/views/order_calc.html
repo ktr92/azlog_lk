@@ -227,9 +227,9 @@
                           <a href="#" class="btn btn_border ">
                             <span class='downloadicon2'>Скачать</span>
                           </a>
-                          <a href="#" class="btn btn_border ">
+                          <!--<a href="#" class="btn btn_border ">
                             <span class='infoicon'>Подробнее</span>
-                          </a>
+                          </a>-->
                         </div>
                         <!-- /.orderitem__toolbar -->
                       </div>
@@ -247,7 +247,17 @@
                               <div class="stepform__icon">
                                 <span class='stepform__number avtive'>01</span>
                               </div>
-                              <div class="stepform__title">Направление</div>
+                              <div class="stepform__title">Направление  <span class="calcheader__help">
+                                <span class="help-call">?</span>
+                                <span class="help-tooltip">
+                                  <span class="help-tooltip__content">
+                                    <span class="help-tooltip__text"> Для более точного поиска укажите
+                                      название населенного пункта: <br>
+                                      Например: Нефтегорск, Самарская область</span>
+                                    <!-- 	<span class="help-tooltip__info">+8 к защите груза</span> -->
+                                  </span>
+                                </span>
+                              </span></div>
                             </div>
                           </div>
                           <div class="stepform__main stepform__main_type2">
@@ -300,7 +310,21 @@
                               <div class="stepform__row stepform__row_mob2 flex">
                                 <div class="stepform__col  ">
                                   <div class="inputlabel inputlabel_date inputlabel_dropdown ">
-                                    <label class='inputdata__label'>Дата отправки</label><!-- /.placeholder -->
+                                    <label class='inputdata__label'>Дата отправки   <span class="calcheader__help calcheader__help_outside">
+                                      <span class="help-call">?</span>
+                                      <span class="help-tooltip">
+                                        <span class="help-tooltip__content">
+                                          <span class="help-tooltip__text"> Заявки на перевозки принимаются до 16:00
+                                            часов с датой выполнения на следующий день. В случае изменения параметров
+                                            груза при заборе (в сторону уменьшения) стоимость перевозки рассчитывается
+                                            как стоимость забора груза для диапазона, указанного в первоначальной
+                                            заявке. Применяются повышающие коэффициенты, если нужно подать машину в
+                                            нерабочее время или точно ко времени.
+
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </span></label><!-- /.placeholder -->
                                     <input readonly='' class="lk-datepicker datepicker-send" value="" type="text"
                                       data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"
                                       data-required="required" data-min="10" data-max="10" placeholder="Выбрать дату">
@@ -358,10 +382,57 @@
                               <div class="stepform__icon">
                                 <span class='stepform__number avtive'>02</span>
                               </div>
-                              <div class="stepform__title">О грузе</div>
+                              <div class="stepform__title">О грузе <span class="calcheader__help">
+                                <span class="help-call">?</span>
+                                <span class="help-tooltip">
+                                  <span class="help-tooltip__content">
+                                    <span class="help-tooltip__text">Для точного расчета стоимости перевозки
+                                      и дополнительных услуг заполните габариты каждого грузового места,
+                                      или введите общий вес и объем для быстрого предварительного расчета.
+                                    </span>
+                                    <!-- 												<span class="help-tooltip__info">+8 к защите груза</span>
+           --> </span>
+                                </span></span></div>
                             </div>
                             <div class="stepform__headerlink">
-                              <a href="">Как это работает?</a>
+                              <a href="#">
+                                <span class="calcheader__help calcheader__help_xl">
+                                  <span class="">Как это работает?</span>
+                                  <span class="help-tooltip">
+                                    <span class="help-tooltip__content">
+                                      <span class="help-tooltip__text">
+                                        <p><b>Базовый расчет (без габаритов):</b></p>
+                                        <p>Если вы не указываете габариты груза, стоимость рассчитывается на основе
+                                          объема и веса.</p>
+
+                                        <p><b>Формула:</b></p>
+                                        <p>Стоимость = (Объем × Количество мест) или (Вес × Количество мест) (в
+                                          зависимости от того, что больше).</p>
+                                        <p>Поля "Объем" и "Вес места" остаются активными для ввода.</p>
+
+                                        <p><b>Расчет с габаритами:</b></p>
+                                        <p>Если вы вводите габариты груза (длина, ширина, высота), поле "Объем"
+                                          автоматически блокируется.</p>
+                                        <p>Объем пересчитывается на основе введенных габаритов по формуле:</p>
+                                        <p>Объем = Длина × Ширина × Высота.</p>
+                                        <p>Стоимость затем рассчитывается на основе нового объема и веса.</p>
+
+                                        <p><b>Негабаритные грузы:</b></p>
+                                        <p>Если габариты груза превышают стандартные параметры (для каждого
+                                          направления они свои), применяется повышающий коэффициент.</p>
+                                        <p>Если габариты груза превышают максимальные значения, система уведомит вас,
+                                          что такой груз не может быть принят к перевозке.</p>
+
+                                        <p><b>Добавление нескольких мест:</b></p>
+                                        <p>Вы можете добавить несколько мест с разными параметрами, нажав кнопку "+
+                                          Добавить".</p>
+                                        <p>Для каждого места можно указать свои габариты, вес и количество.</p>
+                                      </span>
+                                      <!-- 												<span class="help-tooltip__info">+8 к защите груза</span>
+               --> </span>
+                                  </span></span>
+
+                              </a>
                             </div>
                           </div>
                           <div class="stepform__main stepform__main_type2">
@@ -416,12 +487,38 @@
                                 <div class="stepform__col w-full">
                                   <div class="stepform__block">
                                     <input name='userPrice' type="text" placeholder='Обьявленная стоимость, руб.'
-                                      data-number-format="">
+                                    data-number-format="" data-steptype="source" data-stepdata="cost">
+                                      <span class="calcheader__help calcheader__help_outside">
+                                        <span class="help-call">?</span>
+                                        <span class="help-tooltip">
+                                          <span class="help-tooltip__content">
+                                            <span class="help-tooltip__text">Документально подтвержденная стоимость
+                                              груза.
+
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </span>
                                   </div>
 
                                   <div class="stepform__block">
 
-                                    <input name="CARGO_TYPE" type="text" placeholder='Тип груза'>
+                                    
+                                    <input name="CARGO_TYPE" type="text" placeholder='Тип груза'
+                                    data-stepdata="tip_gruza" data-steptype="source">
+                                    <span class="calcheader__help calcheader__help_outside">
+                                      <span class="help-call">?</span>
+                                      <span class="help-tooltip">
+                                        <span class="help-tooltip__content">
+                                          <span class="help-tooltip__text">Некоторые типы грузов мы не
+                                            принимаем к перевозке, подробней в разделе <a
+                                              href="/gruzy-ne-prinimaemye-k-perevozke/" target="_blank">“Грузы, не
+                                              принимаемые к
+                                              перевозке”</a>
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </span>
                                     <div class="inputhints">
                                       <span>Например:</span>
                                       <a href="#">Запчасти</a>,
@@ -441,7 +538,22 @@
                                             <img src="img/warnicon.svg" alt="">
                                           </div>
                                           <div class="checkblock__text">
-                                            <div class="checkblock__label">Хрупкий / жидкий груз</div>
+                                            <div class="checkblock__label">Хрупкий / жидкий груз 
+                                              <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text"> В случае отсутствия
+                                                      надлежащей упаковки, в целях сохранности груза в
+                                                      процессе перевозки мы вправе самостоятельно
+                                                      доупаковать груз, а плательщик обязан оплатить
+                                                      стоимость доп. упаковки.
+
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </div>
                                             <div class="checkblock__value" data-dependon='liquidCargo'>Отключен</div>
                                           </div>
                                         </div>
@@ -463,7 +575,21 @@
                                             <img src="img/warmicon.svg" alt="">
                                           </div>
                                           <div class="checkblock__text">
-                                            <div class="checkblock__label">Теплый режим</div>
+                                            <div class="checkblock__label">Теплый режим <span
+                                              class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Доставку груза при
+                                                    температуре не ниже +2 оС.
+                                                    Важно! Мы не занимаемся доставкой товаров, требующих
+                                                    поддержания низких температур. Например,
+                                                    замороженных продуктов питания, охлаждённого мяса и
+                                                    прочих товаров.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></div>
                                             <div class="checkblock__value" data-dependon='teplo'>Отключен</div>
                                           </div>
                                         </div>
@@ -491,7 +617,21 @@
                                           <input type="checkbox" id="check10-1" name="CRATE" value="Y"
                                             data-stepdata="pack_wooden" data-steptype="source">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Деревянная
-                                            обрешетка</span>
+                                            обрешетка <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Изготовление жесткой
+                                                    упаковки индивидуально по размеру груза.
+                                                    Ознакомьтесь с <a href="/trebovanie-k-upakovke/" target="_blank">
+                                                      Перечнем грузов,
+                                                      подлежащих обязательной упаковке в обрешетку
+                                                      (жесткая упаковка)</a> <br>
+                                                    +30% к стоимости межтерминальной перевозки
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                         </span>
                                       </label>
                                       <label for="check10-012" class="formcheckbox__label formcheckbox__label_type2">
@@ -499,7 +639,22 @@
                                           <input type="checkbox" id="check10-012" name="PALET" value="Y"
                                             data-stepdata="pack_palet" data-steptype="source">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Паллетный
-                                            борт</span>
+                                            борт <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Изготовление жесткой
+                                                    упаковки индивидуально по размеру груза.
+                                                    Ознакомьтесь с <a href="/trebovanie-k-upakovke/" target="_blank">
+                                                      Перечнем грузов,
+                                                      подлежащих обязательной упаковке в паллетный
+                                                      борт
+                                                      (жесткая упаковка)</a> <br>
+                                                    +30% к стоимости межтерминальной перевозки
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                         </span>
                                       </label>
                                       <label for="check10-2" class="formcheckbox__label formcheckbox__label_type2">
@@ -507,7 +662,21 @@
                                           <input type="checkbox" id="check10-2" name="BUBBLE" value="Y"
                                             data-stepdata="pack_bubble" data-steptype="source">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Пузырчатая
-                                            пленка</span>
+                                            пленка  <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Обеспечивает
+                                                    дополнительную защиту груза от царапин и
+                                                    потертостей. Расход и определение стоимости упаковки
+                                                    возможно только по фактически определяемым
+                                                    параметрам груза при его сдаче.
+
+
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                         </span>
                                       </label>
                                       <label for="check10-3" class="formcheckbox__label formcheckbox__label_type2">
@@ -515,21 +684,60 @@
                                           <input type="checkbox" id="check10-3" name="STRETCHFILM"
                                             data-stepdata="pack_stretch" data-steptype="source" value="Y">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Стретч
-                                            пленка</span>
+                                            пленка <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Обеспечивает
+                                                    дополнительную защиту груза от вмятин и сколов.
+                                                    Расход и определение стоимости упаковки возможно
+                                                    только по фактически определяемым параметрам груза
+                                                    при его сдаче.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                         </span>
                                       </label>
                                       <label for="check10-4" class="formcheckbox__label formcheckbox__label_type2">
                                         <span>
                                           <input type="checkbox" id="check10-4" name="CORRUGATEDBOARD" value="Y"
                                             data-stepdata="pack_gofro" data-steptype="source">
-                                          <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон</span>
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон <span
+                                            class="calcheader__help">
+                                            <span class="help-call">?</span>
+                                            <span class="help-tooltip">
+                                              <span class="help-tooltip__content">
+                                                <span class="help-tooltip__text">Обеспечивает
+                                                  дополнительную защиту груза от царапин и
+                                                  потертостей. Расход и определение стоимости упаковки
+                                                  возможно только по фактически определяемым
+                                                  параметрам груза при его сдаче.
+
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </span></span>
                                         </span>
                                       </label>
                                       <label for="check10-5" class="formcheckbox__label formcheckbox__label_type2">
                                         <span>
                                           <input type="checkbox" id="check10-5" name="BAG" value="Y"
                                             data-stepdata="pack_meshkotara" data-steptype="source">
-                                          <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара</span>
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара <span
+                                            class="calcheader__help">
+                                            <span class="help-call">?</span>
+                                            <span class="help-tooltip">
+                                              <span class="help-tooltip__content">
+                                                <span class="help-tooltip__text">Используется для
+                                                  упаковки небольших, ценных грузов, партий мелких
+                                                  грузов. Расход и определение стоимости упаковки
+                                                  возможно только по фактически определяемым
+                                                  параметрам груза при его сдаче.
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </span></span>
                                         </span>
                                       </label>
                                       <label for="check10-8" class="formcheckbox__label formcheckbox__label_type2">
@@ -537,14 +745,43 @@
                                           <input type="checkbox" id="check10-8" name="InternalRecalculate"
                                             data-stepdata="pack_recalc" data-steptype="source" value="Y">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Пересчет
-                                            внутренних вложений</span>
+                                            внутренних вложений <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">Данная услуга
+                                                  подразумевает пересчет внутреннего содержимого грузовых
+                                                  мест представителем компании — водителем службы
+                                                  доставки, оператором склада или кладовщиком. Пересчет
+                                                  проводится в присутствии клиента (грузоотправителя или
+                                                  грузополучателя) для того, чтобы принять груз по
+                                                  количеству грузовых и внутритарных мест. После процедуры
+                                                  грузовые места опечатываются номерными пломбами. При
+                                                  заборе груза общее количество внутритарных мест не
+                                                  должно превышать 1600 штук. При заборе груза к
+                                                  внутритарному пересчету НЕ принимаются стеклянные и
+                                                  легкобьющиеся грузы.</span>
+                                              </span>
+                                            </span></span>
                                         </span>
                                       </label>
                                       <label for="check10-9" class="formcheckbox__label formcheckbox__label_type2">
                                         <span>
                                           <input type="checkbox" id="check10-9" name="MARKING" value="Y"
                                             data-stepdata="pack_mark" data-steptype="source" checked="">
-                                          <span class="formcheckbox__text" data-text="checkboxtext">Маркировка</span>
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Маркировка <span
+                                            class="calcheader__help">
+                                            <span class="help-call">?</span>
+                                            <span class="help-tooltip">
+                                              <span class="help-tooltip__content">
+                                                <span class="help-tooltip__text">Маркировка грузов, в
+                                                  соответствии с действующими стандартами компании,
+                                                  является обязательной услугой, важной с точки зрения
+                                                  идентификации и сохранности содержимого при
+                                                  перевозке сборного груза.
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </span>/span>
                                         </span>
                                       </label>
                                     </div>
@@ -559,7 +796,17 @@
                                           <input type="checkbox" id="check11-1" name="SendingAccompanyingDocuments"
                                             value="Y" data-stepdata="dop_doc" data-steptype="source">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Перевозка
-                                            сопроводительных документов</span>
+                                            сопроводительных документов <span class="calcheader__help">
+                                            <span class="help-call">?</span>
+                                            <span class="help-tooltip">
+                                              <span class="help-tooltip__content">
+                                                <span class="help-tooltip__text">Упаковка комплекта
+                                                  сопроводительных документов в отдельный конверт и
+                                                  передача их получателю груза.
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </span></span>
                                         </span>
                                       </label>
                                       <label for="check11-2" data-entity="doc-checkbox"
@@ -568,7 +815,18 @@
                                           <input type="checkbox" id="check11-2" name="ReturnOfAccompanyingDocuments"
                                             value="Y" data-stepdata="dop_return" data-steptype="source">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Возврат
-                                            документов</span>
+                                            документов <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Возврат оригиналов
+                                                    документов с отметками получателя,
+                                                    подтверждающими
+                                                    выдачу груза.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                         </span>
                                       </label>
                                     </div>
@@ -601,6 +859,17 @@
                                   </ul>
                                 </div>
                               </div>
+                              <span class="calcheader__help">
+                                <span class="help-call">?</span>
+                                <span class="help-tooltip">
+                                  <span class="help-tooltip__content">
+                                    <span class="help-tooltip__text"> Самостоятельно приехать на терминал
+                                      компании, либо заказать машину до адреса. Стоимость перевозки по городу
+                                      между терминалами по требованию грузополучателя составляет 50% от прайса
+                                      автоэкспедирования.
+                                    </span>
+                                  </span>
+                                </span>
                             </div>
                           </div>
                           <div class="stepform__main stepform__main_type2">
@@ -703,7 +972,20 @@
                                           <img src="img/prr.svg" alt="">
                                         </div>
                                         <div class="checkblock__text">
-                                          <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                          <div class="checkblock__label">Погрузо-разгрузочные работы <span
+                                            class="calcheader__help">
+                                            <span class="help-call">?</span>
+                                            <span class="help-tooltip">
+                                              <span class="help-tooltip__content">
+                                                <span class="help-tooltip__text">Погрузо-разгрузочные работы
+                                                  рассчитываются для грузов с весом 1 места не более 20 кг, объемом
+                                                  не более 0,2 м3. Если вес отдельного грузового места превышает 20
+                                                  кг, стоимость ПРР определяется по согласованию, исходя из времени
+                                                  выполнения работ и количества привлекаемых грузчиков.
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </span></div>
                                           <div class="checkblock__value" data-dependon='FROM_LOADING'>Отключен</div>
                                         </div>
                                       </div>
@@ -858,6 +1140,18 @@
                                   </ul>
                                 </div>
                               </div>
+                              <span class="calcheader__help">
+                                <span class="help-call">?</span>
+                                <span class="help-tooltip">
+                                  <span class="help-tooltip__content">
+                                    <span class="help-tooltip__text">Самостоятельно приехать на терминал
+                                      компании, либо заказать машину до адреса. Стоимость перевозки по
+                                      городу между терминалами по требованию грузополучателя составляет
+                                      50% от прайса автоэкспедирования.
+                                    </span>
+                                  </span>
+                                </span>
+                              </span>
                             </div>
                           </div>
                           <div class="stepform__main stepform__main_type2">
@@ -963,7 +1257,20 @@
                                           <img src="img/prr.svg" alt="">
                                         </div>
                                         <div class="checkblock__text">
-                                          <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                          <div class="checkblock__label">Погрузо-разгрузочные работы  <span
+                                            class="calcheader__help">
+                                            <span class="help-call">?</span>
+                                            <span class="help-tooltip">
+                                              <span class="help-tooltip__content">
+                                                <span class="help-tooltip__text">Погрузо-разгрузочные работы
+                                                  рассчитываются для грузов с весом 1 места не более 20 кг, объемом
+                                                  не более 0,2 м3. Если вес отдельного грузового места превышает 20
+                                                  кг, стоимость ПРР определяется по согласованию, исходя из времени
+                                                  выполнения работ и количества привлекаемых грузчиков.
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </span></div>
                                           <div class="checkblock__value" data-dependon='TO_LOADING'>Отключен</div>
                                         </div>
                                       </div>
@@ -2955,7 +3262,20 @@
                                     <img src="img/prr.svg" alt="">
                                   </div>
                                   <div class="checkblock__text">
-                                    <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                    <div class="checkblock__label">Погрузо-разгрузочные работы <span
+                                      class="calcheader__help">
+                                      <span class="help-call">?</span>
+                                      <span class="help-tooltip">
+                                        <span class="help-tooltip__content">
+                                          <span class="help-tooltip__text">Погрузо-разгрузочные работы рассчитываются
+                                            для грузов с весом 1 места не более 20 кг, объемом не более 0,2 м3. Если
+                                            вес отдельного грузового места превышает 20 кг, стоимость ПРР определяется
+                                            по согласованию, исходя из времени выполнения работ и количества
+                                            привлекаемых грузчиков.
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </span></div>
                                     <div class="checkblock__value" data-dependon="FROM_LOADING_pickup">Отключен</div>
                                   </div>
                                 </div>
@@ -3610,7 +3930,20 @@
                                     <img src="img/prr.svg" alt="">
                                   </div>
                                   <div class="checkblock__text">
-                                    <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                    <div class="checkblock__label">Погрузо-разгрузочные работы <span
+                                      class="calcheader__help">
+                                      <span class="help-call">?</span>
+                                      <span class="help-tooltip">
+                                        <span class="help-tooltip__content">
+                                          <span class="help-tooltip__text">Погрузо-разгрузочные работы рассчитываются
+                                            для грузов с весом 1 места не более 20 кг, объемом не более 0,2 м3. Если
+                                            вес отдельного грузового места превышает 20 кг, стоимость ПРР определяется
+                                            по согласованию, исходя из времени выполнения работ и количества
+                                            привлекаемых грузчиков.
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </span></div>
                                     <div class="checkblock__value" data-dependon="FROM_LOADING_deliver">Отключен</div>
                                   </div>
                                 </div>

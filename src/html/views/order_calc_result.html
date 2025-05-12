@@ -227,9 +227,9 @@
                           <a href="#" class="btn btn_border ">
                             <span class='downloadicon2'>Скачать</span>
                           </a>
-                          <a href="#" class="btn btn_border ">
+                          <!--<a href="#" class="btn btn_border ">
                             <span class='infoicon'>Подробнее</span>
-                          </a>
+                          </a>-->
                         </div>
                         <!-- /.orderitem__toolbar -->
                       </div>
@@ -247,7 +247,17 @@
                                 <div class="stepform__icon">
                                   <span class='stepform__number avtive'>01</span>
                                 </div>
-                                <div class="stepform__title">Направление</div>
+                                <div class="stepform__title">Направление  <span class="calcheader__help">
+                                  <span class="help-call">?</span>
+                                  <span class="help-tooltip">
+                                    <span class="help-tooltip__content">
+                                      <span class="help-tooltip__text"> Для более точного поиска укажите
+                                        название населенного пункта: <br>
+                                        Например: Нефтегорск, Самарская область</span>
+                                      <!-- 	<span class="help-tooltip__info">+8 к защите груза</span> -->
+                                    </span>
+                                  </span>
+                                </span></div>
                               </div>
                             </div>
                             <div class="stepform__main stepform__main_type2">
@@ -262,9 +272,9 @@
                                           data-required="required">
                                         <input type="hidden" name="from" value="" data-entity="city-kladr-id">
                                         <!--  <ul id="cityList1" class="cityList" style="display: none;">
-                                      <div class="cityListContainer">
-                                      </div>
-                                    </ul> -->
+                                        <div class="cityListContainer">
+                                        </div>
+                                      </ul> -->
                                         <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
                                           xmlns="http://www.w3.org/2000/svg">
                                           <path
@@ -283,9 +293,9 @@
                                           data-required="required">
                                         <input type="hidden" name="to" value="" data-entity="city-kladr-id">
                                         <!--  <ul id="cityList2" class="cityList" style="display: none;">
-                                      <div class="cityListContainer">
-                                      </div>
-                                    </ul> -->
+                                        <div class="cityListContainer">
+                                        </div>
+                                      </ul> -->
                                         <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
                                           xmlns="http://www.w3.org/2000/svg">
                                           <path
@@ -300,7 +310,21 @@
                                 <div class="stepform__row stepform__row_mob2 flex">
                                   <div class="stepform__col  ">
                                     <div class="inputlabel inputlabel_date inputlabel_dropdown ">
-                                      <label class='inputdata__label'>Дата отправки</label><!-- /.placeholder -->
+                                      <label class='inputdata__label'>Дата отправки   <span class="calcheader__help calcheader__help_outside">
+                                        <span class="help-call">?</span>
+                                        <span class="help-tooltip">
+                                          <span class="help-tooltip__content">
+                                            <span class="help-tooltip__text"> Заявки на перевозки принимаются до 16:00
+                                              часов с датой выполнения на следующий день. В случае изменения параметров
+                                              груза при заборе (в сторону уменьшения) стоимость перевозки рассчитывается
+                                              как стоимость забора груза для диапазона, указанного в первоначальной
+                                              заявке. Применяются повышающие коэффициенты, если нужно подать машину в
+                                              нерабочее время или точно ко времени.
+  
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </span></label><!-- /.placeholder -->
                                       <input readonly='' class="lk-datepicker datepicker-send" value="" type="text"
                                         data-stepdata="date_otpravki" name="date_otpravki" data-steptype="source"
                                         data-required="required" data-min="10" data-max="10" placeholder="Выбрать дату">
@@ -323,8 +347,7 @@
                                         <!-- /.inputselect__content -->
                                       </div>
                                       <!-- /.inputselect__wrapper -->
-                                      <div class="dateblock__menu dropdownblock dropdownblock_sm"
-                                        data-toggle="sendtype">
+                                      <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="sendtype">
                                         <div class="dropdownblock__wrapper">
                                           <div class="dropdownblock__links">
                                             <menu>
@@ -359,10 +382,57 @@
                                 <div class="stepform__icon">
                                   <span class='stepform__number avtive'>02</span>
                                 </div>
-                                <div class="stepform__title">О грузе</div>
+                                <div class="stepform__title">О грузе <span class="calcheader__help">
+                                  <span class="help-call">?</span>
+                                  <span class="help-tooltip">
+                                    <span class="help-tooltip__content">
+                                      <span class="help-tooltip__text">Для точного расчета стоимости перевозки
+                                        и дополнительных услуг заполните габариты каждого грузового места,
+                                        или введите общий вес и объем для быстрого предварительного расчета.
+                                      </span>
+                                      <!-- 												<span class="help-tooltip__info">+8 к защите груза</span>
+             --> </span>
+                                  </span></span></div>
                               </div>
                               <div class="stepform__headerlink">
-                                <a href="">Как это работает?</a>
+                                <a href="#">
+                                  <span class="calcheader__help calcheader__help_xl">
+                                    <span class="">Как это работает?</span>
+                                    <span class="help-tooltip">
+                                      <span class="help-tooltip__content">
+                                        <span class="help-tooltip__text">
+                                          <p><b>Базовый расчет (без габаритов):</b></p>
+                                          <p>Если вы не указываете габариты груза, стоимость рассчитывается на основе
+                                            объема и веса.</p>
+  
+                                          <p><b>Формула:</b></p>
+                                          <p>Стоимость = (Объем × Количество мест) или (Вес × Количество мест) (в
+                                            зависимости от того, что больше).</p>
+                                          <p>Поля "Объем" и "Вес места" остаются активными для ввода.</p>
+  
+                                          <p><b>Расчет с габаритами:</b></p>
+                                          <p>Если вы вводите габариты груза (длина, ширина, высота), поле "Объем"
+                                            автоматически блокируется.</p>
+                                          <p>Объем пересчитывается на основе введенных габаритов по формуле:</p>
+                                          <p>Объем = Длина × Ширина × Высота.</p>
+                                          <p>Стоимость затем рассчитывается на основе нового объема и веса.</p>
+  
+                                          <p><b>Негабаритные грузы:</b></p>
+                                          <p>Если габариты груза превышают стандартные параметры (для каждого
+                                            направления они свои), применяется повышающий коэффициент.</p>
+                                          <p>Если габариты груза превышают максимальные значения, система уведомит вас,
+                                            что такой груз не может быть принят к перевозке.</p>
+  
+                                          <p><b>Добавление нескольких мест:</b></p>
+                                          <p>Вы можете добавить несколько мест с разными параметрами, нажав кнопку "+
+                                            Добавить".</p>
+                                          <p>Для каждого места можно указать свои габариты, вес и количество.</p>
+                                        </span>
+                                        <!-- 												<span class="help-tooltip__info">+8 к защите груза</span>
+                 --> </span>
+                                    </span></span>
+  
+                                </a>
                               </div>
                             </div>
                             <div class="stepform__main stepform__main_type2">
@@ -374,7 +444,7 @@
                                   <div class="calcobject__row ">
                                     <div class="calcobject__number">
                                       <span>1</span>
-
+  
                                     </div>
                                     <div class="calcobject__input ">
                                       <div class="floating">
@@ -417,12 +487,38 @@
                                   <div class="stepform__col w-full">
                                     <div class="stepform__block">
                                       <input name='userPrice' type="text" placeholder='Обьявленная стоимость, руб.'
-                                        data-number-format="">
+                                      data-number-format="" data-steptype="source" data-stepdata="cost">
+                                        <span class="calcheader__help calcheader__help_outside">
+                                          <span class="help-call">?</span>
+                                          <span class="help-tooltip">
+                                            <span class="help-tooltip__content">
+                                              <span class="help-tooltip__text">Документально подтвержденная стоимость
+                                                груза.
+  
+                                              </span>
+                                            </span>
+                                          </span>
+                                        </span>
                                     </div>
-
+  
                                     <div class="stepform__block">
-
-                                      <input name="CARGO_TYPE" type="text" placeholder='Тип груза'>
+  
+                                      
+                                      <input name="CARGO_TYPE" type="text" placeholder='Тип груза'
+                                      data-stepdata="tip_gruza" data-steptype="source">
+                                      <span class="calcheader__help calcheader__help_outside">
+                                        <span class="help-call">?</span>
+                                        <span class="help-tooltip">
+                                          <span class="help-tooltip__content">
+                                            <span class="help-tooltip__text">Некоторые типы грузов мы не
+                                              принимаем к перевозке, подробней в разделе <a
+                                                href="/gruzy-ne-prinimaemye-k-perevozke/" target="_blank">“Грузы, не
+                                                принимаемые к
+                                                перевозке”</a>
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </span>
                                       <div class="inputhints">
                                         <span>Например:</span>
                                         <a href="#">Запчасти</a>,
@@ -431,8 +527,8 @@
                                       </div>
                                     </div>
                                   </div>
-
-
+  
+  
                                   <div class="stepform__col checkblock_col">
                                     <div class="stepform__block">
                                       <div class="borderblock">
@@ -442,7 +538,22 @@
                                               <img src="img/warnicon.svg" alt="">
                                             </div>
                                             <div class="checkblock__text">
-                                              <div class="checkblock__label">Хрупкий / жидкий груз</div>
+                                              <div class="checkblock__label">Хрупкий / жидкий груз 
+                                                <span class="calcheader__help">
+                                                  <span class="help-call">?</span>
+                                                  <span class="help-tooltip">
+                                                    <span class="help-tooltip__content">
+                                                      <span class="help-tooltip__text"> В случае отсутствия
+                                                        надлежащей упаковки, в целях сохранности груза в
+                                                        процессе перевозки мы вправе самостоятельно
+                                                        доупаковать груз, а плательщик обязан оплатить
+                                                        стоимость доп. упаковки.
+  
+                                                      </span>
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </div>
                                               <div class="checkblock__value" data-dependon='liquidCargo'>Отключен</div>
                                             </div>
                                           </div>
@@ -456,7 +567,7 @@
                                       </div>
                                     </div>
                                     <div class="stepform__block">
-
+  
                                       <div class="borderblock" style='background-image: url(img/warmbg.png);'>
                                         <div class="checkblock checkblock_white">
                                           <div class="checkblock__content">
@@ -464,7 +575,21 @@
                                               <img src="img/warmicon.svg" alt="">
                                             </div>
                                             <div class="checkblock__text">
-                                              <div class="checkblock__label">Теплый режим</div>
+                                              <div class="checkblock__label">Теплый режим <span
+                                                class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Доставку груза при
+                                                      температуре не ниже +2 оС.
+                                                      Важно! Мы не занимаемся доставкой товаров, требующих
+                                                      поддержания низких температур. Например,
+                                                      замороженных продуктов питания, охлаждённого мяса и
+                                                      прочих товаров.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></div>
                                               <div class="checkblock__value" data-dependon='teplo'>Отключен</div>
                                             </div>
                                           </div>
@@ -492,7 +617,21 @@
                                             <input type="checkbox" id="check10-1" name="CRATE" value="Y"
                                               data-stepdata="pack_wooden" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Деревянная
-                                              обрешетка</span>
+                                              обрешетка <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Изготовление жесткой
+                                                      упаковки индивидуально по размеру груза.
+                                                      Ознакомьтесь с <a href="/trebovanie-k-upakovke/" target="_blank">
+                                                        Перечнем грузов,
+                                                        подлежащих обязательной упаковке в обрешетку
+                                                        (жесткая упаковка)</a> <br>
+                                                      +30% к стоимости межтерминальной перевозки
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-012" class="formcheckbox__label formcheckbox__label_type2">
@@ -500,7 +639,22 @@
                                             <input type="checkbox" id="check10-012" name="PALET" value="Y"
                                               data-stepdata="pack_palet" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Паллетный
-                                              борт</span>
+                                              борт <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Изготовление жесткой
+                                                      упаковки индивидуально по размеру груза.
+                                                      Ознакомьтесь с <a href="/trebovanie-k-upakovke/" target="_blank">
+                                                        Перечнем грузов,
+                                                        подлежащих обязательной упаковке в паллетный
+                                                        борт
+                                                        (жесткая упаковка)</a> <br>
+                                                      +30% к стоимости межтерминальной перевозки
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-2" class="formcheckbox__label formcheckbox__label_type2">
@@ -508,7 +662,21 @@
                                             <input type="checkbox" id="check10-2" name="BUBBLE" value="Y"
                                               data-stepdata="pack_bubble" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Пузырчатая
-                                              пленка</span>
+                                              пленка  <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Обеспечивает
+                                                      дополнительную защиту груза от царапин и
+                                                      потертостей. Расход и определение стоимости упаковки
+                                                      возможно только по фактически определяемым
+                                                      параметрам груза при его сдаче.
+  
+  
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-3" class="formcheckbox__label formcheckbox__label_type2">
@@ -516,21 +684,60 @@
                                             <input type="checkbox" id="check10-3" name="STRETCHFILM"
                                               data-stepdata="pack_stretch" data-steptype="source" value="Y">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Стретч
-                                              пленка</span>
+                                              пленка <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Обеспечивает
+                                                      дополнительную защиту груза от вмятин и сколов.
+                                                      Расход и определение стоимости упаковки возможно
+                                                      только по фактически определяемым параметрам груза
+                                                      при его сдаче.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-4" class="formcheckbox__label formcheckbox__label_type2">
                                           <span>
                                             <input type="checkbox" id="check10-4" name="CORRUGATEDBOARD" value="Y"
                                               data-stepdata="pack_gofro" data-steptype="source">
-                                            <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон</span>
+                                            <span class="formcheckbox__text" data-text="checkboxtext">Гофрокартон <span
+                                              class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Обеспечивает
+                                                    дополнительную защиту груза от царапин и
+                                                    потертостей. Расход и определение стоимости упаковки
+                                                    возможно только по фактически определяемым
+                                                    параметрам груза при его сдаче.
+  
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-5" class="formcheckbox__label formcheckbox__label_type2">
                                           <span>
                                             <input type="checkbox" id="check10-5" name="BAG" value="Y"
                                               data-stepdata="pack_meshkotara" data-steptype="source">
-                                            <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара</span>
+                                            <span class="formcheckbox__text" data-text="checkboxtext">Мешкотара <span
+                                              class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Используется для
+                                                    упаковки небольших, ценных грузов, партий мелких
+                                                    грузов. Расход и определение стоимости упаковки
+                                                    возможно только по фактически определяемым
+                                                    параметрам груза при его сдаче.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-8" class="formcheckbox__label formcheckbox__label_type2">
@@ -538,14 +745,43 @@
                                             <input type="checkbox" id="check10-8" name="InternalRecalculate"
                                               data-stepdata="pack_recalc" data-steptype="source" value="Y">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Пересчет
-                                              внутренних вложений</span>
+                                              внутренних вложений <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">Данная услуга
+                                                    подразумевает пересчет внутреннего содержимого грузовых
+                                                    мест представителем компании — водителем службы
+                                                    доставки, оператором склада или кладовщиком. Пересчет
+                                                    проводится в присутствии клиента (грузоотправителя или
+                                                    грузополучателя) для того, чтобы принять груз по
+                                                    количеству грузовых и внутритарных мест. После процедуры
+                                                    грузовые места опечатываются номерными пломбами. При
+                                                    заборе груза общее количество внутритарных мест не
+                                                    должно превышать 1600 штук. При заборе груза к
+                                                    внутритарному пересчету НЕ принимаются стеклянные и
+                                                    легкобьющиеся грузы.</span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                         <label for="check10-9" class="formcheckbox__label formcheckbox__label_type2">
                                           <span>
                                             <input type="checkbox" id="check10-9" name="MARKING" value="Y"
                                               data-stepdata="pack_mark" data-steptype="source" checked="">
-                                            <span class="formcheckbox__text" data-text="checkboxtext">Маркировка</span>
+                                            <span class="formcheckbox__text" data-text="checkboxtext">Маркировка <span
+                                              class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Маркировка грузов, в
+                                                    соответствии с действующими стандартами компании,
+                                                    является обязательной услугой, важной с точки зрения
+                                                    идентификации и сохранности содержимого при
+                                                    перевозке сборного груза.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span>/span>
                                           </span>
                                         </label>
                                       </div>
@@ -560,7 +796,17 @@
                                             <input type="checkbox" id="check11-1" name="SendingAccompanyingDocuments"
                                               value="Y" data-stepdata="dop_doc" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Перевозка
-                                              сопроводительных документов</span>
+                                              сопроводительных документов <span class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Упаковка комплекта
+                                                    сопроводительных документов в отдельный конверт и
+                                                    передача их получателю груза.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></span>
                                           </span>
                                         </label>
                                         <label for="check11-2" data-entity="doc-checkbox"
@@ -569,13 +815,24 @@
                                             <input type="checkbox" id="check11-2" name="ReturnOfAccompanyingDocuments"
                                               value="Y" data-stepdata="dop_return" data-steptype="source">
                                             <span class="formcheckbox__text" data-text="checkboxtext">Возврат
-                                              документов</span>
+                                              документов <span class="calcheader__help">
+                                                <span class="help-call">?</span>
+                                                <span class="help-tooltip">
+                                                  <span class="help-tooltip__content">
+                                                    <span class="help-tooltip__text">Возврат оригиналов
+                                                      документов с отметками получателя,
+                                                      подтверждающими
+                                                      выдачу груза.
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </span></span>
                                           </span>
                                         </label>
                                       </div>
                                     </div>
                                   </div>
-
+  
                                 </div>
                               </div>
                               <!-- /.stepform__borderblock -->
@@ -602,6 +859,17 @@
                                     </ul>
                                   </div>
                                 </div>
+                                <span class="calcheader__help">
+                                  <span class="help-call">?</span>
+                                  <span class="help-tooltip">
+                                    <span class="help-tooltip__content">
+                                      <span class="help-tooltip__text"> Самостоятельно приехать на терминал
+                                        компании, либо заказать машину до адреса. Стоимость перевозки по городу
+                                        между терминалами по требованию грузополучателя составляет 50% от прайса
+                                        автоэкспедирования.
+                                      </span>
+                                    </span>
+                                  </span>
                               </div>
                             </div>
                             <div class="stepform__main stepform__main_type2">
@@ -613,8 +881,7 @@
                                       <img src="img/locicon.svg" alt="">
                                     </div>
                                     <div class="inputselect__content">
-                                      <div class="inputselect__title" data-value='send_terminal'>222148481 г. Москва,
-                                        ул.
+                                      <div class="inputselect__title" data-value='send_terminal'>222148481 г. Москва, ул.
                                         Освобождения Ленинских прос-ктов 49491
                                       </div>
                                       <div class="inputselect__info" data-value2='send_terminal'>10:00 - 19:00 (GMT +2)
@@ -628,8 +895,7 @@
                                     <!-- /.inputselect__content -->
                                   </div>
                                   <!-- /.inputselect__wrapper -->
-                                  <div class="dateblock__menu dropdownblock dropdownblock_sm"
-                                    data-toggle="send_terminal">
+                                  <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="send_terminal">
                                     <div class="dropdownblock__wrapper">
                                       <div class="dropdownblock__links">
                                         <menu>
@@ -650,7 +916,7 @@
                               <div data-tabscontent='sendfrom'>
                                 <div class="stepform__row  flex">
                                   <div class="stepform__col w-full">
-                                    <div class="inputlabel  inputlabel_dropdown  inputselect">
+                                    <div class="inputlabel    inputselect">
                                       <div class="inputselect__wrapper">
                                         <div class="inputselect__icon">
                                           <img src="img/locicon.svg" alt="">
@@ -706,7 +972,20 @@
                                             <img src="img/prr.svg" alt="">
                                           </div>
                                           <div class="checkblock__text">
-                                            <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                            <div class="checkblock__label">Погрузо-разгрузочные работы <span
+                                              class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Погрузо-разгрузочные работы
+                                                    рассчитываются для грузов с весом 1 места не более 20 кг, объемом
+                                                    не более 0,2 м3. Если вес отдельного грузового места превышает 20
+                                                    кг, стоимость ПРР определяется по согласованию, исходя из времени
+                                                    выполнения работ и количества привлекаемых грузчиков.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></div>
                                             <div class="checkblock__value" data-dependon='FROM_LOADING'>Отключен</div>
                                           </div>
                                         </div>
@@ -739,64 +1018,54 @@
                                         <div class="dropdownblock__wrapper">
                                           <div class="dropdownblock__links">
                                             <div class="formcheckbox">
-
-                                              <label for="check77-1"
-                                                class="formcheckbox__label formcheckbox__label_type2">
+  
+                                              <label for="check77-1" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check77-1" name="FROM_SideTentRemoval"
-                                                    value="Y" data-stepdata="dop_bok" data-steptype="source">
+                                                  <input type="checkbox" id="check77-1" name="FROM_SideTentRemoval" value="Y" data-stepdata="dop_bok" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Боковая
                                                     рестентовка</span>
                                                 </span>
-
+  
                                               </label>
-                                              <label for="check77-2"
-                                                class="formcheckbox__label formcheckbox__label_type2">
+                                              <label for="check77-2" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check77-2" name="FROM_UpperTentRemoval"
-                                                    value="Y" data-stepdata="dop_verh" data-steptype="source">
+                                                  <input type="checkbox" id="check77-2" name="FROM_UpperTentRemoval" value="Y" data-stepdata="dop_verh" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
                                                     растентовка</span>
                                                 </span>
-
+  
                                               </label>
-                                              <label for="check77-3"
-                                                class="formcheckbox__label formcheckbox__label_type2">
+                                              <label for="check77-3" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check77-3" name="FROM_FullTentRemoval"
-                                                    data-stepdata="dop_full" data-steptype="source">
+                                                  <input type="checkbox" id="check77-3" name="FROM_FullTentRemoval" data-stepdata="dop_full" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Полная
                                                     рестентовка</span>
                                                 </span>
-
+  
                                               </label>
-
-                                              <label for="check77-4"
-                                                class="formcheckbox__label formcheckbox__label_type2">
+  
+                                              <label for="check77-4" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check77-4" data-stepdata="dop_bort"
-                                                    data-steptype="source" name="FROM_TailLift" value="Y">
+                                                  <input type="checkbox" id="check77-4" data-stepdata="dop_bort" data-steptype="source" name="FROM_TailLift" value="Y">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Требуется
                                                     машина
                                                     с
                                                     гидробортом</span>
-
+  
                                                 </span>
-
+  
                                               </label>
-
+  
                                             </div>
-
+  
                                             <div class="calcform__input">
                                               <div class="floating">
-                                                <input type="text" name="FLOOR" data-stepdata="dop_floor"
-                                                  data-steptype="source" data-min="1" data-max="300" class="w-full"
-                                                  onkeyup="this.setAttribute('value', this.value);" value="">
+                                                <input type="text" name="FLOOR" data-stepdata="dop_floor" data-steptype="source" data-min="1" data-max="300" class="w-full" onkeyup="this.setAttribute('value', this.value);" value="">
                                                 <span class="floating-label">Этаж</span>
-
-
+  
+  
                                               </div>
-
+  
                                               <div class="checkblock checkblock_abs">
                                                 <div class="checkblock__content">
                                                   <div class="checkblock__text">
@@ -804,18 +1073,17 @@
                                                   </div>
                                                 </div>
                                                 <div class="checkblock__checkbox">
-                                                  <input type="checkbox" id="NO_LIFT" name="NO_LIFT"
-                                                    value="Y" data-stepdata="NO_LIFT" data-steptype="source">
+                                                  <input  type="checkbox" id="NO_LIFT" name="NO_LIFT" value="Y" data-stepdata="NO_LIFT" data-steptype="source">
                                                   <label for="NO_LIFT">
                                                     <span></span>
                                                   </label>
                                                 </div>
                                               </div>
-
-
+  
+  
                                             </div><!-- /.calcform__input -->
-
-
+  
+  
                                           </div>
                                         </div>
                                       </div>
@@ -872,6 +1140,18 @@
                                     </ul>
                                   </div>
                                 </div>
+                                <span class="calcheader__help">
+                                  <span class="help-call">?</span>
+                                  <span class="help-tooltip">
+                                    <span class="help-tooltip__content">
+                                      <span class="help-tooltip__text">Самостоятельно приехать на терминал
+                                        компании, либо заказать машину до адреса. Стоимость перевозки по
+                                        городу между терминалами по требованию грузополучателя составляет
+                                        50% от прайса автоэкспедирования.
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
                               </div>
                             </div>
                             <div class="stepform__main stepform__main_type2">
@@ -887,15 +1167,14 @@
                                         ул.
                                         Освобождения Ленинских прос-ктов 49491
                                       </div>
-                                      <div class="inputselect__info" data-value2='receive_terminal'>10:00 - 19:00 (GMT
-                                        +2)
+                                      <div class="inputselect__info" data-value2='receive_terminal'>10:00 - 19:00 (GMT +2)
                                       </div>
-                                      <input type="hidden" data-input="ternimalid" value="000000088"
-                                        name="terminal-to-id" class="terminal-id">
+                                      <input type="hidden" data-input="ternimalid" value="000000088" name="terminal-to-id"
+                                        class="terminal-id">
                                       <input type="hidden" data-input="ternimalname"
                                         value="Санкт-Петербург, ул. Кубинская, д. 75 корп.5" name="terminal-to-name"
                                         class="terminal-name">
-
+  
                                     </div>
                                     <!-- /.inputselect__content -->
                                   </div>
@@ -922,7 +1201,7 @@
                               <div data-tabscontent='receiveto'>
                                 <div class="stepform__row  flex">
                                   <div class="stepform__col w-full">
-                                    <div class="inputlabel  inputlabel_dropdown  inputselect">
+                                    <div class="inputlabel    inputselect">
                                       <div class="inputselect__wrapper">
                                         <div class="inputselect__icon">
                                           <img src="img/locicon.svg" alt="">
@@ -978,7 +1257,20 @@
                                             <img src="img/prr.svg" alt="">
                                           </div>
                                           <div class="checkblock__text">
-                                            <div class="checkblock__label">Погрузо-разгрузочные работы</div>
+                                            <div class="checkblock__label">Погрузо-разгрузочные работы  <span
+                                              class="calcheader__help">
+                                              <span class="help-call">?</span>
+                                              <span class="help-tooltip">
+                                                <span class="help-tooltip__content">
+                                                  <span class="help-tooltip__text">Погрузо-разгрузочные работы
+                                                    рассчитываются для грузов с весом 1 места не более 20 кг, объемом
+                                                    не более 0,2 м3. Если вес отдельного грузового места превышает 20
+                                                    кг, стоимость ПРР определяется по согласованию, исходя из времени
+                                                    выполнения работ и количества привлекаемых грузчиков.
+                                                  </span>
+                                                </span>
+                                              </span>
+                                            </span></div>
                                             <div class="checkblock__value" data-dependon='TO_LOADING'>Отключен</div>
                                           </div>
                                         </div>
@@ -1011,64 +1303,54 @@
                                         <div class="dropdownblock__wrapper">
                                           <div class="dropdownblock__links">
                                             <div class="formcheckbox">
-
-                                              <label for="check88-1"
-                                                class="formcheckbox__label formcheckbox__label_type2">
+  
+                                              <label for="check88-1" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-1" name="TO_SideTentRemoval"
-                                                    value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
+                                                  <input type="checkbox" id="check88-1" name="TO_SideTentRemoval" value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Боковая
                                                     рестентовка</span>
                                                 </span>
-
+  
                                               </label>
-                                              <label for="check88-2"
-                                                class="formcheckbox__label formcheckbox__label_type2">
+                                              <label for="check88-2" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-2" name="TO_UpperTentRemoval"
-                                                    value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
+                                                  <input type="checkbox" id="check88-2" name="TO_UpperTentRemoval" value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
                                                     растентовка</span>
                                                 </span>
-
+  
                                               </label>
-                                              <label for="check88-3"
-                                                class="formcheckbox__label formcheckbox__label_type2">
+                                              <label for="check88-3" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-3" name="TO_FullTentRemoval"
-                                                    data-stepdata="dop_dost_full" data-steptype="source">
+                                                  <input type="checkbox" id="check88-3" name="TO_FullTentRemoval" data-stepdata="dop_dost_full" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Полная
                                                     рестентовка</span>
                                                 </span>
-
+  
                                               </label>
-
-                                              <label for="check88-4"
-                                                class="formcheckbox__label formcheckbox__label_type2">
+  
+                                              <label for="check88-4" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-4" data-stepdata="dop_dost_bort"
-                                                    data-steptype="source" name="TO_TailLift" value="Y">
+                                                  <input type="checkbox" id="check88-4" data-stepdata="dop_dost_bort" data-steptype="source" name="TO_TailLift" value="Y">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Требуется
                                                     машина
                                                     с
                                                     гидробортом</span>
-
+  
                                                 </span>
-
+  
                                               </label>
-
+  
                                             </div>
-
+  
                                             <div class="calcform__input">
                                               <div class="floating">
-                                                <input type="text" name="TO_FLOOR" data-stepdata="dop_dost_floor"
-                                                  data-steptype="source" data-min="1" data-max="300" class="w-full"
-                                                  onkeyup="this.setAttribute('value', this.value);" value="">
+                                                <input type="text" name="TO_FLOOR" data-stepdata="dop_dost_floor" data-steptype="source" data-min="1" data-max="300" class="w-full" onkeyup="this.setAttribute('value', this.value);" value="">
                                                 <span class="floating-label">Этаж</span>
-
-
+  
+  
                                               </div>
-
+  
                                               <div class="checkblock checkblock_abs">
                                                 <div class="checkblock__content">
                                                   <div class="checkblock__text">
@@ -1076,18 +1358,17 @@
                                                   </div>
                                                 </div>
                                                 <div class="checkblock__checkbox">
-                                                  <input checked="" type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT"
-                                                    value="Y">
+                                                  <input checked="" type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT" value="Y">
                                                   <label for="TO_NO_LIFT">
                                                     <span></span>
                                                   </label>
                                                 </div>
                                               </div>
-
-
+  
+  
                                             </div><!-- /.calcform__input -->
-
-
+  
+  
                                           </div>
                                         </div>
                                       </div>
@@ -1139,9 +1420,9 @@
                               <div class="stepform__tabs stepform__tabs_type2 stepform__tabs_checkbox">
                                 <div class="calctabs calctabs-js" data-tabs='sender' data-depgroup='S_DADATA'>
                                   <ul>
-                                    <label class="active" for="send_yur">Физ. лицо <input data-radiotab="tab"
-                                        type="radio" data-isrequired="delivery-address" value="Y" id="send_yur"
-                                        checked="" name="sendfizyur"></label>
+                                    <label class="active" for="send_yur">Физ. лицо <input data-radiotab="tab" type="radio"
+                                        data-isrequired="delivery-address" value="Y" id="send_yur" checked=""
+                                        name="sendfizyur"></label>
                                     <label class="" for="send_fiz">Юр. лицо <input data-radiotab="tab" type="radio"
                                         value="N" id="send_fiz" name="sendfizyur" data-dependcheck="S_DADATA">
                                     </label>
@@ -1171,10 +1452,9 @@
                                     <div class="stepform__row  flex ">
                                       <div class="stepform__col w-full">
                                         <div class="floating">
-                                          <input type="text" name="F_FIO" data-stepdata="send_fio"
-                                            data-steptype="source" data-required="required" data-min="3"
-                                            data-max="300" class='w-full'
-                                            onkeyup="this.setAttribute('value', this.value);" value='test'>
+                                          <input type="text" name="F_FIO" data-stepdata="send_fio" data-steptype="source"
+                                            data-required="required" data-min="3" data-max="300" class='w-full'
+                                            onkeyup="this.setAttribute('value', this.value);" value=''>
                                           <span class="floating-label">ФИО</span></span>
                                         </div>
                                       </div>
@@ -1190,8 +1470,7 @@
                                               </div>
                                               <div class="inputselect__title" data-value="F_DOCTYPE">Паспорт РФ
                                               </div>
-                                              <input type="hidden" value='' data-inputvalue='F_DOCTYPE'
-                                                name='F_DOCTYPE'>
+                                              <input type="hidden" value='' data-inputvalue='F_DOCTYPE' name='F_DOCTYPE'>
                                             </div>
                                             <!-- /.inputselect__content -->
                                           </div>
@@ -1201,7 +1480,7 @@
                                             <div class="dropdownblock__wrapper">
                                               <div class="dropdownblock__links">
                                                 <menu>
-                                                  <li><a href="#" data-togglevalue='Паспорт РФ'>Паспорт РФ</a></li>
+                                                  <li><a href="#" data-togglevalue='>Паспорт РФ'>Паспорт РФ</a></li>
                                                   <li><a href="#"
                                                       data-togglevalue='Водительское удостоверение'>Водительское
                                                       удостоверение</a>
@@ -1215,11 +1494,9 @@
                                                   </li>
                                                   <li><a href="#" data-togglevalue='Паспорт моряка'>Паспорт моряка</a>
                                                   </li>
-                                                  <li><a href="#" data-togglevalue='Загран. паспорт'>Загран.
-                                                      паспорт</a>
+                                                  <li><a href="#" data-togglevalue='Загран. паспорт'>Загран. паспорт</a>
                                                   </li>
-                                                  <li><a href="#" data-togglevalue='Военный билет'>Военный билет</a>
-                                                  </li>
+                                                  <li><a href="#" data-togglevalue='Военный билет'>Военный билет</a></li>
                                                 </menu>
                                               </div>
                                             </div>
@@ -1232,16 +1509,16 @@
                                           <div class="inputDoc calcform__multipleInput w-full" data-select="passport">
                                             <div class="floating">
                                               <input type="text" placeholder="" name="F_PASS_1" class="inputPassport1"
-                                                data-stepdata="send_pasp1" data-steptype="source"
-                                                data-required="required" data-min="4" data-max="4"
-                                                onkeyup="this.setAttribute('value', this.value);" value='2222'>
+                                                data-stepdata="send_pasp1" data-steptype="source" data-required="required"
+                                                data-min="4" data-max="4"
+                                                onkeyup="this.setAttribute('value', this.value);" value=''>
                                               <span class="floating-label">Серия</span></span>
                                             </div>
                                             <div class="floating w-full">
                                               <input type="text" placeholder="" name="F_PASS_2" class="inputPassport2"
-                                                data-stepdata="send_pasp2" data-steptype="source"
-                                                data-required="required" data-min="6" data-max="6"
-                                                onkeyup="this.setAttribute('value', this.value);" value='222222'>
+                                                data-stepdata="send_pasp2" data-steptype="source" data-required="required"
+                                                data-min="6" data-max="6"
+                                                onkeyup="this.setAttribute('value', this.value);" value=''>
                                               <span class="floating-label">Номер документа</span></span>
                                             </div>
                                           </div>
@@ -1253,9 +1530,8 @@
                                       <div class="stepform__col ">
                                         <div class="floating">
                                           <input type="tel" name="F_PHONE[]" data-stepdata="send_tel"
-                                            data-steptype="source" value='7 (733) 333-33-33' data-required="required"
-                                            data-min="18" data-max="18"
-                                            onkeyup="this.setAttribute('value', this.value);">
+                                            data-steptype="source" value='' data-required="required" data-min="18"
+                                            data-max="18" onkeyup="this.setAttribute('value', this.value);">
                                           <span class="floating-label">Телефон</span></span>
                                         </div>
                                         <div class="newtel"></div>
@@ -1270,9 +1546,8 @@
                                       <div class="stepform__col">
                                         <div class="calcform__multipleInput">
                                           <div class="floating">
-                                            <input type="email" name="F_EMAIL" data-stepdata="send_email" value=''
-                                              data-steptype="source"
-                                              onkeyup="this.setAttribute('value', this.value);">
+                                            <input type="email" name="F_EMAIL" data-stepdata="send_fio" value=''
+                                              data-steptype="source" onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Email <span
                                                 class='gray'>(необязательно)</span></span>
                                           </div>
@@ -1284,14 +1559,14 @@
                               </div>
                               <div class='' data-tabscontent='sender' data-datatawrapper='sender'>
                                 <div class="calcform__content">
-
-                                  <div class="stepform__row stepform__row3 flex">
-                                    <div class="stepform__col ">
+  
+                                  <div class="stepform__row stepform__row3 w-full flex ">
+                                    <div class="stepform__col">
                                       <div class="floating">
                                         <input type="text" name="U_INN" data-stepdata="send_inn" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                           data-required="required" data-min="13" data-max="13" data-dadatatype="inn"
-                                          data-dadata="org" data-dependset="S_DADATA">
+                                          data-dadata="org">
                                         <span class="floating-label">ИНН</span></span>
                                       </div>
                                     </div>
@@ -1302,8 +1577,8 @@
                                         <div class="inputselect__wrapper" data-toggleclick="U_FORM">
                                           <div class="inputselect__content floating">
                                             <input type="hidden" value='' data-inputvalue='U_FORM' name='U_FORM'
-                                              data-dadata='short' data-steptype="source" data-stepdata="send_yurform">
-
+                                              data-dadata='short'>
+  
                                             <div class="floating-label">
                                               Правовая форма
                                             </div>
@@ -1313,12 +1588,11 @@
                                           <!-- /.inputselect__content -->
                                         </div>
                                         <!-- /.inputselect__wrapper -->
-                                        <div class="dateblock__menu dropdownblock dropdownblock_sm"
-                                          data-toggle="U_FORM">
+                                        <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="U_FORM">
                                           <div class="dropdownblock__wrapper">
                                             <div class="dropdownblock__links">
                                               <menu>
-                                                <li><a href="#" data-togglevalue='ООО'>ООО</a></li>
+                                                <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
                                                 <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
                                                 <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
                                                 <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
@@ -1329,7 +1603,7 @@
                                       </div>
                                       <!-- /.inputlabel -->
                                     </div>
-
+  
                                     <div class="stepform__col">
                                       <div class="floating">
                                         <input type="text" name="U_KPP" data-stepdata="send_kpp" value=''
@@ -1352,7 +1626,7 @@
                                     </div>
                                   </div>
                                   <div class="calcform__title">Контактное лицо</div>
-
+  
                                   <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
@@ -1374,14 +1648,14 @@
                                     </div>
                                     <div class="stepform__col w-full ">
                                       <div class="floating">
-                                        <input type="text" name="U_EMAIL" data-stepdata="send_yuremail" value=''
+                                        <input type="text" name="U_EMAIL" data-stepdata="send_email" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-min="3" data-max="300">
+                                          data-required="required" data-min="3" data-max="300">
                                         <span class="floating-label">Email</span></span>
                                       </div>
                                     </div>
                                   </div>
-
+  
                                   <div class="calcitem__info calcitem__info_red">
                                     <img src="img/calcitem__info.svg" alt=""><span>Обязательно нужна <a
                                         href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf"
@@ -1393,20 +1667,19 @@
                               <div class='' data-tabscontent='sender'>
                                 <div class="calcform__content">
                                   <div class="stepform__row  flex ">
-
                                     <div class="stepform__col w-full">
                                       <div class="floating">
                                         <input type="text" value="" name="U_COMPANY" placeholder=""
                                           data-stepdata="send_yurname" data-steptype="source" data-required="required"
                                           data-min="2" data-max="300"
                                           onkeyup="this.setAttribute('value', this.value);">
-
+  
                                         <span class="floating-label">Название компании</span></span>
                                       </div>
                                     </div>
                                     <div class="stepform__col w-full">
                                       <div class="floating">
-                                        <input type="text" name="IP_INN" data-stepdata="send_yurname" value=''
+                                        <input type="text" name="IP_INN" data-stepdata="send_innip" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                           data-required="required" data-min="13" data-max="13">
                                         <span class="floating-label">ИНН</span></span>
@@ -1421,7 +1694,7 @@
                                       </div>
                                     </div>
                                   </div>
-
+  
                                   <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
@@ -1435,7 +1708,7 @@
                                       <div class="floating">
                                         <input type="text" name="IP_EMAIL" data-stepdata="send_emailip" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-min="3" data-max="300">
+                                          data-required="required" data-min="3" data-max="300">
                                         <span class="floating-label">Email <span
                                             class='gray'>необязательно</span></span></span>
                                       </div>
@@ -1447,7 +1720,7 @@
                                         target="_blank">доверенность</a> на
                                       отправку или получение груза</span>
                                   </div>
-
+  
                                 </div>
                               </div>
                             </div>
@@ -1473,8 +1746,8 @@
                                     <label class="" for="receive_fiz">Юр. лицо <input data-radiotab="tab" type="radio"
                                         value="N" id="receive_fiz" name="receivefizyur" data-dependcheck="R_DADATA">
                                     </label>
-                                    <label class="" for="receive_ip">ИП <input data-radiotab="tab" type="radio"
-                                        value="N" id="receive_ip" name="receivefizyur">
+                                    <label class="" for="receive_ip">ИП <input data-radiotab="tab" type="radio" value="N"
+                                        id="receive_ip" name="receivefizyur">
                                     </label>
                                   </ul>
                                 </div>
@@ -1500,9 +1773,8 @@
                                       <div class="stepform__col ">
                                         <div class="floating">
                                           <input type="text" name="R_F_FIO" data-stepdata="receive_fio"
-                                            data-steptype="source" data-required="required" data-min="3"
-                                            data-max="300" class='w-full'
-                                            onkeyup="this.setAttribute('value', this.value);" value='tester'>
+                                            data-steptype="source" data-required="required" data-min="3" data-max="300"
+                                            class='w-full' onkeyup="this.setAttribute('value', this.value);" value=''>
                                           <span class="floating-label">ФИО</span></span>
                                         </div>
                                       </div>
@@ -1515,8 +1787,7 @@
                                               </div>
                                               <div class="checkblock__text">
                                                 <div class="checkblock__label">Упрощенная выдача по смс</div>
-                                                <div class="checkblock__value" data-dependon="R_SIMPLIFY">Отключен
-                                                </div>
+                                                <div class="checkblock__value" data-dependon="R_SIMPLIFY">Отключен</div>
                                               </div>
                                             </div>
                                             <div class="checkblock__checkbox">
@@ -1552,7 +1823,7 @@
                                             <div class="dropdownblock__wrapper">
                                               <div class="dropdownblock__links">
                                                 <menu>
-                                                  <li><a href="#" data-togglevalue='Паспорт РФ'>Паспорт РФ</a></li>
+                                                  <li><a href="#" data-togglevalue='>Паспорт РФ'>Паспорт РФ</a></li>
                                                   <li><a href="#"
                                                       data-togglevalue='Водительское удостоверение'>Водительское
                                                       удостоверение</a>
@@ -1566,11 +1837,9 @@
                                                   </li>
                                                   <li><a href="#" data-togglevalue='Паспорт моряка'>Паспорт моряка</a>
                                                   </li>
-                                                  <li><a href="#" data-togglevalue='Загран. паспорт'>Загран.
-                                                      паспорт</a>
+                                                  <li><a href="#" data-togglevalue='Загран. паспорт'>Загран. паспорт</a>
                                                   </li>
-                                                  <li><a href="#" data-togglevalue='Военный билет'>Военный билет</a>
-                                                  </li>
+                                                  <li><a href="#" data-togglevalue='Военный билет'>Военный билет</a></li>
                                                 </menu>
                                               </div>
                                             </div>
@@ -1582,19 +1851,19 @@
                                         <div class="calcform__multipleInput" data-select="input_doc">
                                           <div class="inputDoc calcform__multipleInput w-full" data-select="passport">
                                             <div class="floating">
-                                              <input type="text" placeholder="" name="R_F_PASS_1"
-                                                class="inputPassport1" data-stepdata="receive_pasp1"
-                                                data-steptype="source" data-required="required" data-min="4"
-                                                data-max="4" onkeyup="this.setAttribute('value', this.value);"
-                                                value='3333' data-depend='R_SIMPLIFY'>
+                                              <input type="text" placeholder="" name="R_F_PASS_1" class="inputPassport1"
+                                                data-stepdata="receive_pasp1" data-steptype="source"
+                                                data-required="required" data-min="4" data-max="4"
+                                                onkeyup="this.setAttribute('value', this.value);" value=''
+                                                data-depend='R_SIMPLIFY'>
                                               <span class="floating-label">Серия</span></span>
                                             </div>
-                                            <div class="floating ">
-                                              <input type="text" placeholder="" name="R_F_PASS_2"
-                                                class="inputPassport2" data-stepdata="receive_pasp2"
-                                                data-steptype="source" data-required="required" data-min="6"
-                                                data-max="6" onkeyup="this.setAttribute('value', this.value);"
-                                                value='333333' data-depend='R_SIMPLIFY'>
+                                            <div class="floating w-full">
+                                              <input type="text" placeholder="" name="R_F_PASS_2" class="inputPassport2"
+                                                data-stepdata="receive_pasp2" data-steptype="source"
+                                                data-required="required" data-min="6" data-max="6"
+                                                onkeyup="this.setAttribute('value', this.value);" value=''
+                                                data-depend='R_SIMPLIFY'>
                                               <span class="floating-label">Номер документа</span></span>
                                             </div>
                                           </div>
@@ -1606,9 +1875,8 @@
                                       <div class="stepform__col ">
                                         <div class="floating">
                                           <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel"
-                                            data-steptype="source" value='7 (333) 333-33-33' data-required="required"
-                                            data-min="18" data-max="18"
-                                            onkeyup="this.setAttribute('value', this.value);">
+                                            data-steptype="source" value='' data-required="required" data-min="18"
+                                            data-max="18" onkeyup="this.setAttribute('value', this.value);">
                                           <span class="floating-label">Телефон</span></span>
                                         </div>
                                         <div class="newtel"></div>
@@ -1624,8 +1892,7 @@
                                         <div class="calcform__multipleInput">
                                           <div class="floating">
                                             <input type="email" name="R_F_EMAIL" data-stepdata="receive_fio" value=''
-                                              data-steptype="source"
-                                              onkeyup="this.setAttribute('value', this.value);">
+                                              data-steptype="source" onkeyup="this.setAttribute('value', this.value);">
                                             <span class="floating-label">Email <span
                                                 class='gray'>(необязательно)</span></span>
                                           </div>
@@ -1637,14 +1904,14 @@
                               </div>
                               <div class='' data-tabscontent='receiver' data-datatawrapper='receiver'>
                                 <div class="calcform__content">
-
-                                  <div class="stepform__row stepform__row3  flex ">
+  
+                                  <div class="stepform__row stepform__row3 w-full flex ">
                                     <div class="stepform__col">
                                       <div class="floating">
                                         <input type="text" name="R_U_INN" data-stepdata="receive_inn" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
                                           data-required="required" data-min="13" data-max="13" data-dadatatype="inn"
-                                          data-dadata="org" data-dependset="R_DADATA">
+                                          data-dadata="org">
                                         <span class="floating-label">ИНН</span></span>
                                       </div>
                                     </div>
@@ -1656,7 +1923,7 @@
                                           <div class="inputselect__content floating">
                                             <input type="hidden" value='' data-inputvalue='R_U_FORM' name='R_U_FORM'
                                               data-dadata='short'>
-
+  
                                             <div class="floating-label">
                                               Правовая форма
                                             </div>
@@ -1682,7 +1949,7 @@
                                       </div>
                                       <!-- /.inputlabel -->
                                     </div>
-
+  
                                     <div class="stepform__col">
                                       <div class="floating">
                                         <input type="text" name="R_U_KPP" data-stepdata="receive_kpp" value=''
@@ -1705,7 +1972,7 @@
                                     </div>
                                   </div>
                                   <div class="calcform__title">Контактное лицо</div>
-
+  
                                   <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
@@ -1729,12 +1996,12 @@
                                       <div class="floating">
                                         <input type="text" name="R_U_EMAIL" data-stepdata="receive_email" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-min="3" data-max="300">
+                                          data-required="required" data-min="3" data-max="300">
                                         <span class="floating-label">Email</span></span>
                                       </div>
                                     </div>
                                   </div>
-
+  
                                   <div class="calcitem__info calcitem__info_red">
                                     <img src="img/calcitem__info.svg" alt=""><span>Обязательно нужна <a
                                         href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf"
@@ -1745,18 +2012,18 @@
                               </div>
                               <div class='' data-tabscontent='receiver'>
                                 <div class="calcform__content">
-                                  <div class="stepform__row  flex">
-
+                                  <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
-                                      <div class="floating">
-                                        <input type="text" value="" name="R_U_COMPANY" placeholder=""
-                                          data-stepdata="receive_innip" data-steptype="source"
-                                          data-required="required" data-min="2" data-max="300"
-                                          onkeyup="this.setAttribute('value', this.value);">
-
-                                        <span class="floating-label">Название компании</span></span>
-                                      </div>
+  
+                                    <div class="floating">
+                                      <input type="text" value="" name="R_U_COMPANY" placeholder=""
+                                        data-stepdata="receive_innip" data-steptype="source"
+                                        data-required="required" data-min="2" data-max="300"
+                                        onkeyup="this.setAttribute('value', this.value);">
+  
+                                      <span class="floating-label">Название компании</span></span>
                                     </div>
+                                  </div>
                                     <div class="stepform__col w-full">
                                       <div class="floating">
                                         <input type="text" name="R_IP_INN" data-stepdata="receive_innip" value=''
@@ -1774,14 +2041,13 @@
                                       </div>
                                     </div>
                                   </div>
-
+  
                                   <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
-                                        <input type="tel" name="R_IP_PHONE[]" data-stepdata="receive_yurtelip"
-                                          value='' data-steptype="source"
-                                          onkeyup="this.setAttribute('value', this.value);" data-required="required"
-                                          data-min="18" data-max="18">
+                                        <input type="tel" name="R_IP_PHONE[]" data-stepdata="receive_yurtelip" value=''
+                                          data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
+                                          data-required="required" data-min="18" data-max="18">
                                         <span class="floating-label">Телефон</span></span>
                                       </div>
                                     </div>
@@ -1789,7 +2055,7 @@
                                       <div class="floating">
                                         <input type="text" name="R_IP_EMAIL" data-stepdata="receive_emailip" value=''
                                           data-steptype="source" onkeyup="this.setAttribute('value', this.value);"
-                                          data-min="3" data-max="300">
+                                          data-required="required" data-min="3" data-max="300">
                                         <span class="floating-label">Email <span
                                             class='gray'>необязательно</span></span></span>
                                       </div>
@@ -1801,7 +2067,7 @@
                                         target="_blank">доверенность</a> на
                                       отправку или получение груза</span>
                                   </div>
-
+  
                                 </div>
                               </div>
                             </div>
@@ -1827,21 +2093,21 @@
                                     <label class="" for="payer_fiz">Получатель<input data-radiotab="tab" type="radio"
                                         value="2" id="payer_fiz" name="PAYER">
                                     </label>
-                                    <label class="" for="payer_third">Третье лицо <input data-radiotab="tab"
-                                        type="radio" value="3" id="payer_third" name="PAYER">
+                                    <label class="" for="payer_third">Третье лицо <input data-radiotab="tab" type="radio"
+                                        value="3" id="payer_third" name="PAYER">
                                     </label>
                                   </ul>
                                 </div>
                               </div>
                               <div class='active' data-tabscontent='payer'>
-
+  
                               </div>
                               <div class='' data-tabscontent='payer'>
-
+  
                               </div>
                               <div class='' data-tabscontent='payer'>
                                 <div class="calcform__content">
-
+  
                                   <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
@@ -1852,14 +2118,14 @@
                                       </div>
                                     </div>
                                   </div>
-
+  
                                   <div class="stepform__row stepform__row3 w-full flex ">
                                     <div class="stepform__col ">
                                       <div class="inputlabel  inputlabel_dropdown  inputselect inputlabel_md"
                                         data-toggleitem='P_FORM'>
                                         <div class="inputselect__wrapper" data-toggleclick="P_FORM">
                                           <div class="inputselect__content">
-
+  
                                             <div class="inputselect__title" data-value="P_FORM">Правовая форма
                                             </div>
                                             <input type="hidden" value='' data-inputvalue='P_FORM' name='P_FORM'>
@@ -1867,8 +2133,7 @@
                                           <!-- /.inputselect__content -->
                                         </div>
                                         <!-- /.inputselect__wrapper -->
-                                        <div class="dateblock__menu dropdownblock dropdownblock_sm"
-                                          data-toggle="P_FORM">
+                                        <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="P_FORM">
                                           <div class="dropdownblock__wrapper">
                                             <div class="dropdownblock__links">
                                               <menu>
@@ -1900,9 +2165,9 @@
                                       </div>
                                     </div>
                                   </div>
-
+  
                                   <div class="calcform__title">Контактное лицо</div>
-
+  
                                   <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
@@ -1913,7 +2178,7 @@
                                       </div>
                                     </div>
                                   </div>
-
+  
                                   <div class="stepform__row  flex ">
                                     <div class="stepform__col w-full">
                                       <div class="floating">
@@ -1939,7 +2204,7 @@
                                         target="_blank">доверенность</a> на
                                       отправку или получение груза</span>
                                   </div>
-
+  
                                 </div>
                               </div>
                             </div>
