@@ -4199,14 +4199,18 @@ color: #373737;
   font-size: 16px;
   background: #f5f5f5; }
 
+.orderitem {
+  margin-bottom: 20px; }
+
+/* 
 .stepform__number.avtive {
   background: #ff4d42;
-  color: #fff; }
-
+  color: #fff;
+}
 .avtive .stepform__number {
   background: #ff4d42;
-  color: #fff; }
-
+  color: #fff;
+} */
 .orderpage .stepform__row {
   margin-bottom: 12px; }
   .orderpage .stepform__row:last-child {
@@ -7177,17 +7181,17 @@ span.calcprice-params_left {
     padding-right: 15px; }
   .orderpage__step_type2 .calcform__content {
     margin-bottom: 12px; }
-  .orderpage__aside .orderpage__asideblock:not(.popupstyle) .orderparams__item {
+  .orderpage__asideblock:not(.popupstyle) .orderparams__item {
     margin-bottom: 16px; }
-  .orderpage__aside .orderpage__asideblock:not(.popupstyle) .orderparams_dd {
+  .orderpage__asideblock:not(.popupstyle) .orderparams_dd {
     font-size: 14px; }
-  .orderpage__aside .orderpage__asideblock:not(.popupstyle) .orderparams__dt {
+  .orderpage__asideblock:not(.popupstyle) .orderparams__dt {
     font-size: 14px;
     padding-right: 20px; }
-  .orderpage__aside .orderpage__asideblock:not(.popupstyle) .btn_main {
+  .orderpage__asideblock:not(.popupstyle) .btn_main {
     line-height: 120%;
     box-shadow: none; }
-  .orderpage__aside .orderpage__asideblock:not(.popupstyle) .orderitem__wrapper_wide {
+  .orderpage__asideblock:not(.popupstyle) .orderitem__wrapper_wide {
     padding-top: 14px;
     border-radius: 24px 24px 0 0;
     border-top: 1px solid rgba(55, 55, 55, 0.1);
