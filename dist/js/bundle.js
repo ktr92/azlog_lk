@@ -82,12 +82,17 @@ function closeByClickOutside(element, button) {
 
 $(document).ready(function () {
 
+  $( ".modal:not(#popup_edit2)" ).on('shown.bs.modal', function(){
+    $(`[data-modalcontent].mobactive`).removeClass("mobactive").removeClass("active")
+});
+
   $('.signout_close').on('click', function(e) {
     $('[data-toggle="accountmenu"]').removeClass('active')
   })
 
   $(document).on("click", ".modal-backdrop", function (e) {
     $(".modal").modal("hide")
+    
   })
 
   $("[data-modaltab]").on("click", function (e) {

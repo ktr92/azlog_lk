@@ -6090,8 +6090,12 @@ span.calcprice-params_left {
 
 .calcheader__help_outside {
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 5px;
+}
+
+.help-tooltip {
+  
 }
 
 .stepform__block {
@@ -6165,4 +6169,17 @@ span.calcprice-params_left {
   transform: translateY(-50%);
   cursor: pointer;
   display: block;
+}
+a.check_rememb {
+      color: #2079ff !important;
+} 
+.orderpage__asideblock.notasideblock.lineborders.onlyMobile {
+  display: none !important
+}
+
+.modal .inputlabel {
+  padding-left: 20px;
+}
+.modal .inputselect__icon {
+  justify-content: start;
 }

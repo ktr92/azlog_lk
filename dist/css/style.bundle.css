@@ -5925,7 +5925,7 @@ span.calcprice-params_left {
 
 .calcheader__help_outside {
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 5px; }
 
 .stepform__block {
@@ -5989,6 +5989,18 @@ span.calcprice-params_left {
   transform: translateY(-50%);
   cursor: pointer;
   display: block; }
+
+a.check_rememb {
+  color: #2079ff !important; }
+
+.orderpage__asideblock.notasideblock.lineborders.onlyMobile {
+  display: none !important; }
+
+.modal .inputlabel {
+  padding-left: 20px; }
+
+.modal .inputselect__icon {
+  justify-content: start; }
 
 @media (max-width: 1440px) {
   .orderpage__aside {
@@ -7256,7 +7268,23 @@ span.calcprice-params_left {
       width: 100%; }
   [data-aside].active {
     display: block !important;
-    position: fixed; }
+    position: fixed;
+    /*     background: #fff; */ }
+  .orderpage__asideblock:not(.popupstyle) .orderitem__wrapper_wide {
+    padding-top: 30px; }
+  [data-aside].active:before {
+    content: "";
+    width: 26px;
+    height: 3px;
+    background-color: #d9d9d9;
+    border-radius: 555px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 15px; }
+  [data-aside] .orderitem {
+    margin-bottom: 0; }
   .mobileorder {
     position: fixed;
     bottom: 82px;
@@ -7442,7 +7470,17 @@ span.calcprice-params_left {
     left: 0; }
   .formcheckbox .calcheader__help {
     position: static;
-    margin-left: 10px; } }
+    margin-left: 10px; }
+  /*  .orderpage__asideblock:not(.popupstyle) .orderitem__wrapper_wide {
+      border-radius: 0;
+    } */
+  .calcheader__help_outside {
+    position: absolute;
+    right: 10px;
+    top: 5px; }
+  .calcheader__help_outside .help-tooltip {
+    left: 0;
+    right: unset; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/

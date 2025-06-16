@@ -1823,8 +1823,27 @@
   [data-aside].active {
     display: block !important;
     position: fixed;
-  }
 
+/*     background: #fff; */
+  }
+.orderpage__asideblock:not(.popupstyle) .orderitem__wrapper_wide  {
+    padding-top: 30px;
+  }
+   [data-aside].active:before {
+    content: "";
+    width: 26px;
+    height: 3px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 555px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 15px;
+   }
+ [data-aside] .orderitem {
+  margin-bottom: 0;
+}
   .mobileorder {
     position: fixed;
     bottom: 82px;
@@ -2095,4 +2114,17 @@ display: block;
       position: static;
       margin-left: 10px;
     }
+   /*  .orderpage__asideblock:not(.popupstyle) .orderitem__wrapper_wide {
+      border-radius: 0;
+    } */
+
+    .calcheader__help_outside {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+      }
+
+      .calcheader__help_outside .help-tooltip {
+        left: 0;right: unset;
+      }
   }

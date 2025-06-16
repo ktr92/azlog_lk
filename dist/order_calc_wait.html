@@ -372,7 +372,7 @@
                       <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_update">
                         <span>Повторить</span>
                       </a>
-                      <a href="#popup_edit2" data-toggle="modal" class="ordertoolbar__item ordertb_docs">
+                      <a href="#popup_edit2" data-actionid="tabdocs" data-toggle="modal" class="ordertoolbar__item ordertb_docs">
                         <span>Документы</span>
                       </a>
                       <a href="#" class="ordertoolbar__item ordertb_pause">
@@ -623,27 +623,36 @@
                                   <!-- /.stepform__col -->
                                   <div class="stepform__col  ">
                                     <div class="inputlabel inputlabel_date inputlabel_dropdown inputselect"
-                                      data-toggleitem='sendtype'>
+                                      data-toggleitem="sendtype">
                                       <div class="inputselect__wrapper" data-toggleclick="sendtype">
                                         <div class="inputselect__icon">
-                                          <img src="img/conteiner.svg" alt="">
+                                          <img src="img/conteiner.svg" alt="" data-toggleicon="">
                                         </div>
                                         <div class="inputselect__content">
-                                          <div class="inputselect__title" data-value='sendtype'>Контейнеры</div>
+                                          <div class="inputselect__title" data-value="sendtype">Контейнеры</div>
                                           <div class="inputselect__info" data-value2="sendtype">10-14 дней</div>
-                                          <input type="hidden" value='Контейнеры' data-inputvalue='sendtype'>
+                                          <input type="hidden" value="Контейнеры" data-inputvalue="sendtype">
                                         </div>
                                         <!-- /.inputselect__content -->
                                       </div>
                                       <!-- /.inputselect__wrapper -->
-                                      <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="sendtype">
+                                      <div class="dateblock__menu dropdownblock dropdownblock_sm"
+                                        data-toggle="sendtype">
                                         <div class="dropdownblock__wrapper">
                                           <div class="dropdownblock__links">
                                             <menu>
-                                              <li><a href="#" data-togglevalue='Контейнеры'
-                                                  data-togglevalue2="10-14 дней">Контейнеры</a></li>
-                                              <li><a href="#" data-togglevalue='Коробки'
-                                                  data-togglevalue2="2-3 дня">Коробки</a></li>
+
+                                              <li><a href="#" data-togglevalue="Стандарт" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/auto.svg">Стандарт</a></li>
+                                              <li><a href="#" data-togglevalue="Авиа" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/airport.svg">Авиа</a></li>
+                                              <li><a href="#" data-togglevalue="Контейнеры"
+                                                  data-togglevalue2="10-14 дней"
+                                                  data-icon="img/conteiner.svg">Контейнеры</a></li>
+                                              <li><a href="#" data-togglevalue="Льготный" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/Ruble.svg">Льготный </a></li>
+                                              <li><a href="#" data-togglevalue="Паром" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/cargo.svg">Паром </a></li>
                                             </menu>
                                           </div>
                                         </div>
@@ -760,7 +769,7 @@
                                     </div>
                                     <div class="calcobject__input w-full">
                                       <div class="floating">
-                                        <input type="text" name='boxSizes[]' value=''
+                                        <input type="text" name='boxSizes[]' value=''     data-validate='boxsizes' data-validwarn='200' data-validerror='1000'
                                           onkeyup="this.setAttribute('value', this.value);" data-separate-format="">
                                         <span class="floating-label">Габариты <span
                                             class="gray">(Необязательно)</span></span>
@@ -864,7 +873,7 @@
                                               <img src="img/warmicon.svg" alt="">
                                             </div>
                                             <div class="checkblock__text">
-                                              <div class="checkblock__label">Теплый режим <span
+                                              <div class="checkblock__label">тепловой режим <span
                                                 class="calcheader__help">
                                                 <span class="help-call">?</span>
                                                 <span class="help-tooltip">
@@ -1070,7 +1079,7 @@
                                                   </span>
                                                 </span>
                                               </span>
-                                            </span>/span>
+                                            </span>
                                           </span>
                                         </label>
                                       </div>
@@ -1591,36 +1600,36 @@
                                       <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop2">
                                         <div class="dropdownblock__wrapper">
                                           <div class="dropdownblock__links">
-                                            <div class="formcheckbox">
+                                             <div class="formcheckbox">
   
-                                              <label for="check88-1" class="formcheckbox__label formcheckbox__label_type2">
+                                              <label for="check772-1" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-1" name="TO_SideTentRemoval" value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
+                                                  <input type="checkbox" id="check772-1" name="TO_SideTentRemoval" value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Боковая
                                                     рестентовка</span>
                                                 </span>
   
                                               </label>
-                                              <label for="check88-2" class="formcheckbox__label formcheckbox__label_type2">
+                                              <label for="check772-2" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-2" name="TO_UpperTentRemoval" value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
+                                                  <input type="checkbox" id="check772-2" name="TO_UpperTentRemoval" value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
                                                     растентовка</span>
                                                 </span>
   
                                               </label>
-                                              <label for="check88-3" class="formcheckbox__label formcheckbox__label_type2">
+                                              <label for="check772-3" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-3" name="TO_FullTentRemoval" data-stepdata="dop_dost_full" data-steptype="source">
+                                                  <input type="checkbox" id="check772-3" name="TO_FullTentRemoval" data-stepdata="dop_dost_full" data-steptype="source">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Полная
                                                     рестентовка</span>
                                                 </span>
   
                                               </label>
   
-                                              <label for="check88-4" class="formcheckbox__label formcheckbox__label_type2">
+                                              <label for="checcheck772k88-4" class="formcheckbox__label formcheckbox__label_type2">
                                                 <span>
-                                                  <input type="checkbox" id="check88-4" data-stepdata="dop_dost_bort" data-steptype="source" name="TO_TailLift" value="Y">
+                                                  <input type="checkbox" id="checheck772ck88-4" data-stepdata="dop_dost_bort" data-steptype="source" name="TO_TailLift" value="Y">
                                                   <span class="formcheckbox__text" data-text="checkboxtext">Требуется
                                                     машина
                                                     с
@@ -1881,7 +1890,7 @@
                                           <div class="dropdownblock__wrapper">
                                             <div class="dropdownblock__links">
                                               <menu>
-                                                <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
+                                                <li><a href="#" data-togglevalue='ООО'>ООО</a></li>
                                                 <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
                                                 <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
                                                 <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
@@ -2227,7 +2236,7 @@
                                           <div class="dropdownblock__wrapper">
                                             <div class="dropdownblock__links">
                                               <menu>
-                                                <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
+                                                <li><a href="#" data-togglevalue='ООО'>ООО</a></li>
                                                 <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
                                                 <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
                                                 <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
@@ -2426,7 +2435,7 @@
                                           <div class="dropdownblock__wrapper">
                                             <div class="dropdownblock__links">
                                               <menu>
-                                                <li><a href="#" data-togglevalue='>ООО'>ООО</a></li>
+                                                <li><a href="#" data-togglevalue='ООО'>ООО</a></li>
                                                 <li><a href="#" data-togglevalue='ОАО'>ОАО</a></li>
                                                 <li><a href="#" data-togglevalue='ЗАО'>ЗАО</a></li>
                                                 <li><a href="#" data-togglevalue='ИП'>ИП</a></li>
@@ -3803,29 +3812,29 @@
                               <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
                                 <div class="dropdownblock__wrapper">
                                   <div class="dropdownblock__links">
-                                    <div class="formcheckbox">
+                                   <div class="formcheckbox">
 
-                                      <label for="check88-1" class="formcheckbox__label formcheckbox__label_type2">
+                                      <label for="check773-1" class="formcheckbox__label formcheckbox__label_type2">
                                         <span>
-                                          <input type="checkbox" id="check88-1" name="TO_SideTentRemoval" value="Y"
+                                          <input type="checkbox" id="check773-1" name="TO_SideTentRemoval" value="Y"
                                             data-stepdata="dop_dost_bok" data-steptype="source">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Боковая
                                             рестентовка</span>
                                         </span>
 
                                       </label>
-                                      <label for="check88-2" class="formcheckbox__label formcheckbox__label_type2">
+                                      <label for="check773-2" class="formcheckbox__label formcheckbox__label_type2">
                                         <span>
-                                          <input type="checkbox" id="check88-2" name="TO_UpperTentRemoval" value="Y"
+                                          <input type="checkbox" id="check773-2" name="TO_UpperTentRemoval" value="Y"
                                             data-stepdata="dop_dost_verh" data-steptype="source">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
                                             растентовка</span>
                                         </span>
 
                                       </label>
-                                      <label for="check88-3" class="formcheckbox__label formcheckbox__label_type2">
+                                      <label for="check773-3" class="formcheckbox__label formcheckbox__label_type2">
                                         <span>
-                                          <input type="checkbox" id="check88-3" name="TO_FullTentRemoval"
+                                          <input type="checkbox" id="check773-3" name="TO_FullTentRemoval"
                                             data-stepdata="dop_dost_full" data-steptype="source">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Полная
                                             рестентовка</span>
@@ -3833,9 +3842,9 @@
 
                                       </label>
 
-                                      <label for="check88-4" class="formcheckbox__label formcheckbox__label_type2">
+                                      <label for="check773-4" class="formcheckbox__label formcheckbox__label_type2">
                                         <span>
-                                          <input type="checkbox" id="check88-4" data-stepdata="dop_dost_bort"
+                                          <input type="checkbox" id="check773-4" data-stepdata="dop_dost_bort"
                                             data-steptype="source" name="TO_TailLift" value="Y">
                                           <span class="formcheckbox__text" data-text="checkboxtext">Требуется
                                             машина
@@ -4472,10 +4481,73 @@
                               <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="dop">
                                 <div class="dropdownblock__wrapper">
                                   <div class="dropdownblock__links">
-                                    <menu>
-                                      <li><a href="#" data-togglevalue="Услуга 1">Услуга 1</a></li>
-                                      <li><a href="#" data-togglevalue="Услуга 2">Услуга 2</a></li>
-                                    </menu>
+                                     <div class="formcheckbox">
+
+                                      <label for="check774-1" class="formcheckbox__label formcheckbox__label_type2">
+                                        <span>
+                                          <input type="checkbox" id="check774-1" name="TO_SideTentRemoval" value="Y" data-stepdata="dop_dost_bok" data-steptype="source">
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Боковая
+                                            рестентовка</span>
+                                        </span>
+
+                                      </label>
+                                      <label for="check774-2" class="formcheckbox__label formcheckbox__label_type2">
+                                        <span>
+                                          <input type="checkbox" id="check774-2" name="TO_UpperTentRemoval" value="Y" data-stepdata="dop_dost_verh" data-steptype="source">
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Верхняя
+                                            растентовка</span>
+                                        </span>
+
+                                      </label>
+                                      <label for="check774-3" class="formcheckbox__label formcheckbox__label_type2">
+                                        <span>
+                                          <input type="checkbox" id="check774-3" name="TO_FullTentRemoval" data-stepdata="dop_dost_full" data-steptype="source">
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Полная
+                                            рестентовка</span>
+                                        </span>
+
+                                      </label>
+
+                                      <label for="check774-4" class="formcheckbox__label formcheckbox__label_type2">
+                                        <span>
+                                          <input type="checkbox" id="check774-4" data-stepdata="dop_dost_bort" data-steptype="source" name="TO_TailLift" value="Y">
+                                          <span class="formcheckbox__text" data-text="checkboxtext">Требуется
+                                            машина
+                                            с
+                                            гидробортом</span>
+
+                                        </span>
+
+                                      </label>
+
+                                    </div>
+
+                                    <div class="calcform__input">
+                                      <div class="floating">
+                                        <input type="text" name="TO_FLOOR" data-stepdata="dop_dost_floor" data-steptype="source" data-min="1" data-max="300" class="w-full" onkeyup="this.setAttribute('value', this.value);" value="">
+                                        <span class="floating-label">Этаж</span>
+
+
+                                      </div>
+
+                                      <div class="checkblock checkblock_abs">
+                                        <div class="checkblock__content">
+                                          <div class="checkblock__text">
+                                            <div class="checkblock__label">Лифт</div>
+                                          </div>
+                                        </div>
+                                        <div class="checkblock__checkbox">
+                                          <input checked="" type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT" value="Y">
+                                          <label for="TO_NO_LIFT">
+                                            <span></span>
+                                          </label>
+                                        </div>
+                                      </div>
+
+
+                                    </div><!-- /.calcform__input -->
+
+
                                   </div>
                                 </div>
                               </div>
