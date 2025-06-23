@@ -613,7 +613,7 @@
                                             <img src="img/warmicon.svg" alt="" class='afteractive'>
                                           </div>
                                           <div class="checkblock__text">
-                                            <div class="checkblock__label">тепловой режим</div>
+                                            <div class="checkblock__label">Тепловой режим</div>
                                             <div class="checkblock__value" data-dependon='teplo'>Отключен</div>
                                           </div>
                                         </div>
@@ -2621,7 +2621,7 @@
                                           </div>
                                         </div>
                                         <div class="checkblock__checkbox">
-                                          <input checked="" type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT" value="Y">
+                                          <input type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT" value="Y">
                                           <label for="TO_NO_LIFT">
                                             <span></span>
                                           </label>
@@ -3162,18 +3162,27 @@
                                 <!-- /.inputselect__content -->
                               </div>
                               <!-- /.inputselect__wrapper -->
-                              <div class="dateblock__menu dropdownblock dropdownblock_sm" data-toggle="select-time-day_deliver">
-                                <div class="dropdownblock__wrapper">
-                                  <div class="dropdownblock__links">
-                                    <menu>
-                                      <li><a href="#" data-togglevalue="с 10:00 до 11:00">с 10:00 до 11:00</a>
-                                      </li>
-                                      <li><a href="#" data-togglevalue="с 22:00 до 11:00">с 22:00 до 11:00</a>
-                                      </li>
-                                    </menu>
-                                  </div>
-                                </div>
-                              </div>
+                              <div class="dateblock__menu dropdownblock dropdownblock_sm"
+                                        data-toggle="sendtype">
+                                        <div class="dropdownblock__wrapper">
+                                          <div class="dropdownblock__links">
+                                            <menu>
+
+                                              <li><a href="#" data-togglevalue="Стандарт" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/auto.svg">Стандарт</a></li>
+                                              <li><a href="#" data-togglevalue="Авиа" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/airport.svg">Авиа</a></li>
+                                              <li><a href="#" data-togglevalue="Контейнеры"
+                                                  data-togglevalue2="10-14 дней"
+                                                  data-icon="img/conteiner.svg">Контейнеры</a></li>
+                                              <li><a href="#" data-togglevalue="Льготный" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/Ruble.svg">Льготный </a></li>
+                                              <li><a href="#" data-togglevalue="Паром" data-togglevalue2="2-3 дня"
+                                                  data-icon="img/cargo.svg">Паром </a></li>
+                                            </menu>
+                                          </div>
+                                        </div>
+                                      </div>
                             </div>
                             <!-- /.inputlabel -->
                           </div>
@@ -3276,7 +3285,7 @@
                                           </div>
                                         </div>
                                         <div class="checkblock__checkbox">
-                                          <input checked="" type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT" value="Y">
+                                          <input type="checkbox" id="TO_NO_LIFT" name="TO_NO_LIFT" value="Y">
                                           <label for="TO_NO_LIFT">
                                             <span></span>
                                           </label>

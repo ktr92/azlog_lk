@@ -879,7 +879,7 @@ const app = (function () {
         }
 
         $('[data-entity="errors"]').hide()
-        //тепловой режим
+        //Тепловой режим
         if (result.IS_TEPLO) {
           $('[data-entity="errors"]').show()
           $('[data-entity="teplo"]').show()

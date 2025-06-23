@@ -2067,7 +2067,8 @@ display: block;
       font-size: 12px;
     }
     .texterror {
-     bottom: -24px;
+    /*  bottom: -24px; */
+    top: calc(100% + 17px);
     }
     .inputlabel {
       padding-left: 12px;

@@ -4263,6 +4263,7 @@ color: #373737;
   height: 100%;
   padding: 10px 20px;
   height: 50px;
+  background-size: cover;
 }
 
 .inputdata__label {
@@ -4394,7 +4395,7 @@ input[type="password"] {
 }
 
 .calcobject__row {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .lk-datepicker {
@@ -4550,7 +4551,7 @@ input[type="password"] {
 }
 
 .checkblock_col {
-  min-width: 308px;
+  min-width: 333px;
   max-width: 100%;
 }
 
@@ -4782,10 +4783,10 @@ span.formcheckbox__text {
   }
 }
 
-.floating + .floating {
+/* .floating + .floating {
   margin-left: 8px;
 }
-
+ */
 .newtel {
   margin: 20px 0;
 
@@ -5272,9 +5273,10 @@ span.formcheckbox__text {
   font-size: 11px;
   line-height: 100%;
   color: #f23f34;
-  margin-top: 8px;
+/*   margin-top: 8px; */
   position: absolute;
-  bottom: -15px;
+  /* bottom: -24px; */
+  top: calc(100% + 5px)
 }
 
 .inputvalidicon {
@@ -5285,7 +5287,9 @@ span.formcheckbox__text {
   background-repeat: no-repeat;
   position: absolute;
   right: 16px;
-  top: 16px;
+/*   top: 16px; */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .error,
@@ -6182,4 +6186,15 @@ a.check_rememb {
 }
 .modal .inputselect__icon {
   justify-content: start;
+}
+.inputlabel .dropdownblock__wrapper {
+  padding: 14px;
+}
+.calcform__multipleInput {
+  gap: 8px;
+}
+
+.calcform__multipleInput .floating {
+  margin-left: 0;
+  margin-right: 0;
 }
