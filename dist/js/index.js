@@ -32,6 +32,10 @@ function initFE() {
     '[data-toggle="receive_terminal"]',
     '[data-toggleclick="receive_terminal"]'
   )
+  closeByClickOutside(
+    '[data-toggle="mobtoolbarmenu"]',
+    '[data-toggleclick="mobtoolbarmenu"]'
+  )
   closeByClickOutside('[data-toggle="dop"]', '[data-toggleclick="dop"]')
   closeByClickOutside('[data-toggle="dop2"]', '[data-toggleclick="dop2"]')
   closeByClickOutside(".popup", '[data-toggle="popup"]')
@@ -326,6 +330,7 @@ $(document).ready(function () {
     $(this).toggleClass("active")
     $(".jsbackdrop").toggleClass("active")
     $("body").toggleClass("expmenu")
+    $('[data-toggle="mobtoolbarmenu"]').removeClass('active')
   })
   $("[data-menutoggle]").on("click", function (e) {
     e.preventDefault()

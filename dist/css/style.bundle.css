@@ -7462,7 +7462,10 @@ a.check_rememb {
     padding-left: 28px; }
   .inputLocation svg {
     left: 9px; }
-  input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"] {
     padding-left: 12px;
     padding-right: 12px; }
   .modal .dateblock__menu.dropdownblock.dropdownblock_sm.active {
@@ -7496,7 +7499,15 @@ a.check_rememb {
     top: 5px; }
   .calcheader__help_outside .help-tooltip {
     left: 0;
-    right: unset; } }
+    right: unset; }
+  .orderpage__aside > .orderpage__asideblock.onlyDesktop.popupstyle {
+    display: none !important; }
+  .orderpage__asideblock.popupstyle {
+    display: none !important; }
+  .orderpage__asideblock.popupstyle[data-aside].active {
+    display: block !important; }
+  .orderpage__aside > .orderpage__asideblock.onlyDesktop.popupstyle.active {
+    display: block !important; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/
