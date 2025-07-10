@@ -74,6 +74,8 @@ const appv2 = (function () {
         }
       }
     })
+
+    $('li[data-hasparam]:visible:last .separator').hide()
   }
   function setData() {
     const $inputs = document.querySelectorAll('[data-steptype="source"]')

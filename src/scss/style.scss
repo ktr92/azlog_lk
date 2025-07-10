@@ -5053,7 +5053,11 @@ span.formcheckbox__text {
     font-size: 14px;
     line-height: 100%;
     color: #373737;
-    border: none;
+  /*   border: none; */
+
+  &:focus {
+    border-color: #8235FF;
+  }
 
     &::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
@@ -6197,4 +6201,37 @@ a.check_rememb {
 .calcform__multipleInput .floating {
   margin-left: 0;
   margin-right: 0;
+}
+
+.mobileorder__item.active {
+  .mobileorder__text {
+    color: rgba(55, 55, 55, 0.4) !important;
+  }
+  .mobileorder__icon {
+     position: relative;
+     display: inline-block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 30px;
+     height: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+
+     img {
+      display: block;
+      line-height: 1;
+     }
+
+  &:after {
+    content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.75" fill="%2346D981" stroke="white" stroke-width="1.5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.53151 8.48636L10.1483 5.33301L11.3333 6.30139L7.71099 10.6663L5.33325 8.60167L6.34406 7.45526L7.53151 8.48636Z" fill="white"/></svg>');
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 16px;
+    display: block;
+  }
+  }
+ 
 }

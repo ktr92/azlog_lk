@@ -5042,7 +5042,13 @@ span:last-child {
     font-size: 14px;
     line-height: 100%;
     color: #373737;
-    border: none; }
+    /*   border: none; */ }
+    .modal__wrapper textarea:focus,
+    .modal__wrapper input[type="text"]:focus,
+    .modal__wrapper input[type="email"]:focus,
+    .modal__wrapper input[type="tel"]:focus,
+    .modal__wrapper input[type="password"]:focus {
+      border-color: #8235FF; }
     .modal__wrapper textarea::-webkit-input-placeholder,
     .modal__wrapper input[type="text"]::-webkit-input-placeholder,
     .modal__wrapper input[type="email"]::-webkit-input-placeholder,
@@ -6016,6 +6022,31 @@ a.check_rememb {
 .calcform__multipleInput .floating {
   margin-left: 0;
   margin-right: 0; }
+
+.mobileorder__item.active .mobileorder__text {
+  color: rgba(55, 55, 55, 0.4) !important; }
+
+.mobileorder__item.active .mobileorder__icon {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  .mobileorder__item.active .mobileorder__icon img {
+    display: block;
+    line-height: 1; }
+  .mobileorder__item.active .mobileorder__icon:after {
+    content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.75" fill="%2346D981" stroke="white" stroke-width="1.5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.53151 8.48636L10.1483 5.33301L11.3333 6.30139L7.71099 10.6663L5.33325 8.60167L6.34406 7.45526L7.53151 8.48636Z" fill="white"/></svg>');
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 16px;
+    display: block; }
 
 @media (max-width: 1440px) {
   .orderpage__aside {
@@ -7063,14 +7094,15 @@ a.check_rememb {
   .stepform__row input.lk-datepicker {
     height: unset;
     padding: 0; }
-  .stepform__showdata.borderblock {
+  /* .stepform__showdata.borderblock {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: none;
     padding-left: 0;
     padding-right: 0;
-    width: 100%; }
+    width: 100%;
+  } */
   .inputlabel input {
     width: 100%; }
   .calcobject__row {
@@ -7507,7 +7539,9 @@ a.check_rememb {
   .orderpage__asideblock.popupstyle[data-aside].active {
     display: block !important; }
   .orderpage__aside > .orderpage__asideblock.onlyDesktop.popupstyle.active {
-    display: block !important; } }
+    display: block !important; }
+  .stepform__row.stepform__row_col2.flex {
+    gap: 10px; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/

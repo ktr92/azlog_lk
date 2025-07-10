@@ -1515,7 +1515,7 @@
     height: unset;
     padding: 0;
   }
-  .stepform__showdata.borderblock {
+  /* .stepform__showdata.borderblock {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1523,7 +1523,7 @@
     padding-left: 0;
     padding-right: 0;
     width: 100%;
-  }
+  } */
   .inputlabel input {
     width: 100%;
   }
@@ -2144,5 +2144,8 @@
   }
     .orderpage__aside > .orderpage__asideblock.onlyDesktop.popupstyle.active {
     display: block !important;
+  }
+  .stepform__row.stepform__row_col2.flex {
+    gap: 10px;
   }
 }
