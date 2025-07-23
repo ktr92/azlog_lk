@@ -5705,7 +5705,7 @@ input.lk-datepicker {
   font-size: 14px;
   line-height: 1;
   color: #373737;
-  margin-left: 12px;
+  margin-left: 4px;
   white-space: nowrap; }
 
 .ordepageblock__paramvalue ul {
@@ -7074,7 +7074,7 @@ a.check_rememb {
   .stepform__row input[type="tel"],
   .stepform__row input[type="password"] {
     border-radius: 8px;
-    border: none;
+    /* border: none; */
     height: 46px; }
   input.cityInput {
     padding-left: 38px; }
@@ -7400,8 +7400,11 @@ a.check_rememb {
   .ordepageblock__paramvalue li {
     white-space: unset; }
   .ordepageblock__service {
-    margin: 16px -20px 0 -20px;
-    padding: 16px 20px 0 20px; }
+    /*    margin: 16px 20px 0 20px;
+    padding: 16px 20px 0 20px; */
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 0 0; }
   .ordepageblock .orderparams__item {
     display: flex; }
   .ordepageblock .orderparams__dt {

@@ -582,6 +582,7 @@ const appv2 = (function () {
     if (state.currentStep < state.totalSteps) {
       ++state.currentStep
       changeStep()
+      recalcBoxes()
       if (state.currentStep === state.totalSteps) {
         setData()
         fillData()

@@ -1482,7 +1482,7 @@
     input[type="tel"],
     input[type="password"] {
       border-radius: 8px;
-      border: none;
+      /* border: none; */
       height: 46px;
     }
   }
@@ -1935,8 +1935,11 @@
     white-space: unset;
   }
   .ordepageblock__service {
-    margin: 16px -20px 0 -20px;
-    padding: 16px 20px 0 20px;
+ /*    margin: 16px 20px 0 20px;
+    padding: 16px 20px 0 20px; */
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 0 0;
   }
   .ordepageblock {
     .orderparams__item {
