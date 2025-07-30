@@ -5724,7 +5724,7 @@ input.lk-datepicker {
   display: block; }
 
 .ordepageblock__service {
-  padding-top: 20px;
+  margin-top: 20px;
   width: calc(100% + 80px);
   margin: 28px -40px 0 -40px;
   padding-left: 40px;
@@ -7404,7 +7404,8 @@ a.check_rememb {
     padding: 16px 20px 0 20px; */
     width: 100%;
     margin: 0;
-    padding: 20px 0 0 0; }
+    padding: 20px 0 0 0;
+    margin-top: 20px; }
   .ordepageblock .orderparams__item {
     display: flex; }
   .ordepageblock .orderparams__dt {
